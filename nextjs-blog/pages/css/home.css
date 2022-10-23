@@ -12,8 +12,9 @@ h6 {
   font-family: Roboto, sans-serif;
 }
 
-/* .banner-bookings-img-1 {
-} */
+.banner-home-img {
+  background-image: url("../../public/images/home-banner-glasses.png");
+}
 .u-section-1-1 {
   background-position: 60% 50%;
   /* max-height: 90vh; */
