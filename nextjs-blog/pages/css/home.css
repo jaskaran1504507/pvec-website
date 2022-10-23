@@ -1,0 +1,156 @@
+body {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: Roboto, sans-serif;
+}
+
+/* .banner-bookings-img-1 {
+} */
+.u-section-1-1 {
+  background-position: 60% 50%;
+  /* max-height: 90vh; */
+  height: 85vh;
+  background-position-x: 420px !important;
+  background-size: 89% !important;
+}
+
+.banner-bookings-img {
+  background-image: url("../../public/images/Bookings-AppntBanner.jpg");
+  background-position-x: inherit !important;
+  background-size: 120% !important;
+}
+.banner-bookings-img-1 {
+  background-image: url("../../public/images/Bookings-ContactBanner.jpg");
+  background-position-x: inherit !important;
+  background-size: 120% !important;
+}
+.u-carousel-item {
+  position: relative;
+  align-items: center;
+  width: 100%;
+  transition: transform 0.6s ease;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  perspective: 1000px;
+  transform: translate3d(0, 0, 0);
+}
+.u-image,
+.u-background-effect-image,
+.u-video-poster {
+  object-fit: cover;
+  display: block;
+  vertical-align: middle;
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+}
+.u-section-1-1 .u-sheet-1 {
+  min-height: 800px;
+  /* max-width: 80vh; */
+}
+.u-sheet {
+  position: relative;
+  width: 1140px;
+  margin: 0 auto;
+}
+.u-sheet > * {
+  position: relative;
+}
+section.u-image:not(.u-hover-box),
+.u-sheet.u-image:not(.u-hover-box),
+.u-group.u-image:not(.u-hover-box),
+.u-layout-cell.u-image:not(.u-hover-box) {
+  overflow: visible;
+}
+.u-section-1-1 .u-text-1 {
+  font-weight: 700;
+  font-size: 3.75rem;
+  padding: 60px auto 0 !important;
+}
+h1.u-title {
+  font-weight: 400;
+  font-size: 4.5rem;
+  line-height: 1.1;
+}
+.u-section-2 .u-sheet-1 {
+  /* min-height: 524px; */
+}
+.u-section-3 .u-image-3 {
+  height: 273px;
+  width: 331px;
+  margin: 0 auto 0 12px;
+}
+.u-sheet .u-sheet {
+  width: 100%;
+}
+@media (max-width: 1199px) {
+  .u-section-1-1 .u-sheet-1 {
+    min-height: 660px;
+  }
+
+  .u-section-1-1 .u-text-1 {
+    font-size: 3rem;
+    margin-top: 40px;
+    margin-right: 50px;
+  }
+}
+
+@media (max-width: 991px) {
+  .u-section-1-1 .u-sheet-1 {
+    min-height: 506px;
+  }
+}
+
+@media (max-width: 767px) {
+  .u-section-1-1 .u-sheet-1 {
+    min-height: 380px;
+  }
+}
+
+@media (max-width: 575px) {
+  .banner-img {
+    /* margin-top: 468px; */
+    height: auto;
+    height: auto;
+    background-size: 443px !important;
+    background-position-y: top;
+    background-position-x: 50% !important;
+  }
+  .u-section-1-1 .u-sheet-1 {
+    min-height: 239px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .u-sheet {
+    width: 1140px;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  .u-sheet {
+    width: 940px;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .u-sheet {
+    width: 720px;
+  }
+}
+@media (min-width: 576px) and (max-width: 767px) {
+  .u-sheet {
+    width: 540px;
+  }
+}
+@media (max-width: 575px) {
+  .u-sheet {
+    max-width: 340px;
+  }
+}
