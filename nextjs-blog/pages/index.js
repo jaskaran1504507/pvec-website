@@ -1,22 +1,63 @@
+import Link from "next/link";
 import Banner from "../components/Banner";
 import Carouselcard from "../components/Carouselcard";
 import ProductCatalogue from "../components/ProductCatalogue";
+import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+import { Carousel } from "react-responsive-carousel";
 
 export default function Home() {
   return (
     <main>
-      <Banner
-        banner="banner-home-img"
-        text="Our goal is to detect eye health issues before permanent damage
+      <Carousel autoPlay swipeable infiniteLoop>
+        <div className="pb-2 md:py-0">
+          <Banner
+            banner="banner-home-img"
+            text="Our goal is to detect eye health issues before permanent damage
               occurs while being safe during the COVID-19 outbreak"
-      >
-        <a
-          href="#"
-          className="bg-blue-400 rounded-full border py-3  px-8 text-white font-semibold  u-btn u-btn-round u-button-style u-radius-50 u-btn-1"
-        >
-          BOOK YOUR APPOINTMENT
-        </a>
-      </Banner>{" "}
+          >
+            <Link href="/bookings#appointment">
+              <a
+                href="#"
+                className="bg-blue-400 rounded-full border py-3  px-8 text-white font-semibold  u-btn u-btn-round u-button-style u-radius-50 u-btn-1"
+              >
+                BOOK YOUR APPOINTMENT
+              </a>
+            </Link>
+          </Banner>
+        </div>
+        <div className="pb-2 md:py-0">
+          <Banner
+            banner="banner-home-img"
+            text="Our goal is to detect eye health issues before permanent damage
+              occurs while being safe during the COVID-19 outbreak"
+          >
+            <Link href="/bookings#appointment">
+              <a
+                href="#"
+                className="bg-blue-400 rounded-full border py-3  px-8 text-white font-semibold  u-btn u-btn-round u-button-style u-radius-50 u-btn-1"
+              >
+                BOOK YOUR APPOINTMENT
+              </a>
+            </Link>
+          </Banner>
+        </div>
+        <div className="pb-2 md:py-0">
+          <Banner
+            banner="banner-home-img"
+            text="Our goal is to detect eye health issues before permanent damage
+              occurs while being safe during the COVID-19 outbreak"
+          >
+            <Link href="/bookings#appointment">
+              <a
+                href="#"
+                className="bg-blue-400 rounded-full border py-3  px-8 text-white font-semibold  u-btn u-btn-round u-button-style u-radius-50 u-btn-1"
+              >
+                BOOK YOUR APPOINTMENT
+              </a>
+            </Link>
+          </Banner>
+        </div>
+      </Carousel>{" "}
       {/* About us and product services */}
       <section className="u-align-left u-clearfix u-section-2" id="sec-0eb6">
         <div className="u-clearfix u-sheet mx-auto u-valign-middle u-sheet-1">

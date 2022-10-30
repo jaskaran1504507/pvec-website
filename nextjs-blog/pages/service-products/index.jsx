@@ -31,7 +31,7 @@ export default function ServiceProducts() {
   ];
   return (
     <main>
-      <div className="grid gap-16 md:gap-28 mt-20 grid-cols-1 md:grid-cols-2 u-clearfix u-sheet mx-auto u-valign-middle u-sheet-1">
+      <div className="grid gap-16  mt-20 grid-cols-1 md:grid-cols-2 u-clearfix u-sheet mx-auto u-valign-middle u-sheet-1">
         <div className="px-6">
           <h2
             style={{
@@ -78,7 +78,6 @@ export default function ServiceProducts() {
               fontWeight: 400,
               fontSize: "2.25rem",
               lineHeight: 1.1,
-              marginTop: "20px",
             }}
           >
             <span

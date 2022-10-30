@@ -33,6 +33,14 @@ h6 {
   background-position-x: inherit !important;
   background-size: 120% !important;
 }
+.banner-about-us-img {
+  background-image: url("../../public/images/door.jpeg");
+  background-position-x: inherit !important;
+  background-size: 120% !important;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 .u-carousel-item {
   position: relative;
   align-items: center;

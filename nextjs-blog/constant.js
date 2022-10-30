@@ -88,10 +88,10 @@ export const cards = [
   },
 ];
 export const navArr = [
-  { name: "Bookings", path: "/" },
+  { name: "Bookings", path: "/bookings" },
   { name: "Home", path: "/" },
   { name: "COVID Safety", path: "/" },
-  { path: "/", name: "About Us" },
+  { path: "/about-us", name: "About Us" },
   { path: "/service-products", name: "Services & Products" },
   { name: "Promotions", path: "/" },
 ];
