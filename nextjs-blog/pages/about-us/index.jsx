@@ -110,7 +110,7 @@ export default function AboutUs() {
         <div className="mt-20">
           <div className="font-semibold text-blue-900">
             "Performance Vision Optometry saved my right eye from being further
-            damaged. I tru;y value the professional support from their doctors
+            damaged. I truly value the professional support from their doctors
             as well as their kindness and gentleness with taking care of me.
             Fortunately, my eye has now completely heated. Thank you so much!"
             <br /> <br />- Janice, Vancouver
