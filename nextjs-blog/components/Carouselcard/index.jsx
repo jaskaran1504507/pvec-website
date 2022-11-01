@@ -31,9 +31,11 @@ export default function Carouselcard() {
           ))}
         </div>
         <div className="flex justify-center pb-10">
-          <div className="uppercase rounded-full bg-amber-400 text-sm font-semibold px-8 py-3">
-            Click here to know more
-          </div>
+          <Link href="/service-products">
+                <u className="uppercase rounded-full bg-amber-400 text-sm font-semibold px-8 py-3">
+                Click here to know more{" "}
+                </u>
+              </Link>
         </div>
       </section>
     </div>

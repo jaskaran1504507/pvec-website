@@ -16,18 +16,6 @@ export default function Footer() {
           <p className="text-white font-semibold text-base">
             St. Robert, MO 65584-5678.
           </p>
-          <br />
-          <p className="text-white font-semibold text-base">
-            {" "}
-            1234 NW Bobcat Lane,
-          </p>
-          <p className="text-white font-semibold text-base">
-            {" "}
-            Robert Robertson,
-          </p>
-          <p className="text-white font-semibold text-base">
-            St. Robert, MO 65584-5678.
-          </p>
         </div>
         <div style={{ height: "200px", width: "348px" }}>
           <img
