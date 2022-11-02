@@ -1,9 +1,10 @@
 import React from "react";
+import Link from "next/link";
 
 export default function ProductCatalogue() {
   const imgArr = [
-    "images/PVEC_ContactLenses.jpeg",
-    "images/PVEC_ContactLenses.jpeg",
+    "images/Rectangle 6-1.jpg",
+    "images/glassesimage.jpeg",
     "images/PVEC_ContactLenses.jpeg",
     "images/PVEC_ContactLenses.jpeg",
     "images/PVEC_ContactLenses.jpeg",
@@ -38,15 +39,15 @@ export default function ProductCatalogue() {
                 Product Catalogue
               </span>
             </h2>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga
-            corrupti adipisci consequuntur, saepe minima sint ipsam sit
-            reiciendis tempora tempore exercitationem facilis similique vitae
-            incidunt praesentium! Explicabo provident labore ex?
+            Many people believe that glasses must cost more from a doctor's office... in truth, our fees are usually substantially lower.
             <br />
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum
-            temporibus debitis vel ad reprehenderit aliquam possimus quas natus.
-            Iusto dolor expedita nisi deleniti minus mollitia repellendus labore
-            eveniet aliquam dignissimos?
+            We offer a range of styles that can fit any budget, and offer direct billing for glasses orders.
+            <br />
+            <Link href="/promotions">
+                <u className="text-blue-800 font-semibold cursor-pointer">
+                  Visit our promotionan page to see what deals are on now!{" "}
+                </u>
+              </Link>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-3 pt-8">
             {imgArr.map((img) => (

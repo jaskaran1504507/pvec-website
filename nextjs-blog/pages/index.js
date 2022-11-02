@@ -13,7 +13,7 @@ export default function Home() {
           <Banner
             banner="banner-home-img"
             text="Our goal is to detect eye health issues before permanent damage
-              occurs while being safe during the COVID-19 outbreak"
+              occurs"
           >
             <Link href="/bookings#appointment">
               <a
@@ -29,7 +29,7 @@ export default function Home() {
           <Banner
             banner="banner-home-img"
             text="Our goal is to detect eye health issues before permanent damage
-              occurs while being safe during the COVID-19 outbreak"
+              occurs"
           >
             <Link href="/bookings#appointment">
               <a
@@ -45,7 +45,7 @@ export default function Home() {
           <Banner
             banner="banner-home-img"
             text="Our goal is to detect eye health issues before permanent damage
-              occurs while being safe during the COVID-19 outbreak"
+              occurs"
           >
             <Link href="/bookings#appointment">
               <a
