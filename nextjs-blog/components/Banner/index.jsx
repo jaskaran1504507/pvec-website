@@ -19,12 +19,14 @@ export default function Banner({ banner, text, children }) {
         <div className="u-clearfix u-sheet flex items-center u-sheet-1 top-section md:mt-0 md:py-0 py-4">
           <div className="mt-48 md:mt-0 md:w-1/2 md:text-left">
             {" "}
-            <h1
-              style={{ color: "#454545", lineHeight: "1.25" }}
-              className="u-text text-white text-left text-2xl md:text-5xl mb-12 md:text-5xl font-semibold "
-            >
-              {text}
-            </h1>
+            {text && (
+              <h1
+                style={{ color: "#454545", lineHeight: "1.25" }}
+                className="u-text text-white text-left text-2xl md:text-5xl mb-12 md:text-5xl font-semibold "
+              >
+                {text}
+              </h1>
+            )}
             {children}
           </div>
         </div>

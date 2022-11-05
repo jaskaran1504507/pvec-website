@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/router";
 import React, { useState } from "react";
 import { navArr } from "../../constant";
 
@@ -8,6 +9,7 @@ export default function Header() {
   const handleNavClick = () => {
     setIsNavVisible((prev) => !prev);
   };
+  const location = useRouter();
   return (
     <>
       <div className="relative bg-white">
@@ -57,7 +59,7 @@ export default function Header() {
               </button>
             </div>
             <div className="flex flex-col  ">
-              <div className="flex justify-end pt-1">
+              <div className="flex hidden justify-end pt-1">
                 <input
                   type="search"
                   name=""
@@ -79,7 +81,9 @@ export default function Header() {
                   <Link href={nav.path} key={nav.name}>
                     <a
                       href="#"
-                      className=" font-bold text-gray-500 hover:text-gray-900"
+                      className={`${
+                        location.pathname === nav.path && " text-black"
+                      } font-bold text-gray-500 hover:text-gray-900`}
                     >
                       {nav.name}
                     </a>
@@ -137,7 +141,9 @@ export default function Header() {
                     <Link href={nav.path} key={nav.name}>
                       <a
                         href="#"
-                        className=" flex items-center rounded-md px-6 py-2 hover:bg-gray-50"
+                        className={` ${
+                          location.pathname === nav.path && " text-black"
+                        } flex items-center rounded-md px-6 py-2 hover:bg-gray-50`}
                       >
                         <span className="font-bold text-gray-500 hover:text-gray-900">
                           {nav.name}

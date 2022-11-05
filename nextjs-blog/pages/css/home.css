@@ -41,6 +41,12 @@ h6 {
   background-repeat: no-repeat;
   background-size: cover;
 }
+
+.banner-contact-img-1 {
+  background-image: url("../../public//images/glassesimage.jpg");
+  background-position-x: inherit !important;
+  background-size: 120% !important;
+}
 .u-carousel-item {
   position: relative;
   align-items: center;
@@ -162,4 +168,10 @@ h1.u-title {
   .u-sheet {
     max-width: 340px;
   }
+}
+.banner-contact-img {
+  background-image: url("../../public//images/glassesbanner.jpg");
+  background-position-x: inherit !important;
+  background-size: 120% !important;
+  background-position-y: center;
 }
