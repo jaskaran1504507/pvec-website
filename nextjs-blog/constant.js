@@ -92,7 +92,7 @@ export const navArr = [
   { name: "Bookings", path: "/bookings" },
   { name: "Promotions", path: "/promotions" },
   { path: "/service-products", name: "Services & Products" },
-  { name: "Glasses & contacts", path: "/glasses-contacts" },
+  { name: "Glasses & Contacts", path: "/glasses-contacts" },
   { path: "/about-us", name: "About Us" },
 ];
 

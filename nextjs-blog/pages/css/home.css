@@ -15,6 +15,12 @@ h6 {
 .banner-home-img {
   background-image: url("../../public/images/home-banner-glasses.png");
 }
+.banner-home-img-2 {
+  background-image: url("../../public/images/banner1.jpg");
+}
+.banner-home-img-3 {
+  background-image: url("../../public/images/banner3.jpg");
+}
 .u-section-1-1 {
   background-position: 60% 50%;
   /* max-height: 90vh; */

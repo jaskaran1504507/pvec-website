@@ -27,9 +27,8 @@ export default function Home() {
         </div>
         <div className="pb-2 md:py-0">
           <Banner
-            banner="banner-home-img"
-            text="Our goal is to detect eye health issues before permanent damage
-              occurs"
+            banner="banner-home-img-2"
+            text="We offer the best suite of services and products"
           >
             <Link href="/bookings#appointment">
               <a
@@ -43,7 +42,7 @@ export default function Home() {
         </div>
         <div className="pb-2 md:py-0">
           <Banner
-            banner="banner-home-img"
+            banner="banner-home-img-3"
             text="Our goal is to detect eye health issues before permanent damage
               occurs"
           >
@@ -99,8 +98,8 @@ export default function Home() {
               conveniently located downtown Vancouver, on the ground level on
               Burrard St and just West of Davie St.
             </p>
-            <h2 style={{ textAlign: "left" }}>Services &amp; Products</h2>
-            <p style={{ textAlign: "left" }}>
+            {/* <h2 style={{ textAlign: "left" }}>Services &amp; Products</h2> */}
+            {/* <p style={{ textAlign: "left" }}>
               <span style={{ lineHeight: 2 }}>
                 Euismod in pellentesque massa placerat. Risus quis varius quam
                 quisque. Fermentum leo vel orci porta non pulvinar neque.
@@ -108,7 +107,7 @@ export default function Home() {
                 arcu vitae. Viverra aliquet eget sit amet. Platea dictumst
                 vestibulum rhoncus est.
               </span>
-            </p>
+            </p> */}
             {/* Services & Products */}
             <h2
               style={{

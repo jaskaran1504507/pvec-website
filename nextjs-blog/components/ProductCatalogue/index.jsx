@@ -4,12 +4,13 @@ import Link from "next/link";
 export default function ProductCatalogue() {
   const imgArr = [
     "images/Rectangle 6-1.jpg",
-    "images/glassesimage.jpeg",
-    "images/PVEC_ContactLenses.jpeg",
-    "images/PVEC_ContactLenses.jpeg",
-    "images/PVEC_ContactLenses.jpeg",
-    "images/PVEC_ContactLenses.jpeg",
-    "images/PVEC_ContactLenses.jpeg",
+    "images/Rectangle 4-2.jpg",
+    "images/prod_cat_2.png",
+    "images/Rectangle 6-4.jpg",
+    "images/prod_cat_1.png",
+    
+    // "images/Rectangle 1-4.jpg",
+    // "images/PVEC_ContactLenses.jpeg",
   ];
   return (
     <section className="u-clearfix u-grey-10 u-section-3" id="sec-f593">
