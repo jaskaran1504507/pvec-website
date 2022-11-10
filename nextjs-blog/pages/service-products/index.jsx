@@ -1,6 +1,7 @@
 import Image from "next/image";
 import React from "react";
 import { cards } from "../../constant";
+import Link from "next/link";
 
 export default function ServiceProducts() {
   const imgArr = [
@@ -27,8 +28,26 @@ export default function ServiceProducts() {
     "PVEC_Staag.png",
     "PVEC_Superflex.jpeg",
     "PVEC_TF.png",
-    "test.js",
   ];
+  const brandsLinkArr = [
+    "https://www.armani.com/en-in/emporio-armani/man/eyewear",
+    "https://fyshuk.com",
+    "https://www.gucci.com/us/en/st/capsule/women-eyewear",
+    "https://www.guess.com/us/en/women/accessories/sunglasses",
+    "https://www.hugoboss.com/men-glasses/",
+    "https://www.katespade.com/shop/accessories/sunglasses-reading-glasses",
+    "https://www.kliik.com/",
+    "https://www.lafont.com/the-collection/",
+    "https://www.marcjacobs.com/default/the-marc-jacobs/the-accessories/sunglasses/",
+    "https://www.michaelkors.ca/men/accessories/sunglasses/_/N-285v",
+    "https://moleskine-eyewear.com/en/",
+    "https://www.oakley.com/en-eu",
+    "https://www.ray-ban.com/canada/en",
+    "",
+    "",
+    "https://www.tomford.com/eyewear/men/optical/"
+  ];
+  let index =0;
   return (
     <main>
       <div className="grid gap-16  mt-20 grid-cols-1 md:grid-cols-2 u-clearfix u-sheet mx-auto u-valign-middle u-sheet-1">
@@ -212,9 +231,10 @@ export default function ServiceProducts() {
       </div>
       <div className="u-clearfix u-sheet mx-auto u-valign-middle u-sheet-1">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-1">
-          {brandsArr.map((brand) => (
+          {brandsArr.map((brand) =>  (
             <div key={brand}>
-              {/* <Link href="/service-products"> */}
+              {/* <Link href={brandsLinkArr[index++]} legacyBehavior passHref> */}
+              <a target="_blank" href={brandsLinkArr[index++]} rel="noopener noreferrer">
               <Image
                 src={"/images/brands/" + brand}
                 //   layout="fill"
@@ -222,8 +242,10 @@ export default function ServiceProducts() {
                 width="150x"
               />
               {/* </Link> */}
+              </a>
             </div>
-          ))}
+          )
+          )}
         </div>
       </div>
     </main>
