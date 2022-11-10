@@ -214,14 +214,14 @@ export default function ServiceProducts() {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-1">
           {brandsArr.map((brand) => (
             <div key={brand}>
-              <Link href="/service-products">
+              {/* <Link href="/service-products"> */}
               <Image
                 src={"/images/brands/" + brand}
                 //   layout="fill"
                 height="150px"
                 width="150x"
               />
-              </Link>
+              {/* </Link> */}
             </div>
           ))}
         </div>
