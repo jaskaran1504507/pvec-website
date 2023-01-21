@@ -1,6 +1,11 @@
 import React from "react";
 
-export default function Banner({ banner, text, children }) {
+export default function Banner({
+  banner,
+  text,
+  children,
+  textColor = "#454545",
+}) {
   return (
     <div
       style={{
@@ -21,7 +26,7 @@ export default function Banner({ banner, text, children }) {
             {" "}
             {text && (
               <h1
-                style={{ color: "#454545", lineHeight: "1.25" }}
+                style={{ color: textColor, lineHeight: "1.25" }}
                 className="u-text text-white text-left text-2xl md:text-5xl mb-12 md:text-5xl font-semibold "
               >
                 {text}

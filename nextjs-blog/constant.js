@@ -1,36 +1,29 @@
 export const cards = [
   {
-    text: (
-      <p>
+    text: `
         A comprehensive exam includes a vision check as well as complete health
         examination of the front and back of your eyes.
-        <br />
+
         We provide the best care for your eyes which includes; full
         comprehensive exams, prescription eye glasses sunglasses, contact
         lenses, and top notch vitamins and drops especially to promote eye
         health!
-      </p>
-    ),
+      `,
     img: "/images/Rectangle 1-6.jpg",
     head: "Children/Senior Eye Exams",
   },
   {
     img: "/images/AboutUs_Unslapsh.png",
     head: "Children/Senior Eye exams",
-    text: (
-      <div>
-        <p>
+    text: `
+   
           Children under 19 and adults 65 and older are covered by MSP for their
           comprehensive eyes exams. Any other person between the ages of 18-65
           who is referenced from a family doctor or other specialist for a
           health condition will also be covered by MSP. *
-        </p>
-        <p>
+    
           Fees may be applicable. please call us or email us to inquire about
-          charges.
-        </p>
-      </div>
-    ),
+          charges.`,
   },
   {
     img: "/images/Rectangle 1-2.jpg",
@@ -41,20 +34,18 @@ export const cards = [
         Eye Exams, Glasses, & Contact lenses
       </>
     ),
-    text: (
-      <div>
+    text: `
         If you have private extended health insurance from one of the below
         companies, we offer direct billing for all glasses and contact lens
         orders. This means you can walk away with glasses or contacts with
         little to no out of- pocket expenses.
-        <p className="text-xs">
+      
           Most of our common health benefits providers are: Blue Cross, Chamber
           of Commerce, Crown, Desjardins, Great-West life, Canada Life,
           Industrial Alliance, Johnson Inc., Manulife financial, Maximun
           Benefit/Johnson Group, Standard Life, Sun Life Financial and more.
-        </p>
-      </div>
-    ),
+     
+   `,
   },
   {
     img: "/images/Rectangle 1.jpg",

@@ -1,13 +1,20 @@
 import Image from "next/image";
-import React from "react";
+import React, { useState } from "react";
 import { cards } from "../../constant";
-import Link from "next/link";
 
 export default function ServiceProducts() {
+  const [seeMore, setSeeMore] = useState({});
   const imgArr = [
     "/images/PVEC_idrop.jpeg",
     "/images/PVEC_omega3.jpeg",
-    "/images/PVEC_teatree.jpeg",
+    // "/images/PVEC_teatree.jpeg",
+    // "/images/PVEC_eyemask.jpeg",
+    // "/images/PVEC_lidlash.jpeg",
+  ];
+  const imgArr1 = [
+    // "/images/PVEC_idrop.jpeg",
+    // "/images/PVEC_omega3.jpeg",
+    // "/images/PVEC_teatree.jpeg",
     "/images/PVEC_eyemask.jpeg",
     "/images/PVEC_lidlash.jpeg",
   ];
@@ -45,9 +52,9 @@ export default function ServiceProducts() {
     "https://www.ray-ban.com/canada/en",
     "",
     "",
-    "https://www.tomford.com/eyewear/men/optical/"
+    "https://www.tomford.com/eyewear/men/optical/",
   ];
-  let index =0;
+  let index = 0;
   return (
     <main>
       <div className="grid gap-16  mt-20 grid-cols-1 md:grid-cols-2 u-clearfix u-sheet mx-auto u-valign-middle u-sheet-1">
@@ -71,8 +78,8 @@ export default function ServiceProducts() {
           <div>
             {" "}
             <p>
-              We have been helping people with quality care with a from our team
-              of expert eye doctors in downtown Vancouver since 2005
+              We have been helping people with quality care from our team of
+              expert eye doctors in downtown Vancouver since 2005
             </p>
             <br />
             <p>
@@ -152,14 +159,14 @@ export default function ServiceProducts() {
           </div>
         </div>{" "}
       </div>
-      <div className="grid gap-8 mt-20 grid-cols-1 md:grid-cols-3 u-clearfix u-sheet mx-auto u-valign-middle u-sheet-1">
+      <div className="grid  gap-6 mt-20 grid-cols-1 md:grid-cols-3 u-clearfix u-sheet mx-auto u-valign-middle u-sheet-1">
         {cards.map(({ img, text, head }) => (
-          <div key={img} className="shadow-lg rounded-lg">
+          <div key={img} className="p-2 shadow-lg ">
             <div>
               <Image
                 // layout="fill"
                 // objectFit="cover"
-                className="rounded-none"
+                className="rounded-lg"
                 src={img}
                 alt=""
                 srcSet=""
@@ -170,7 +177,22 @@ export default function ServiceProducts() {
             <h1 className="text-blue-900 my-3 text-center font-semibold">
               {head}
             </h1>
-            <div className="px-4 pb-2">{text}</div>
+            <div className="px-6 py-4 ">
+              {seeMore[img] || text.slice(0, 250)}
+              {text.length > 250 && (
+                <span
+                  onClick={() => {
+                    setSeeMore((prev) => ({
+                      ...prev,
+                      [img]: prev[img] ? "" : text,
+                    }));
+                  }}
+                  className=" pl-2 text-blue-900 hover:underline cursor-pointer"
+                >
+                  see {seeMore[img] ? "less" : "more"}...
+                </span>
+              )}
+            </div>
           </div>
         ))}
       </div>
@@ -203,10 +225,24 @@ export default function ServiceProducts() {
             </p>
             <p>To know more about contact lenses, call us at 604-XXX-XXXX</p>
           </div>
-          <div className="md:w-1/2 grid gap-6 grid-cols-2">
-            {imgArr.map((img) => (
-              <Image key={img} src={img} height="250px" width="300px" />
-            ))}
+          <div className="">
+            <div className="md:w-1/2 grid gap-6 grid-cols-2">
+              {imgArr.map((img) => (
+                <Image key={img} src={img} height="250px" width="300px" />
+              ))}
+            </div>
+            <div className="my-4">
+              <Image
+                src="/images/PVEC_eyemask.jpeg"
+                height="250px"
+                width="300px"
+              />
+            </div>
+            <div className="md:w-1/2 grid gap-6 grid-cols-2">
+              {imgArr1.map((img) => (
+                <Image key={img} src={img} height="250px" width="300px" />
+              ))}
+            </div>
           </div>
         </div>
       </div>
@@ -231,21 +267,24 @@ export default function ServiceProducts() {
       </div>
       <div className="u-clearfix u-sheet mx-auto u-valign-middle u-sheet-1">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-1">
-          {brandsArr.map((brand) =>  (
+          {brandsArr.map((brand) => (
             <div key={brand}>
               {/* <Link href={brandsLinkArr[index++]} legacyBehavior passHref> */}
-              <a target="_blank" href={brandsLinkArr[index++]} rel="noopener noreferrer">
-              <Image
-                src={"/images/brands/" + brand}
-                //   layout="fill"
-                height="150px"
-                width="150x"
-              />
-              {/* </Link> */}
+              <a
+                target="_blank"
+                href={brandsLinkArr[index++]}
+                rel="noopener noreferrer"
+              >
+                <Image
+                  src={"/images/brands/" + brand}
+                  //   layout="fill"
+                  height="150px"
+                  width="150x"
+                />
+                {/* </Link> */}
               </a>
             </div>
-          )
-          )}
+          ))}
         </div>
       </div>
     </main>

@@ -28,6 +28,7 @@ export default function Home() {
         <div className="pb-2 md:py-0">
           <Banner
             banner="banner-home-img-2"
+            textColor="white"
             text="We offer the best suite of services and products"
           >
             <Link href="/bookings#appointment">
@@ -45,6 +46,7 @@ export default function Home() {
             banner="banner-home-img-3"
             text="Our goal is to detect eye health issues before permanent damage
               occurs"
+            textColor="white"
           >
             <Link href="/bookings#appointment">
               <a

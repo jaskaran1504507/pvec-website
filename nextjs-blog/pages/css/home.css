@@ -14,19 +14,20 @@ h6 {
 
 .banner-home-img {
   background-image: url("../../public/images/home-banner-glasses.png");
+  background-position: 60% 50%;
+  height: 85vh;
+  background-position-x: 420px !important;
+  background-size: 89% !important;
 }
 .banner-home-img-2 {
   background-image: url("../../public/images/banner1.jpg");
+  /* background-position-x: inherit !important;
+  background-size: 120% !important; */
 }
 .banner-home-img-3 {
   background-image: url("../../public/images/banner3.jpg");
 }
 .u-section-1-1 {
-  background-position: 60% 50%;
-  /* max-height: 90vh; */
-  height: 85vh;
-  background-position-x: 420px !important;
-  background-size: 89% !important;
 }
 
 .banner-bookings-img {
