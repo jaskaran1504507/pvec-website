@@ -113,3 +113,67 @@ export const eyeBrand = [
   "Tura",
   "Stepper",
 ];
+
+export const productCatalogue = [
+  {
+    img: "/images/man-lenses.jpg",
+    head: "Contact lenses",
+    text: "Experience clear vision with our wide selection of contact lenses. Perfect for any need, prescription or non-prescription available.",
+  },
+  {
+    img: "/images/man-eyeglass.jpg",
+    head: "Eyewears",
+    text: "Upgrade your style with our collection of trendy eyewears. From classic to modern, we have something for everyone.",
+  },
+  {
+    img: "/images/PVEC_eyemask.jpeg",
+    head: "Eye drops",
+    text: "Relieve dry, irritated eyes with our collection of high-quality eye drops. Perfect for daily use and for contact lens wearers.",
+  },
+];
+
+export const brandsArr = [
+  { link: "PVEC_Superflex.jpeg", addr: "" },
+
+  {
+    link: "PVEC_TF.png",
+    addr: "https://www.tomford.com/eyewear/men/optical/",
+  },
+  { link: "PVEC_RayBan.png", addr: "https://www.ray-ban.com/canada/en" },
+
+  {
+    link: "PVEC_EmporioArmani.jpeg",
+    addr: "https://www.armani.com/en-in/emporio-armani/man/eyewear",
+  },
+  { link: "PVEC_FYSH.jpeg", addr: "https://fyshuk.com" },
+  {
+    link: "PVEC_Gucci.png",
+    addr: "https://www.gucci.com/us/en/st/capsule/women-eyewear",
+  },
+  {
+    link: "PVEC_Guess.jpeg",
+    addr: "https://www.guess.com/us/en/women/accessories/sunglasses",
+  },
+  {
+    link: "PVEC_HugoBoss.png",
+    addr: "https://www.hugoboss.com/men-glasses/",
+  },
+  {
+    link: "PVEC_KateSpade.png",
+    addr: "https://www.katespade.com/shop/accessories/sunglasses-reading-glasses",
+  },
+  { link: "PVEC_KliikDenmark.jpeg", addr: "https://www.kliik.com/" },
+  { link: "PVEC_LaFont.png", addr: "https://www.lafont.com/the-collection/" },
+  {
+    link: "PVEC_MarcJacobs.jpeg",
+    addr: "https://www.marcjacobs.com/default/the-marc-jacobs/the-accessories/sunglasses/",
+  },
+  {
+    link: "PVEC_MichaelKors.jpeg",
+    addr: "https://www.michaelkors.ca/men/accessories/sunglasses/_/N-285v",
+  },
+  { link: "PVEC_Moleskine.png", addr: "https://moleskine-eyewear.com/en/" },
+  { link: "PVEC_Oakley.png", addr: "https://www.oakley.com/en-eu" },
+
+  { link: "PVEC_Staag.png", addr: "" },
+];
