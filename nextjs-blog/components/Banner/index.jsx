@@ -22,7 +22,7 @@ export default function Banner({
         data-image-height="641"
       >
         <div className="u-clearfix u-sheet flex items-center u-sheet-1 top-section md:mt-0 md:py-0 py-4">
-          <div className="mt-48 md:mt-0 md:w-1/2 md:text-left">
+          <div className=" mt-6 md:mt-0 md:w-1/2 md:text-left">
             {" "}
             {text && (
               <h1

@@ -1,25 +1,66 @@
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
+import { Carousel } from "react-responsive-carousel";
+import Banner from "../../components/Banner";
+import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+
+import { dummmy } from "../../constant";
 
 export default function Promotions() {
-  const dummmy = [
-    {
-      img: "/images/Rectangle 2.png",
-      heading: `Purchase any complete pair of glasses (frame & lenses) and get
-    your 2nd complete pair 30% off  (even sunglasses)`,
-      tageLine: ` *Some restrictions apply, see for associate for details. Glasses
-    must be purchased on the same day. Cannot be combined with any
-    other offers.`,
-    },
-    {
-      img: "/images/Rectangle 4-2.jpg",
-      heading: `Our tom fords are up for clearance for upto 50% off`,
-      tageLine: ` *Some restrictions apply, see for associate for details.`,
-    },
-  ];
   return (
     <main>
-      <div className="grid gap-16  mt-20 grid-cols-1 md:grid-cols-1 u-clearfix u-sheet mx-auto u-valign-middle u-sheet-1">
+      <Carousel autoPlay swipeable infiniteLoop>
+        <div className="pb-2 md:py-0">
+          <Banner
+            banner="banner-permotion-img"
+            textColor="black"
+            text="40% off sale now on! Grab a bargain before it's gone."
+          >
+            <Link href="/bookings#appointment">
+              <a
+                href="#"
+                className="bg-blue-400 rounded-full border py-3  px-8 text-white font-semibold  u-btn u-btn-round u-button-style u-radius-50 u-btn-1"
+              >
+                SHOP NOW
+              </a>
+            </Link>
+          </Banner>
+        </div>
+        <div className="pb-2 md:py-0">
+          <Banner
+            banner="banner-permotion-img-1"
+            text="Get 40% off on all contact lens! Limited time offer. Order now!"
+            textColor="black"
+          >
+            <Link href="/bookings#appointment">
+              <a
+                href="#"
+                className="bg-blue-400 rounded-full border py-3  px-8 text-white font-semibold  u-btn u-btn-round u-button-style u-radius-50 u-btn-1"
+              >
+                SHOP NOW
+              </a>
+            </Link>
+          </Banner>
+        </div>
+        <div className="pb-2 md:py-0">
+          <Banner
+            banner="banner-permotion-img-2"
+            text="Save big on Eye drops! 40% off sale ends soon!"
+            textColor="white"
+          >
+            <Link href="/bookings#appointment">
+              <a
+                href="#"
+                className="bg-blue-400 rounded-full border py-3  px-8 text-white font-semibold  u-btn u-btn-round u-button-style u-radius-50 u-btn-1"
+              >
+                SHOP NOW
+              </a>
+            </Link>
+          </Banner>
+        </div>
+      </Carousel>
+      {/* <div className="grid gap-16  mt-20 grid-cols-1 md:grid-cols-1 u-clearfix u-sheet mx-auto u-valign-middle u-sheet-1">
         {dummmy.map((n, i) => (
           <div className="w-full grid grid-cols-2 gap-2">
             {i % 2 === 1 && (
@@ -68,7 +109,8 @@ export default function Promotions() {
             )}
           </div>
         ))}
-      </div>
+      </div> */}
     </main>
   );
 }
+//

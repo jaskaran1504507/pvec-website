@@ -19,6 +19,15 @@ h6 {
   background-position-x: 420px !important;
   background-size: 89% !important;
 }
+.banner-permotion-img {
+  background-image: url("../../public/images/bg-per.jpg");
+}
+.banner-permotion-img-1 {
+  background-image: url("../../public/images/bg-per-2.jpg");
+}
+.banner-permotion-img-2 {
+  background-image: url("../../public/images/PVEC_teatree.jpeg");
+}
 .banner-home-img-2 {
   background-image: url("../../public/images/banner1.jpg");
   /* background-position-x: inherit !important;
@@ -146,6 +155,7 @@ h1.u-title {
     background-position-y: top;
     background-position-x: 50% !important;
   }
+
   .u-section-1-1 .u-sheet-1 {
     min-height: 239px;
   }
