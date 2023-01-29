@@ -180,7 +180,7 @@ export const brandsArr = [
 
 export const banner = [
   {
-    textColor: "white",
+    textColor: "black",
     img: "banner-home-img",
     text: "Our goal is to detect eye health issues before permanent damage occurs",
   },
