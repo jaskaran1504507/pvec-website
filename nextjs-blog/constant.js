@@ -178,18 +178,20 @@ export const brandsArr = [
   { link: "PVEC_Staag.png", addr: "" },
 ];
 
-export const dummmy = [
+export const banner = [
   {
-    img: "/images/Rectangle 2.png",
-    heading: `Purchase any complete pair of glasses (frame & lenses) and get
-  your 2nd complete pair 30% off  (even sunglasses)`,
-    tageLine: ` *Some restrictions apply, see for associate for details. Glasses
-  must be purchased on the same day. Cannot be combined with any
-  other offers.`,
+    textColor: "white",
+    img: "banner-home-img",
+    text: "Our goal is to detect eye health issues before permanent damage occurs",
   },
   {
-    img: "/images/Rectangle 4-2.jpg",
-    heading: `Our tom fords are up for clearance for upto 50% off`,
-    tageLine: ` *Some restrictions apply, see for associate for details.`,
+    textColor: "white",
+    img: "banner-home-img-2",
+    text: "We offer the best suite of services and products",
+  },
+  {
+    textColor: "white",
+    img: "banner-home-img-3",
+    text: "Our goal is to detect eye health issues before permanent damage occurs",
   },
 ];

@@ -1,5 +1,6 @@
 import React from "react";
 import Banner from "../../components/Banner";
+import Button from "../../components/Button";
 
 export default function Bookings() {
   return (
@@ -16,11 +17,10 @@ export default function Bookings() {
           </p>
         }
       >
-        <a
-          href="#appointment"
-          className="text-blue-800 font-semibold rounded-full border py-3  px-8 bg-white font-semibold  u-btn u-btn-round u-button-style u-radius-50 u-btn-1"
-        >
-          BOOK My APPOINTMENT
+        <a href="#appointment">
+          <Button className="text-blue-800 bg-white">
+            BOOK MY APPOINTMENT
+          </Button>
         </a>
       </Banner>
 
@@ -37,11 +37,10 @@ export default function Bookings() {
             </p>
           }
         >
-          <a
-            href="#appointment"
-            className="text-blue-800 font-semibold rounded-full border py-3  px-8 bg-white font-semibold  u-btn u-btn-round u-button-style u-radius-50 u-btn-1"
-          >
-            BOOK My APPOINTMENT
+          <a href="#appointment">
+            <Button className="text-blue-800 bg-white">
+              BOOK MY APPOINTMENT
+            </Button>
           </a>
         </Banner>
       </div>

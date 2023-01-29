@@ -5,8 +5,6 @@ import { Carousel } from "react-responsive-carousel";
 import Banner from "../../components/Banner";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 
-import { dummmy } from "../../constant";
-
 export default function Promotions() {
   return (
     <main>
@@ -60,56 +58,6 @@ export default function Promotions() {
           </Banner>
         </div>
       </Carousel>
-      {/* <div className="grid gap-16  mt-20 grid-cols-1 md:grid-cols-1 u-clearfix u-sheet mx-auto u-valign-middle u-sheet-1">
-        {dummmy.map((n, i) => (
-          <div className="w-full grid grid-cols-2 gap-2">
-            {i % 2 === 1 && (
-              <div className="px-6 ">
-                <Image
-                  height="450px"
-                  width="500px"
-                  src={n.img}
-                  alt=""
-                  srcSet=""
-                />
-              </div>
-            )}
-
-            <div className="">
-              <h2
-                style={{
-                  textAlign: "left",
-                  // fontSize: "2.25rem",
-                  lineHeight: 1.1,
-                  marginTop: "20px",
-                  marginBottom: "20px",
-                }}
-              >
-                <span
-                  style={{ lineHeight: 2 }}
-                  className="text-blue-900 text-center md:text-left text-4xl font-semibold"
-                >
-                  {n.heading}
-                </span>
-              </h2>
-
-              <br />
-              <p className="text-blue-900">{n.tageLine}</p>
-            </div>
-            {i % 2 === 0 && (
-              <div className="px-6 ">
-                <Image
-                  src="/images/Rectangle 2.png"
-                  alt=""
-                  height="450px"
-                  width="500px"
-                  srcSet=""
-                />
-              </div>
-            )}
-          </div>
-        ))}
-      </div> */}
     </main>
   );
 }

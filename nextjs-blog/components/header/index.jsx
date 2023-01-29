@@ -82,7 +82,9 @@ export default function Header() {
                     <a
                       href="#"
                       className={`${
-                        location.pathname === nav.path && " text-black"
+                        location.pathname === nav.path
+                          ? " text-black"
+                          : "text-gray-500 hover:text-gray-900 "
                       } font-bold text-gray-500 hover:text-gray-900`}
                     >
                       {nav.name}
@@ -142,12 +144,12 @@ export default function Header() {
                       <a
                         href="#"
                         className={` ${
-                          location.pathname === nav.path && " text-black"
-                        } flex items-center rounded-md px-6 py-2 hover:bg-gray-50`}
+                          location.pathname === nav.path
+                            ? "bg-slate-100 text-black"
+                            : "text-gray-500 hover:text-gray-900  hover:bg-gray-50"
+                        } flex items-center rounded-md px-6 py-2`}
                       >
-                        <span className="font-bold text-gray-500 hover:text-gray-900">
-                          {nav.name}
-                        </span>
+                        <span className="font-bold ">{nav.name}</span>
                       </a>
                     </Link>
                   ))}
