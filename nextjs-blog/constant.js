@@ -15,7 +15,7 @@ export const cards = [
     head: "Children/Senior Eye Exams",
   },
   {
-    img: "/images/AboutUs_Unslapsh.png",
+    img: "/images/AboutUs_Unsplash.png",
     head: "Children/Senior Eye exams",
     text: (
       <div>
@@ -50,7 +50,7 @@ export const cards = [
         <p className="text-xs">
           Most of our common health benefits providers are: Blue Cross, Chamber
           of Commerce, Crown, Desjardins, Great-West life, Canada Life,
-          Industrial Alliance, Johnson Inc., Manulife financial, Maximun
+          Industrial Alliance, Johnson Inc., Manulife financial, Maximum
           Benefit/Johnson Group, Standard Life, Sun Life Financial and more.
         </p>
       </div>

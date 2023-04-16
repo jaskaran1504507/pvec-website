@@ -10,18 +10,17 @@ export default function Bookings() {
           <p className="text-black md:text-white">
             Get a full check up
             <br />
-            with one of our Optometrists; we're available evenings
+            with one of our Optometrists, we're available evenings
             <br />
             and weekends too!
           </p>
         }
       >
-        <a
-          href="#appointment"
-          className="text-blue-800 font-semibold rounded-full border py-3  px-8 bg-white font-semibold  u-btn u-btn-round u-button-style u-radius-50 u-btn-1"
-        >
-          BOOK My APPOINTMENT
-        </a>
+        {/* <a href="#appointment">
+          <Button className="text-blue-800 bg-white">
+            BOOK MY APPOINTMENT
+          </Button>
+        </a> */}
       </Banner>
 
       <div className="mt-40">
@@ -31,18 +30,17 @@ export default function Bookings() {
             <p className="text-black md:text-white">
               Get a full check up
               <br />
-              with one of our Optometrists; we're available evenings
+              with one of our Optometrists, we're available evenings
               <br />
               and weekends too!
             </p>
           }
         >
-          <a
-            href="#appointment"
-            className="text-blue-800 font-semibold rounded-full border py-3  px-8 bg-white font-semibold  u-btn u-btn-round u-button-style u-radius-50 u-btn-1"
-          >
-            BOOK My APPOINTMENT
-          </a>
+          {/* <a href="#appointment">
+            <Button className="text-blue-800 bg-white">
+              BOOK MY APPOINTMENT
+            </Button>
+          </a> */}
         </Banner>
       </div>
       <div
