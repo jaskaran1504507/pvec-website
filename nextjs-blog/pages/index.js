@@ -5,6 +5,8 @@ import ProductCatalogue from "../components/ProductCatalogue";
 import ServicesCatalogueHomePage from "../components/ServicesCatalogueHomePage";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from "react-responsive-carousel";
+import Button from "../components/Button";
+import { banner } from "../constant";
 import { banner } from "../constant";
 import ProductCatalogueHomePage from "../components/ProductCatalogueHomePage";
 import FeedbackHomePage from "../components/FeedbackHomePage";
@@ -127,8 +129,6 @@ export default function Home() {
                 textAlign: "left",
                 fontSize: "2.25rem",
                 lineHeight: 1.1,
-                // marginTop: "20px",
-                // marginBottom: "20px",
               }}
               className="text-blue-900 mt-6 font-semibold"
             >

@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/router";
 import React, { useState } from "react";
 import { navArr } from "../../constant";
 
@@ -8,6 +9,7 @@ export default function Header() {
   const handleNavClick = () => {
     setIsNavVisible((prev) => !prev);
   };
+  const location = useRouter();
   return (
     // <>
     //   <div className="relative bg-white">

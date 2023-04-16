@@ -14,13 +14,29 @@ h6 {
 
 .banner-home-img {
   background-image: url("../../public/images/home-banner-glasses.png");
-}
-.u-section-1-1 {
   background-position: 60% 50%;
-  /* max-height: 90vh; */
   height: 85vh;
   background-position-x: 420px !important;
   background-size: 89% !important;
+}
+.banner-permotion-img {
+  background-image: url("../../public/images/bg-per.jpg");
+}
+.banner-permotion-img-1 {
+  background-image: url("../../public/images/bg-per-2.jpg");
+}
+.banner-permotion-img-2 {
+  background-image: url("../../public/images/PVEC_teatree.jpeg");
+}
+.banner-home-img-2 {
+  background-image: url("../../public/images/banner1.jpg");
+  /* background-position-x: inherit !important;
+  background-size: 120% !important; */
+}
+.banner-home-img-3 {
+  background-image: url("../../public/images/banner3.jpg");
+}
+.u-section-1-1 {
 }
 
 .banner-bookings-img {
@@ -40,6 +56,12 @@ h6 {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.banner-contact-img-1 {
+  background-image: url("../../public//images/glassesimage.jpg");
+  background-position-x: inherit !important;
+  background-size: 120% !important;
 }
 .u-carousel-item {
   position: relative;
@@ -133,8 +155,14 @@ h1.u-title {
     background-position-y: top;
     background-position-x: 50% !important;
   }
+
   .u-section-1-1 .u-sheet-1 {
     min-height: 239px;
+  }
+  .banner-bookings-img,
+  .banner-bookings-img-1 {
+    background-position-y: center;
+    background-size: 672px !important;
   }
 }
 
@@ -162,4 +190,10 @@ h1.u-title {
   .u-sheet {
     max-width: 340px;
   }
+}
+.banner-contact-img {
+  background-image: url("../../public//images/glassesbanner.jpg");
+  background-position-x: inherit !important;
+  background-size: 120% !important;
+  background-position-y: center;
 }

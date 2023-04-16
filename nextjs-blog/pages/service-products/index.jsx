@@ -1,34 +1,25 @@
 import Image from "next/image";
-import React from "react";
-import { cards } from "../../constant";
+import React, { useState } from "react";
+import { cards, productCatalogue, brandsArr } from "../../constant";
+
+const imgArr = [
+  "/images/PVEC_idrop.jpeg",
+  "/images/PVEC_omega3.jpeg",
+  // "/images/PVEC_teatree.jpeg",
+  // "/images/PVEC_eyemask.jpeg",
+  // "/images/PVEC_lidlash.jpeg",
+];
+const imgArr1 = [
+  // "/images/PVEC_idrop.jpeg",
+  // "/images/PVEC_omega3.jpeg",
+  // "/images/PVEC_teatree.jpeg",
+  "/images/PVEC_eyemask.jpeg",
+  "/images/PVEC_lidlash.jpeg",
+];
 
 export default function ServiceProducts() {
-  const imgArr = [
-    "/images/PVEC_idrop.jpeg",
-    "/images/PVEC_omega3.jpeg",
-    "/images/PVEC_teatree.jpeg",
-    "/images/PVEC_eyemask.jpeg",
-    "/images/PVEC_lidlash.jpeg",
-  ];
-  const brandsArr = [
-    "PVEC_EmporioArmani.jpeg",
-    "PVEC_FYSH.jpeg",
-    "PVEC_Gucci.png",
-    "PVEC_Guess.jpeg",
-    "PVEC_HugoBoss.png",
-    "PVEC_KateSpade.png",
-    "PVEC_KliikDenmark.jpeg",
-    "PVEC_LaFont.png",
-    "PVEC_MarcJacobs.jpeg",
-    "PVEC_MichaelKors.jpeg",
-    "PVEC_Moleskine.png",
-    "PVEC_Oakley.png",
-    "PVEC_RayBan.png",
-    "PVEC_Staag.png",
-    "PVEC_Superflex.jpeg",
-    "PVEC_TF.png",
-    "test.js",
-  ];
+  const [seeMore, setSeeMore] = useState({});
+
   return (
     <main>
       <div className="grid gap-16  mt-20 grid-cols-1 md:grid-cols-2 u-clearfix u-sheet mx-auto u-valign-middle u-sheet-1">
@@ -52,8 +43,8 @@ export default function ServiceProducts() {
           <div>
             {" "}
             <p>
-              We have been helping people with quality care with a from our team
-              of expert eye doctors in downtown Vancouver since 2005
+              We have been helping people with quality care from our team of
+              expert eye doctors in downtown Vancouver since 2005
             </p>
             <br />
             <p>
@@ -133,14 +124,14 @@ export default function ServiceProducts() {
           </div>
         </div>{" "}
       </div>
-      <div className="grid gap-8 mt-20 grid-cols-1 md:grid-cols-3 u-clearfix u-sheet mx-auto u-valign-middle u-sheet-1">
+      <div className="grid  gap-6 mt-20 grid-cols-1 md:grid-cols-3 u-clearfix u-sheet mx-auto u-valign-middle u-sheet-1">
         {cards.map(({ img, text, head }) => (
-          <div key={img} className="shadow-lg rounded-lg">
+          <div key={img} className="p-2 shadow-lg ">
             <div>
               <Image
                 // layout="fill"
                 // objectFit="cover"
-                className="rounded-none"
+                className="rounded-lg"
                 src={img}
                 alt=""
                 srcSet=""
@@ -151,42 +142,80 @@ export default function ServiceProducts() {
             <h1 className="text-blue-900 my-3 text-center font-semibold">
               {head}
             </h1>
-            <div className="px-4 pb-2">{text}</div>
+            <div className="px-6 py-4 ">
+              {seeMore[img] || text.slice(0, 250)}
+              {text.length > 250 && (
+                <span
+                  onClick={() => {
+                    setSeeMore((prev) => ({
+                      ...prev,
+                      [img]: prev[img] ? "" : text,
+                    }));
+                  }}
+                  className=" pl-2 text-blue-900 hover:underline cursor-pointer"
+                >
+                  see {seeMore[img] ? "less" : "more"}...
+                </span>
+              )}
+            </div>
           </div>
         ))}
       </div>
       <div className="mt-12 u-clearfix u-sheet mx-auto u-valign-middle u-sheet-1">
-        <div className="flex md:flex-row flex-col">
-          <div className="md:w-1/2 text-blue-900 font-semibold mb-6">
-            {" "}
-            <div>
-              <h2
-                style={{
-                  textAlign: "left",
-                  fontWeight: 400,
-                  fontSize: "2.25rem",
-                  lineHeight: 1.1,
-                  marginTop: "20px",
-                  marginBottom: "20px",
-                }}
-              >
-                <span
-                  style={{ lineHeight: 2 }}
-                  className="text-blue-900 font-semibold"
-                >
-                  Product Catalogue
-                </span>
-              </h2>
-            </div>
-            <p className="mb-6">
-              We have a range of eye care products for regular or specific eye
-              care necessities.{" "}
-            </p>
-            <p>To know more about contact lenses, call us at 604-XXX-XXXX</p>
-          </div>
-          <div className="md:w-1/2 grid gap-6 grid-cols-2">
-            {imgArr.map((img) => (
-              <Image key={img} src={img} height="250px" width="300px" />
+        <div className="">
+          <h2
+            style={{
+              textAlign: "left",
+              fontWeight: 400,
+              fontSize: "2.25rem",
+              lineHeight: 1.1,
+              marginTop: "20px",
+              marginBottom: "20px",
+            }}
+          >
+            <span
+              style={{ lineHeight: 2 }}
+              className="text-blue-900 font-semibold"
+            >
+              Product Catalogue
+            </span>
+          </h2>
+
+          <div className=" grid grid-cols-1 md:grid-cols-3 gap-5 mb-6">
+            {productCatalogue.map(({ img, text, head }) => (
+              <div key={img} className="p-2 shadow-lg ">
+                <div>
+                  <Image
+                    // layout="fill"
+                    // objectFit="cover"
+                    className="rounded-lg"
+                    src={img}
+                    alt=""
+                    srcSet=""
+                    height="250px"
+                    width="355px"
+                  />
+                </div>
+                <h1 className="text-blue-900 my-3 text-center font-semibold">
+                  {head}
+                </h1>
+                <div className="px-6 py-4 ">
+                  {seeMore[img] || text.slice(0, 250)}
+                  {text.length > 250 && (
+                    <span
+                      onClick={() => {
+                        setSeeMore((prev) => ({
+                          ...prev,
+                          [img]: prev[img] ? "" : text,
+                        }));
+                      }}
+                      className=" pl-2 text-blue-900 hover:underline cursor-pointer"
+                    >
+                      see {seeMore[img] ? "less" : "more"}...
+                    </span>
+                  )}
+                </div>
+              </div>
             ))}
           </div>
         </div>
@@ -211,15 +240,16 @@ export default function ServiceProducts() {
         </h2>
       </div>
       <div className="u-clearfix u-sheet mx-auto u-valign-middle u-sheet-1">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-1">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-2 md:gap-5">
           {brandsArr.map((brand) => (
-            <div key={brand}>
-              <Image
-                src={"/images/brands/" + brand}
-                //   layout="fill"
-                height="150px"
-                width="150x"
-              />
+            <div key={brand.link}>
+              {/* <Link href={brandsLinkArr[index++]} legacyBehavior passHref> */}
+              <a target="_blank" href={brand.addr} rel="noopener noreferrer">
+                <div style={{ height: "200px", position: "relative" }}>
+                  <Image src={"/images/brands/" + brand.link} layout="fill" />
+                </div>
+                {/* </Link> */}
+              </a>
             </div>
           ))}
         </div>
