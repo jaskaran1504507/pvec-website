@@ -7,60 +7,61 @@ import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a lo
 
 export default function Promotions() {
   return (
-    <main>
-      <Carousel autoPlay swipeable infiniteLoop>
-        <div className="pb-2 md:py-0">
-          <Banner
-            banner="banner-permotion-img"
-            textColor="black"
-            text="40% off sale now on! Grab a bargain before it's gone."
-          >
-            <Link href="/bookings#appointment">
-              {/* <a
-                href="#"
-                className="bg-blue-400 rounded-full border py-3  px-8 text-white font-semibold  u-btn u-btn-round u-button-style u-radius-50 u-btn-1"
-              >
-                SHOP NOW
-              </a> */}
-               SHOP NOW
-            </Link>
-          </Banner>
-        </div>
-        <div className="pb-2 md:py-0">
-          <Banner
-            banner="banner-permotion-img-1"
-            text="Get 40% off on all contact lens! Limited time offer. Order now!"
-            textColor="black"
-          >
-            <Link href="/bookings#appointment">
-              {/* <a
-                href="#"
-                className="bg-blue-400 rounded-full border py-3  px-8 text-white font-semibold  u-btn u-btn-round u-button-style u-radius-50 u-btn-1"
-              >
-                SHOP NOW
-              </a> */}
-              SHOP NOW
-            </Link>
-          </Banner>
-        </div>
-        <div className="pb-2 md:py-0">
-          <Banner
-            banner="banner-permotion-img-2"
-            text="Save big on Eye drops! 40% off sale ends soon!"
-            textColor="white"
-          >
-            <Link href="/bookings#appointment">
-              {/* <a
-                href="#"
-                className="bg-blue-400 rounded-full border py-3  px-8 text-white font-semibold  u-btn u-btn-round u-button-style u-radius-50 u-btn-1"
-              >
-                SHOP NOW
-              </a> */}
-              SHOP NOW
-            </Link>
-          </Banner>
-        </div>
-      </Carousel>
-    </main>
+   
+    // <section className="about-area pt-70">
+    //   <div className="container">
+    //     <div className="row">
+    //       <div className="col-lg-6">
+    //         <div
+    //           className="about-content mt-50 wow fadeInLeftBig"
+    //           data-wow-duration="1s"
+    //           data-wow-delay="0.5s"
+    //         >
+    //           <div className="section-title">
+    //             <h3 className="title">Eye Drops</h3>
+                
+    //           </div>
+    //         </div>
+    //         {/* <!-- about content --> */}
+    //       </div>
+    //       <div className="col-lg-6">
+    //         <div
+    //           className="about-image text-center mt-50 wow fadeInRightBig"
+    //           data-wow-duration="1s"
+    //           data-wow-delay="0.5s"
+    //         >
+    //           <img
+    //             src="images/eyedrops.jpg"
+    //             alt="about"
+    //             style={{ maxHeight: "80%", maxWidth: "80%" }}
+    //           />
+    //         </div>
+    //         {/* <!-- about image --> */}
+    //       </div>
+    //     </div>
+    //     {/* <!-- row --> */}
+    //   </div>
+    //   {/* <!-- container --> */}
+    //   <div className="about-shape-1">
+    //     <img src="assets/images/about-shape-1.svg" alt="shape" />
+    //   </div>
+    // </section>
+
+    <>
+    <div className="flex align-items-center justify-content-between mt-20 mx-10">
+ 
+    <div
+              className="about-content mt-50 wow fadeInLeftBig"
+              data-wow-duration="1s"
+              data-wow-delay="0.5s"
+            >
+              <div className="section-title-promotions">
+                <h3 className="title-promotions">Ahh, ha! We don't have any active promotions yet, please check back in sometime </h3>
+                
+              </div>
+            </div>
+  <img src="images/no-promotions-2.jpg" alt="Snow" style={{width:'70%', maxHeight:'540px'}}/>
+</div>
+</>
   );
 }

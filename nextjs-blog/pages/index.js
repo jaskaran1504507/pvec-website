@@ -7,7 +7,6 @@ import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a lo
 import { Carousel } from "react-responsive-carousel";
 import Button from "../components/Button";
 import { banner } from "../constant";
-import { banner } from "../constant";
 import ProductCatalogueHomePage from "../components/ProductCatalogueHomePage";
 import FeedbackHomePage from "../components/FeedbackHomePage";
 import { Helmet } from "react-helmet";

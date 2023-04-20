@@ -16,202 +16,202 @@ export default function FeedbackHomePage() {
     <>
    {/* <!--====== TESTIMONIAL PART START ======--> */}
    
-<section id="testimonial" class="testimonial-area pt-120">
-  <div class="container">
-    <div class="row justify-content-center">
-      <div class="col-lg-5">
-        <div class="section-title text-center pb-10">
-          <div class="line m-auto"></div>
-          <h3 class="title">Users sharing<span> their experience</span></h3>
+<section id="testimonial" className="testimonial-area pt-120">
+  <div className="container">
+    <div className="row justify-content-center">
+      <div className="col-lg-5">
+        <div className="section-title text-center pb-10">
+          <div className="line m-auto"></div>
+          <h3 className="title">Users sharing<span> their experience</span></h3>
         </div>
         {/* <!-- section title --> */}
       </div>
     </div>
     {/* <!-- row --> */}
     <div
-      class="row testimonial-active wow fadeInUpBig"
+      className="row testimonial-active wow fadeInUpBig"
       data-wow-duration="1s"
       data-wow-delay="0.8s"
     >
-      <div class="col-lg-4">
-        <div class="single-testimonial">
+      <div className="col-lg-4">
+        <div className="single-testimonial">
           <div
-            class="testimonial-review d-flex align-items-center justify-content-between"
+            className="testimonial-review d-flex align-items-center justify-content-between"
           >
-            <div class="quota">
-              <i class="lni-quotation"></i>
+            <div className="quota">
+              <i className="lni-quotation"></i>
             </div>
-            <div class="star">
+            <div className="star">
               <ul>
-                <li><i class="lni-star-filled"></i></li>
-                <li><i class="lni-star-filled"></i></li>
-                <li><i class="lni-star-filled"></i></li>
-                <li><i class="lni-star-filled"></i></li>
-                <li><i class="lni-star-filled"></i></li>
+                <li><i className="lni-star-filled"></i></li>
+                <li><i className="lni-star-filled"></i></li>
+                <li><i className="lni-star-filled"></i></li>
+                <li><i className="lni-star-filled"></i></li>
+                <li><i className="lni-star-filled"></i></li>
               </ul>
             </div>
           </div>
-          <div class="testimonial-text">
-            <p class="text">
+          <div className="testimonial-text">
+            <p className="text">
               Lorem ipsum dolor sit amet,consetetur sadipscing elitr,
               seddiam nonu eirmod tempor invidunt labore.Lorem ipsum dolor
               sit amet,consetetur sadipscing elitr, seddiam nonu.
             </p>
           </div>
-          <div class="testimonial-author d-flex align-items-center">
-            <div class="author-image">
+          <div className="testimonial-author d-flex align-items-center">
+            <div className="author-image">
               <img
-                class="shape"
+                className="shape"
                 src="assets/images/textimonial-shape.svg"
                 alt="shape"
               />
               <img
-                class="author"
+                className="author"
                 src="assets/images/author-1.png"
                 alt="author"
               />
             </div>
-            <div class="author-content media-body">
-              <h6 class="holder-name">Jenny Deo</h6>
-              <p class="text">CEO, SpaceX</p>
+            <div className="author-content media-body">
+              <h6 className="holder-name">Jenny Deo</h6>
+              <p className="text">CEO, SpaceX</p>
             </div>
           </div>
         </div>
         {/* <!-- single testimonial --> */}
       </div>
-      <div class="col-lg-4">
-        <div class="single-testimonial">
+      <div className="col-lg-4">
+        <div className="single-testimonial">
           <div
-            class="testimonial-review d-flex align-items-center justify-content-between"
+            className="testimonial-review d-flex align-items-center justify-content-between"
           >
-            <div class="quota">
-              <i class="lni-quotation"></i>
+            <div className="quota">
+              <i className="lni-quotation"></i>
             </div>
-            <div class="star">
+            <div className="star">
               <ul>
-                <li><i class="lni-star-filled"></i></li>
-                <li><i class="lni-star-filled"></i></li>
-                <li><i class="lni-star-filled"></i></li>
-                <li><i class="lni-star-filled"></i></li>
-                <li><i class="lni-star-filled"></i></li>
+                <li><i className="lni-star-filled"></i></li>
+                <li><i className="lni-star-filled"></i></li>
+                <li><i className="lni-star-filled"></i></li>
+                <li><i className="lni-star-filled"></i></li>
+                <li><i className="lni-star-filled"></i></li>
               </ul>
             </div>
           </div>
-          <div class="testimonial-text">
-            <p class="text">
+          <div className="testimonial-text">
+            <p className="text">
               Lorem ipsum dolor sit amet,consetetur sadipscing elitr,
               seddiam nonu eirmod tempor invidunt labore.Lorem ipsum dolor
               sit amet,consetetur sadipscing elitr, seddiam nonu.
             </p>
           </div>
-          <div class="testimonial-author d-flex align-items-center">
-            <div class="author-image">
+          <div className="testimonial-author d-flex align-items-center">
+            <div className="author-image">
               <img
-                class="shape"
+                className="shape"
                 src="assets/images/textimonial-shape.svg"
                 alt="shape"
               />
               <img
-                class="author"
+                className="author"
                 src="assets/images/author-2.png"
                 alt="author"
               />
             </div>
-            <div class="author-content media-body">
-              <h6 class="holder-name">Marjin Otte</h6>
-              <p class="text">UX Specialist, Yoast</p>
+            <div className="author-content media-body">
+              <h6 className="holder-name">Marjin Otte</h6>
+              <p className="text">UX Specialist, Yoast</p>
             </div>
           </div>
         </div>
         {/* <!-- single testimonial --> */}
       </div>
-      <div class="col-lg-4">
-        <div class="single-testimonial">
+      <div className="col-lg-4">
+        <div className="single-testimonial">
           <div
-            class="testimonial-review d-flex align-items-center justify-content-between"
+            className="testimonial-review d-flex align-items-center justify-content-between"
           >
-            <div class="quota">
-              <i class="lni-quotation"></i>
+            <div className="quota">
+              <i className="lni-quotation"></i>
             </div>
-            <div class="star">
+            <div className="star">
               <ul>
-                <li><i class="lni-star-filled"></i></li>
-                <li><i class="lni-star-filled"></i></li>
-                <li><i class="lni-star-filled"></i></li>
-                <li><i class="lni-star-filled"></i></li>
-                <li><i class="lni-star-filled"></i></li>
+                <li><i className="lni-star-filled"></i></li>
+                <li><i className="lni-star-filled"></i></li>
+                <li><i className="lni-star-filled"></i></li>
+                <li><i className="lni-star-filled"></i></li>
+                <li><i className="lni-star-filled"></i></li>
               </ul>
             </div>
           </div>
-          <div class="testimonial-text">
-            <p class="text">
+          <div className="testimonial-text">
+            <p className="text">
               Lorem ipsum dolor sit amet,consetetur sadipscing elitr,
               seddiam nonu eirmod tempor invidunt labore.Lorem ipsum dolor
               sit amet,consetetur sadipscing elitr, seddiam nonu.
             </p>
           </div>
-          <div class="testimonial-author d-flex align-items-center">
-            <div class="author-image">
+          <div className="testimonial-author d-flex align-items-center">
+            <div className="author-image">
               <img
-                class="shape"
+                className="shape"
                 src="assets/images/textimonial-shape.svg"
                 alt="shape"
               />
               <img
-                class="author"
+                className="author"
                 src="assets/images/author-3.png"
                 alt="author"
               />
             </div>
-            <div class="author-content media-body">
-              <h6 class="holder-name">David Smith</h6>
-              <p class="text">CTO, Alphabet</p>
+            <div className="author-content media-body">
+              <h6 className="holder-name">David Smith</h6>
+              <p className="text">CTO, Alphabet</p>
             </div>
           </div>
         </div>
         {/* <!-- single testimonial --> */}
       </div>
-      <div class="col-lg-4">
-        <div class="single-testimonial">
+      <div className="col-lg-4">
+        <div className="single-testimonial">
           <div
-            class="testimonial-review d-flex align-items-center justify-content-between"
+            className="testimonial-review d-flex align-items-center justify-content-between"
           >
-            <div class="quota">
-              <i class="lni-quotation"></i>
+            <div className="quota">
+              <i className="lni-quotation"></i>
             </div>
-            <div class="star">
+            <div className="star">
               <ul>
-                <li><i class="lni-star-filled"></i></li>
-                <li><i class="lni-star-filled"></i></li>
-                <li><i class="lni-star-filled"></i></li>
-                <li><i class="lni-star-filled"></i></li>
-                <li><i class="lni-star-filled"></i></li>
+                <li><i className="lni-star-filled"></i></li>
+                <li><i className="lni-star-filled"></i></li>
+                <li><i className="lni-star-filled"></i></li>
+                <li><i className="lni-star-filled"></i></li>
+                <li><i className="lni-star-filled"></i></li>
               </ul>
             </div>
           </div>
-          <div class="testimonial-text">
-            <p class="text">
+          <div className="testimonial-text">
+            <p className="text">
               Lorem ipsum dolor sit amet,consetetur sadipscing elitr,
               seddiam nonu eirmod tempor invidunt labore.Lorem ipsum dolor
               sit amet,consetetur sadipscing elitr, seddiam nonu.
             </p>
           </div>
-          <div class="testimonial-author d-flex align-items-center">
-            <div class="author-image">
+          <div className="testimonial-author d-flex align-items-center">
+            <div className="author-image">
               <img
-                class="shape"
+                className="shape"
                 src="assets/images/textimonial-shape.svg"
                 alt="shape"
               />
               <img
-                class="author"
+                className="author"
                 src="assets/images/author-2.png"
                 alt="author"
               />
             </div>
-            <div class="author-content media-body">
-              <h6 class="holder-name">Fajar Siddiq</h6>
-              <p class="text">COO, MakerFlix</p>
+            <div className="author-content media-body">
+              <h6 className="holder-name">Fajar Siddiq</h6>
+              <p className="text">COO, MakerFlix</p>
             </div>
           </div>
         </div>

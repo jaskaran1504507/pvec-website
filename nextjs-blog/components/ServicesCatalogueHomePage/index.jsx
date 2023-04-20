@@ -7,10 +7,7 @@ export default function ServicesCatalogueHomePage() {
     "images/Rectangle 4-2.jpg",
     "images/prod_cat_2.png",
     "images/Rectangle 6-4.jpg",
-    "images/prod_cat_1.png",
-    
-    // "images/Rectangle 1-4.jpg",
-    // "images/PVEC_ContactLenses.jpeg",
+    "images/prod_cat_1.png"
   ];
   return (
     
@@ -34,7 +31,7 @@ export default function ServicesCatalogueHomePage() {
         </div>
         {/* <!-- row --> */}
         <div className="row justify-content-center">
-        {/* <div class="flex items-stretch -mx-4"> */}
+        {/* <div className="flex items-stretch -mx-4"> */}
         <div className="col-lg-1.5 col-md-0 col-sm-0"></div>
           <div className="col-lg-3 col-md-7 col-sm-8 h-full">
             <div
@@ -149,44 +146,44 @@ export default function ServicesCatalogueHomePage() {
   );
 }
 
-{/* <div class="container mx-auto p-6">
-  <div class="flex items-stretch -mx-4">
-    <div class="flex-1 p-4">
-      <div class="block bg-white overflow-hidden border-2 h-full">
-        <div class="p-4">
-          <h2 class="mt-2 mb-2 font-bold text-2xl font-Headingg">
+{/* <div className="container mx-auto p-6">
+  <div className="flex items-stretch -mx-4">
+    <div className="flex-1 p-4">
+      <div className="block bg-white overflow-hidden border-2 h-full">
+        <div className="p-4">
+          <h2 className="mt-2 mb-2 font-bold text-2xl font-Headingg">
             Card Name
           </h2>
-          <div class="mb-4 flex flex-wrap">
-            <span class="mr-2">Link 1</span>
+          <div className="mb-4 flex flex-wrap">
+            <span className="mr-2">Link 1</span>
             <span>Link 2</span>
           </div>
 
-          <p class="text-md text-justify">Some Description</p>
+          <p className="text-md text-justify">Some Description</p>
         </div>
-        <div class="p-4 flex flex-wrap items-center">
-          <p class="px-1 py-2 tracking-wide text-xs mr-2 mb-2">Tag #1</p>
-          <p class="px-1 py-2 tracking-wide text-xs mr-2 mb-2">Tag #2</p>
+        <div className="p-4 flex flex-wrap items-center">
+          <p className="px-1 py-2 tracking-wide text-xs mr-2 mb-2">Tag #1</p>
+          <p className="px-1 py-2 tracking-wide text-xs mr-2 mb-2">Tag #2</p>
         </div>
       </div>
     </div>
     
-    <div class="flex-1 p-4">
-      <div class="block bg-white overflow-hidden border-2 h-full">
-        <div class="p-4">
-          <h2 class="mt-2 mb-2 font-bold text-2xl font-Headingg">
+    <div className="flex-1 p-4">
+      <div className="block bg-white overflow-hidden border-2 h-full">
+        <div className="p-4">
+          <h2 className="mt-2 mb-2 font-bold text-2xl font-Headingg">
             Card Name
           </h2>
-          <div class="mb-4 flex flex-wrap">
-            <span class="mr-2">Link 1</span>
+          <div className="mb-4 flex flex-wrap">
+            <span className="mr-2">Link 1</span>
             <span>Link 2</span>
           </div>
 
-          <p class="text-md text-justify">Some Description Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas vel enim lectus.</p>
+          <p className="text-md text-justify">Some Description Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas vel enim lectus.</p>
         </div>
-        <div class="p-4 flex flex-wrap items-center">
-          <p class="px-1 py-2 tracking-wide text-xs mr-2 mb-2">Tag #1</p>
-          <p class="px-1 py-2 tracking-wide text-xs mr-2 mb-2">Tag #2</p>
+        <div className="p-4 flex flex-wrap items-center">
+          <p className="px-1 py-2 tracking-wide text-xs mr-2 mb-2">Tag #1</p>
+          <p className="px-1 py-2 tracking-wide text-xs mr-2 mb-2">Tag #2</p>
         </div>
       </div>
     </div>

@@ -30,7 +30,7 @@ export default function AboutUs() {
                 >
                   Great eye health begins with a preventive eye exam!
                   <br />
-                  New patient are welcome at our <u>Vancouver </u>location
+                  New patient are welcome at our <u>Vancouver</u> location
                 </h1>
               </div>
             </div>
@@ -62,8 +62,8 @@ export default function AboutUs() {
         <div className="my-20 grid grid-cols-1 md:grid-cols-2 gap-8">
           <Image
             src="/images/AboutUs_Unslapsh.png"
-            height="450px"
-            width="400px"
+            height="450"
+            width="400"
           />
           <div className="h-full flex items-center">
             <div>
@@ -82,14 +82,13 @@ export default function AboutUs() {
             </div>
           </div>
         </div>
-        <div className="grid gird-cols-1 gap-10 md:grid-cols-3">
+        <div className="grid gird-cols-1 gap-10 md:grid-cols-2">
           <div>
-            "
             <i className="text-blue-900">
-              Did you know the eye is the only organ we can see blood vessels
-              and other structure linked to the general body health ?
+              "Did you know the eye is the only organ we can see blood vessels
+              and other structure linked to the general body health ?"
             </i>
-            "
+            <br />
             <br />
             <br />
             <p>
@@ -99,15 +98,15 @@ export default function AboutUs() {
               is really a window into your overall health and well-being. "
             </p>
           </div>
-          <div className="flex justify-end">
+          {/* <div className="flex justify-end">
             {" "}
-            <Image src="/images/LM.jpeg" height="300px" width="250px" />
+            <Image src="/images/LM.jpeg" height="300" width="250" />
           </div>
           <div className="flex justify-start">
-            <Image src="/images/WY.jpeg" height="300px" width="250px" />
-          </div>
+            <Image src="/images/WY.jpeg" height="300" width="250" />
+          </div> */}
         </div>
-        <div className="mt-20">
+        {/* <div className="mt-20">
           <div className="font-semibold text-blue-900">
             "Performance Vision Optometry saved my right eye from being further
             damaged. I truly value the professional support from their doctors
@@ -115,7 +114,7 @@ export default function AboutUs() {
             Fortunately, my eye has now completely heated. Thank you so much!"
             <br /> <br />- Janice, Vancouver
           </div>
-        </div>
+        </div> */}
       </div>
     </main>
   );

@@ -172,9 +172,7 @@ export default function Header() {
                             <a className="navbar-brand" href="#">
                                 <img src="images/eyecare-logo.png" alt="Logo"/>
                             </a>
-                            <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" onClick={
-                              (e)=>console.log("Button clicked", e)
-                            }>
+                            <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                                 <span className="toggler-icon"></span>
                                 <span className="toggler-icon"></span>
                                 <span className="toggler-icon"></span>

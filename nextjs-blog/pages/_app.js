@@ -1,6 +1,7 @@
 // import "./css/global.css";
 import Head from "next/head";
 import Footer from "../components/Footer";
+import Footer2 from "../components/Footer2";
 import Header from "../components/header";
 import "./css/home.css";
 import "./../pages/dummy/assets/css/animate.css";
@@ -11,8 +12,13 @@ import "./../pages/dummy/assets/css/font-awesome.min.css";
 import "./../pages/dummy/assets/css/bootstrap.min.css";
 import "./../pages/dummy/assets/css/default.css";
 import "./../pages/dummy/assets/css/style.css";
+import { useRouter } from "next/router";
+
 // This default export is required in a new `pages/_app.js` file.
 export default function MyApp({ Component, pageProps }) {
+  const router = useRouter();
+  console.log("searchParams", router.pathname);
+
   return (
     <>
       <link
@@ -27,7 +33,7 @@ export default function MyApp({ Component, pageProps }) {
       </Head>
       <Header />
       <Component {...pageProps} />
-      <Footer />
+      {router.pathname == "/about-us" ? <Footer2 /> : <Footer />}
     </>
   );
 }
