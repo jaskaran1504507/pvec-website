@@ -206,7 +206,7 @@ export default function Header() {
                             </div>  
                             {/* #1D3D74 #3598CF */}
                             <div className="navbar-btn d-none d-sm-inline-block">
-                                <a className="main-btn" data-scroll-nav="0" href="#pricing">Book Appointment</a>
+                                <a className="main-btn" data-scroll-nav="0" href="/bookings#appointment">Book Appointment</a>
                             </div>
                         </nav> 
                     </div>

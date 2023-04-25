@@ -155,7 +155,7 @@ export default function ServiceProducts() {
             {/* <div className="flex justify-center">
             <div className="flex-end justify-center navbar-btn d-none d-sm-inline-block"> */}
               <div>
-                <a className="link" data-scroll-nav="0" href="#pricing">Book your checkup appointment </a>
+                <a className="link" data-scroll-nav="0" href="bookings#appointment">Book your checkup appointment </a>
                 {/* <div className="long-arrow-right"></div> */}
               </div>
               {/* </div>

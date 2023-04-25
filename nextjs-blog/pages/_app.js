@@ -12,6 +12,7 @@ import "./../pages/dummy/assets/css/font-awesome.min.css";
 import "./../pages/dummy/assets/css/bootstrap.min.css";
 import "./../pages/dummy/assets/css/default.css";
 import "./../pages/dummy/assets/css/style.css";
+import "./../components/FloatInput/index.css";
 import { useRouter } from "next/router";
 
 // This default export is required in a new `pages/_app.js` file.
