@@ -475,7 +475,7 @@ const Bookings = () => {
         </div>
       </div> */}
 
-<button type="button" className="btn btn-info btn-lg" data-toggle="modal" data-target="#success_tic">Open Modal</button>
+{/* <button type="button" className="btn btn-info btn-lg" data-toggle="modal" data-target="#success_tic">Open Modal</button> */}
       {showAppointmentSuccess && (
         <div id="success_tic" class="modal fade" role="dialog">
           <div className="modal-dialog">
