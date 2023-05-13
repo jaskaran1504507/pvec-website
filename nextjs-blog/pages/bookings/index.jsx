@@ -15,6 +15,7 @@ const Bookings = () => {
   //   labelCol: { span: 8 },
   //   wrapperCol: { span: 24 },
   // };
+  const [disableDate, setDisableDate] = useState({});
 
   useEffect(() => {
     let defaultDate = getDefaultDate(true);
@@ -24,6 +25,11 @@ const Bookings = () => {
       query: { date: defaultDate + "" },
       pathParams: { day: defaultDate.getDay() },
     });
+    callApi({ uriEndPoint: { uri: "/getBooking", method: "GET", version: "" } })
+      .then((res) => {
+        setDisableDate({ [new Date().toDateString()]: true });
+      })
+      .catch((err) => console.log("err", err));
   }, []);
 
   const layout = {
@@ -307,11 +313,11 @@ const Bookings = () => {
             <DatePicker
               defaultValue={getDefaultDate()}
               disabledDate={(current) => {
-                //   // Can not select days after today and before start Date
-                //   const start = moment("2020-01-01", "YYYY-MM-DD");
-                //   // return  current< start || current<moment();
-                //   console.log(moment(current).day(), "select");
-                return current < moment() || current.day() === 0;
+                return (
+                  current.startOf("hour", 0) <= moment().startOf("hour", 0) ||
+                  current.day() === 0 ||
+                  disableDate[current.toDate().toDateString()]
+                );
               }}
               format={"DD/MM/YYYY"}
               onChange={onChangeDate}
