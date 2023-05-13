@@ -4,18 +4,18 @@
  * Utility methods to be used for invoking API methods
  */
 
-import Axios, { AxiosRequestHeaders } from 'axios';
-import ct from 'countries-and-timezones';
-import moment from 'moment-timezone';
-import queryString from 'querystring';
-import { Cookies } from 'react-cookie';
+import Axios, { AxiosRequestHeaders } from "axios";
+import ct from "countries-and-timezones";
+import moment from "moment-timezone";
+import queryString from "querystring";
+import { Cookies } from "react-cookie";
 
-import { UriEndPoint } from '../Interface/index';
+import { UriEndPoint } from "../Interface/index";
 
 // Interfaces
 
 // export const hostname = () => 'https://test-cms-site-api.sol-m.com';
-export const hostname = () => 'http://localhost:5001/api';
+export const hostname = () => "https://api.performancevisioneyecare.ca/api";
 
 export const cookies = new Cookies();
 
@@ -51,13 +51,14 @@ export const makeUrl = (
   },
   host: string | undefined
 ): string => {
-  const url = `${host || hostUrl}${version}${uri?.split('/')
-      .map((param: string) =>
-        param.charAt(0) === ':'
-          ? encodeURI(pathParams?.[param.slice(1)] || '')
-          : param
-      )
-      .join('/')}${query ? `?${queryString.stringify(query)}` : ''}`;
+  const url = `${host || hostUrl}${version}${uri
+    ?.split("/")
+    .map((param: string) =>
+      param.charAt(0) === ":"
+        ? encodeURI(pathParams?.[param.slice(1)] || "")
+        : param
+    )
+    .join("/")}${query ? `?${queryString.stringify(query)}` : ""}`;
 
   return url;
 };
@@ -67,13 +68,13 @@ const timezone = moment.tz.guess();
 // eslint-disable-next-line prefer-const
 userCountry = ct.getCountriesForTimezone(timezone);
 export const getDefaultHeaders = () => ({
-  Location: 'IN' || null,
-  'Content-Type': 'application/json',
+  Location: "IN" || null,
+  "Content-Type": "application/json",
 });
 
-export const currencyFormatter = new Intl.NumberFormat('en-US', {
-  style: 'currency',
-  currency: 'USD',
+export const currencyFormatter = new Intl.NumberFormat("en-US", {
+  style: "currency",
+  currency: "USD",
   minimumFractionDigits: 2,
 });
 

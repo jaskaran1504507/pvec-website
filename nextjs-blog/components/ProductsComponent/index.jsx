@@ -1,17 +1,22 @@
 import React, { useEffect, useState } from "react";
 import { useRouter } from "next/router";
-import SearchBar from "../SearchBar";
-import Icon, { ShoppingCartOutlined } from "@ant-design/icons";
-import { Avatar, Badge, Input, Modal, Space } from "antd";
+import { ShoppingCartOutlined } from "@ant-design/icons";
+import { Badge, Input, Modal, Pagination } from "antd";
 import Order from "../Order";
 import Products from "../../utils/endpoints/Products";
 import { callApi } from "../../utils/apiUtils";
 
 const { Search } = Input;
+const queryObj = {
+  "eye-medic": "MEDICARE",
+  contacts: "CONTACTS",
+  glasses: "GLASSES",
+};
 
 const onSearch = () => console.log(value);
 
 export default function ProductsComponent() {
+  const [cartProducts, setCartProducts] = useState([]);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [products, setProducts] = useState([]);
   const showModal = () => {
@@ -26,40 +31,44 @@ export default function ProductsComponent() {
     setIsModalOpen(false);
   };
   const router = useRouter();
-
-
   useEffect(() => {
-    let productResp = getProducts({
-      query: { category :"" },
-    });
-    if(productResp?.productData)
-      setProducts(productResp?.productData)
-  }, []);
+    if (router.isReady) {
+      const localCartProducts = localStorage.getItem("products") || "[]";
+      setCartProducts(JSON.parse(localCartProducts));
+      getProducts({
+        query: {
+          query: queryObj[router?.query?.query] || "contacts,glasses",
+          startIndex: 0,
+          viewSize: 10,
+        },
+      }).then((res) => {
+        if (res.productData) {
+          console.log("res", res.productData);
+          setProducts(res);
+        }
+      });
+    }
+  }, [router.query]);
 
   const getProducts = async ({ query }) => {
     console.log("getAppointmentSchedulesDayWise", query);
-    const products = await callApi({
+    return await callApi({
       uriEndPoint: {
         ...Products.getProductsV2,
       },
-      query :{ category :""},
+      query,
+    }).catch((err) => {
+      console.log("err", err);
     });
-  
-      console.log("products", products);
-    return products;
   };
 
-  console.log("searchParams", router.query);
-  // if(router?.query?.query){
-  //   if(router?.query?.query=="eye-medic"){
-  //     setTitle("Eye Medicare Products");
-  //   } else if(router?.query?.query==""){
-  //     setTitle("Eye Medicare Products");
-  //   } else if(router?.query?.query==""){
-  //     setTitle("Eye Medicare Products");
-  //   }
-  // }
-
+  const handleAddOrder = async (newCartProduct) => {
+    setCartProducts((prev) => [...prev, { count: 1, ...newCartProduct }]);
+    localStorage.setItem(
+      "products",
+      JSON.stringify([...cartProducts, { count: 1, ...newCartProduct }])
+    );
+  };
   function getTitle() {
     if (router?.query?.query == "eye-medic") {
       return "Eye Medicare Products";
@@ -70,21 +79,29 @@ export default function ProductsComponent() {
     } else if (router.pathname == "/glasses-contacts")
       return "Glasses & Contacts";
   }
-
+  const productDict = {};
+  cartProducts?.forEach((product, i) => {
+    productDict[product?._id] = i;
+  });
+  const removeOrder = (removeProduct, idxRemoveProduct) => {
+    localStorage.setItem(
+      "products",
+      JSON.stringify(cartProducts.filter((p, i) => i !== idxRemoveProduct))
+    );
+    setCartProducts((prev) => prev.filter((p, i) => i !== idxRemoveProduct));
+  };
+  console.log("productDict", productDict);
   return (
     <>
       <div className="section-title mx-10">
         <div className="line"></div>
         <h3 className="title">{getTitle()}</h3>
       </div>
-      {/* <SearchBar/> */}
-      {/* <Search placeholder="input search text" onSearch={onSearch} enterButton /> */}
       <div className="container mt-2 mb-2">
         <div className="col-md-2"></div>
         <div className="col-md-10 flex justify-end">
-          <Badge count={5}>
+          <Badge count={cartProducts.length}>
             <ShoppingCartOutlined style={{ fontSize: "30px" }} />
-            {/* <Avatar shape="square" size="large" /> */}
           </Badge>
           <button
             className="btn btn-outline-primary btn-sm ml-8"
@@ -98,13 +115,17 @@ export default function ProductsComponent() {
             title="Order your products"
             open={isModalOpen}
             onOk={handleOk}
-            okText ="Place your order"
+            okText="Place your order"
             onCancel={handleCancel}
-            // style={{
-            //   backgroundColor: "#1677ff !important",
-            // }}
+            centered
+            width="70vh"
+            footer={null}
           >
-            <Order />
+            <Order
+              cartProducts={cartProducts}
+              setCartProducts={setCartProducts}
+              setIsModalOpen={setIsModalOpen}
+            />
           </Modal>
         </div>
       </div>
@@ -120,368 +141,86 @@ export default function ProductsComponent() {
           }}
         />
       </div>
-      {/* Add to cart and order functionality */}
       <div className="container mt-2 mb-5">
         <div className="d-flex justify-content-center row">
           <div className="col-md-10">
-          {products.map(product =>{
-            <div className="row p-2 bg-white border rounded">
-              <div className="col-md-3 mt-1">
-                <img
-                  className="img-fluid img-responsive rounded product-image"
-                  src={product.image}
-                />
-              </div>
-              <div className="col-md-7 mt-1">
-                <h5>{product.name}</h5>
-                {/* <div className="d-flex flex-row">
-                  <div className="ratings mr-2">
-                    <i className="fa fa-star"></i>
-                    <i className="fa fa-star"></i>
-                    <i className="fa fa-star"></i>
-                    <i className="fa fa-star"></i>
+            {products?.productData?.map((product) => {
+              return (
+                <div
+                  key={product?._id}
+                  className="row p-2 bg-white border rounded"
+                >
+                  <div className="col-md-3 mt-1">
+                    <img
+                      className="img-fluid img-responsive rounded product-image"
+                      src={product.image}
+                    />
                   </div>
-                  <span>310</span>
-                </div> */}
-                <div className="mt-1 mb-1 spec-1">
-                  {
-                    product?.tags.array.forEach((element, arrIndex) => {
-                      tag =`<span className="dot"></span>
-                          <span>${element}</span>`
-                      tag +=((arrIndex+1) %3 ==0)?"<br />":""
-                      return tag;
-                    })
-                  }
-                </div>
-                <p className="text-justify text-truncate para mb-0">
-                  {product.description}
-                  <br />
-                  <br />
-                </p>
-              </div>
-              <div className="align-items-center align-content-center col-md-2 border-left mt-1">
-                <div className="d-flex flex-column mt-4">
-                  {/* <button className="btn btn-primary btn-sm" type="button">
-                    Details
-                  </button> */}
-                  <button
-                    className="btn btn-outline-primary btn-sm mt-2"
-                    type="button"
-                  >
-                    Add to Order
-                  </button>
-                </div>
-              </div>
-            </div>
-          })}
-            <div className="row p-2 bg-white border rounded">
-              <div className="col-md-3 mt-1">
-                <img
-                  className="img-fluid img-responsive rounded product-image"
-                  src="/images/PVEC_idrop.jpeg"
-                />
-              </div>
-              <div className="col-md-7 mt-1">
-                <h5>Eye Drops</h5>
-                {/* <div className="d-flex flex-row">
-                  <div className="ratings mr-2">
-                    <i className="fa fa-star"></i>
-                    <i className="fa fa-star"></i>
-                    <i className="fa fa-star"></i>
-                    <i className="fa fa-star"></i>
+                  <div className="col-md-7 mt-1">
+                    <h5>{product.name}</h5>
+                    <div className="mt-1 mb-1 spec-1">
+                      {product?.tags?.map((element, arrIndex) => {
+                        let tag = (
+                          <>
+                            <span className="dot"></span>
+                            <span>{element}</span>
+                          </>
+                        );
+                        return tag;
+                      })}
+                    </div>
+                    <p className="text-justify text-truncate para mb-0">
+                      {product.description}
+                      <br />
+                      <br />
+                    </p>
                   </div>
-                  <span>310</span>
-                </div> */}
-                <div className="mt-1 mb-1 spec-1">
-                  <span>100% cotton</span>
-                  <span className="dot"></span>
-                  <span>Light weight</span>
-                  <span className="dot"></span>
-                  <span>
-                    Best finish
-                    <br />
-                  </span>
-                </div>
-                <div className="mt-1 mb-1 spec-1">
-                  <span>Unique design</span>
-                  <span className="dot"></span>
-                  <span>For men</span>
-                  <span className="dot"></span>
-                  <span>
-                    Casual
-                    <br />
-                  </span>
-                </div>
-                <p className="text-justify text-truncate para mb-0">
-                  There are many variations of passages of Lorem Ipsum
-                  available, but the majority have suffered alteration in some
-                  form, by injected humour, or randomised words which don't look
-                  even slightly believable.
-                  <br />
-                  <br />
-                </p>
-              </div>
-              <div className="align-items-center align-content-center col-md-2 border-left mt-1">
-                <div className="d-flex flex-column mt-4">
-                  {/* <button className="btn btn-primary btn-sm" type="button">
-                    Details
-                  </button> */}
-                  <button
-                    className="btn btn-outline-primary btn-sm mt-2"
-                    type="button"
-                  >
-                    Add to Order
-                  </button>
-                </div>
-              </div>
-            </div>
-            <div className="row p-2 bg-white border rounded mt-2">
-              <div className="col-md-3 mt-1">
-                <img
-                  className="img-fluid img-responsive rounded product-image"
-                  // src="https://i.imgur.com/JvPeqEF.jpg"
-                  src="/images/PVEC_omega3.jpeg"
-                />
-              </div>
-              <div className="col-md-7 mt-1">
-                <h5>Omega-3</h5>
-                {/* <div className="d-flex flex-row">
-                  <div className="ratings mr-2">
-                    <i className="fa fa-star"></i>
-                    <i className="fa fa-star"></i>
-                    <i className="fa fa-star"></i>
-                    <i className="fa fa-star"></i>
+                  <div className="align-items-center align-content-center col-md-2 border-left mt-1">
+                    <div className="d-flex flex-column mt-4">
+                      {!(product?._id in productDict) ? (
+                        <button
+                          className="btn btn-outline-primary btn-sm mt-2"
+                          type="button"
+                          onClick={() => handleAddOrder(product)}
+                        >
+                          Add to order
+                        </button>
+                      ) : (
+                        <button
+                          className="bg-primary text-white btn-sm mt-2"
+                          type="button"
+                          onClick={() =>
+                            removeOrder(product, productDict[product?._id])
+                          }
+                        >
+                          Remove order
+                        </button>
+                      )}
+                    </div>
                   </div>
-                  <span>310</span>
-                </div> */}
-                <div className="mt-1 mb-1 spec-1">
-                  <span>100% cotton</span>
-                  <span className="dot"></span>
-                  <span>Light weight</span>
-                  <span className="dot"></span>
-                  <span>
-                    Best finish
-                    <br />
-                  </span>
                 </div>
-                <div className="mt-1 mb-1 spec-1">
-                  <span>Unique design</span>
-                  <span className="dot"></span>
-                  <span>For men</span>
-                  <span className="dot"></span>
-                  <span>
-                    Casual
-                    <br />
-                  </span>
-                </div>
-                <p className="text-justify text-truncate para mb-0">
-                  There are many variations of passages of Lorem Ipsum
-                  available, but the majority have suffered alteration in some
-                  form, by injected humour, or randomised words which don't look
-                  even slightly believable.
-                  <br />
-                  <br />
-                </p>
-              </div>
-              <div className="align-items-center align-content-center col-md-2 border-left mt-1">
-                <div className="d-flex flex-column mt-4">
-                  {/* <button className="btn btn-primary btn-sm" type="button">
-                    Details
-                  </button> */}
-                  <button
-                    className="btn btn-outline-primary btn-sm mt-2"
-                    type="button"
-                  >
-                    Add to Order
-                  </button>
-                </div>
-              </div>
-            </div>
-            <div className="row p-2 bg-white border rounded mt-2">
-              <div className="col-md-3 mt-1">
-                <img
-                  className="img-fluid img-responsive rounded product-image"
-                  src="/images/PVEC_teatree.jpeg"
-                />
-              </div>
-              <div className="col-md-7 mt-1">
-                <h5>Tea Tree Eyelid</h5>
-                {/* <div className="d-flex flex-row">
-                  <div className="ratings mr-2">
-                    <i className="fa fa-star"></i>
-                    <i className="fa fa-star"></i>
-                    <i className="fa fa-star"></i>
-                    <i className="fa fa-star"></i>
-                  </div>
-                  <span>123</span>
-                </div> */}
-                <div className="mt-1 mb-1 spec-1">
-                  <span>100% cotton</span>
-                  <span className="dot"></span>
-                  <span>Light weight</span>
-                  <span className="dot"></span>
-                  <span>
-                    Best finish
-                    <br />
-                  </span>
-                </div>
-                <div className="mt-1 mb-1 spec-1">
-                  <span>Unique design</span>
-                  <span className="dot"></span>
-                  <span>For men</span>
-                  <span className="dot"></span>
-                  <span>
-                    Casual
-                    <br />
-                  </span>
-                </div>
-                <p className="text-justify text-truncate para mb-0">
-                  There are many variations of passages of Lorem Ipsum
-                  available, but the majority have suffered alteration in some
-                  form, by injected humour, or randomised words which don't look
-                  even slightly believable.
-                  <br />
-                  <br />
-                </p>
-              </div>
-              <div className="align-items-center align-content-center col-md-2 border-left mt-1">
-                <div className="d-flex flex-column mt-4">
-                  {/* <button className="btn btn-primary btn-sm" type="button">
-                    Details
-                  </button> */}
-                  <button
-                    className="btn btn-outline-primary btn-sm mt-2"
-                    type="button"
-                  >
-                    Add to Order
-                  </button>
-                </div>
-              </div>
-            </div>
-            <div className="row p-2 bg-white border rounded mt-2">
-              <div className="col-md-3 mt-1">
-                <img
-                  className="img-fluid img-responsive rounded product-image"
-                  src="/images/PVEC_eyemask.jpeg"
-                />
-              </div>
-              <div className="col-md-7 mt-1">
-                <h5>Eye Mask</h5>
-                {/* <div className="d-flex flex-row">
-                  <div className="ratings mr-2">
-                    <i className="fa fa-star"></i>
-                    <i className="fa fa-star"></i>
-                    <i className="fa fa-star"></i>
-                    <i className="fa fa-star"></i>
-                  </div>
-                  <span>110</span>
-                </div> */}
-                <div className="mt-1 mb-1 spec-1">
-                  <span>100% cotton</span>
-                  <span className="dot"></span>
-                  <span>Light weight</span>
-                  <span className="dot"></span>
-                  <span>
-                    Best finish
-                    <br />
-                  </span>
-                </div>
-                <div className="mt-1 mb-1 spec-1">
-                  <span>Unique design</span>
-                  <span className="dot"></span>
-                  <span>For men</span>
-                  <span className="dot"></span>
-                  <span>
-                    Casual
-                    <br />
-                  </span>
-                </div>
-                <p className="text-justify text-truncate para mb-0">
-                  There are many variations of passages of Lorem Ipsum
-                  available, but the majority have suffered alteration in some
-                  form, by injected humour, or randomized words which don't look
-                  even slightly believable.
-                  <br />
-                  <br />
-                </p>
-              </div>
-              <div className="align-items-center align-content-center col-md-2 border-left mt-1">
-                <div className="d-flex flex-column mt-4">
-                  {/* <button className="btn btn-primary btn-sm" type="button">
-                    Details
-                  </button> */}
-                  <button
-                    className="btn btn-outline-primary btn-sm mt-2"
-                    type="button"
-                  >
-                    Add to Order
-                  </button>
-                </div>
-              </div>
-            </div>
-            <div className="row p-2 bg-white border rounded mt-2">
-              <div className="col-md-3 mt-1">
-                <img
-                  className="img-fluid img-responsive rounded product-image"
-                  src="/images/PVEC_lidlash.jpeg"
-                />
-              </div>
-              <div className="col-md-7 mt-1">
-                <h5>Lid 'n Lash</h5>
-                {/* <div className="d-flex flex-row">
-                  <div className="ratings mr-2">
-                    <i className="fa fa-star"></i>
-                    <i className="fa fa-star"></i>
-                    <i className="fa fa-star"></i>
-                    <i className="fa fa-star"></i>
-                  </div>
-                  <span>110</span>
-                </div> */}
-                <div className="mt-1 mb-1 spec-1">
-                  <span>100% cotton</span>
-                  <span className="dot"></span>
-                  <span>Light weight</span>
-                  <span className="dot"></span>
-                  <span>
-                    Best finish
-                    <br />
-                  </span>
-                </div>
-                <div className="mt-1 mb-1 spec-1">
-                  <span>Unique design</span>
-                  <span className="dot"></span>
-                  <span>For men</span>
-                  <span className="dot"></span>
-                  <span>
-                    Casual
-                    <br />
-                  </span>
-                </div>
-                <p className="text-justify text-truncate para mb-0">
-                  There are many variations of passages of Lorem Ipsum
-                  available, but the majority have suffered alteration in some
-                  form, by injected humour, or randomised words which don't look
-                  even slightly believable.
-                  <br />
-                  <br />
-                </p>
-              </div>
-              <div className="align-items-center align-content-center col-md-2 border-left mt-1">
-                <div className="d-flex flex-column mt-4">
-                  {/* <button className="btn btn-primary btn-sm" type="button">
-                    Details
-                  </button> */}
-                  <button
-                    className="btn btn-outline-primary btn-sm mt-2"
-                    type="button"
-                  >
-                    Add to Order
-                  </button>
-                  <i className="bi bi-cart-plus"></i>
-                </div>
-              </div>
-            </div>
+              );
+            })}
           </div>
+        </div>
+        <div className="flex justify-end">
+          <Pagination
+            className="mr-28 py-6"
+            onChange={(page, pageSize) => {
+              getProducts({
+                query: {
+                  query: router?.query?.query || "contacts,glasses",
+                  startIndex: (page - 1) * pageSize,
+                  viewSize: pageSize,
+                },
+              }).then((res) => {
+                setProducts(res);
+              });
+            }}
+            pageSize={10}
+            hideOnSinglePage
+            total={products?.totalCount}
+          />
         </div>
       </div>
     </>
