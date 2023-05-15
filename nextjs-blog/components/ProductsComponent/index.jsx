@@ -13,11 +13,10 @@ const queryObj = {
   glasses: "GLASSES",
 };
 
-const onSearch = () => console.log(value);
-
 export default function ProductsComponent() {
   const [cartProducts, setCartProducts] = useState([]);
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [search, setSearch] = useState("");
   const [products, setProducts] = useState([]);
   const showModal = () => {
     setIsModalOpen(true);
@@ -59,6 +58,17 @@ export default function ProductsComponent() {
       query,
     }).catch((err) => {
       console.log("err", err);
+    });
+  };
+
+  const onSearch = (val) => {
+    getProducts({
+      query: {
+        query: router?.query?.query || "contacts,glasses",
+        startIndex: 0,
+        viewSize: 10,
+        search: val,
+      },
     });
   };
 
@@ -133,7 +143,11 @@ export default function ProductsComponent() {
         <Search
           className="m-6"
           placeholder="Search products"
-          onSearch={onSearch}
+          onSearch={(val) => {
+            console.log("val", val);
+            onSearch(val);
+            setSearch(val);
+          }}
           enterButton
           style={{
             width: "70%",
@@ -212,6 +226,7 @@ export default function ProductsComponent() {
                   query: router?.query?.query || "contacts,glasses",
                   startIndex: (page - 1) * pageSize,
                   viewSize: pageSize,
+                  search,
                 },
               }).then((res) => {
                 setProducts(res);
