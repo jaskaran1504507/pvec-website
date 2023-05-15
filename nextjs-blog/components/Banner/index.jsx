@@ -26,10 +26,10 @@ export default function Banner({
             {" "}
             {text && (
               <h1
-                style={{ color: textColor, lineHeight: "1.25" }}
+                style={{ lineHeight: "1.25" }}
                 className="u-text text-white text-left text-2xl md:text-5xl mb-12 md:text-5xl font-semibold "
               >
-                {text}
+                <span style={{ color: textColor }}> {text}</span>
               </h1>
             )}
             {children}
