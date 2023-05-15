@@ -42,7 +42,7 @@ export default function ProductsComponent() {
           viewSize: 10,
         },
       }).then((res) => {
-        if (res.productData) {
+        if (res?.productData) {
           console.log("res", res.productData);
           setProducts(res);
         }

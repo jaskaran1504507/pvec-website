@@ -156,7 +156,7 @@ const Order = ({ setIsModalOpen, cartProducts, setCartProducts }) => {
             <Form.Item>
               <Button
                 type="primary"
-                className="bg-primary"
+                className="bg-primary text-white"
                 htmlType="submit"
                 style={{ width: "100%" }}
                 disabled={cartProducts?.length === 0}
