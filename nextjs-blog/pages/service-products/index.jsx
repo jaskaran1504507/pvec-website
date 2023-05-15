@@ -22,14 +22,14 @@ export default function ServiceProducts() {
 
   return (
     <main>
-      <div className="grid gap-16  mt-20 grid-cols-1 md:grid-cols-2 u-clearfix u-sheet mx-auto u-valign-middle u-sheet-1">
+      <div className="grid gap-16 mt-20 grid-cols-1 md:grid-cols-2 u-clearfix u-sheet mx-auto u-valign-middle u-sheet-1">
         <div className="px-6">
           <h2
             style={{
               textAlign: "left",
               // fontSize: "2.25rem",
               lineHeight: 1.1,
-              marginTop: "20px",
+              marginTop: "6rem",
               marginBottom: "20px",
             }}
           >
@@ -42,19 +42,14 @@ export default function ServiceProducts() {
           </h2>
           <div>
             {" "}
-            <p>
-              We have been helping people with quality care from our team of
-              expert eye doctors in downtown Vancouver since 2005
+            <p className="text">
+            We have been helping people with quality care from our team of
+            expert eye doctors in Downtown Vancouver since 2005
             </p>
             <br />
-            <p>
-              Our team of eye specialists have many years of professional
-              experience and can provide proper diagnosis of eye health
-              conditions right in the Downtown Care of Vancouver.
-            </p>
           </div>
         </div>
-        <div className="flex justify-center px-6" style={{ height: "450px" }}>
+        <div className="flex justify-center px-6 mt-20" style={{ height: "450px" }}>
           <Image
             src="/images/MainPage_Illustration.png"
             alt=""
@@ -79,13 +74,13 @@ export default function ServiceProducts() {
             </span>
           </h2>
         </div>
-        <div className="hidden md:block"></div>
-        <div>
+        {/* <div className="hidden md:block"></div> */}
+        {/* <div>
           <div className="px-6" style={{ height: "450px" }}>
             <Image src="/images/door.jpeg" alt="" layout="fill" srcSet="" />
           </div>
-        </div>
-        <div>
+        </div> */}
+        {/* <div>
           With some of the best Optometrists in Downtime Vancouver on our hand,
           we can always guarantee you will be given the best advice. We partner
           with the best Ophthalmologists around to care for your cataracts,
@@ -98,8 +93,8 @@ export default function ServiceProducts() {
           We provide the best care for your eyes which includes: full
           compressive exams, prescription eye glasses or sunglasses, contact
           lenses, and top notch vitamins and drops especially to promote health!
-        </div>
-        <div>
+        </div> */}
+        {/* <div>
           Some people believe that eye examinations are not necessary for people
           that see well. The fact is, there are a number of eye disease that can
           go undetected until it is too late.
@@ -112,8 +107,8 @@ export default function ServiceProducts() {
           <br />
           Our goal is to detect eye health issues before permanent damage
           occurs.
-        </div>
-        <div>
+        </div> */}
+        {/* <div>
           <div className="px-6" style={{ height: "450px" }}>
             <Image
               src="/images/Rectangle 3-1.jpg"
@@ -122,9 +117,9 @@ export default function ServiceProducts() {
               srcSet=""
             />
           </div>
-        </div>{" "}
+        </div>{" "} */}
       </div>
-      <div className="grid  gap-6 mt-20 grid-cols-1 md:grid-cols-3 u-clearfix u-sheet mx-auto u-valign-middle u-sheet-1">
+      <div className="grid  gap-6 mt-10 grid-cols-1 md:grid-cols-3 u-clearfix u-sheet mx-auto u-valign-middle u-sheet-1">
         {cards.map(({ img, text, head }) => (
           <div key={img} className="p-2 shadow-lg ">
             <div>
@@ -135,8 +130,8 @@ export default function ServiceProducts() {
                 src={img}
                 alt=""
                 srcSet=""
-                height="250px"
-                width="355px"
+                height="250"
+                width="355"
               />
             </div>
             <h1 className="text-blue-900 my-3 text-center font-semibold">
@@ -152,12 +147,19 @@ export default function ServiceProducts() {
                       [img]: prev[img] ? "" : text,
                     }));
                   }}
-                  className=" pl-2 text-blue-900 hover:underline cursor-pointer"
-                >
+                  className=" pl-2 text-blue-900 hover:underline cursor-pointer">
                   see {seeMore[img] ? "less" : "more"}...
                 </span>
               )}
             </div>
+            {/* <div className="flex justify-center">
+            <div className="flex-end justify-center navbar-btn d-none d-sm-inline-block"> */}
+              <div>
+                <a className="link" data-scroll-nav="0" href="bookings#appointment">Book your checkup appointment </a>
+                {/* <div className="long-arrow-right"></div> */}
+              </div>
+              {/* </div>
+              </div> */}
           </div>
         ))}
       </div>
@@ -182,7 +184,7 @@ export default function ServiceProducts() {
           </h2>
 
           <div className=" grid grid-cols-1 md:grid-cols-3 gap-5 mb-6">
-            {productCatalogue.map(({ img, text, head }) => (
+            {productCatalogue.map(({ img, text, head, link }) => (
               <div key={img} className="p-2 shadow-lg ">
                 <div>
                   <Image
@@ -192,14 +194,14 @@ export default function ServiceProducts() {
                     src={img}
                     alt=""
                     srcSet=""
-                    height="250px"
-                    width="355px"
+                    height="250"
+                    width="355"
                   />
                 </div>
-                <h1 className="text-blue-900 my-3 text-center font-semibold">
+                <h1 className="text-blue-900 my-2 text-center font-semibold">
                   {head}
                 </h1>
-                <div className="px-6 py-4 ">
+                <div className="px-6 py-2">
                   {seeMore[img] || text.slice(0, 250)}
                   {text.length > 250 && (
                     <span
@@ -209,12 +211,19 @@ export default function ServiceProducts() {
                           [img]: prev[img] ? "" : text,
                         }));
                       }}
-                      className=" pl-2 text-blue-900 hover:underline cursor-pointer"
-                    >
+                      className="pl-2 text-blue-900 hover:underline cursor-pointer">
                       see {seeMore[img] ? "less" : "more"}...
                     </span>
                   )}
                 </div>
+                <div>
+                {/* <button className="hover:shadow-form w-full rounded-md bg-sky-900 py-3 px-8 text-center text-base font-semibold text-white outline-none">
+                  Check products
+                </button> */}
+                <div className="flex align-items-center justify-center" >
+                <a className="main-btn-products" data-scroll-nav="0" href={link}>Check products</a>
+                </div>
+              </div>
               </div>
             ))}
           </div>
@@ -245,11 +254,12 @@ export default function ServiceProducts() {
             <div key={brand.link}>
               {/* <Link href={brandsLinkArr[index++]} legacyBehavior passHref> */}
               <a target="_blank" href={brand.addr} rel="noopener noreferrer">
-                <div style={{ height: "200px", position: "relative" }}>
-                  <Image src={"/images/brands/" + brand.link} layout="fill" />
+                <div style={{ height: '200px', position: "relative" , width : '200px'}}>
+                  <Image src={"/images/brands/" + brand.link} height = '100' width='200'  alt="brd"/>
                 </div>
-                {/* </Link> */}
+               
               </a>
+              {/* </Link> */}
             </div>
           ))}
         </div>

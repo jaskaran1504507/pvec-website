@@ -1,161 +1,394 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Banner from "../../components/Banner";
 import Button from "../../components/Button";
+import { DatePicker, Form, Input, Radio, Select } from "antd";
+import FloatInput from "../../components/FloatInput";
+import dayjs from "dayjs";
+import customParseFormat from "dayjs/plugin/customParseFormat";
+import moment from "moment";
+import { callApi } from "../../utils/apiUtils";
+import Appointment from "../../utils/endpoints/Appointment";
+const { TextArea } = Input;
 
-export default function Bookings() {
+const Bookings = () => {
+  // const layout = {
+  //   labelCol: { span: 8 },
+  //   wrapperCol: { span: 24 },
+  // };
+  const [disableDate, setDisableDate] = useState({});
+
+  useEffect(() => {
+    let defaultDate = getDefaultDate(true);
+
+    console.log(defaultDate, "defaultDate");
+    getAppointmentSchedulesDayWise({
+      query: { date: defaultDate + "" },
+      pathParams: { day: defaultDate.getDay() },
+    });
+    callApi({ uriEndPoint: { uri: "/getBooking", method: "GET", version: "" } })
+      .then((res) => {
+        setDisableDate({ [new Date().toDateString()]: true });
+      })
+      .catch((err) => console.log("err", err));
+  }, []);
+
+  const layout = {
+    col: {
+      xs: 24,
+      sm: 24,
+      md: 24,
+      lg: 12,
+      xl: 12,
+    },
+    formItem: {
+      labelCol: {
+        xs: 24,
+        sm: 24,
+        md: 4,
+        lg: 24,
+        xl: 4,
+      },
+      wrapperCol: {
+        xs: 24,
+        sm: 24,
+        md: 20,
+        lg: 24,
+        xl: 20,
+      },
+    },
+  };
+
+  const prefixSelector = (
+    <Form.Item name="prefix" noStyle>
+      <Select style={{ width: 70 }} options={[{ value: "1", label: "+1" }]} />
+      {/* <Option value="1">+1</Option>
+      </Select> */}
+    </Form.Item>
+  );
+  /* eslint-disable no-template-curly-in-string */
+  const validateMessages = {
+    required: "${label} is required!",
+    types: {
+      email: "${label} is not a valid email!",
+      number: "${label} is not a valid number!",
+    },
+    number: {
+      range: "${label} must be between ${min} and ${max}",
+    },
+  };
+
+  const onFinish = (values) => {
+    console.log("this is submission ", values);
+    console.log("this is submission ", values.date);
+    let body = {
+      name: values.user.name,
+      email: values.user.email,
+      isExisting: values.existing_patient,
+      phone: values.phone,
+      preferredContactMethod: values.preferred_contact_method,
+      appointmentDate: values.date,
+      appointmentSlot: values.slot,
+      comment: values.comment,
+    };
+
+    console.log("this is body ", body);
+
+    callApi({
+      uriEndPoint: {
+        ...Appointment.bookAppointment,
+      },
+      body,
+    }).then((e) => {
+      console.log("e", e);
+    });
+  };
+
+  const getAppointmentSchedules = async ({ query }) => {
+    const schedules = await callApi({
+      uriEndPoint: {
+        ...Appointment.getSchedules,
+      },
+      query,
+    });
+    console.log("schedules", schedules);
+    return schedules;
+  };
+
+  const getAppointmentSchedulesDayWise = async ({ query, pathParams }) => {
+    console.log("getAppointmentSchedulesDayWise", query);
+    const schedules = await callApi({
+      uriEndPoint: {
+        ...Appointment.getSingleDaySchedule,
+      },
+      query,
+      pathParams,
+    });
+    if (schedules?.schedule?.scheduleSlots) {
+      let newSchedules = schedules?.schedule?.scheduleSlots.map((obj) => {
+        return {
+          value: obj._id,
+          label: getFormattedSlotTime(obj),
+        };
+      });
+
+      console.log("newSchedules", newSchedules);
+      setSlots(newSchedules);
+    }
+    return schedules;
+  };
+
+  function getFormattedSlotTime(obj) {
+    let timeStr = "";
+    if (obj) {
+      if (obj.timeFromObjStr) {
+        timeStr += obj.timeFromObjStr;
+      }
+      if (obj.timeAmPm) {
+        timeStr += " " + obj.timeAmPm;
+      }
+      timeStr += " - ";
+      if (obj.timeToObjStr) {
+        timeStr += obj.timeToObjStr;
+      }
+      if (obj.timeToAmPm) {
+        timeStr += " " + obj.timeAmPm;
+      } else if (obj.timeAmPm) {
+        timeStr += " " + obj.timeAmPm;
+      }
+    }
+    return timeStr;
+  }
+
+  function disableDateRanges(range = { startDate: false, endDate: false }) {
+    const { startDate, endDate } = range;
+    return function disabledDate(current) {
+      let startCheck = true;
+      let endCheck = true;
+      if (startDate) {
+        startCheck = current && current < moment(startDate, "YYYY-MM-DD");
+      }
+      if (endDate) {
+        endCheck = current && current > moment(endDate, "YYYY-MM-DD");
+      }
+      return (startDate && startCheck) || (endDate && endCheck);
+    };
+  }
+
+  function disableDateCheck(range = { startDate: false, endDate: false }) {
+    const { startDate, endDate } = range;
+    return function disabledDate(current) {
+      let startCheck = true;
+      let endCheck = true;
+      if (startDate) {
+        startCheck = current && current < moment(startDate, "YYYY-MM-DD");
+      }
+      if (endDate) {
+        endCheck = current && current > moment(endDate, "YYYY-MM-DD");
+      }
+      return (startDate && startCheck) || (endDate && endCheck);
+    };
+  }
+
+  const onChangeDate = (value) => {
+    console.log(`selected ${value}`);
+    let selectedAppointmentDate = new Date(value);
+    console.log("selectedAppointmentDate", selectedAppointmentDate.getDay());
+    if (selectedAppointmentDate.getDay()) {
+      getAppointmentSchedulesDayWise({
+        query: { date: selectedAppointmentDate + "" },
+        pathParams: { day: selectedAppointmentDate.getDay() },
+      });
+    }
+  };
+
+  const onSearch = (value) => {
+    console.log("search:", value);
+  };
+
+  const getDefaultDate = (fromUseEffect = false) => {
+    let todaysDate = new Date();
+    // todaysDate = new Date(Date.now() + (3600 * 1000 * 24));
+    if (todaysDate.getDay() == 0) {
+      todaysDate.setDate(todaysDate.getDate() + 1);
+    }
+    if (fromUseEffect) {
+      return todaysDate;
+    }
+
+    return dayjs(todaysDate.toLocaleDateString(), "DD/MM/YYYY");
+  };
+
+  const disabledDates = ["2023-04-26", "2023-04-27"];
+
+  function disabledDate(current) {
+    // Can not select Sundays and predefined days
+    return (
+      moment(current).day() === 0
+      // ||
+      // disabledDates.find(date => date === moment(current).format("YYYY-MM-DD"))
+    );
+  }
+
+  const [slots, setSlots] = useState([]);
+  const [showAppointmentSuccess, setShowAppointmentSuccess] = useState(true);
+
   return (
     <main>
       <Banner
         banner="banner-bookings-img"
         text={
-          <p className="text-black md:text-white">
+          <span className="text-black md:text-white">
             Get a full check up
             <br />
-            with one of our Optometrists; we're available evenings
+            with one of our Optometrists, we're available evenings
             <br />
             and weekends too!
-          </p>
+          </span>
         }
-      >
-        <a href="#appointment">
-          <Button className="text-blue-800 bg-white">
-            BOOK MY APPOINTMENT
-          </Button>
-        </a>
-      </Banner>
-
-      <div className="mt-40">
-        <Banner
-          banner="banner-bookings-img-1"
-          text={
-            <p className="text-black md:text-white">
-              Get a full check up
-              <br />
-              with one of our Optometrists; we're available evenings
-              <br />
-              and weekends too!
-            </p>
-          }
+      />
+      <div className="flex justify-center mt-10">
+        <Form
+          {...layout}
+          name="nest-messages"
+          onFinish={onFinish}
+          style={{ maxWidth: 600 }}
+          validateMessages={validateMessages}
+          size={"large"}
         >
-          <a href="#appointment">
-            <Button className="text-blue-800 bg-white">
-              BOOK MY APPOINTMENT
-            </Button>
-          </a>
-        </Banner>
-      </div>
-      <div
-        id="appointment"
-        className="u-clearfix u-sheet mx-auto u-valign-middle u-sheet-1 md:px-40"
-      >
-        <div className="flex items-center justify-center py-12 md:p-12">
-          <div className="mx-auto w-full max-w-[550px] bg-white">
-            <form
-              onSubmit={(ev) => {
-                ev.preventDefault();
-                alert("Appointment submitted");
+          <Form.Item
+            name={["user", "name"]}
+            label="Name"
+            rules={[{ required: true }]}
+          >
+            <Input />
+          </Form.Item>
+          <Form.Item
+            name={["user", "email"]}
+            label="Email"
+            rules={[{ type: "email", required: true }]}
+          >
+            <Input />
+          </Form.Item>
+          <Form.Item
+            label="Existing patient?"
+            name="existing_patient"
+            rules={[{ required: true }]}
+          >
+            <Radio.Group value={"no"}>
+              <Radio.Button value="yes">Yes</Radio.Button>
+              <Radio.Button checked value="no">
+                No
+              </Radio.Button>
+            </Radio.Group>
+          </Form.Item>
+          <Form.Item
+            name="phone"
+            label="Phone Number"
+            rules={[
+              { required: true, message: "Please input your phone number!" },
+            ]}
+          >
+            <Input addonBefore={prefixSelector} style={{ width: "100%" }} />
+          </Form.Item>
+          <Form.Item
+            label="Preferred Contact Method"
+            name="preferred_contact_method"
+            rules={[{ required: true }]}
+          >
+            <Radio.Group value={"no"}>
+              <Radio.Button value="email">Email</Radio.Button>
+              <Radio.Button value="phone">Phone</Radio.Button>
+              <Radio.Button selected value="any">
+                Any
+              </Radio.Button>
+            </Radio.Group>
+          </Form.Item>
+          <Form.Item
+            name="date"
+            label="Appointment Date"
+            rules={[{ required: true, message: "Please select date" }]}
+          >
+            {/* <Input style={{ width: "100%" }} /> */}
+            {/* let date = new Date().toLocaleDateString(); */}
+            <DatePicker
+              defaultValue={getDefaultDate()}
+              disabledDate={(current) => {
+                return (
+                  current.startOf("hour", 0) <= moment().startOf("hour", 0) ||
+                  current.day() === 0 ||
+                  disableDate[current.toDate().toDateString()]
+                );
               }}
-              method="POST"
-            >
-              <div className="mb-5">
-                <label
-                  htmlFor="name"
-                  className="mb-3 block text-base font-medium text-[#07074D]"
-                >
-                  Full Name
-                </label>
-                <input
-                  type="text"
-                  name="name"
-                  id="name"
-                  required
-                  placeholder="Full Name"
-                  className="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#0C4A6E] focus:shadow-md"
-                />
-              </div>
-              <div className="mb-5">
-                <label
-                  htmlFor="phone"
-                  className="mb-3 block text-base font-medium text-[#07074D]"
-                >
-                  Phone Number
-                </label>
-                <input
-                  required
-                  type="text"
-                  name="phone"
-                  id="phone"
-                  placeholder="Enter your phone number"
-                  className="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#0C4A6E] focus:shadow-md"
-                />
-              </div>
-              <div className="mb-5">
-                <label
-                  htmlFor="email"
-                  className="mb-3 block text-base font-medium text-[#07074D]"
-                >
-                  Email Address
-                </label>
-                <input
-                  type="email"
-                  name="email"
-                  id="email"
-                  placeholder="Enter your email"
-                  className="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#0C4A6E] focus:shadow-md"
-                />
-              </div>
-              <div className="-mx-3 flex flex-wrap">
-                <div className="w-full px-3 sm:w-1/2">
-                  <div className="mb-5">
-                    <label
-                      htmlFor="date"
-                      className="mb-3 block text-base font-medium text-[#07074D]"
-                    >
-                      Date
-                    </label>
-                    <input
-                      type="date"
-                      name="date"
-                      id="date"
-                      className="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#0C4A6E] focus:shadow-md"
-                    />
-                  </div>
+              format={"DD/MM/YYYY"}
+              onChange={onChangeDate}
+            />
+          </Form.Item>
+          <Form.Item
+            name="slot"
+            label="Appointment Slot"
+            rules={[{ required: true, message: "Please select the slot" }]}
+          >
+            {/* <Input style={{ width: "100%" }} /> */}
+            <Select
+              placeholder="Select a slot"
+              optionFilterProp="children"
+              // onSearch={onSearch}
+              filterOption={(input, option) =>
+                (option?.label ?? "")
+                  .toLowerCase()
+                  .includes(input.toLowerCase())
+              }
+              options={slots}
+            />
+          </Form.Item>
+          <Form.Item name="comment" label="Comments">
+            {/* <Input /> */}
+            {/* <FloatInput
+              label="Any questions or comments"
+              placeholder="Any questions or comments"
+              name="email"
+            />  */}
+            {/* <Input /> */}
+            <TextArea
+              rows={4}
+              placeholder="Any questions or comments..."
+              maxLength={320}
+            />
+          </Form.Item>
+          <Form.Item wrapperCol={{ ...layout.wrapperCol, offset: 8 }}>
+            <Button className="book-appointment-button" htmlType="submit">
+              Book
+            </Button>
+          </Form.Item>
+        </Form>
+      </div>
+      {showAppointmentSuccess && (
+        <div id="success_tic" class="modal fade" role="dialog">
+          <div className="modal-dialog">
+            {/* <!-- Modal content--> */}
+            <div className="modal-content">
+              <a className="" href="#" data-dismiss="modal">
+                &times;
+              </a>
+              <div className="page-body">
+                <div className="head">
+                  <h3 className="mt-2">Lorem ipsum dolor sit amet</h3>
+                  <h4>Lorem ipsum dolor sit amet</h4>
                 </div>
-                <div className="w-full px-3 sm:w-1/2">
-                  <div className="mb-5">
-                    <label
-                      htmlFor="time"
-                      className="mb-3 block text-base font-medium text-[#07074D]"
-                    >
-                      Available slots
-                    </label>
-                    {/* <input
-                      type="time"
-                      name="time"
-                      id="time"
-                      className="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#0C4A6E] focus:shadow-md"
-                    /> */}
-                    <select
-                      className="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#0C4A6E] focus:shadow-md"
-                      name="slot"
-                      id=""
-                    >
-                      <option value="">01:00pm-02:00pm</option>
-                      <option value="">02:00pm-03:00pm</option>
-                    </select>
-                  </div>
-                </div>
-              </div>
 
-              <div>
-                <button className="hover:shadow-form w-full rounded-md bg-sky-900 py-3 px-8 text-center text-base font-semibold text-white outline-none">
-                  Book Appointment
-                </button>
+                <h1 style={{ textAlign: "center" }}>
+                  <div className="checkmark-circle">
+                    <div className="background"></div>
+                    <div className="checkmark draw"></div>
+                  </div>
+                </h1>
               </div>
-            </form>
+            </div>
           </div>
         </div>
-      </div>
+      )}
     </main>
   );
-}
+};
+
+export default Bookings;

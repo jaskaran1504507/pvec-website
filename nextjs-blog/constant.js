@@ -55,17 +55,17 @@ export const cards = [
   {
     img: "/images/PVEC_ContactLenses.jpeg",
     head: "Contact Lens Fitting",
-    text: "We believe that the combination of comprehensive eye health services, and the finest quality of contact lenses our office provides, gives our patients unsurpassed care and assurance at a reasonable cost.",
+    text: "We believe that the combination of comprehensive eye health services, and the finest quality of contact lenses. We at our office provides our patients unsurpassed care and assurance at a reasonable cost.",
   },
   {
     img: "/images/Rectangle 1-7.jpg",
-    text: "Patients who have ocular emergencies that need to be assessed immediately and we welcome them. Eye Emergencies include red eyes, sudden vision loss and blur, sudden peripheral vision loss, eye pain, and symptoms of flashes and/or floaters.",
+    text: "Patients who have ocular emergencies that need to be assessed immediately and we welcome them. Eye emergencies include red eyes, sudden vision loss and blur, sudden peripheral vision loss, eye pain, and symptoms of flashes and/or floaters.",
     head: "Eye Emergencies",
   },
   {
     img: "/images/Rectangle 1-3.jpg",
     head: "Light Sensitivity Management",
-    text: "Light sensitivity, or photophobia, is a condition in which bright light hurts your eyes. This condition can range from mild to severe.(1md.org)",
+    text: "Light sensitivity, or photophobia, is a condition in which bright light hurts your eyes. This condition can range from mild to severe.",
   },
   {
     img: "/images/Rectangle 1-4.jpg",
@@ -73,7 +73,7 @@ export const cards = [
     text: "Dry eye happens when your eye don't make enough tears to stay wet, or when your tears don't work correctly. This can make your eyes feel uncomfortable, and in some cases ut can also cause vision problems.",
   },
   {
-    head: "ASIK/PRK Surgery Consultation",
+    head: "LASIK/PRK Surgery Consultation",
     text: "Pre-Op and Post-Op Care Cataract Surgery Management, Glaucoma Treatment, Macular Degeneration Care, Diabetic Eye Care",
     img: "/images/Rectangle 1-5.jpg",
   },
@@ -119,16 +119,19 @@ export const productCatalogue = [
     img: "/images/man-lenses.jpg",
     head: "Contact lenses",
     text: "Experience clear vision with our wide selection of contact lenses. Perfect for any need, prescription or non-prescription available.",
+    link: "/glasses-contacts?query=contacts",
   },
   {
-    img: "/images/man-eyeglass.jpg",
-    head: "Eyewears",
-    text: "Upgrade your style with our collection of trendy eyewears. From classic to modern, we have something for everyone.",
-  },
-  {
-    img: "/images/PVEC_eyemask.jpeg",
-    head: "Eye drops",
+    img: "/images/eye-drops.jpg",
+    head: "Eye medication products",
     text: "Relieve dry, irritated eyes with our collection of high-quality eye drops. Perfect for daily use and for contact lens wearers.",
+    link: "/products?query=eye-medic",
+  },
+  {
+    img: "/images/modern-elegance-glasses.jpg",
+    head: "Eye wears",
+    text: "Upgrade your style with our collection of trendy eye wears. From classic to modern, we have something for everyone.",
+    link: "/glasses-contacts?query=glasses",
   },
 ];
 

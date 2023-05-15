@@ -1,11 +1,14 @@
 import React from "react";
 import Banner from "../../components/Banner";
 import { eyeBrand } from "../../constant";
+import ProductsComponent from "../../components/ProductsComponent";
 
 export default function GlassesContacts() {
   return (
-    <main>
-      <Banner
+    <main className="mt-32">
+
+      <ProductsComponent/>
+      {/* <Banner
         banner="banner-contact-img"
         text={
           <p className="text-blue-900 ml-12 mt-4 md:m-0">Glasses & Contacts</p>
@@ -94,7 +97,7 @@ export default function GlassesContacts() {
             </li>
           ))}
         </ul>
-      </div>
+      </div> */}
     </main>
   );
 }

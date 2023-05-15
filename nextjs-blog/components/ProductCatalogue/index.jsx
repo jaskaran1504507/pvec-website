@@ -46,7 +46,7 @@ export default function ProductCatalogue() {
             <br />
             <Link href="/promotions">
                 <u className="text-blue-800 font-semibold cursor-pointer">
-                  Visit our promotionan page to see what deals are on now!{" "}
+                  Visit our promotions page to see what deals are on now!{" "}
                 </u>
               </Link>
           </div>
