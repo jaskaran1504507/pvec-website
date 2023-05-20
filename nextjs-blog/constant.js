@@ -136,49 +136,76 @@ export const productCatalogue = [
 ];
 
 export const brandsArr = [
-  { link: "PVEC_Superflex.jpeg", addr: "" },
-
+  { link: "PVEC_Superflex.jpeg", addr: "", name: "superflex" },
   {
+    name: "tomeford",
     link: "PVEC_TF.png",
     addr: "https://www.tomford.com/eyewear/men/optical/",
   },
-  { link: "PVEC_RayBan.png", addr: "https://www.ray-ban.com/canada/en" },
-
+  {
+    link: "PVEC_RayBan.png",
+    addr: "https://www.ray-ban.com/canada/en",
+    name: "rayban",
+  },
   {
     link: "PVEC_EmporioArmani.jpeg",
     addr: "https://www.armani.com/en-in/emporio-armani/man/eyewear",
+    name: "armani",
   },
-  { link: "PVEC_FYSH.jpeg", addr: "https://fyshuk.com" },
+  { link: "PVEC_FYSH.jpeg", addr: "https://fyshuk.com", name: "fyshuk" },
   {
     link: "PVEC_Gucci.png",
     addr: "https://www.gucci.com/us/en/st/capsule/women-eyewear",
+    name: "gucci",
   },
   {
     link: "PVEC_Guess.jpeg",
     addr: "https://www.guess.com/us/en/women/accessories/sunglasses",
+    name: "guess",
   },
   {
     link: "PVEC_HugoBoss.png",
     addr: "https://www.hugoboss.com/men-glasses/",
+    name: "hugoboss",
   },
   {
     link: "PVEC_KateSpade.png",
     addr: "https://www.katespade.com/shop/accessories/sunglasses-reading-glasses",
+    name: "katespade",
   },
-  { link: "PVEC_KliikDenmark.jpeg", addr: "https://www.kliik.com/" },
-  { link: "PVEC_LaFont.png", addr: "https://www.lafont.com/the-collection/" },
+  {
+    link: "PVEC_KliikDenmark.jpeg",
+    addr: "https://www.kliik.com/",
+    name: "kiliik",
+  },
+  {
+    link: "PVEC_LaFont.png",
+    addr: "https://www.lafont.com/the-collection/",
+    name: "lafont",
+  },
+
   {
     link: "PVEC_MarcJacobs.jpeg",
     addr: "https://www.marcjacobs.com/default/the-marc-jacobs/the-accessories/sunglasses/",
+    name: "marcjacobs",
   },
   {
     link: "PVEC_MichaelKors.jpeg",
     addr: "https://www.michaelkors.ca/men/accessories/sunglasses/_/N-285v",
+    name: "michaelkors",
   },
-  { link: "PVEC_Moleskine.png", addr: "https://moleskine-eyewear.com/en/" },
-  { link: "PVEC_Oakley.png", addr: "https://www.oakley.com/en-eu" },
+  {
+    link: "PVEC_Moleskine.png",
+    addr: "https://moleskine-eyewear.com/en/",
+    name: "moleskine",
+  },
+  {
+    link: "PVEC_Oakley.png",
+    addr: "https://www.oakley.com/en-eu",
+    name: "oakley",
+  },
 
-  { link: "PVEC_Staag.png", addr: "" },
+  { link: "PVEC_Staag.png", addr: "", name: "staag" },
 ];
 
 export const banner = [
