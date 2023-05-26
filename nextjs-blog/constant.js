@@ -1,7 +1,7 @@
 export const cards = [
   {
     text: `
-        A comprehensive exam includes a vision check as well as complete health
+        A comprehensive exam includes a refraction check as well as complete health
         examination of the front and back of your eyes.
 
         We provide the best care for your eyes which includes; full
@@ -10,28 +10,32 @@ export const cards = [
         health!
       `,
     img: "/images/Rectangle 1-6.jpg",
-    head: "Children/Senior Eye Exams",
+    head: "Comprehensive exam starting from $100",
   },
   {
     img: "/images/AboutUs_Unslapsh.png",
-    head: "Children/Senior Eye exams",
-    text: `
-   
-          Children under 19 and adults 65 and older are covered by MSP for their
+    head: (
+      <>
+      Children/Senior Eye exams
+      <br />
+        <p>Children: $30 - Seniors: $45</p>
+      </>
+    ),
+    text: `Children under 19 and adults 65 and older are covered by MSP for their
           comprehensive eyes exams. Any other person between the ages of 18-65
           who is referenced from a family doctor or other specialist for a
-          health condition will also be covered by MSP. *
-    
-          Fees may be applicable. please call us or email us to inquire about
+          health condition will be partly covered by MSP.*
+           Please call us or email us to inquire about
           charges.`,
+          conditions : `*conditions apply, see associate for details.`
   },
   {
     img: "/images/Rectangle 1-2.jpg",
     head: (
       <>
-        <p>Direct Billing</p>
+        Eye exams, glasses, sunglasses, and contact lenses
         <br />
-        Eye Exams, Glasses, & Contact lenses
+        <p>Direct Billing</p>
       </>
     ),
     text: `
@@ -49,17 +53,44 @@ export const cards = [
   },
   {
     img: "/images/Rectangle 1.jpg",
-    head: "Pink, Red or Sore Eye",
-    text: "A comprehensive exam includes a vision check as well as the complete health examination of the front and back of your eyes.",
+    head: (
+      <>
+      Pink Red, Sore Eyes, or eyelid care
+      <br />
+        <p>Minor Eye exam: $30 - $60</p>
+      </>
+    ),
+    text: `Eye Irritation or Redness due to allergies, excessive computer use, prolonged contact
+    lens wear, or foreign objects can be
+    treated same day.
+    We also specialize in treating Chalazion or stye with proper education along with a suite of products to provide vou with the
+    relief you are looking for.`,
   },
   {
     img: "/images/PVEC_ContactLenses.jpeg",
-    head: "Contact Lens Fitting",
-    text: "We believe that the combination of comprehensive eye health services, and the finest quality of contact lenses. We at our office provides our patients unsurpassed care and assurance at a reasonable cost.",
+    head: (
+      <>
+      Contact Lens Fitting
+      <br />
+        <p>Fitting Fee: $30 to $90</p>
+      </>
+    ),
+    text: `Whether you are a first time wearer, or a
+    seasoned Contact Lens veteran, we can help you get the most out of your contact lenses
+    by providing you with options
+    from all of the top brands. We can educate,
+    fit and recommend the contacts that best suit
+    your lifestyle needs. 
+    Ask about how to get free trial contacts!`,
   },
   {
     img: "/images/Rectangle 1-7.jpg",
-    text: "Patients who have ocular emergencies that need to be assessed immediately and we welcome them. Eye emergencies include red eyes, sudden vision loss and blur, sudden peripheral vision loss, eye pain, and symptoms of flashes and/or floaters.",
+    text: `Patients experiencing ocular emergencies can be fit in same if necessary; even if we are
+    fully booked. Eye emergencies can include irritated red eyes, foreign object removal,
+    sudden vision loss and blur, sudden peripheral vision loss, severe eye pain, and
+    symptoms of flashes, sparks and/or heavy floaters.
+    1f urgent surgical care is required, we can refer to an ophthalmologist same day.
+    (Usual wait times for an appointment is 6 to 9 months currently for non emergency)`,
     head: "Eye Emergencies",
   },
   {
@@ -76,6 +107,14 @@ export const cards = [
     head: "LASIK/PRK Surgery Consultation",
     text: "Pre-Op and Post-Op Care Cataract Surgery Management, Glaucoma Treatment, Macular Degeneration Care, Diabetic Eye Care",
     img: "/images/Rectangle 1-5.jpg",
+  },
+  {
+    head: "Rigid Gas Permeable (RGPs) & Scleral Lenses Fitting",
+    text: `Treatment for corneal conditions
+    such as keratoconus, severe dry eye, past refractive complications,
+    complicated prescriptions, and
+    post corneal transplants`,
+    img: "/images/lens-fitting.jpg",
   },
 ];
 export const navArr = [
@@ -185,7 +224,7 @@ export const banner = [
   {
     textColor: "black",
     img: "banner-home-img",
-    text: "Our goal is to detect eye health issues before permanent damage occurs",
+    text: "Our mission is to provide comprehensive eye care in order to detect and address any ocular health issues.",
   },
   {
     textColor: "white",
@@ -195,6 +234,6 @@ export const banner = [
   {
     textColor: "white",
     img: "banner-home-img-3",
-    text: "Our goal is to detect eye health issues before permanent damage occurs",
+    text: "Our mission is to provide comprehensive eye care in order to detect and address any ocular health issues.",
   },
 ];

@@ -43,8 +43,8 @@ export default function ServiceProducts() {
           <div>
             {" "}
             <p className="text">
-            We have been helping people with quality care from our team of
-            expert eye doctors in Downtown Vancouver since 2005
+            We have been serving the Downtown Vancouver core with quality eye care from our team of expert eye
+doctors since 2005!
             </p>
             <br />
           </div>
@@ -120,7 +120,7 @@ export default function ServiceProducts() {
         </div>{" "} */}
       </div>
       <div className="grid  gap-6 mt-10 grid-cols-1 md:grid-cols-3 u-clearfix u-sheet mx-auto u-valign-middle u-sheet-1">
-        {cards.map(({ img, text, head }) => (
+        {cards.map(({ img, text, head, conditions }) => (
           <div key={img} className="p-2 shadow-lg ">
             <div>
               <Image
@@ -152,6 +152,9 @@ export default function ServiceProducts() {
                 </span>
               )}
             </div>
+            {conditions &&  (<div className="px-6">
+                <p>{conditions} </p>
+              </div>) }
             {/* <div className="flex justify-center">
             <div className="flex-end justify-center navbar-btn d-none d-sm-inline-block"> */}
               <div>

@@ -47,20 +47,19 @@ export default function ServicesCatalogueHomePage() {
                 />
                 <img
                   className="shape-1"
-                  src="/images/Rectangle 1-5.jpg"
+                  src="/images/Rectangle 1-6.jpg"
                   alt="shape"
                   style={{height: '100%', width: '200%'}}
                 />
                 {/* <i className="lni-baloon"></i> */}
               </div>
               <div className="services-content mt-30">
-                <h4 className="services-title"><a href="/service-products" >LASIK/PRK Surgery Consultation</a></h4>
+                <h4 className="services-title"><a href="/service-products" >Comprehensive Eye Exam</a></h4>
                 <p className="text">
-                Pre-Op and Post-Op Care Cataract Surgery Management, Glaucoma Treatment, Macular Degeneration Care, Diabetic Eye Care
+                for Adults/Senior/Children
                 </p>
                 <a className="more" href="/service-products"
-                  >Learn More <i className="lni-chevron-right"></i
-                ></a>
+                  >Learn More <i className="lni-chevron-right"></i></a>
               </div>
             </div>
             {/* <!-- single services --> */}
@@ -86,9 +85,10 @@ export default function ServicesCatalogueHomePage() {
                 {/* <i className="lni-cog"></i> */}
               </div>
               <div className="services-content mt-30">
-                <h4 className="services-title"><a href="/service-products">Dry Eye Treatment</a></h4>
+                <h4 className="services-title"><a href="/service-products">Computer Vision Syndrome
+</a></h4>
                 <p className="text">
-                Dry eye happens when your eye don't make enough tears to stay wet, or when your tears don't work correctly.
+                Eye problems caused by prolonged computer use including: Eye irritation (Dry eyes, itchy eyes, red eyes) Blurred vision. Headaches.
                 </p>
                 <a className="more" href="/service-products">Learn More <i className="lni-chevron-right"></i></a>
               </div>
@@ -109,20 +109,18 @@ export default function ServicesCatalogueHomePage() {
                 />
                 <img
                   className="shape-1"
-                  src="/images/Rectangle 1-3.jpg"
+                  src="/images/Rectangle 1-5.jpg"
                   alt="shape"
                   style={{height: '100%', width: '200%'}}
                 />
                 {/* <i className="lni-bolt-alt"></i> */}
               </div>
               <div className="services-content mt-30">
-                <h4 className="services-title"><a href="/service-products">Light Sensitivity Management</a></h4>
+                <h4 className="services-title"><a href="/service-products">Lasik/PRK Surgery Consult</a></h4>
                 <p className="text">
-                Light sensitivity, or photophobia, is a condition in which bright light hurts your eyes. This condition can range from mild to severe.
+                Pre-Op and Post-Op Care Cataract Surgery Management, Glaucoma Treatment, Macular Degeneration Care, Diabetic Eye Care.
                 </p>
-                <a className="more" href="/service-products"
-                  >Learn More <i className="lni-chevron-right"></i
-                ></a>
+                <a className="more" href="/service-products">Learn More <i className="lni-chevron-right"></i></a>
               </div>
             </div>
             {/* <!-- single services --> */}

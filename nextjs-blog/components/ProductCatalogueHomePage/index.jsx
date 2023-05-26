@@ -24,8 +24,7 @@ export default function ProductCatalogueHomePage() {
               <h4>
                 <span>
                   <br />
-                  Style it, daily wearables, or for your eye protection. We have
-                  everything!
+                  Over 750+ Ophthalmic frames, 250+ Stylish Sunglasses, Top Branded Contact Lenses, and various eye care products in stock to choose from!
                 </span>
               </h4>
             </div>
@@ -47,17 +46,16 @@ export default function ProductCatalogueHomePage() {
                     <h3>
                       <span>
                         <br />
-                        Vision correction | Designer - All categories available
+                        Disposable Daily, Bi-Weekly, Monthly, Astigmastic,
+• Colored or Cos-play Contact Lenses (with or without prescrption) delivered with Free Shipping!
                       </span>
                     </h3>
                   </div>
                   {/* <!-- section title --> */}
                   <p className="text">
-                    Experience clear vision with our wide selection of contact
-                    lenses. Perfect for any need, prescription or
-                    non-prescription available.
+                  All at competitive prices with applicable manufacturer's rebates* (based on quantity ordered)
                   </p>
-                  <a href="/service-products" className="main-btn">
+                  <a href="/glasses-contacts?query=contacts" className="main-btn">
                     Get yours now
                   </a>
                 </div>
@@ -108,16 +106,16 @@ export default function ProductCatalogueHomePage() {
                     <h3>
                       <span>
                         <br />
-                        Checkout our exclusive brand associates{" "}
+                        New Modern Trends, Timeless Classics, or safety protective eyewear; our collection has it all!{" "}
                       </span>
                     </h3>
                   </div>
                   {/* <!-- section title --> */}
                   <p className="text">
-                    Upgrade your style with our collection of trendy eye wears.
-                    From classic to modern, we have something for everyone.
+                  We are constantly updating our selections vear round to keep our
+collection up-to-date
                   </p>
-                  <a href="/service-products" className="main-btn">
+                  <a href="/glasses-contacts?query=glasses" className="main-btn">
                     Style it now
                   </a>
                 </div>
@@ -160,17 +158,17 @@ export default function ProductCatalogueHomePage() {
                     <h3>
                       <span>
                         <br />
-                        Protect your eyes
+                        Over 30% of the population struggle with dry eye syndrome which can lead to many eye complications.
                       </span>
                     </h3>
                   </div>
                   {/* <!-- section title --> */}
                   <p className="text">
-                    Relieve dry, irritated eyes with our collection of
-                    high-quality eye drops. Perfect for daily use and for
-                    contact lens wearers.
+                  We have the relief you need with our Optometrist recommended selection of dry eye products.
+                  <br/> Relieve dry, irritated eyes with our selection of high quality eye-drops, lid and eyelash care products, and therapeutic masks.
+                  <br/>Perfect for the net addicts, cyberphiles and contact lens wearers out there!
                   </p>
-                  <a href="/service-products" className="main-btn">
+                  <a href="/products?query=eye-medic" className="main-btn">
                     Get it now
                   </a>
                 </div>

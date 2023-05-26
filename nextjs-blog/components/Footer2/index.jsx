@@ -15,8 +15,8 @@ export default function Footer2() {
                 <h2 className="subscribe-title">Subscribe Our Newsletter</h2>
                 <h3>
                   <span>
-                    for the offers on our products, eye health related blogs and
-                    the free or discounted eye checkup camp* notifications
+                  and follow us facebook and instragram
+to keep up-to-date on our latest offers, new stock announcements, and access to our health care blog
                   </span>
                 </h3>
               </div>
@@ -58,11 +58,7 @@ export default function Footer2() {
                   />
                 </a>
                 <p className="text">
-                  We have been helping people with quality care from our team of
-                  expert eye doctors in downtown Vancouver since 2005. Our team
-                  of eye specialists have many years of professional experience
-                  and can provide proper diagnosis of eye health conditions
-                  right in the heart of Vancouver.
+                We have been caring for eyes in downtown Vancouver since 2005. Our team of expert eye doctors have many years of experience to provide proper diagnosis of health conditions, future care recommendations, and to expedite urgent care needs to our extensive list of associate ophthalmologists.
                 </p>
                 <ul className="social">
                   <li>
