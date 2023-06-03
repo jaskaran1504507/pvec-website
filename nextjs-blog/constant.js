@@ -24,16 +24,15 @@ export const cards = [
     text: `Children under 19 and adults 65 and older are covered by MSP for their
           comprehensive eyes exams. Any other person between the ages of 18-65
           who is referenced from a family doctor or other specialist for a
-          health condition will be partly covered by MSP.*
-           Please call us or email us to inquire about
-          charges.`,
-          conditions : `*conditions apply, see associate for details.`
+          health condition will be partly covered by MSP*.`,
+          conditions : `( *conditions apply, see associate for details. Please call us or email us to inquire about
+            charges.)`
   },
   {
     img: "/images/Rectangle 1-2.jpg",
     head: (
       <>
-        Eye exams, glasses, sunglasses, and contact lenses
+        Eye exams, Glasses, Sunglasses, and Contact Lenses
         <br />
         <p>Direct Billing</p>
       </>
@@ -42,7 +41,7 @@ export const cards = [
         If you have private extended health insurance from one of the below
         companies, we offer direct billing for all glasses and contact lens
         orders. This means you can walk away with glasses or contacts with
-        little to no out of- pocket expenses.
+        little to no out of pocket expenses.
       
           Most of our common health benefits providers are: Blue Cross, Chamber
           of Commerce, Crown, Desjardins, Great-West life, Canada Life,
@@ -55,15 +54,14 @@ export const cards = [
     img: "/images/Rectangle 1.jpg",
     head: (
       <>
-      Pink Red, Sore Eyes, or eyelid care
-      <br />
-        <p>Minor Eye exam: $30 - $60</p>
+      Pink Red, Sore Eyes, or Eyelid Care
+      <br /><p>Minor Eye exam: $30 - $60</p>
       </>
     ),
-    text: `Eye Irritation or Redness due to allergies, excessive computer use, prolonged contact
+    text: `Eye irritation or redness due to allergies, excessive computer use, prolonged contact
     lens wear, or foreign objects can be
     treated same day.
-    We also specialize in treating Chalazion or stye with proper education along with a suite of products to provide vou with the
+    We also specialize in treating Chalazion or Stye with proper education along with a suite of products to provide vou with the
     relief you are looking for.`,
   },
   {
@@ -71,8 +69,7 @@ export const cards = [
     head: (
       <>
       Contact Lens Fitting
-      <br />
-        <p>Fitting Fee: $30 to $90</p>
+      <br /><p>Fitting Fee: $30 to $90</p>
       </>
     ),
     text: `Whether you are a first time wearer, or a
@@ -86,10 +83,10 @@ export const cards = [
   {
     img: "/images/Rectangle 1-7.jpg",
     text: `Patients experiencing ocular emergencies can be fit in same if necessary; even if we are
-    fully booked. Eye emergencies can include irritated red eyes, foreign object removal,
+    fully booked. Eye Emergencies can include irritated red eyes, foreign object removal,
     sudden vision loss and blur, sudden peripheral vision loss, severe eye pain, and
     symptoms of flashes, sparks and/or heavy floaters.
-    1f urgent surgical care is required, we can refer to an ophthalmologist same day.
+    If urgent surgical care is required, we can refer to an ophthalmologist same day.
     (Usual wait times for an appointment is 6 to 9 months currently for non emergency)`,
     head: "Eye Emergencies",
   },
@@ -101,7 +98,7 @@ export const cards = [
   {
     img: "/images/Rectangle 1-4.jpg",
     head: "Dry Eye Treatment",
-    text: "Dry eye happens when your eye don't make enough tears to stay wet, or when your tears don't work correctly. This can make your eyes feel uncomfortable, and in some cases ut can also cause vision problems.",
+    text: "Dry eye happens when your eye don't make enough tears to stay wet, or when your tears don't work correctly. This can make your eyes feel uncomfortable, and in some cases it can also cause vision problems.",
   },
   {
     head: "LASIK/PRK Surgery Consultation",
@@ -156,20 +153,20 @@ export const eyeBrand = [
 export const productCatalogue = [
   {
     img: "/images/man-lenses.jpg",
-    head: "Contact lenses",
+    head: "Contact Lenses",
     text: "Experience clear vision with our wide selection of contact lenses. Perfect for any need, prescription or non-prescription available.",
     link: "/glasses-contacts?query=contacts",
   },
   {
     img: "/images/eye-drops.jpg",
-    head: "Eye medication products",
+    head: "Eye Medication Products",
     text: "Relieve dry, irritated eyes with our collection of high-quality eye drops. Perfect for daily use and for contact lens wearers.",
     link: "/products?query=eye-medic",
   },
   {
     img: "/images/modern-elegance-glasses.jpg",
-    head: "Eye wears",
-    text: "Upgrade your style with our collection of trendy eye wears. From classic to modern, we have something for everyone.",
+    head: "Eyewears",
+    text: "Upgrade your style with our collection of trendy eye wears. From classic to modern, bold or conservative, and even safety protective, we have something for everyone.",
     link: "/glasses-contacts?query=glasses",
   },
 ];

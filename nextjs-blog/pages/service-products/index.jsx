@@ -152,9 +152,7 @@ doctors since 2005!
                 </span>
               )}
             </div>
-            {conditions &&  (<div className="px-6">
-                <p>{conditions} </p>
-              </div>) }
+            
             {/* <div className="flex justify-center">
             <div className="flex-end justify-center navbar-btn d-none d-sm-inline-block"> */}
               <div>
@@ -163,6 +161,9 @@ doctors since 2005!
               </div>
               {/* </div>
               </div> */}
+              {conditions &&  (<div className="px-6">
+                <p className="text-xs">{conditions} </p>
+              </div>) }
           </div>
         ))}
       </div>

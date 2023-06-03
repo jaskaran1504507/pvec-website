@@ -53,6 +53,9 @@ export default function ProductCatalogueHomePage() {
                   </div>
                   {/* <!-- section title --> */}
                   <p className="text">
+                  Our speciality is Rigid Gas Permeable and Scleral Contact lens fittings.
+                  </p>
+                  <p className="text">
                   All at competitive prices with applicable manufacturer's rebates* (based on quantity ordered)
                   </p>
                   <a href="/glasses-contacts?query=contacts" className="main-btn">

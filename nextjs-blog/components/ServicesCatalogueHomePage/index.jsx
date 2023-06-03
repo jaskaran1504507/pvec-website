@@ -23,7 +23,7 @@ export default function ServicesCatalogueHomePage() {
                 Our Services
               </h3>
               <h4 >
-                <span><br/>Everything you need for your eye care!</span>
+                <span><br/>Everything you need for happy, healthy eyes!</span>
               </h4>
             </div>
             {/* <!-- section title --> */}
