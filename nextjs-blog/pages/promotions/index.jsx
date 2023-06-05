@@ -52,8 +52,8 @@ export default function Promotions() {
                 className=" u-active text-center u-section-1-1 banner-img  u-carousel-item  justify-center flex u-clearfix u-image u-shading "
               >
                 <div className="u-clearfix u-sheet flex items-center u-sheet-1 top-section md:mt-0 md:py-0 py-4">
-                  <div style={{ marginTop: "15em" }}>
-                    <h2
+                  <div className = "backdrop-blur" style={{ marginTop: "15em" }}>
+                      <h2
                       style={{
                         color: "white",
                         fontSize: "3em",
