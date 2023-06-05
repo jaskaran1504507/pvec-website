@@ -7,61 +7,91 @@ import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a lo
 
 export default function Promotions() {
   return (
-   
-    // <section className="about-area pt-70">
-    //   <div className="container">
-    //     <div className="row">
-    //       <div className="col-lg-6">
-    //         <div
-    //           className="about-content mt-50 wow fadeInLeftBig"
-    //           data-wow-duration="1s"
-    //           data-wow-delay="0.5s"
-    //         >
-    //           <div className="section-title">
-    //             <h3 className="title">Eye Drops</h3>
-                
-    //           </div>
-    //         </div>
-    //         {/* <!-- about content --> */}
-    //       </div>
-    //       <div className="col-lg-6">
-    //         <div
-    //           className="about-image text-center mt-50 wow fadeInRightBig"
-    //           data-wow-duration="1s"
-    //           data-wow-delay="0.5s"
-    //         >
-    //           <img
-    //             src="images/eyedrops.jpg"
-    //             alt="about"
-    //             style={{ maxHeight: "80%", maxWidth: "80%" }}
-    //           />
-    //         </div>
-    //         {/* <!-- about image --> */}
-    //       </div>
-    //     </div>
-    //     {/* <!-- row --> */}
-    //   </div>
-    //   {/* <!-- container --> */}
-    //   <div className="about-shape-1">
-    //     <img src="assets/images/about-shape-1.svg" alt="shape" />
-    //   </div>
-    // </section>
-
     <>
-    <div className="flex align-items-center justify-content-between mt-20 mx-10">
- 
-    <div
-              className="about-content mt-50 wow fadeInLeftBig"
-              data-wow-duration="1s"
-              data-wow-delay="0.5s"
+      <div className="mt-28">
+        {/* <Carousel autoPlay swipeable infiniteLoop> */}
+          {[
+            {
+              link: "https://www.reviewob.com/wp-content/uploads/2017/10/10-25-17glasses.jpg",
+              title : "Clearance Sale",
+              description : "Select eyewear from 50-90% off with fully coated lenses purchase",
+            },
+            {
+              link: "https://images.squarespace-cdn.com/content/v1/5d30ea61f16b850001147f58/1585435822475-I6FQWPFD24ED97BXJK4T/iStock-1131639271.jpg?format=1000w",
+              title : "Every Day Value Offer",
+              description : (<>Buy 1 Complete Pair (frame+lenses), Get 2nd pair 30% off frame and lenses! <br />Buy 1 Pair of Non-Prescription Sunglasses, get 2nd pair 20% Off!</>),
+            },
+            {
+              link: "https://da4e1j5r7gw87.cloudfront.net/wp-content/uploads/sites/2520/2018/06/Hero-3-1280x480.jpeg",
+              title : "Summertime Sun Sale Limited Time Offer",
+              description : "Select Polarized Sunglasses: Regular price $200 on for $99",
+            },
+            {
+              link: "https://www.ipshealth.co.za/wp-content/uploads/2020/11/eyehealth.jpg",
+              title : "Have Extended Insurance? Ask us how to get glasses or sunglasses for little to no expense out of your pocket!",
+            },
+          ].map((m) => (
+            <div
+              className="pb-2 md:py-0 mt-10"
+              key={m.link}
+              style={{
+                position: "relative",
+                width: "100%",
+                overflow: "hidden",
+                background: "#F6F8F3",
+              }}
             >
-              <div className="section-title-promotions">
-                <h3 className="title-promotions">Ahh, ha! We don't have any active promotions yet, please check back in sometime </h3>
-                
+              <div
+                style={{
+                  backgroundImage: `url(${m.link})`,
+                  backgroundColor: "#cccccc",
+                  backgroundRepeat: "no-repeat",
+                  backgroundSize: "cover",
+                  maxHeight : "540px"
+                }}
+                className=" u-active text-center u-section-1-1 banner-img  u-carousel-item  justify-center flex u-clearfix u-image u-shading "
+              >
+                <div className="u-clearfix u-sheet flex items-center u-sheet-1 top-section md:mt-0 md:py-0 py-4">
+                  <div style={{ marginTop: "15em" }}>
+                    <h2
+                      style={{
+                        color: "white",
+                        fontSize: "3em",
+                        textAlign: "start",
+                        color : "#8193BE"
+                      }}
+                    >
+                     {m.title}
+                    </h2>
+                    {m.description &&  (<p style={{ color: "#349BD6", alignItems : "flex-start", fontSize : "20px"}}>
+                    {m.description}
+                    </p>)}
+                  </div>
+                </div>
               </div>
             </div>
-  <img src="images/no-promotions-2.jpg" alt="Snow" style={{width:'70%', maxHeight:'540px'}}/>
-</div>
-</>
+          ))}
+        {/* </Carousel> */}
+      </div>
+      {/* <div className="flex align-items-center justify-content-between mt-20 mx-10">
+        <div
+          className="about-content mt-50 wow fadeInLeftBig"
+          data-wow-duration="1s"
+          data-wow-delay="0.5s"
+        >
+          <div className="section-title-promotions">
+            <h3 className="title-promotions">
+              Ahh, ha! We don't have any active promotions yet, please check
+              back in sometime{" "}
+            </h3>
+          </div>
+        </div>
+        <img
+          src="images/no-promotions-2.jpg"
+          alt="Snow"
+          style={{ width: "70%", maxHeight: "540px" }}
+        />
+      </div> */}
+    </>
   );
 }

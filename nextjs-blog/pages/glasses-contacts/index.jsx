@@ -1,13 +1,44 @@
 import React from "react";
 import Banner from "../../components/Banner";
-import { eyeBrand } from "../../constant";
+import { brandsArr, eyeBrand } from "../../constant";
 import ProductsComponent from "../../components/ProductsComponent";
+import { Carousel } from "react-responsive-carousel";
+import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+
+import Image from "next/image";
+import { useRouter } from "next/router";
 
 export default function GlassesContacts() {
+  const router = useRouter();
   return (
     <main className="mt-32">
+      <div className="mt-24">
+        <Carousel autoPlay swipeable infiniteLoop>
+          {brandsArr.map((m) => (
+            <div
+              className="pb-2 md:py-0 "
+              key={m.link}
+              style={{
+                position: "relative",
+                width: "100%",
+                overflow: "hidden",
+                background: "#F6F8F3",
+              }}
+              onClick={() => {
+                router.push({ query: `search=${m.name}` });
+              }}
+            >
+              <div className=" u-active text-center u-section-1-1 banner-img  u-carousel-item  justify-center flex u-clearfix u-image u-shading ">
+                <div className="u-clearfix u-sheet flex items-center u-sheet-1 top-section md:mt-0 md:py-0 py-4">
+                  <Image src={"/images/brands/" + m.link} alt="brd" fill />
+                </div>
+              </div>
+            </div>
+          ))}
+        </Carousel>
+      </div>
 
-      <ProductsComponent/>
+      <ProductsComponent />
       {/* <Banner
         banner="banner-contact-img"
         text={

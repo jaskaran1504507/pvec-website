@@ -32,20 +32,37 @@ export default function ProductsComponent() {
   const router = useRouter();
   useEffect(() => {
     if (router.isReady) {
-      const localCartProducts = localStorage.getItem("products") || "[]";
-      setCartProducts(JSON.parse(localCartProducts));
-      getProducts({
-        query: {
-          query: queryObj[router?.query?.query] || "contacts,glasses",
-          startIndex: 0,
-          viewSize: 10,
-        },
-      }).then((res) => {
-        if (res?.productData) {
-          console.log("res", res.productData);
-          setProducts(res);
-        }
-      });
+      if (router.query?.search) {
+        setSearch(router.query.search);
+        getProducts({
+          query: {
+            query: router.query.search,
+            startIndex: 0,
+            viewSize: 10,
+          },
+        }).then((res) => {
+          if (res?.productData) {
+            console.log("res", res.productData);
+            setProducts(res);
+          }
+        });
+      } else {
+        console.log("router.query", router.query);
+        const localCartProducts = localStorage.getItem("products") || "[]";
+        setCartProducts(JSON.parse(localCartProducts));
+        getProducts({
+          query: {
+            query: queryObj[router?.query?.query] || "contacts,glasses",
+            startIndex: 0,
+            viewSize: 10,
+          },
+        }).then((res) => {
+          if (res?.productData) {
+            console.log("res", res.productData);
+            setProducts(res);
+          }
+        });
+      }
     }
   }, [router.query]);
 
@@ -141,12 +158,15 @@ export default function ProductsComponent() {
       </div>
       <div className="flex justify-center">
         <Search
+          value={search}
           className="m-6"
           placeholder="Search products"
           onSearch={(val) => {
             console.log("val", val);
             onSearch(val);
-            setSearch(val);
+          }}
+          onChange={(ev) => {
+            setSearch(ev.target.value);
           }}
           enterButton
           style={{
