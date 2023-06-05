@@ -7,61 +7,32 @@ import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a lo
 
 export default function Promotions() {
   return (
-    // <section className="about-area pt-70">
-    //   <div className="container">
-    //     <div className="row">
-    //       <div className="col-lg-6">
-    //         <div
-    //           className="about-content mt-50 wow fadeInLeftBig"
-    //           data-wow-duration="1s"
-    //           data-wow-delay="0.5s"
-    //         >
-    //           <div className="section-title">
-    //             <h3 className="title">Eye Drops</h3>
-
-    //           </div>
-    //         </div>
-    //         {/* <!-- about content --> */}
-    //       </div>
-    //       <div className="col-lg-6">
-    //         <div
-    //           className="about-image text-center mt-50 wow fadeInRightBig"
-    //           data-wow-duration="1s"
-    //           data-wow-delay="0.5s"
-    //         >
-    //           <img
-    //             src="images/eyedrops.jpg"
-    //             alt="about"
-    //             style={{ maxHeight: "80%", maxWidth: "80%" }}
-    //           />
-    //         </div>
-    //         {/* <!-- about image --> */}
-    //       </div>
-    //     </div>
-    //     {/* <!-- row --> */}
-    //   </div>
-    //   {/* <!-- container --> */}
-    //   <div className="about-shape-1">
-    //     <img src="assets/images/about-shape-1.svg" alt="shape" />
-    //   </div>
-    // </section>
-
     <>
       <div className="mt-28">
-        <Carousel autoPlay swipeable infiniteLoop>
+        {/* <Carousel autoPlay swipeable infiniteLoop> */}
           {[
             {
               link: "https://www.reviewob.com/wp-content/uploads/2017/10/10-25-17glasses.jpg",
+              title : "Clearance Sale",
+              description : "Select eyewear from 50-90% off with fully coated lenses purchase",
             },
             {
-              link: "https://www.essilorindia.com/sites/default/files/2023-05/304-23%20CHO%20-%20Web%20Banners%20-%20Man%20-%201280%20x%20420%20px%20-%20general_1.jpg",
+              link: "https://images.squarespace-cdn.com/content/v1/5d30ea61f16b850001147f58/1585435822475-I6FQWPFD24ED97BXJK4T/iStock-1131639271.jpg?format=1000w",
+              title : "Every Day Value Offer",
+              description : (<>Buy 1 Complete Pair (frame+lenses), Get 2nd pair 30% off frame and lenses! <br />Buy 1 Pair of Non-Prescription Sunglasses, get 2nd pair 20% Off!</>),
             },
             {
-              link: "https://www.everydayonsales.com/wp-content/uploads/2022/07/MOG-Eyewear-Buy-1-Free-1-Promotion-350x350.jpg",
+              link: "https://da4e1j5r7gw87.cloudfront.net/wp-content/uploads/sites/2520/2018/06/Hero-3-1280x480.jpeg",
+              title : "Summertime Sun Sale Limited Time Offer",
+              description : "Select Polarized Sunglasses: Regular price $200 on for $99",
+            },
+            {
+              link: "https://www.ipshealth.co.za/wp-content/uploads/2020/11/eyehealth.jpg",
+              title : "Have Extended Insurance? Ask us how to get glasses or sunglasses for little to no expense out of your pocket!",
             },
           ].map((m) => (
             <div
-              className="pb-2 md:py-0 "
+              className="pb-2 md:py-0 mt-10"
               key={m.link}
               style={{
                 position: "relative",
@@ -76,6 +47,7 @@ export default function Promotions() {
                   backgroundColor: "#cccccc",
                   backgroundRepeat: "no-repeat",
                   backgroundSize: "cover",
+                  maxHeight : "540px"
                 }}
                 className=" u-active text-center u-section-1-1 banner-img  u-carousel-item  justify-center flex u-clearfix u-image u-shading "
               >
@@ -84,30 +56,24 @@ export default function Promotions() {
                     <h2
                       style={{
                         color: "white",
-                        fontSize: "5em",
+                        fontSize: "3em",
                         textAlign: "start",
+                        color : "#8193BE"
                       }}
                     >
-                      This is heading
+                     {m.title}
                     </h2>
-                    <p style={{ color: "white" }}>
-                      Disclaimer: The offer is not available for everywhere.
-                      please check with local shop does offer apply to you. The
-                      offer is not available for everywhere. please check with
-                      local shop does offer apply to you. The offer is not
-                      available for everywhere. please check with local shop
-                      does offer apply to you. The offer is not available for
-                      everywhere. please check with local shop does offer apply
-                      to you
-                    </p>
+                    {m.description &&  (<p style={{ color: "#349BD6", alignItems : "flex-start", fontSize : "20px"}}>
+                    {m.description}
+                    </p>)}
                   </div>
                 </div>
               </div>
             </div>
           ))}
-        </Carousel>
+        {/* </Carousel> */}
       </div>
-      <div className="flex align-items-center justify-content-between mt-20 mx-10">
+      {/* <div className="flex align-items-center justify-content-between mt-20 mx-10">
         <div
           className="about-content mt-50 wow fadeInLeftBig"
           data-wow-duration="1s"
@@ -125,7 +91,7 @@ export default function Promotions() {
           alt="Snow"
           style={{ width: "70%", maxHeight: "540px" }}
         />
-      </div>
+      </div> */}
     </>
   );
 }
