@@ -47,7 +47,7 @@ export default function ProductCatalogueHomePage() {
                       <span>
                         <br />
                         Disposable Daily, Bi-Weekly, Monthly, Astigmastic,
-• Colored or Cos-play Contact Lenses (with or without prescrption) delivered with Free Shipping!
+• Colored or Cos-play Contact Lenses (with or without prescription) delivered with Free Shipping!
                       </span>
                     </h3>
                   </div>
@@ -109,14 +109,13 @@ export default function ProductCatalogueHomePage() {
                     <h3>
                       <span>
                         <br />
-                        New Modern Trends, Timeless Classics, or safety protective eyewear; our collection has it all!{" "}
+                        New Modern Trends, Timeless Classics,Bold or Conservative and even Safety Protective eyewear; our collection has it all!{" "}
                       </span>
                     </h3>
                   </div>
                   {/* <!-- section title --> */}
                   <p className="text">
-                  We are constantly updating our selections vear round to keep our
-collection up-to-date
+                  We are constantly updating our selections year round to keep our collection up-to-date
                   </p>
                   <a href="/glasses-contacts?query=glasses" className="main-btn">
                     Style it now

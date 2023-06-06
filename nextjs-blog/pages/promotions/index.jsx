@@ -58,12 +58,12 @@ export default function Promotions() {
                         color: "white",
                         fontSize: "3em",
                         textAlign: "start",
-                        color : "#8193BE"
+                        color : "#1D3D74"
                       }}
                     >
                      {m.title}
                     </h2>
-                    {m.description &&  (<p style={{ color: "#349BD6", alignItems : "flex-start", fontSize : "20px"}}>
+                    {m.description &&  (<p style={{ color: "#2968ce", alignItems : "flex-start", fontSize : "20px"}}>
                     {m.description}
                     </p>)}
                   </div>
