@@ -7,37 +7,39 @@ import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a lo
 
 import Image from "next/image";
 import { useRouter } from "next/router";
+const brands = [[], [], [], []];
 
+for (let index = 0; index < brandsArr.length; index++) {
+  const brand = brandsArr[index];
+  console.log(Math.floor(index / 4));
+  brands[Math.floor(index / 4)].push(
+    <div key={brand.link}>
+      {/* <Link href={brandsLinkArr[index++]} legacyBehavior passHref> */}
+      <a target="_blank" href={brand.addr} rel="noopener noreferrer">
+        <div
+          style={{
+            height: "200px",
+            position: "relative",
+            width: "200px",
+          }}
+        >
+          <Image
+            src={"/images/brands/" + brand.link}
+            height="100"
+            width="200"
+            alt="brd"
+          />
+        </div>
+      </a>
+      {/* </Link> */}
+    </div>
+  );
+}
+console.log(brands);
 export default function GlassesContacts() {
   const router = useRouter();
   return (
     <main className="mt-32">
-      <div className="mt-24">
-        <Carousel autoPlay swipeable infiniteLoop>
-          {brandsArr.map((m) => (
-            <div
-              className="pb-2 md:py-0 "
-              key={m.link}
-              style={{
-                position: "relative",
-                width: "100%",
-                overflow: "hidden",
-                background: "#F6F8F3",
-              }}
-              onClick={() => {
-                router.push({ query: `search=${m.name}` });
-              }}
-            >
-              <div className=" u-active text-center u-section-1-1 banner-img  u-carousel-item  justify-center flex u-clearfix u-image u-shading ">
-                <div className="u-clearfix u-sheet flex items-center u-sheet-1 top-section md:mt-0 md:py-0 py-4">
-                  <Image src={"/images/brands/" + m.link} alt="brd" fill />
-                </div>
-              </div>
-            </div>
-          ))}
-        </Carousel>
-      </div>
-
       <ProductsComponent />
       {/* <Banner
         banner="banner-contact-img"
@@ -129,6 +131,25 @@ export default function GlassesContacts() {
           ))}
         </ul>
       </div> */}
+
+      <div className="mt-4">
+        <Carousel
+          autoPlay
+          swipeable
+          transitionTime={1500}
+          infiniteLoop
+          centerMode
+        >
+          {brands.map((b, i) => (
+            <div
+              key={i}
+              className="grid grid-cols-1 md:grid-cols-4 gap-2 md:gap-5"
+            >
+              {b}
+            </div>
+          ))}
+        </Carousel>
+      </div>
     </main>
   );
 }

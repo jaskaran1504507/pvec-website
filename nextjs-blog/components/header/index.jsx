@@ -2,6 +2,12 @@ import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import React, { useState } from "react";
+import {
+  HomeFilled,
+  HomeOutlined,
+  MailOutlined,
+  MobileOutlined,
+} from "@ant-design/icons";
 import { navArr } from "../../constant";
 
 export default function Header() {
@@ -168,7 +174,7 @@ export default function Header() {
           <div className="container">
             <div className="row">
               <div className="col-lg-12">
-                <nav className="navbar navbar-expand-lg">
+                <nav className="navbar navbar-expand-lg pb-0">
                   <a className="navbar-brand" href="#">
                     <img src="images/eyecare-logo.png" alt="Logo" />
                   </a>
@@ -188,15 +194,26 @@ export default function Header() {
                   </button>
 
                   <div
+                    // style={{
+                    //   background:
+                    //     " linear-gradient(to right, #6441A5 0%, #2a0845  51%, #6441A5  100%)",
+                    // }}
                     className={`navbar-collapse sub-menu-bar `}
-                    style={{ display: isNavVisible ? "block" : "none" }}
+                    style={{
+                      display: isNavVisible ? "block" : "none",
+                      // background:
+                      //   " linear-gradient(to right, #6441A5 0%, #2a0845  51%, #6441A5  100%)",
+                    }}
                     id="navbarSupportedContent"
                   >
                     {/* <div className="collapse navbar-collapse sub-menu-bar" id="navbarSupportedContent"> */}
                     <ul id="nav" className="navbar-nav ml-auto">
-                      <li className="nav-item active">
+                      <li className="nav-item active ">
                         <a className="page-scroll" href="/">
-                          Home
+                          <span className="flex items-center ">
+                            {" "}
+                            <span className="pl-2">Home</span>
+                          </span>
                         </a>
                       </li>
                       {/* <li className="nav-item">
@@ -243,6 +260,51 @@ export default function Header() {
               </div>
             </div>
           </div>
+          {location.pathname === "/" && !isNavVisible && (
+            <div
+              style={{
+                position: "sticky",
+                width: "100%",
+                top: "111px",
+                zIndex: 2000,
+              }}
+              className="hidden md:block"
+            >
+              <div className=" mx-auto  flex justify-end   ">
+                <div
+                  className="py-2 pl-8 pr-40"
+                  style={{
+                    background:
+                      "linear-gradient(to right, #1d3d74 0%, #3598cf 50%, #1d3d74 100%)",
+                  }}
+                >
+                  <div className="text-white flex items-center">
+                    <MailOutlined />
+                    {` `}{" "}
+                    <div className="pl-2 ">
+                      {/* <a href="mailto:info@pveyecare.ca"> */}
+                      <span className="hover:white focus:white">
+                        info@pveyecare.ca
+                      </span>
+                      {/* </a> */}
+                    </div>
+                  </div>
+                  <div className="text-white flex items-center">
+                    <MobileOutlined twoToneColor="white" />
+                    {` `}
+                    <span className="pl-2">+1 604 689 9962</span>
+                  </div>
+                  <div className="text-white flex items-center">
+                    <HomeOutlined />
+                    {` `}{" "}
+                    <span className="pl-2">
+                      1242 Burrard Street, Vancouver BC, V6Z 1Z1
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          )}
         </div>
 
         {/* <div id="home" className="header-hero bg_cover" style={{backgroundImage: "assets/images/banner-bg.svg"}}>

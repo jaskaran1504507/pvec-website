@@ -16,17 +16,17 @@ export const cards = [
     img: "/images/AboutUs_Unslapsh.png",
     head: (
       <>
-      Children/Senior Eye exams
-      <br />
-        <p>Children: $30 - Seniors: $45</p>
+        Children/Senior Eye exams
+        <br />
+        <p className="font-bold">Children: $30 - Seniors: $45</p>
       </>
     ),
     text: `Children under 19 and adults 65 and older are covered by MSP for their
           comprehensive eyes exams. Any other person between the ages of 18-65
           who is referenced from a family doctor or other specialist for a
           health condition will be partly covered by MSP*.`,
-          conditions : `( *conditions apply, see associate for details. Please call us or email us to inquire about
-            charges.)`
+    conditions: `( *conditions apply, see associate for details. Please call us or email us to inquire about
+            charges.)`,
   },
   {
     img: "/images/Rectangle 1-2.jpg",
@@ -34,7 +34,7 @@ export const cards = [
       <>
         Eye exams, Glasses, Sunglasses, and Contact Lenses
         <br />
-        <p>Direct Billing</p>
+        <p className="font-bold">Direct Billing</p>
       </>
     ),
     text: `
@@ -54,8 +54,9 @@ export const cards = [
     img: "/images/Rectangle 1.jpg",
     head: (
       <>
-      Pink Red, Sore Eyes, or Eyelid Care
-      <br /><p>Minor Eye exam: $30 - $60</p>
+        Pink Red, Sore Eyes, or Eyelid Care
+        <br />
+        <p className="font-bold">Minor Eye exam: $30 - $60</p>
       </>
     ),
     text: `Eye irritation or redness due to allergies, excessive computer use, prolonged contact
@@ -68,8 +69,9 @@ export const cards = [
     img: "/images/PVEC_ContactLenses.jpeg",
     head: (
       <>
-      Contact Lens Fitting
-      <br /><p>Fitting Fee: $30 to $90</p>
+        Contact Lens Fitting
+        <br />
+        <p className="font-bold">Fitting Fee: $30 to $90</p>
       </>
     ),
     text: `Whether you are a first time wearer, or a
@@ -159,7 +161,7 @@ export const productCatalogue = [
   },
   {
     img: "/images/eye-drops.jpg",
-    head: "Eye Medication Products",
+    head: "Eye Care Products",
     text: "Relieve dry, irritated eyes with our collection of high-quality eye drops. Perfect for daily use and for contact lens wearers.",
     link: "/products?query=eye-medic",
   },

@@ -14,11 +14,18 @@ import "./../pages/dummy/assets/css/default.css";
 import "./../pages/dummy/assets/css/style.css";
 import "./../components/FloatInput/index.css";
 import { useRouter } from "next/router";
+import { useEffect, useState } from "react";
 
 // This default export is required in a new `pages/_app.js` file.
 export default function MyApp({ Component, pageProps }) {
   const router = useRouter();
+  const [isVisited, setIsVisited] = useState(true);
   console.log("searchParams", router.pathname);
+  useEffect(() => {
+    if (!localStorage.getItem("isVisited")) {
+      setIsVisited(false);
+    }
+  }, []);
 
   return (
     <>
@@ -35,6 +42,35 @@ export default function MyApp({ Component, pageProps }) {
       <Header />
       <Component {...pageProps} />
       {router.pathname == "/about-us" ? <Footer2 /> : <Footer />}
+      {!isVisited && (
+        <div
+          style={{
+            position: "fixed",
+            width: "100%",
+            bottom: "0px",
+            zIndex: 2000,
+          }}
+        >
+          <div
+            className="alert bg-black text-white text-center cookiealert show"
+            role="alert"
+          >
+            <b>Do you like cookies ?</b>🍪 We use cookies to ensure you get the
+            best experience on our website. By using our website, you agree to
+            our use of cookies
+            <button
+              type="button"
+              onClick={() => {
+                localStorage.setItem("isVisited", "true");
+                setIsVisited((p) => !p);
+              }}
+              className="ant-btn ml-2 mt-2 ant-btn-primary"
+            >
+              <span>Confirm</span>
+            </button>
+          </div>
+        </div>
+      )}
     </>
   );
 }

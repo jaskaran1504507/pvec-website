@@ -27,12 +27,11 @@ export default function Footer() {
     //   </div>
     // </footer>
 
-
     // <!--====== FOOTER PART START ======-->
 
     <footer id="footer" className="footer-area pt-120">
       <div className="container">
-        <div
+        {/* <div
           className="subscribe-area wow fadeIn"
           data-wow-duration="1s"
           data-wow-delay="0.5s"
@@ -40,12 +39,13 @@ export default function Footer() {
           <div className="row">
             <div className="col-lg-6">
               <div className="subscribe-content mt-35">
-                <h2 className="subscribe-title">
-                  Subscribe Our Newsletter
-                </h2>
-                <h3 >
-                  <span>and follow us facebook and instragram
-to keep up-to-date on our latest offers, new stock announcements, and access to our health care blog</span>
+                <h2 className="subscribe-title">Subscribe Our Newsletter</h2>
+                <h3>
+                  <span>
+                    and follow us facebook and instragram to keep up-to-date on
+                    our latest offers, new stock announcements, and access to
+                    our health care blog
+                  </span>
                 </h3>
               </div>
             </div>
@@ -58,8 +58,7 @@ to keep up-to-date on our latest offers, new stock announcements, and access to 
               </div>
             </div>
           </div>
-          {/* <!-- row --> */}
-        </div>
+        </div> */}
         {/* <!-- subscribe area --> */}
         <div className="footer-widget pb-100">
           <div className="row">
@@ -70,24 +69,44 @@ to keep up-to-date on our latest offers, new stock announcements, and access to 
                 data-wow-delay="0.2s"
               >
                 <a className="logo" href="#">
-                  <img style={{backgroundColor: '#fff',
-    color: '#fff', margin: '2px', padding: '2px'}} src="images/eyecare-logo.png" alt="logo" />
+                  <img
+                    style={{
+                      backgroundColor: "#fff",
+                      color: "#fff",
+                      margin: "2px",
+                      padding: "2px",
+                    }}
+                    src="images/eyecare-logo.png"
+                    alt="logo"
+                  />
                 </a>
                 <p className="text">
-                We have been caring for eyes in downtown Vancouver since 2005. Our team of expert eye doctors have many years of experience to provide proper diagnosis of health conditions, future care recommendations, and to expedite urgent care needs to our extensive list of associate ophthalmologists.
+                  We have been caring for eyes in downtown Vancouver since 2005.
+                  Our team of expert eye doctors have many years of experience
+                  to provide proper diagnosis of health conditions, future care
+                  recommendations, and to expedite urgent care needs to our
+                  extensive list of associate ophthalmologists.
                 </p>
                 <ul className="social">
                   <li>
-                    <a href="#"><i className="lni-facebook-filled"></i></a>
+                    <a href="#">
+                      <i className="lni-facebook-filled"></i>
+                    </a>
                   </li>
                   <li>
-                    <a href="#"><i className="lni-twitter-filled"></i></a>
+                    <a href="#">
+                      <i className="lni-twitter-filled"></i>
+                    </a>
                   </li>
                   <li>
-                    <a href="#"><i className="lni-instagram-filled"></i></a>
+                    <a href="#">
+                      <i className="lni-instagram-filled"></i>
+                    </a>
                   </li>
                   <li>
-                    <a href="#"><i className="lni-linkedin-original"></i></a>
+                    <a href="#">
+                      <i className="lni-linkedin-original"></i>
+                    </a>
                   </li>
                 </ul>
               </div>
@@ -122,13 +141,23 @@ to keep up-to-date on our latest offers, new stock announcements, and access to 
                   </div>
                   <ul className="link">
                     {/* <li><a href="/">Home</a></li> */}
-                    <li><a href="#">Appointment</a></li>
+                    <li>
+                      <a href="#">Appointment</a>
+                    </li>
                     {/* <li><a href="#">Order Products</a></li> */}
-                    <li><a href="/promotions">Promotions</a></li>
-                    <li><a href="/service-products">Services & Products</a></li>
-                    <li><a href="/glasses-contacts">Glasses & Contacts</a></li>
+                    <li>
+                      <a href="/promotions">Promotions</a>
+                    </li>
+                    <li>
+                      <a href="/service-products">Services & Products</a>
+                    </li>
+                    <li>
+                      <a href="/glasses-contacts">Glasses & Contacts</a>
+                    </li>
                     {/* <li><a href="/about-us">About</a></li> */}
-                    <li><a href="/blogs">Blogs</a></li>
+                    <li>
+                      <a href="/blogs">Blogs</a>
+                    </li>
                   </ul>
                 </div>
                 {/* <!-- footer wrapper --> */}
@@ -148,8 +177,7 @@ to keep up-to-date on our latest offers, new stock announcements, and access to 
                   <li>+1 604 689 9962</li>
                   <li>info@pveyecare.ca</li>
                   <li>www.pveyecare.ca</li>
-                  <li>1242 Burrard Street, Vancouver BC, V6Z 1Z1
-                  </li>
+                  <li>1242 Burrard Street, Vancouver BC, V6Z 1Z1</li>
                 </ul>
               </div>
               {/* <!-- footer contact --> */}
@@ -169,11 +197,11 @@ to keep up-to-date on our latest offers, new stock announcements, and access to 
                   </p>
                 </div>
                 {/* <!-- copyright content --> */}
-              {/* </div> */}
-              {/* <!-- copyright --> */}
-            {/* </div> */}
-          {/* </div> */}
-          {/* <!-- row --> */}
+        {/* </div> */}
+        {/* <!-- copyright --> */}
+        {/* </div> */}
+        {/* </div> */}
+        {/* <!-- row --> */}
         {/* </div> */}
         {/* <!-- footer copyright --> */}
       </div>

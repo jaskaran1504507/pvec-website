@@ -43,18 +43,20 @@ export default function ServiceProducts() {
           <div>
             {" "}
             <p className="text">
-            We have been serving the Downtown Vancouver core with quality eye care from our team of expert eye
-doctors since 2005!
+              We have been serving the Downtown Vancouver core with quality eye
+              care from our team of expert eye doctors since 2005!
             </p>
             <br />
           </div>
         </div>
-        <div className="flex justify-center px-6 mt-20" style={{ height: "450px" }}>
+        <div className="flex justify-end px-6 mt-28">
           <Image
             src="/images/MainPage_Illustration.png"
             alt=""
-            layout="fill"
+            // layout="fill"
             srcSet=""
+            height="320"
+            width="300"
           />
         </div>
         <div>
@@ -147,23 +149,32 @@ doctors since 2005!
                       [img]: prev[img] ? "" : text,
                     }));
                   }}
-                  className=" pl-2 text-blue-900 hover:underline cursor-pointer">
+                  className=" pl-2 text-blue-900 hover:underline cursor-pointer"
+                >
                   see {seeMore[img] ? "less" : "more"}...
                 </span>
               )}
             </div>
-            
+
             {/* <div className="flex justify-center">
             <div className="flex-end justify-center navbar-btn d-none d-sm-inline-block"> */}
-              <div>
-                <a className="link" data-scroll-nav="0" href="bookings#appointment">Book your checkup appointment </a>
-                {/* <div className="long-arrow-right"></div> */}
-              </div>
-              {/* </div>
+            <div className="flex align-items-center justify-center">
+              <a
+                className="main-btn-products"
+                data-scroll-nav="0"
+                href="bookings#appointment"
+              >
+                Book your appointment{" "}
+              </a>
+              {/* <div className="long-arrow-right"></div> */}
+            </div>
+            {/* </div>
               </div> */}
-              {conditions &&  (<div className="px-6">
+            {conditions && (
+              <div className="px-6">
                 <p className="text-xs">{conditions} </p>
-              </div>) }
+              </div>
+            )}
           </div>
         ))}
       </div>
@@ -215,19 +226,26 @@ doctors since 2005!
                           [img]: prev[img] ? "" : text,
                         }));
                       }}
-                      className="pl-2 text-blue-900 hover:underline cursor-pointer">
+                      className="pl-2 text-blue-900 hover:underline cursor-pointer"
+                    >
                       see {seeMore[img] ? "less" : "more"}...
                     </span>
                   )}
                 </div>
                 <div>
-                {/* <button className="hover:shadow-form w-full rounded-md bg-sky-900 py-3 px-8 text-center text-base font-semibold text-white outline-none">
+                  {/* <button className="hover:shadow-form w-full rounded-md bg-sky-900 py-3 px-8 text-center text-base font-semibold text-white outline-none">
                   Check products
                 </button> */}
-                <div className="flex align-items-center justify-center" >
-                <a className="main-btn-products" data-scroll-nav="0" href={link}>Check products</a>
+                  <div className="flex align-items-center justify-center">
+                    <a
+                      className="main-btn-products"
+                      data-scroll-nav="0"
+                      href={link}
+                    >
+                      Check products
+                    </a>
+                  </div>
                 </div>
-              </div>
               </div>
             ))}
           </div>
@@ -258,10 +276,20 @@ doctors since 2005!
             <div key={brand.link}>
               {/* <Link href={brandsLinkArr[index++]} legacyBehavior passHref> */}
               <a target="_blank" href={brand.addr} rel="noopener noreferrer">
-                <div style={{ height: '200px', position: "relative" , width : '200px'}}>
-                  <Image src={"/images/brands/" + brand.link} height = '100' width='200'  alt="brd"/>
+                <div
+                  style={{
+                    height: "200px",
+                    position: "relative",
+                    width: "200px",
+                  }}
+                >
+                  <Image
+                    src={"/images/brands/" + brand.link}
+                    height="100"
+                    width="200"
+                    alt="brd"
+                  />
                 </div>
-               
               </a>
               {/* </Link> */}
             </div>

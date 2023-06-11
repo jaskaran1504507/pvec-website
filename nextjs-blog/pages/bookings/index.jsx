@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Banner from "../../components/Banner";
-import Button from "../../components/Button";
-import { DatePicker, Form, Input, Radio, Select } from "antd";
+// import Button from "../../components/Button";
+import { Button, DatePicker, Form, Input, Radio, Select } from "antd";
 import FloatInput from "../../components/FloatInput";
 import dayjs from "dayjs";
 import customParseFormat from "dayjs/plugin/customParseFormat";
@@ -89,6 +89,7 @@ const Bookings = () => {
       appointmentDate: values.date,
       appointmentSlot: values.slot,
       comment: values.comment,
+      healthcareId: values.healthcareId,
     };
 
     console.log("this is body ", body);
@@ -246,121 +247,141 @@ const Bookings = () => {
           </span>
         }
       />
-      <div className="flex justify-center mt-10">
-        <Form
-          {...layout}
-          name="nest-messages"
-          onFinish={onFinish}
-          style={{ maxWidth: 600 }}
-          validateMessages={validateMessages}
-          size={"large"}
+      <div className="flex justify-center mt-10 ">
+        <div
+          style={{ boxShadow: "0px 2px 5px rgba(0, 0, 0, 0.25)" }}
+          className="px-8 py-4 rounded-border mx-auto md:w-2/5 w-3/4"
         >
-          <Form.Item
-            name={["user", "name"]}
-            label="Name"
-            rules={[{ required: true }]}
+          <Form
+            // {...layout}
+            name="nest-messages"
+            onFinish={onFinish}
+            // style={{ maxWidth: 800 }}
+            validateMessages={validateMessages}
+            size={"large"}
+            layout="vertical"
           >
-            <Input />
-          </Form.Item>
-          <Form.Item
-            name={["user", "email"]}
-            label="Email"
-            rules={[{ type: "email", required: true }]}
-          >
-            <Input />
-          </Form.Item>
-          <Form.Item
-            label="Existing patient?"
-            name="existing_patient"
-            rules={[{ required: true }]}
-          >
-            <Radio.Group value={"no"}>
-              <Radio.Button value="yes">Yes</Radio.Button>
-              <Radio.Button checked value="no">
-                No
-              </Radio.Button>
-            </Radio.Group>
-          </Form.Item>
-          <Form.Item
-            name="phone"
-            label="Phone Number"
-            rules={[
-              { required: true, message: "Please input your phone number!" },
-            ]}
-          >
-            <Input addonBefore={prefixSelector} style={{ width: "100%" }} />
-          </Form.Item>
-          <Form.Item
-            label="Preferred Contact Method"
-            name="preferred_contact_method"
-            rules={[{ required: true }]}
-          >
-            <Radio.Group value={"no"}>
-              <Radio.Button value="email">Email</Radio.Button>
-              <Radio.Button value="phone">Phone</Radio.Button>
-              <Radio.Button selected value="any">
-                Any
-              </Radio.Button>
-            </Radio.Group>
-          </Form.Item>
-          <Form.Item
-            name="date"
-            label="Appointment Date"
-            rules={[{ required: true, message: "Please select date" }]}
-          >
-            {/* <Input style={{ width: "100%" }} /> */}
-            {/* let date = new Date().toLocaleDateString(); */}
-            <DatePicker
-              defaultValue={getDefaultDate()}
-              disabledDate={(current) => {
-                return (
-                  current.startOf("hour", 0) <= moment().startOf("hour", 0) ||
-                  current.day() === 0 ||
-                  disableDate[current.toDate().toDateString()]
-                );
-              }}
-              format={"DD/MM/YYYY"}
-              onChange={onChangeDate}
-            />
-          </Form.Item>
-          <Form.Item
-            name="slot"
-            label="Appointment Slot"
-            rules={[{ required: true, message: "Please select the slot" }]}
-          >
-            {/* <Input style={{ width: "100%" }} /> */}
-            <Select
-              placeholder="Select a slot"
-              optionFilterProp="children"
-              // onSearch={onSearch}
-              filterOption={(input, option) =>
-                (option?.label ?? "")
-                  .toLowerCase()
-                  .includes(input.toLowerCase())
-              }
-              options={slots}
-            />
-          </Form.Item>
-          <Form.Item name="comment" label="Comments">
-            {/* <Input /> */}
-            {/* <FloatInput
+            <Form.Item
+              name={["user", "name"]}
+              label="Name"
+              rules={[{ required: true }]}
+            >
+              <Input />
+            </Form.Item>
+            <Form.Item
+              name={["user", "email"]}
+              label="Email"
+              rules={[{ type: "email", required: true }]}
+            >
+              <Input />
+            </Form.Item>
+            <Form.Item
+              name="healthcareId"
+              label="Healthcare Id"
+              rules={[
+                { required: true, message: "Health care id is required" },
+              ]}
+            >
+              <Input />
+            </Form.Item>
+            <Form.Item
+              label="Existing patient?"
+              name="existing_patient"
+              rules={[{ required: true }]}
+            >
+              <Radio.Group value={"no"}>
+                <Radio.Button value="yes">Yes</Radio.Button>
+                <Radio.Button checked value="no">
+                  No
+                </Radio.Button>
+              </Radio.Group>
+            </Form.Item>
+            <Form.Item
+              name="phone"
+              label="Phone Number"
+              rules={[
+                { required: true, message: "Please input your phone number!" },
+              ]}
+            >
+              <Input addonBefore={prefixSelector} style={{ width: "100%" }} />
+            </Form.Item>
+            <Form.Item
+              label="Preferred Contact Method"
+              name="preferred_contact_method"
+              rules={[{ required: true }]}
+            >
+              <Radio.Group value={"no"}>
+                <Radio.Button value="email">Email</Radio.Button>
+                <Radio.Button value="phone">Phone</Radio.Button>
+                <Radio.Button selected value="any">
+                  Any
+                </Radio.Button>
+              </Radio.Group>
+            </Form.Item>
+            <Form.Item
+              name="date"
+              label="Appointment Date"
+              rules={[{ required: true, message: "Please select date" }]}
+            >
+              {/* <Input style={{ width: "100%" }} /> */}
+              {/* let date = new Date().toLocaleDateString(); */}
+              <DatePicker
+                defaultValue={getDefaultDate()}
+                disabledDate={(current) => {
+                  return (
+                    current.startOf("hour", 0) <= moment().startOf("hour", 0) ||
+                    current.day() === 0 ||
+                    disableDate[current.toDate().toDateString()]
+                  );
+                }}
+                format={"DD/MM/YYYY"}
+                onChange={onChangeDate}
+              />
+            </Form.Item>
+            <Form.Item
+              name="slot"
+              label="Appointment Slot"
+              rules={[{ required: true, message: "Please select the slot" }]}
+            >
+              {/* <Input style={{ width: "100%" }} /> */}
+              <Select
+                placeholder="Select a slot"
+                optionFilterProp="children"
+                // onSearch={onSearch}
+                filterOption={(input, option) =>
+                  (option?.label ?? "")
+                    .toLowerCase()
+                    .includes(input.toLowerCase())
+                }
+                options={slots}
+              />
+            </Form.Item>
+            <Form.Item name="comment" label="Comments">
+              {/* <Input /> */}
+              {/* <FloatInput
               label="Any questions or comments"
               placeholder="Any questions or comments"
               name="email"
             />  */}
-            {/* <Input /> */}
-            <TextArea
-              rows={4}
-              placeholder="Any questions or comments..."
-              maxLength={320}
-            />
-          </Form.Item>
-          <Form.Item wrapperCol={{ ...layout.wrapperCol, offset: 8 }}>
-            <Button className="book-appointment-button" htmlType="submit">
-              Book
-            </Button>
-          </Form.Item>
-        </Form>
+              {/* <Input /> */}
+              <TextArea
+                rows={4}
+                placeholder="Any questions or comments..."
+                maxLength={320}
+              />
+            </Form.Item>
+            <Form.Item wrapperCol={{ ...layout.wrapperCol }}>
+              <Button
+                type="primary"
+                block
+                className="book-appointment-button"
+                htmlType="submit"
+              >
+                Book
+              </Button>
+            </Form.Item>
+          </Form>
+        </div>
       </div>
       {showAppointmentSuccess && (
         <div id="success_tic" class="modal fade" role="dialog">
