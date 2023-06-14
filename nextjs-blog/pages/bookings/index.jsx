@@ -1,16 +1,19 @@
 import React, { useEffect, useState } from "react";
 import Banner from "../../components/Banner";
 // import Button from "../../components/Button";
-import { Button, DatePicker, Form, Input, Radio, Select } from "antd";
+import { Button, DatePicker, Form, Input, Radio, Select, notification } from "antd";
 import FloatInput from "../../components/FloatInput";
 import dayjs from "dayjs";
 import customParseFormat from "dayjs/plugin/customParseFormat";
 import moment from "moment";
 import { callApi } from "../../utils/apiUtils";
 import Appointment from "../../utils/endpoints/Appointment";
+import { useRouter } from 'next/router'
 const { TextArea } = Input;
 
 const Bookings = () => {
+
+  let router= useRouter()
   // const layout = {
   //   labelCol: { span: 8 },
   //   wrapperCol: { span: 24 },
@@ -101,6 +104,12 @@ const Bookings = () => {
       body,
     }).then((e) => {
       console.log("e", e);
+
+      notification.success({
+        message: "Appointment request is received!",
+        description: "Our staff will contact you soon.",
+      });
+      router.push('/service-products');
     });
   };
 
@@ -376,6 +385,7 @@ const Bookings = () => {
                 block
                 className="book-appointment-button"
                 htmlType="submit"
+                style={{backgroundColor : "#1D3D74"}}
               >
                 Book
               </Button>
