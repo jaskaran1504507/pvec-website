@@ -192,7 +192,6 @@ export default function Header() {
                     <span className="toggler-icon"></span>
                     <span className="toggler-icon"></span>
                   </button>
-
                   <div
                     // style={{
                     //   background:
