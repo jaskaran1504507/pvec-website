@@ -29,6 +29,48 @@ export const cards = [
             charges.)`,
   },
   {
+    img: "/images/PVEC_ContactLenses.jpeg",
+    head: (
+      <>
+        Contact Lens Fitting
+        <br />
+        <p className="font-bold">Fitting Fee: $30 to $90</p>
+      </>
+    ),
+    text: `Whether you are a first time wearer, or a
+    seasoned Contact Lens veteran, we can help you get the most out of your contact lenses
+    by providing you with options
+    from all of the top brands. We can educate,
+    fit and recommend the contacts that best suit
+    your lifestyle needs. 
+    Ask about how to get free trial contacts!`,
+  },
+  {
+    img: "/images/Rectangle 1.jpg",
+    head: (
+      <>
+        Pink Red, Sore Eyes, or Eyelid Care
+        <br />
+        <p className="font-bold">Minor Eye exam: $30 - $60</p>
+      </>
+    ),
+    text: `Eye irritation or redness due to allergies, excessive computer use, prolonged contact
+    lens wear, or foreign objects can be
+    treated same day.
+    We also specialize in treating Chalazion or Stye with proper education along with a suite of products to provide vou with the
+    relief you are looking for.`,
+  },
+  {
+    img: "/images/Rectangle 1-4.jpg",
+    head: "Dry Eye Treatment",
+    text: "Dry eye happens when your eye don't make enough tears to stay wet, or when your tears don't work correctly. This can make your eyes feel uncomfortable, and in some cases it can also cause vision problems.",
+  },
+  {
+    head: "LASIK/PRK Surgery Consultation",
+    text: "Pre-Op and Post-Op Care Cataract Surgery Management, Glaucoma Treatment, Macular Degeneration Care, Diabetic Eye Care",
+    img: "/images/Rectangle 1-5.jpg",
+  },
+  {
     img: "/images/Rectangle 1-2.jpg",
     head: (
       <>
@@ -51,38 +93,6 @@ export const cards = [
    `,
   },
   {
-    img: "/images/Rectangle 1.jpg",
-    head: (
-      <>
-        Pink Red, Sore Eyes, or Eyelid Care
-        <br />
-        <p className="font-bold">Minor Eye exam: $30 - $60</p>
-      </>
-    ),
-    text: `Eye irritation or redness due to allergies, excessive computer use, prolonged contact
-    lens wear, or foreign objects can be
-    treated same day.
-    We also specialize in treating Chalazion or Stye with proper education along with a suite of products to provide vou with the
-    relief you are looking for.`,
-  },
-  {
-    img: "/images/PVEC_ContactLenses.jpeg",
-    head: (
-      <>
-        Contact Lens Fitting
-        <br />
-        <p className="font-bold">Fitting Fee: $30 to $90</p>
-      </>
-    ),
-    text: `Whether you are a first time wearer, or a
-    seasoned Contact Lens veteran, we can help you get the most out of your contact lenses
-    by providing you with options
-    from all of the top brands. We can educate,
-    fit and recommend the contacts that best suit
-    your lifestyle needs. 
-    Ask about how to get free trial contacts!`,
-  },
-  {
     img: "/images/Rectangle 1-7.jpg",
     text: `Patients experiencing ocular emergencies can be fit in same if necessary; even if we are
     fully booked. Eye Emergencies can include irritated red eyes, foreign object removal,
@@ -96,16 +106,6 @@ export const cards = [
     img: "/images/Rectangle 1-3.jpg",
     head: "Light Sensitivity Management",
     text: "Light sensitivity, or photophobia, is a condition in which bright light hurts your eyes. This condition can range from mild to severe.",
-  },
-  {
-    img: "/images/Rectangle 1-4.jpg",
-    head: "Dry Eye Treatment",
-    text: "Dry eye happens when your eye don't make enough tears to stay wet, or when your tears don't work correctly. This can make your eyes feel uncomfortable, and in some cases it can also cause vision problems.",
-  },
-  {
-    head: "LASIK/PRK Surgery Consultation",
-    text: "Pre-Op and Post-Op Care Cataract Surgery Management, Glaucoma Treatment, Macular Degeneration Care, Diabetic Eye Care",
-    img: "/images/Rectangle 1-5.jpg",
   },
   {
     head: "Rigid Gas Permeable (RGPs) & Scleral Lenses Fitting",

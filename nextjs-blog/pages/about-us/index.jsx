@@ -30,7 +30,7 @@ export default function AboutUs() {
                 >
                   Great eye health begins with a preventive eye exam!
                   <br />
-                  New patient are welcome at our <u>Vancouver</u> location
+                  We are accepting our new patients in <u>Downtown Vancouver</u>
                 </h1>
               </div>
             </div>
@@ -56,7 +56,7 @@ export default function AboutUs() {
           </span>
         </h2>
         <p className="text-blue-900 font-semibold pl-20 text-lg">
-          Our practices proudly serve Vancouver area with a tradition of quality
+          Our practices proudly serves Greater Vancouver with a tradition of quality
           service and dedicated staff.{" "}
         </p>
         <div className="my-20 grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -69,16 +69,25 @@ export default function AboutUs() {
             <div>
               {" "}
               <p>
-                We work together with ophthalmology and can expedite any
-                surgical needs. We can even help you decide if laser surgery is
+                We can even help you decide if laser surgery is
                 right for you!
               </p>
               <br />
-              <Link href="/bookings#appointment">
+              {/* <Link href="/bookings#appointment">
                 <u className="text-blue-800 font-semibold cursor-pointer">
                   Book your appointment{" "}
                 </u>
-              </Link>
+              </Link> */}
+              <div className="flex align-items-center justify-center">
+              <a
+                className="main-btn-products"
+                data-scroll-nav="0"
+                href="bookings#appointment"
+              >
+                Book your appointment{" "}
+              </a>
+              {/* <div className="long-arrow-right"></div> */}
+            </div>
             </div>
           </div>
         </div>
@@ -93,7 +102,7 @@ export default function AboutUs() {
             <br />
             <p>
               "This allows our doctors to detect many serious health conditions
-              including: diabetes, hypertension , auto-immune disorders, high
+              including: diabetes, hypertension, auto-immune disorders, high
               cholesterol, thyroid disease, tumors and even cancer! The eye exam
               is really a window into your overall health and well-being. "
             </p>
