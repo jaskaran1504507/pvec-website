@@ -52,7 +52,7 @@ export default function ProductsComponent() {
         setCartProducts(JSON.parse(localCartProducts));
         getProducts({
           query: {
-            query: queryObj[router?.query?.query] || "contacts,glasses",
+            category: queryObj[router?.query?.query] || ["CONTACTS","GLASSES"],
             startIndex: 0,
             viewSize: 10,
           },
@@ -67,7 +67,6 @@ export default function ProductsComponent() {
   }, [router.query]);
 
   const getProducts = async ({ query }) => {
-    console.log("getAppointmentSchedulesDayWise", query);
     return await callApi({
       uriEndPoint: {
         ...Products.getProductsV2,
