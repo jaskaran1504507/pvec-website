@@ -16,6 +16,7 @@ export default function Promotions() {
             title: "Clearance Sale",
             description:
               "Select eyewear from 50-90% off with fully coated lenses purchase",
+              url: "/glasses-contacts"
           },
           {
             link: "https://images.squarespace-cdn.com/content/v1/5d30ea61f16b850001147f58/1585435822475-I6FQWPFD24ED97BXJK4T/iStock-1131639271.jpg?format=1000w",
@@ -27,22 +28,25 @@ export default function Promotions() {
                 Buy 1 Pair of Non-Prescription Sunglasses, get 2nd pair 20% Off!
               </>
             ),
+            url: "/glasses-contacts"
           },
           {
             link: "https://da4e1j5r7gw87.cloudfront.net/wp-content/uploads/sites/2520/2018/06/Hero-3-1280x480.jpeg",
             title: "Summertime Sun Sale Limited Time Offer",
             description:
               "Select Polarized Sunglasses: Regular price $200 on for $99",
+              url: "/glasses-contacts"
           },
           {
             link: "https://www.ipshealth.co.za/wp-content/uploads/2020/11/eyehealth.jpg",
             title:
               "Have Extended Insurance? Ask us how to get glasses or sunglasses for little to no expense out of your pocket!",
+              url: "/service-products"
           },
         ].map((m) => (
           <Link
-            href={m.link}
-            key={m.link}
+            href={m.url}
+            key={m.url}
             style={{
               position: "relative",
               width: "100%",

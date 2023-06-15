@@ -29,7 +29,7 @@ export default function Footer() {
 
     // <!--====== FOOTER PART START ======-->
 
-    <footer id="footer" className="footer-area pt-120">
+    <footer id="footer" className="footer-area pt-96">
       <div className="container">
         {/* <div
           className="subscribe-area wow fadeIn"
@@ -60,7 +60,7 @@ export default function Footer() {
           </div>
         </div> */}
         {/* <!-- subscribe area --> */}
-        <div className="footer-widget pb-100">
+        <div className="footer-widget pb-4">
           <div className="row">
             <div className="col-lg-6 col-md-6 col-sm-8">
               <div
