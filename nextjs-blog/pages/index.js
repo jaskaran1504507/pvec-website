@@ -18,6 +18,8 @@ export default function Home() {
               banner={b.img}
               textColor={b.textColor}
               text={b.text}
+              description={b.description}
+              subText={b.subText}
             ></Banner>
           </div>
         ))}

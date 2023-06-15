@@ -260,6 +260,8 @@ export const banner = [
   {
     textColor: "white",
     img: "banner-home-img-3",
-    text: "Our mission is to provide comprehensive eye care in order to detect and address any ocular health issues.",
+    text: "The best use of your performance vision is spotting a good deal. ",
+    subText : "We have clearance sale on selected eyewear from 50-90% off with fully coated lenses purchase.", 
+    description : "Do check out our associates for more details or call us for more info."
   },
 ];
