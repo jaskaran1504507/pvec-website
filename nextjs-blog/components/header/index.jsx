@@ -168,6 +168,49 @@ export default function Header() {
     //   </div>
     // </>
     <>
+    {!isNavVisible && (
+            <div
+              style={{
+                position: "sticky",
+                width: "100%",
+                // top: "111px",
+                zIndex: 2000,
+              }}
+              className="hidden md:block pr-4"
+            >
+              <div className="mx-auto  flex justify-end">
+                <div
+                  className="pl-8 pr-2"
+                  // style={{
+                  //   background:
+                  //     "linear-gradient(to right, #1d3d74 0%, #3598cf 50%, #1d3d74 100%)",
+                  // }}
+                >
+                  <span className="text-white flex items-center">
+                    <MailOutlined />
+                    {` `}
+                    <span className="pl-2 ">
+                      {/* <a href="mailto:info@pveyecare.ca"> */}
+                      <span className="hover:white focus:white">
+                        info@pveyecare.ca
+                      </span>
+                      {/* </a> */}
+                    </span>
+                    &nbsp; &nbsp;
+                    <MobileOutlined twoToneColor="white" />
+                    {` `}
+                    <span className="pl-2">+1 604 689 9962</span>
+                    &nbsp; &nbsp;
+                    <HomeOutlined />
+                    {` `}
+                    <span className="pl-2">
+                      1242 Burrard Street, Vancouver BC, V6Z 1Z1
+                    </span>
+                  </span>
+                </div>
+              </div>
+            </div>
+          )}
       <header className="header-area">
         {/* <script src="assets/js/bootstrap.min.js"></script> */}
         <div className="navbar-area">
@@ -259,51 +302,6 @@ export default function Header() {
               </div>
             </div>
           </div>
-          {location.pathname === "/" && !isNavVisible && (
-            <div
-              style={{
-                position: "sticky",
-                width: "100%",
-                top: "111px",
-                zIndex: 2000,
-              }}
-              className="hidden md:block"
-            >
-              <div className=" mx-auto  flex justify-end   ">
-                <div
-                  className="py-2 pl-8 pr-40"
-                  style={{
-                    background:
-                      "linear-gradient(to right, #1d3d74 0%, #3598cf 50%, #1d3d74 100%)",
-                  }}
-                >
-                  <div className="text-white flex items-center">
-                    <MailOutlined />
-                    {` `}{" "}
-                    <div className="pl-2 ">
-                      {/* <a href="mailto:info@pveyecare.ca"> */}
-                      <span className="hover:white focus:white">
-                        info@pveyecare.ca
-                      </span>
-                      {/* </a> */}
-                    </div>
-                  </div>
-                  <div className="text-white flex items-center">
-                    <MobileOutlined twoToneColor="white" />
-                    {` `}
-                    <span className="pl-2">+1 604 689 9962</span>
-                  </div>
-                  <div className="text-white flex items-center">
-                    <HomeOutlined />
-                    {` `}{" "}
-                    <span className="pl-2">
-                      1242 Burrard Street, Vancouver BC, V6Z 1Z1
-                    </span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          )}
         </div>
 
         {/* <div id="home" className="header-hero bg_cover" style={{backgroundImage: "assets/images/banner-bg.svg"}}>
