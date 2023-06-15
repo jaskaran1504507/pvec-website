@@ -250,12 +250,12 @@ export const banner = [
   {
     textColor: "black",
     img: "banner-home-img",
-    text: "Our mission is to provide comprehensive eye care in order to detect and address any ocular health issues.",
+    text: "We are accepting our new patients in Downtown Vancouver.",
   },
   {
     textColor: "white",
     img: "banner-home-img-2",
-    text: "We offer the best suite of services and products",
+    text: "Our direct billing services and include First Nations Health Authority (FNHA) and people on government disability",
   },
   {
     textColor: "white",
