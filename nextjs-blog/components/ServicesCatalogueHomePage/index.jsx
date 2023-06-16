@@ -22,9 +22,9 @@ export default function ServicesCatalogueHomePage() {
               <h3 className="title">
                 Our Services
               </h3>
-              <h4 >
+              <h3 >
                 <span><br/>Everything you need for happy, healthy eyes!</span>
-              </h4>
+              </h3>
             </div>
             {/* <!-- section title --> */}
           </div>
@@ -55,7 +55,7 @@ export default function ServicesCatalogueHomePage() {
               </div>
               <div className="services-content mt-30">
                 <h4 className="services-title"><a href="/service-products" >Comprehensive Eye Exam</a></h4>
-                <p className="text">
+                <p className="text text-base">
                 for Adults/Senior/Children
                 </p>
                 <a className="more" href="/service-products"
@@ -87,7 +87,7 @@ export default function ServicesCatalogueHomePage() {
               <div className="services-content mt-30">
                 <h4 className="services-title"><a href="/service-products">Computer Vision Syndrome
 </a></h4>
-                <p className="text">
+                <p className="texttext-base">
                 Eye problems caused by prolonged computer use including: Eye irritation (Dry eyes, itchy eyes, red eyes) Blurred vision. Headaches.
                 </p>
                 <a className="more" href="/service-products">Learn More <i className="lni-chevron-right"></i></a>
@@ -117,7 +117,7 @@ export default function ServicesCatalogueHomePage() {
               </div>
               <div className="services-content mt-30">
                 <h4 className="services-title"><a href="/service-products">Lasik/PRK Surgery Consult</a></h4>
-                <p className="text">
+                <p className="text text-base">
                 Pre-Op and Post-Op Care Cataract Surgery Management, Glaucoma Treatment, Macular Degeneration Care, Diabetic Eye Care.
                 </p>
                 <a className="more" href="/service-products">Learn More <i className="lni-chevron-right"></i></a>
@@ -134,7 +134,7 @@ export default function ServicesCatalogueHomePage() {
       </div>
       <div className="flex justify-center pt-12">
           <Link href="/service-products">
-                <u className="explore-services-container uppercase rounded-full white text-sm font-semibold px-4 py-3">
+                <u className="explore-services-container uppercase rounded-full white text-lg font-semibold px-4 py-3">
                 Explore more of our services{" "}
                 </u>
               </Link>

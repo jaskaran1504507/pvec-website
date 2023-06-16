@@ -68,21 +68,22 @@ export default function Promotions() {
                 <div className="u-clearfix u-sheet flex items-center u-sheet-1 top-section md:mt-0 md:py-0 py-4">
                   <div className="backdrop-blur" style={{ marginTop: "15em" }}>
                     <h2
+                     className="font-semibold"
                       style={{
                         color: "white",
-                        fontSize: "4em",
+                        fontSize: "3.8em",
                         textAlign: "start",
-                        color: "#1D3D74",
+                        color: "#1D3D74"
                       }}
                     >
                       {m.title}
                     </h2>
                     {m.description && (
-                      <p
+                      <p className="font-semibold"
                         style={{
                           color: "#2968ce",
                           alignItems: "flex-start",
-                          fontSize: "23px",
+                          fontSize: "26px",
                         }}
                       >
                         {m.description}

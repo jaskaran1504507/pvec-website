@@ -15,7 +15,7 @@ export default function AboutUs() {
         }}
       >
         <div
-          className={` banner-about-us-img u-active text-center u-section-1-1 banner-img  u-carousel-item  justify-center flex u-clearfix u-image u-shading `}
+          className={`banner-about-us-img u-active text-center u-section-1-1 banner-img  u-carousel-item  justify-center flex u-clearfix u-image u-shading `}
           src=""
           data-image-width="1248"
           data-image-height="641"

@@ -168,49 +168,46 @@ export default function Header() {
     //   </div>
     // </>
     <>
-    {!isNavVisible && (
+      {!isNavVisible && (
+        <div
+          style={{
+            position: "sticky",
+            width: "100%",
+            // top: "111px",
+            zIndex: 2000,
+          }}
+          className="hidden md:block pr-4"
+        >
+          <div className="mx-auto  flex justify-end">
             <div
-              style={{
-                position: "sticky",
-                width: "100%",
-                // top: "111px",
-                zIndex: 2000,
-              }}
-              className="hidden md:block pr-4"
+              className="pl-8 pr-2"
+            // style={{
+            //   background:
+            //     "linear-gradient(to right, #1d3d74 0%, #3598cf 50%, #1d3d74 100%)",
+            // }}
             >
-              <div className="mx-auto  flex justify-end">
-                <div
-                  className="pl-8 pr-2"
-                  // style={{
-                  //   background:
-                  //     "linear-gradient(to right, #1d3d74 0%, #3598cf 50%, #1d3d74 100%)",
-                  // }}
-                >
-                  <span className="text-white flex items-center">
-                    <MailOutlined />
-                    {` `}
-                    <span className="pl-2 ">
-                      {/* <a href="mailto:info@pveyecare.ca"> */}
-                      <span className="hover:white focus:white">
-                        info@pveyecare.ca
-                      </span>
-                      {/* </a> */}
-                    </span>
-                    &nbsp; &nbsp;
-                    <MobileOutlined twoToneColor="white" />
-                    {` `}
-                    <span className="pl-2">+1 604 689 9962</span>
-                    &nbsp; &nbsp;
-                    <HomeOutlined />
-                    {` `}
-                    <span className="pl-2">
-                      1242 Burrard Street, Vancouver BC, V6Z 1Z1
-                    </span>
+              <span className="text-white flex items-center space-x-36 text-lg font-bold">
+              
+                <span className="pl-2 ">
+                  {/* <a href="mailto:info@pveyecare.ca"> */}
+                  <MailOutlined /> &nbsp; &nbsp;
+                  <span className="hover:white focus:white">
+                    info@pveyecare.ca
                   </span>
-                </div>
-              </div>
+                  {/* </a> */}
+                </span>
+          
+                <span className="pl-2 "><MobileOutlined twoToneColor="white" />&nbsp; &nbsp;+1 604 689 9962</span>
+              
+                <span className="pl-2"><HomeOutlined /> &nbsp; &nbsp;
+                  1242 Burrard Street, Vancouver BC, V6Z 1Z1
+                </span>
+
+              </span>
             </div>
-          )}
+          </div>
+        </div>
+      )}
       <header className="header-area">
         {/* <script src="assets/js/bootstrap.min.js"></script> */}
         <div className="navbar-area">
@@ -258,12 +255,9 @@ export default function Header() {
                           </span>
                         </a>
                       </li>
-                      {/* <li className="nav-item">
-                                        <a className="page-scroll" href="#features">Bookings</a>
-                                    </li> */}
                       <li className="nav-item">
-                        <a className="page-scroll" href="/promotions">
-                          Promotions
+                        <a className="page-scroll" href="/glasses-contacts">
+                          Glasses & Contacts
                         </a>
                       </li>
                       <li className="nav-item">
@@ -271,9 +265,12 @@ export default function Header() {
                           Services & Products
                         </a>
                       </li>
+                      {/* <li className="nav-item">
+                                        <a className="page-scroll" href="#features">Bookings</a>
+                                    </li> */}
                       <li className="nav-item">
-                        <a className="page-scroll" href="/glasses-contacts">
-                          Glasses & Contacts
+                        <a className="page-scroll" href="/promotions">
+                          Promotions
                         </a>
                       </li>
                       <li className="nav-item">

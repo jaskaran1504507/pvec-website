@@ -20,7 +20,7 @@ export default function ProductCatalogueHomePage() {
           <div className="col-lg-10">
             <div className="section-title text-center pb-30">
               <div className="line m-auto"></div>
-              <h3 className="title">Our Products</h3>
+              <h3 className="title text-xl">Our Products</h3>
               <h4>
                 <span>
                   <br />
@@ -42,8 +42,8 @@ export default function ProductCatalogueHomePage() {
                 >
                   <div className="section-title">
                     <div className="line"></div>
-                    <h3 className="title">Contact Lenses</h3>
-                    <h3>
+                    <h2 className="title">Contact Lenses</h2>
+                    <h3 className="text-lg">
                       <span>
                         <br />
                         Disposable Daily, Bi-Weekly, Monthly, Astigmastic,
@@ -52,13 +52,13 @@ export default function ProductCatalogueHomePage() {
                     </h3>
                   </div>
                   {/* <!-- section title --> */}
-                  <p className="text">
+                  <p className="text text-lg">
                   Our speciality is Rigid Gas Permeable and Scleral Contact lens fittings.
                   </p>
-                  <p className="text">
+                  <p className="text text-lg">
                   All at competitive prices with applicable manufacturer's rebates* (based on quantity ordered)
                   </p>
-                  <a href="/glasses-contacts?query=contacts" className="main-btn">
+                  <a href="/glasses-contacts?query=contacts" className="main-btn text-lg">
                     Get yours now
                   </a>
                 </div>
@@ -106,7 +106,7 @@ export default function ProductCatalogueHomePage() {
                   <div className="section-title">
                     <div className="line"></div>
                     <h3 className="title">Eye Wear</h3>
-                    <h3>
+                    <h3 className="text-lg">
                       <span>
                         <br />
                         New Modern Trends, Timeless Classics,Bold or Conservative and even Safety Protective eyewear; our collection has it all!{" "}
@@ -114,7 +114,7 @@ export default function ProductCatalogueHomePage() {
                     </h3>
                   </div>
                   {/* <!-- section title --> */}
-                  <p className="text">
+                  <p className="text text-lg">
                   We are constantly updating our selections year round to keep our collection up-to-date
                   </p>
                   <a href="/glasses-contacts?query=glasses" className="main-btn">
@@ -157,7 +157,7 @@ export default function ProductCatalogueHomePage() {
                   <div className="section-title">
                     <div className="line"></div>
                     <h3 className="title">Eye Drops</h3>
-                    <h3>
+                    <h3 className="text-lg">
                       <span>
                         <br />
                         Over 30% of the population struggle with dry eye syndrome which can lead to many eye complications.
@@ -165,7 +165,7 @@ export default function ProductCatalogueHomePage() {
                     </h3>
                   </div>
                   {/* <!-- section title --> */}
-                  <p className="text">
+                  <p className="text text-lg">
                   We have the relief you need with our Optometrist recommended selection of dry eye products.
                   <br/> Relieve dry, irritated eyes with our selection of high quality eye-drops, lid and eyelash care products, and therapeutic masks.
                   <br/>Perfect for the net addicts, cyberphiles and contact lens wearers out there!
@@ -200,7 +200,7 @@ export default function ProductCatalogueHomePage() {
         </section>
         <div className="flex justify-center pt-12">
           <Link href="/service-products">
-            <u className="explore-services-container uppercase rounded-full white text-sm font-semibold px-4 py-3">
+            <u className="explore-services-container uppercase rounded-full white text-lg font-semibold px-4 py-3">
               Explore our range of products{" "}
             </u>
           </Link>

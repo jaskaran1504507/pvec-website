@@ -11,7 +11,7 @@ export default function Home() {
   return (
     <main>
       <Helmet></Helmet>
-      <Carousel autoPlay swipeable infiniteLoop>
+      <Carousel autoPlay swipeable infiniteLoop interval='5000'>
         {banner.map((b) => (
           <div className="pb-2 md:py-0" key={b.img}>
             <Banner

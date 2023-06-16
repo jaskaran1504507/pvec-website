@@ -248,8 +248,8 @@ export const brandsArr = [
 
 export const banner = [
   {
-    textColor: "black",
-    img: "banner-home-img",
+    textColor: "white",
+    img: "banner-about-us-img",
     text: "We are accepting our new patients in Downtown Vancouver.",
   },
   {

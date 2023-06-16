@@ -29,14 +29,14 @@ export default function Banner({
             {text && (
               <h1
                 style={{ lineHeight: "1.25" }}
-                className="font-serif u-text text-white text-left text-2xl md:text-5xl mb-12 md:text-5xl font-semibold "
+                className="font-serif u-text text-white text-left text-3xl md:text-5xl mb-12 md:text-5xl font-bold"
               >
                 <span style={{ color: textColor }}> {text}</span>
               </h1>
             )}
             {
               subText && (
-                <h2 style={{ color: textColor, lineHeight: "1" }} className="font-serif u-text text-white text-left text-xl md:text-2xl mb-12 md:text-2xl font-semibold "> {subText}</h2>
+                <h2 style={{ color: textColor, lineHeight: "1" }} className="font-serif u-text text-white text-left text-xl md:text-2xl mb-12 md:text-2xl font-bold "> {subText}</h2>
               )
             }
             {
