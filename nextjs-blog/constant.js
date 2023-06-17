@@ -250,12 +250,12 @@ export const banner = [
   {
     textColor: "white",
     img: "banner-about-us-img",
-    text: "We are accepting our new patients in Downtown Vancouver.",
+    text: "We are now accepting new patients in our Downtown Vancouver clinic.",
   },
   {
     textColor: "white",
     img: "banner-home-img-2",
-    text: "Our direct billing services and include First Nations Health Authority (FNHA) and people on government disability",
+    text: "Our direct bill to all our major insurance providers, we also partnered with First Nation Health Authority (FNHA) and People with Disability (PwD) on government assistance.",
   },
   {
     textColor: "white",

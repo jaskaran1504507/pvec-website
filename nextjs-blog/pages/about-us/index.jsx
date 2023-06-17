@@ -30,7 +30,7 @@ export default function AboutUs() {
                 >
                   Great eye health begins with a preventive eye exam!
                   <br />
-                  We are accepting our new patients in <u>Downtown Vancouver</u>
+                  We are now accepting new patients in our <u>Downtown Vancouver</u> clinic.
                 </h1>
               </div>
             </div>
