@@ -251,48 +251,48 @@ export default function Header() {
                         <a className="page-scroll" href="/">
                           <span className="flex items-center ">
                             {" "}
-                            <span className="pl-2">Home</span>
+                            <span className="pl-2 font-bold">Home</span>
                           </span>
                         </a>
                       </li>
                       <li className="nav-item">
-                        <a className="page-scroll" href="/glasses-contacts?query=glasses">
-                          Sun/Glasses
+                        <a className="page-scroll font-bold" href="/glasses-contacts?query=glasses">
+                        <span className="font-bold">Sun/Glasses</span>
                         </a>
                       </li>
 
                       <li className="nav-item">
-                        <a className="page-scroll" href="/glasses-contacts?query=contacts">
-                          Contacts
+                        <a className="page-scrol font-bold" href="/glasses-contacts?query=contacts">
+                          <span className="font-bold">Contacts</span>
                         </a>
                       </li>
                       <li className="nav-item">
-                        <a className="page-scroll" href="/service-products">
-                          Services
+                        <a className="page-scroll font-bold " href="/service-products">
+                        <span className="font-bold">Services</span>
                         </a>
                       </li>
                       <li className="nav-item">
-                        <a className="page-scroll" href="/service-products">
-                          Eyecare
+                        <a className="page-scroll font-bold" href="/service-products">
+                        <span className="font-bold">EyeCare</span>
                         </a>
                       </li>
                       {/* <li className="nav-item">
                                         <a className="page-scroll" href="#features">Bookings</a>
                                     </li> */}
                       <li className="nav-item">
-                        <a className="page-scroll" href="/promotions">
-                          Promotions
+                        <a className="page-scroll font-bold" href="/promotions">
+                          <span className="font-bold">Promotions</span>
                         </a>
                       </li>
                       <li className="nav-item">
-                        <a className="page-scroll" href="/about-us">
-                          About
+                        <a className="page-scroll font-bold" href="/about-us">
+                          <span className="font-bold">About</span>
                         </a>
                       </li>
                       <li className="nav-item">
-                        <a className="page-scroll" href="/blogs">
-                          Blogs
-                        </a>
+                        <a className="page-scroll font-bold" href="/blogs">
+                        <span className="font-bold">Blogs</span>
+                        </a> 
                       </li>
                     </ul>
                   </div>
@@ -302,8 +302,7 @@ export default function Header() {
                       className="main-btn"
                       data-scroll-nav="0"
                       href="/bookings#appointment"
-                    >
-                      Book Appointment
+                    > <span className="font-bold">Book Appointment</span>
                     </a>
                   </div>
                 </nav>
