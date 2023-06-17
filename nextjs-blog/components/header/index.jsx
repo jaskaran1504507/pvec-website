@@ -190,16 +190,16 @@ export default function Header() {
               
                 <span className="pl-2 ">
                   {/* <a href="mailto:info@pveyecare.ca"> */}
-                  <MailOutlined /> &nbsp; &nbsp;
-                  <span className="hover:white focus:white">
+                  <MailOutlined  style={{color: "#349BD6"}} /> &nbsp; &nbsp;
+                  <span className="hover:white focus:white" style={{color: "#349BD6"}}>
                     info@pveyecare.ca
                   </span>
                   {/* </a> */}
                 </span>
           
-                <span className="pl-2 "><MobileOutlined twoToneColor="white" />&nbsp; &nbsp;+1 604 689 9962</span>
+                <span className="pl-2 " style={{color: "#349BD6"}}><MobileOutlined twoToneColor="white" style={{color: "#349BD6"}}/>&nbsp; &nbsp;+1 604 689 9962</span>
               
-                <span className="pl-2"><HomeOutlined /> &nbsp; &nbsp;
+                <span className="pl-2" style={{color: "#349BD6"}}><HomeOutlined style={{color: "#349BD6"}}/> &nbsp; &nbsp;
                   1242 Burrard Street, Vancouver BC, V6Z 1Z1
                 </span>
 
