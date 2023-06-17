@@ -81,7 +81,7 @@ export default function Footer() {
                   />
                 </a>
                 <p className="text">
-                  We have been caring for eyes in downtown Vancouver since 2005.
+                  We have been caring for eyes in Downtown Vancouver since 2005.
                   Our team of expert eye doctors have many years of experience
                   to provide proper diagnosis of health conditions, future care
                   recommendations, and to expedite urgent care needs to our
