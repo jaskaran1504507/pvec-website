@@ -20,6 +20,7 @@ export default function Home() {
               text={b.text}
               description={b.description}
               subText={b.subText}
+              subText2={b.subText2}
             ></Banner>
           </div>
         ))}

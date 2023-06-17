@@ -6,7 +6,8 @@ export default function Banner({
   children,
   textColor = "#454545",
   description,
-  subText
+  subText,
+  subText2
 }) {
   return (
     <div
@@ -37,6 +38,11 @@ export default function Banner({
             {
               subText && (
                 <h2 style={{ color: textColor, lineHeight: "1" }} className="font-serif u-text text-white text-left text-xl md:text-2xl mb-12 md:text-2xl font-bold "> {subText}</h2>
+              )
+            }
+            {
+              subText2 && (
+                <h2 style={{ color: textColor, lineHeight: "1" }} className="font-serif u-text text-white text-left text-xl md:text-2xl mb-12 md:text-2xl font-bold "> {subText2}</h2>
               )
             }
             {
