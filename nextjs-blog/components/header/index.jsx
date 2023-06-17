@@ -188,20 +188,20 @@ export default function Header() {
             >
               <span className="text-white flex items-center space-x-36 text-lg font-bold">
               
-                <span className="pl-2 ">
+                <a className="pl-2 ">
                   {/* <a href="mailto:info@pveyecare.ca"> */}
                   <MailOutlined  style={{color: "#349BD6"}} /> &nbsp; &nbsp;
-                  <span className="hover:white focus:white" style={{color: "#349BD6"}}>
+                  <span className="hover:white focus:white" style={{color: "#349BD6"}} mailto="mailto:support@example.com">
                     info@pveyecare.ca
                   </span>
                   {/* </a> */}
-                </span>
+                </a>
           
-                <span className="pl-2 " style={{color: "#349BD6"}}><MobileOutlined twoToneColor="white" style={{color: "#349BD6"}}/>&nbsp; &nbsp;+1 604 689 9962</span>
+                <a className="pl-2 " style={{color: "#349BD6"}} mailto="mailto:no-reply@example.com"><MobileOutlined twoToneColor="white" style={{color: "#349BD6"}}/>&nbsp; &nbsp;+1 604 689 9962</a>
               
-                <span className="pl-2" style={{color: "#349BD6"}}><HomeOutlined style={{color: "#349BD6"}}/> &nbsp; &nbsp;
+                <a className="pl-2" style={{color: "#349BD6"}} mailto="mailto:no-reply@example.com"><HomeOutlined style={{color: "#349BD6"}}/> &nbsp; &nbsp;
                   1242 Burrard Street, Vancouver BC, V6Z 1Z1
-                </span>
+                </a>
 
               </span>
             </div>
@@ -257,7 +257,7 @@ export default function Header() {
                       </li>
                       <li className="nav-item">
                         <a className="page-scroll" href="/glasses-contacts?query=glasses">
-                          Glasses
+                          Sun/Glasses
                         </a>
                       </li>
 
@@ -273,7 +273,7 @@ export default function Header() {
                       </li>
                       <li className="nav-item">
                         <a className="page-scroll" href="/service-products">
-                          Products
+                          Eyecare
                         </a>
                       </li>
                       {/* <li className="nav-item">
