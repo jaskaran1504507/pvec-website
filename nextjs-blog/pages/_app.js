@@ -20,7 +20,6 @@ import { useEffect, useState } from "react";
 export default function MyApp({ Component, pageProps }) {
   const router = useRouter();
   const [isVisited, setIsVisited] = useState(true);
-  console.log("searchParams", router.pathname);
   useEffect(() => {
     if (!localStorage.getItem("isVisited")) {
       setIsVisited(false);

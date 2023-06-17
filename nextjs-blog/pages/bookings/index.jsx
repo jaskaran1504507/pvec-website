@@ -125,7 +125,6 @@ const Bookings = () => {
   };
 
   const getAppointmentSchedulesDayWise = async ({ query, pathParams }) => {
-    console.log("getAppointmentSchedulesDayWise", query);
     const schedules = await callApi({
       uriEndPoint: {
         ...Appointment.getSingleDaySchedule,
@@ -141,7 +140,6 @@ const Bookings = () => {
         };
       });
 
-      console.log("newSchedules", newSchedules);
       setSlots(newSchedules);
     }
     return schedules;
