@@ -261,8 +261,8 @@ export const banner = [
     textColor: "white",
     img: "banner-home-img-3",
     text: "The best use of your performance vision is spotting a good deal!",
-    subText : <>Clearance sale now on selected eyewear from <span style={{color:'red'}}>50-90% off </span> with fully coated lenses purchase.</>,
-    subText2 : <a href="https://www.alternativeeyes.com/catalog/one-sun" target="_blank" rel="noopener noreferrer">Limited time offer, fully coated polarised sunglasses regular price 200$ now on 99$ while supplies last.</a>,
+    subText : <>Clearance Sale! <br/>Now on selected eyewear from <span style={{color:'red'}}>50-90% off </span> with fully coated lenses purchase.</>,
+    subText2 : <a href="https://www.alternativeeyes.com/catalog/one-sun" target="_blank" rel="noopener noreferrer">Limited time offer! <br/>Fully coated polarized sun-glasses reg price <span style={{color:'red'}}><s>200$</s></span> now for <span style={{color:'red'}}>99$</span> while supplies last.</a>,
     description : "Please come visit in store or email or call us for more information."
   },
 ];
