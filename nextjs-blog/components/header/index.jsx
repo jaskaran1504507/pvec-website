@@ -246,7 +246,7 @@ export default function Header() {
                     id="navbarSupportedContent"
                   >
                     {/* <div className="collapse navbar-collapse sub-menu-bar" id="navbarSupportedContent"> */}
-                    <ul id="nav" className="navbar-nav ml-auto">
+                    <ul id="nav" className="navbar-nav ml-auto font-bold">
                       <li className="nav-item active ">
                         <a className="page-scroll" href="/">
                           <span className="flex items-center ">
@@ -256,13 +256,24 @@ export default function Header() {
                         </a>
                       </li>
                       <li className="nav-item">
-                        <a className="page-scroll" href="/glasses-contacts">
-                          Glasses & Contacts
+                        <a className="page-scroll" href="/glasses-contacts?query=glasses">
+                          Glasses
+                        </a>
+                      </li>
+
+                      <li className="nav-item">
+                        <a className="page-scroll" href="/glasses-contacts?query=contacts">
+                          Contacts
                         </a>
                       </li>
                       <li className="nav-item">
                         <a className="page-scroll" href="/service-products">
-                          Services & Products
+                          Services
+                        </a>
+                      </li>
+                      <li className="nav-item">
+                        <a className="page-scroll" href="/service-products">
+                          Products
                         </a>
                       </li>
                       {/* <li className="nav-item">
