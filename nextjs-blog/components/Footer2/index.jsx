@@ -136,10 +136,9 @@ to keep up-to-date on our latest offers, new stock announcements, and access to 
                   <h4 className="title">Contact Us</h4>
                 </div>
                 <ul className="contact">
-                  <li>+1 604 689 9962</li>
-                  <li>info@pveyecare.ca</li>
-                  <li>www.pveyecare.ca</li>
-                  <li>1242 Burrard Street, Vancouver BC, V6Z 1Z1</li>
+                <li><a href="tel:+16046899962" target="_blank">+1 604 689 9962</a></li>
+                  <li> <a href="mailto:info@pveyecare.ca" target="_blank">info@pveyecare.ca </a></li>
+                  <li><a href="https://goo.gl/maps/rh7x6UiVqRNjZTBa7" target="_blank">1242 Burrard Street, Vancouver BC, V6Z 1Z1 </a></li>
                 </ul>
               </div>
             </div>

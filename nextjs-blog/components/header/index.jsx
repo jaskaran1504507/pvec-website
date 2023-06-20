@@ -188,18 +188,18 @@ export default function Header() {
             >
               <span className="text-white flex items-center space-x-36 text-lg font-bold">
               
-                <a className="pl-2 ">
+                <a className="pl-2 " href="mailto:info@pveyecare.ca" target="_blank">
                   {/* <a href="mailto:info@pveyecare.ca"> */}
                   <MailOutlined  style={{color: "#349BD6"}} /> &nbsp; &nbsp;
-                  <span className="hover:white focus:white" style={{color: "#349BD6"}} mailto="mailto:support@example.com">
+                  <span className="hover:white focus:white" style={{color: "#349BD6"}} >
                     info@pveyecare.ca
                   </span>
                   {/* </a> */}
                 </a>
           
-                <a className="pl-2 " style={{color: "#349BD6"}} mailto="mailto:no-reply@example.com"><MobileOutlined twoToneColor="white" style={{color: "#349BD6"}}/>&nbsp; &nbsp;+1 604 689 9962</a>
+                <a className="pl-2 " style={{color: "#349BD6"}} href="tel:+16046899962"  target="_blank"><MobileOutlined twoToneColor="white" style={{color: "#349BD6"}}/>&nbsp; &nbsp;+1 604 689 9962</a>
               
-                <a className="pl-2" style={{color: "#349BD6"}} mailto="mailto:no-reply@example.com"><HomeOutlined style={{color: "#349BD6"}}/> &nbsp; &nbsp;
+                <a className="pl-2" style={{color: "#349BD6"}} href="https://goo.gl/maps/rh7x6UiVqRNjZTBa7" target="_blank"><HomeOutlined style={{color: "#349BD6"}}/> &nbsp; &nbsp;
                   1242 Burrard Street, Vancouver BC, V6Z 1Z1
                 </a>
 
@@ -267,12 +267,12 @@ export default function Header() {
                         </a>
                       </li>
                       <li className="nav-item">
-                        <a className="page-scroll font-bold " href="/service-products">
+                        <a className="page-scroll font-bold " href="/services">
                         <span className="font-bold">Services</span>
                         </a>
                       </li>
                       <li className="nav-item">
-                        <a className="page-scroll font-bold" href="/service-products">
+                        <a className="page-scroll font-bold" href="/products?query=eye-medic">
                         <span className="font-bold">EyeCare</span>
                         </a>
                       </li>
