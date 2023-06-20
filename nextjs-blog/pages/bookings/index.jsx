@@ -81,8 +81,6 @@ const Bookings = () => {
   };
 
   const onFinish = (values) => {
-    console.log("this is submission ", values);
-    console.log("this is submission ", values.date);
     let body = {
       name: values.user.name,
       email: values.user.email,
@@ -94,8 +92,6 @@ const Bookings = () => {
       comment: values.comment,
       healthcareId: values.healthcareId,
     };
-
-    console.log("this is body ", body);
 
     callApi({
       uriEndPoint: {
@@ -120,7 +116,6 @@ const Bookings = () => {
       },
       query,
     });
-    console.log("schedules", schedules);
     return schedules;
   };
 
@@ -209,10 +204,6 @@ const Bookings = () => {
     }
   };
 
-  const onSearch = (value) => {
-    console.log("search:", value);
-  };
-
   const getDefaultDate = (fromUseEffect = false) => {
     let todaysDate = new Date();
     // todaysDate = new Date(Date.now() + (3600 * 1000 * 24));
@@ -223,19 +214,16 @@ const Bookings = () => {
       return todaysDate;
     }
 
-    return dayjs(todaysDate.toLocaleDateString(), "DD/MM/YYYY");
+    // return dayjs(todaysDate.toLocaleString("en-CA"), "DD/MM/YYYY");
+    console.log("date, ", todaysDate.toLocaleString("en-CA"));
+    let canDate = dayjs(todaysDate.toLocaleString("en-CA"), "YYYY-MM-DD");
+    if(!canDate){
+      console.log("canDate#1", canDate);
+      canDate = dayjs(todaysDate.toLocaleString(), "DD/MM/YYYY");
+    }
+    console.log("canDate", canDate);
+    return canDate;
   };
-
-  const disabledDates = ["2023-04-26", "2023-04-27"];
-
-  function disabledDate(current) {
-    // Can not select Sundays and predefined days
-    return (
-      moment(current).day() === 0
-      // ||
-      // disabledDates.find(date => date === moment(current).format("YYYY-MM-DD"))
-    );
-  }
 
   const [slots, setSlots] = useState([]);
   const [showAppointmentSuccess, setShowAppointmentSuccess] = useState(true);
@@ -364,13 +352,6 @@ const Bookings = () => {
               />
             </Form.Item>
             <Form.Item name="comment" label="Comments">
-              {/* <Input /> */}
-              {/* <FloatInput
-              label="Any questions or comments"
-              placeholder="Any questions or comments"
-              name="email"
-            />  */}
-              {/* <Input /> */}
               <TextArea
                 rows={4}
                 placeholder="Any questions or comments..."
