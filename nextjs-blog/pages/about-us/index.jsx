@@ -79,15 +79,15 @@ export default function AboutUs() {
                 </u>
               </Link> */}
               <div className="flex align-items-center justify-center">
-              <a
-                className="main-btn-products"
-                data-scroll-nav="0"
-                href="bookings#appointment"
-              >
-                Book your appointment{" "}
-              </a>
-              {/* <div className="long-arrow-right"></div> */}
-            </div>
+                <a
+                  className="main-btn-products"
+                  data-scroll-nav="0"
+                  href="bookings#appointment"
+                >
+                  Book your appointment{" "}
+                </a>
+                {/* <div className="long-arrow-right"></div> */}
+              </div>
             </div>
           </div>
         </div>
@@ -97,33 +97,30 @@ export default function AboutUs() {
               "Did you know the eye is the only organ we can see blood vessels
               and other structure linked to the general body health ?"
             </i>
-            <br />
-            <br />
-            <br />
-            <p>
+            
+          </div>
+          <div>
+          <p>
               "This allows our doctors to detect many serious health conditions
               including: diabetes, hypertension, auto-immune disorders, high
               cholesterol, thyroid disease, tumors and even cancer! The eye exam
               is really a window into your overall health and well-being. "
             </p>
           </div>
+ <div className="flex justify-end">
+          <Image src="/images/WY.jpeg" height="300" width="250" />
+          
+        </div>
+        <div className="font-semibold text-blue-900 mt-24">
+            "Dr. Wayne Yip is the primary optometrist here at Performance Vision EyeCare. Dr. Yip attended the University of Waterloo for his undergraduate program and then graduated from the prestigious New England College of Optometry in 2014; he has been working in British Columbia since then.  Aside from primary care, with his over a decade of experience in providing comprehensive care, Dr. Yip has developed a keen interest in specialized contact lenses for the treatment of corneal conditions and dystrophies such as keratoconus, post refractive surgery complications, and severe chronic dry eye. In addition, Dr. Yip has personal experience and can especially relate to patients with complicated prescriptions due to his own high myopia."
+          </div>
           {/* <div className="flex justify-end">
             {" "}
             <Image src="/images/LM.jpeg" height="300" width="250" />
-          </div>
-          <div className="flex justify-start">
-            <Image src="/images/WY.jpeg" height="300" width="250" />
           </div> */}
+
         </div>
-        {/* <div className="mt-20">
-          <div className="font-semibold text-blue-900">
-            "Performance Vision Optometry saved my right eye from being further
-            damaged. I truly value the professional support from their doctors
-            as well as their kindness and gentleness with taking care of me.
-            Fortunately, my eye has now completely heated. Thank you so much!"
-            <br /> <br />- Janice, Vancouver
-          </div>
-        </div> */}
+       
       </div>
     </main>
   );
