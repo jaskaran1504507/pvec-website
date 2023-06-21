@@ -108,7 +108,7 @@ export default function AboutUs() {
             </p>
           </div>
  <div className="flex justify-end">
-          <Image src="/images/WY.jpeg" height="300" width="250" />
+          <Image src="/images/Wayne.jpg" height="300" width="250" />
           
         </div>
         <div className="font-semibold text-blue-900 mt-24">
