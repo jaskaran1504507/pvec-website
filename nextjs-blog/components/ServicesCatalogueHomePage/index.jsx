@@ -22,8 +22,8 @@ export default function ServicesCatalogueHomePage() {
               <h3 className="title">
                 Our Services
               </h3>
-              <h3 >
-                <span><br/>Everything you need for happy, healthy eyes!</span>
+              <h3>
+                <span className="text-lg font-semibold"><br/>Everything you need for happy, healthy eyes!</span>
               </h3>
             </div>
             {/* <!-- section title --> */}
