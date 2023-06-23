@@ -327,11 +327,16 @@ export default function ServicesCatalogueHomePage() {
           </div>
         </section>
         <div className="flex justify-center pt-12">
-          <Link href="/service-products">
+          {/* <Link href="/service-products">
             <u className="explore-services-container uppercase rounded-full white text-lg font-semibold px-4 py-3">
               Explore our range of products{" "}
             </u>
-          </Link>
+          </Link> */}
+          <Link href="/service-products">
+                <u className="explore-services-container uppercase rounded-full white text-lg font-semibold px-4 py-3">
+                Explore more of our services{" "}
+                </u>
+              </Link>
         </div>
       </div>
       {/* <!--====== ABOUT PART ENDS ======--> */}
