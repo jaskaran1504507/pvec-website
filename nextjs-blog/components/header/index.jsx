@@ -16,6 +16,7 @@ export default function Header() {
     setIsNavVisible((prev) => !prev);
   };
   const location = useRouter();
+  console.log("dfds", location.query)
   return (
     // <>
     //   <div className="relative bg-white">
@@ -216,7 +217,7 @@ export default function Header() {
               <div className="col-lg-12">
                 <nav className="navbar navbar-expand-lg pb-0">
                   <a className="navbar-brand" href="#">
-                    <img src="images/eyecare-logo.png" alt="Logo" />
+                    <img src="images/eyecare-logo.png" style={{maxWidth :'9rem', height :'4.4rem'}} alt="Logo" />
                   </a>
                   <button
                     onClick={handleNavClick}
@@ -247,52 +248,75 @@ export default function Header() {
                   >
                     {/* <div className="collapse navbar-collapse sub-menu-bar" id="navbarSupportedContent"> */}
                     <ul id="nav" className="navbar-nav ml-auto font-bold">
-                      <li className="nav-item active ">
-                        <a className="page-scroll" href="/">
+                     <li className="nav-item active "><div class="relative group">
+                      <div class="absolute -inset-0.5 bg-gradient-to-r from-cyan-800 to-sky-500 rounded-lg blur opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-tilt"></div>
+
+                        <a className={classNames("page-scroll rounded-lg", location?.route=="/"?"bg-white":"bg-black")} href="/">      
                           <span className="flex items-center ">
                             {" "}
-                            <span className="pl-2 font-bold">Home</span>
+                            <span className={classNames("px-1 font-bold text-black", location?.route=="/"?"text-black":"text-white")}>Home</span>
                           </span>
                         </a>
+                        </div>
                       </li>
-                      <li className="nav-item">
-                        <a className="page-scroll font-bold" href="/glasses-contacts?query=glasses">
-                        <span className="font-bold">Sun/Glasses</span>
+                      <li className="nav-item"> <div class="relative group">
+                      <div class="absolute -inset-0.5 bg-gradient-to-r from-cyan-800 to-sky-500 rounded-lg blur opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-tilt"></div>
+
+                        <a className={classNames("page-scroll font-bold rounded-lg", (location?.route=="/glasses-contacts" && location?.query?.query=="glasses")?"bg-white":"bg-black")} href="/glasses-contacts?query=glasses">
+                        <span className={classNames("px-1 font-bold text-black",  (location?.route=="/glasses-contacts" && location?.query?.query=="glasses")?"text-black":"text-white")}>Sun/Glasses</span>
                         </a>
+                        </div>
                       </li>
 
                       <li className="nav-item">
-                        <a className="page-scrol font-bold" href="/glasses-contacts?query=contacts">
-                          <span className="font-bold">Contacts</span>
+                      <div class="relative group">
+                      <div class="absolute -inset-0.5 bg-gradient-to-r from-cyan-800 to-sky-500 rounded-lg blur opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-tilt"></div>
+                        <a className={classNames("page-scroll font-bold rounded-lg", (location?.route=="/glasses-contacts" && location?.query?.query=="contacts")?"bg-white":"bg-black")} href="/glasses-contacts?query=contacts">
+                        <span className={classNames("px-1 font-bold text-black",  (location?.route=="/glasses-contacts" && location?.query?.query=="contacts")?"text-black":"text-white")}>Contacts</span>
                         </a>
+                        </div>
                       </li>
                       <li className="nav-item">
-                        <a className="page-scroll font-bold " href="/services">
-                        <span className="font-bold">Services</span>
+                      <div class="relative group">
+                      <div class="absolute -inset-0.5 bg-gradient-to-r from-cyan-800 to-sky-500 rounded-lg blur opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-tilt"></div>
+
+                        <a className={classNames("page-scroll font-bold rounded-lg", location?.route=="/services"?"bg-white":"bg-black")} href="/services">
+                        <span className={classNames("px-1 font-bold", location?.route=="/services"?"text-black":"text-white")}>Services</span>
                         </a>
+                        </div>
                       </li>
                       <li className="nav-item">
-                        <a className="page-scroll font-bold" href="/products?query=eye-medic">
-                        <span className="font-bold">EyeCare</span>
+                      <div class="relative group">
+                      <div class="absolute -inset-0.5 bg-gradient-to-r from-cyan-800 to-sky-500 rounded-lg blur opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-tilt"></div>
+
+                        <a className={classNames("page-scroll font-bold rounded-lg", (location?.route=="/products" && location?.query?.query=="eye-medic")?"bg-white":"bg-black")} href="/products?query=eye-medic">
+                        <span className={classNames("px-1 font-bold text-black",  (location?.route=="/products" && location?.query?.query=="eye-medic")?"text-black":"text-white")}>EyeCare</span>
                         </a>
-                      </li>
-                      {/* <li className="nav-item">
-                                        <a className="page-scroll" href="#features">Bookings</a>
-                                    </li> */}
-                      <li className="nav-item">
-                        <a className="page-scroll font-bold" href="/promotions">
-                          <span className="font-bold">Promotions</span>
-                        </a>
+                        </div>
                       </li>
                       <li className="nav-item">
-                        <a className="page-scroll font-bold" href="/about-us">
-                          <span className="font-bold">About</span>
+                      <div class="relative group">
+                      <div class="absolute -inset-0.5 bg-gradient-to-r from-cyan-800 to-sky-500 rounded-lg blur opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-tilt"></div>
+                        <a className={classNames("page-scroll font-bold rounded-lg", location?.route=="/promotions"?"bg-white":"bg-black")} href="/promotions">
+                        <span className={classNames("px-1 font-bold", location?.route=="/promotions"?"text-black":"text-white")}>Promotions</span>
                         </a>
+                        </div>
                       </li>
                       <li className="nav-item">
-                        <a className="page-scroll font-bold" href="/blogs">
-                        <span className="font-bold">Blogs</span>
-                        </a> 
+                      <div class="relative group">
+                      <div class="absolute -inset-0.5 bg-gradient-to-r from-cyan-800 to-sky-500 rounded-lg blur opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-tilt"></div>
+                      <a className={classNames("page-scroll font-bold rounded-lg", location?.route=="/about-us"?"bg-white":"bg-black")} href="/about-us">
+                        <span className={classNames("px-1 font-bold", location?.route=="/about-us"?"text-black":"text-white")}>About</span>
+                        </a>
+                        </div>
+                      </li>
+                      <li className="nav-item">
+                      <div class="relative group">
+                      <div class="absolute -inset-0.5 bg-gradient-to-r from-cyan-800 to-sky-500 rounded-lg blur opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-tilt"></div> 
+                        <a className={classNames("page-scroll font-bold rounded-lg", location?.route=="/blogs"?"bg-white":"bg-black")} href="/blogs">
+                        <span className={classNames("px-1 font-bold", location?.route=="/blogs"?"text-black":"text-white")}>Blogs</span>
+                        </a>
+                        </div>
                       </li>
                     </ul>
                   </div>
@@ -302,7 +326,7 @@ export default function Header() {
                       className="main-btn"
                       data-scroll-nav="0"
                       href="/bookings#appointment"
-                    > <span className="font-bold">Book Appointment</span>
+                    > <span className="px-2 font-bold">Book Appointment</span>
                     </a>
                   </div>
                 </nav>
@@ -336,4 +360,8 @@ export default function Header() {
       </header>
     </>
   );
+}
+
+function classNames(...args) {
+  return args.filter(Boolean).join(' ')
 }
