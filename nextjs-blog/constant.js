@@ -255,7 +255,7 @@ export const banner = [
   {
     textColor: "white",
     img: "banner-home-img-2",
-    text: "We direct bill to all major insurance providers. We also partner with First Nation Health Authority (FNHA) and People with Disability (PwD) on government assistance.",
+    text: <>We direct bill to all major insurance providers.<br/>We also partner with First Nation Health Authority (FNHA) and People with Disability (PwD) on government assistance.</>,
   },
   {
     textColor: "white",
@@ -263,6 +263,7 @@ export const banner = [
     text: "The best use of your performance vision is spotting a good deal!",
     subText : <>Clearance Sale! <br/>Now on selected eyewear from <span style={{color:'red'}}>50-90% off </span> with fully coated lenses purchase.</>,
     subText2 : <a href="https://www.alternativeeyes.com/catalog/one-sun" target="_blank" rel="noopener noreferrer">Limited time offer! <br/>Fully coated polarized sun glasses reg price <span style={{color:'red'}}><s>200$</s></span> now for <span style={{color:'red'}}>99$</span> while supplies last.</a>,
+    subText3 : <>Are you a student or senior citizen?<br/>Please ask about our special pricing jsut for you.</>,
     description : "Please come visit in store or email or call us for more information."
   },
 ];

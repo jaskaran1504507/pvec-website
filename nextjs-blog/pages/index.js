@@ -21,6 +21,7 @@ export default function Home() {
               description={b.description}
               subText={b.subText}
               subText2={b.subText2}
+              subText3={b.subText3}
             ></Banner>
           </div>
         ))}
