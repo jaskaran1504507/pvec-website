@@ -150,7 +150,7 @@ export default function ServicesCatalogueHomePage() {
               <div className="line m-auto"></div>
               <h3 className="title text-xl">Our Services</h3>
               <h4>
-                <span className="text-lg font-semibold	">
+                <span className="text-xl font-semibold">
                   <br />
                   Everything you need for happy, healthy eyes!
                 </span>

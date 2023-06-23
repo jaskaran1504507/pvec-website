@@ -22,7 +22,7 @@ export default function ProductCatalogueHomePage() {
               <div className="line m-auto"></div>
               <h3 className="title text-xl">Our Products</h3>
               <h4>
-                <span className="text-lg font-semibold	">
+                <span className="text-xl font-semibold	">
                   <br />
                   Over 750+ Ophthalmic frames, 250+ Stylish Sunglasses, Top Branded Contact Lenses, and various eye care products in stock to choose from!
                 </span>
