@@ -13,134 +13,331 @@ export default function ServicesCatalogueHomePage() {
     
     // <!--====== SERVICES PART START ======-->
 
-    <section id="features" className="services-area pt-82 px-px-120">
-      <div className="container">
+//     <section id="features" className="services-area pt-82 px-px-120">
+//       <div className="container">
+//         <div className="row justify-content-center">
+//           <div className="col-lg-10">
+//             <div className="section-title text-center pb-30">
+//               <div className="line m-auto"></div>
+//               <h3 className="title">
+//                 Our Services
+//               </h3>
+//               <h3>
+//                 <span className="text-lg font-semibold"><br/>Everything you need for happy, healthy eyes!</span>
+//               </h3>
+//             </div>
+//             {/* <!-- section title --> */}
+//           </div>
+//         </div>
+//         {/* <!-- row --> */}
+//         <div className="row justify-content-center">
+//         {/* <div className="flex items-stretch -mx-4"> */}
+//         <div className="col-lg-1.5 col-md-0 col-sm-0"></div>
+//           <div className="col-lg-3 col-md-7 col-sm-8 h-full">
+//             <div
+//               className="single-services text-center mt-30 wow fadeIn"
+//               data-wow-duration="1s"
+//               data-wow-delay="0.2s"
+//             >
+//               <div className="services-icon">
+//                 <img
+//                   className="shape"
+//                   src="assets/images/services-shape.svg"
+//                   alt="shape"
+//                 />
+//                 <img
+//                   className="shape-1"
+//                   src="/images/Rectangle 1-6.jpg"
+//                   alt="shape"
+//                   style={{height: '100%', width: '200%'}}
+//                 />
+//                 {/* <i className="lni-baloon"></i> */}
+//               </div>
+//               <div className="services-content mt-30">
+//                 <h4 className="services-title"><a href="/service-products" >Comprehensive Eye Exam</a></h4>
+//                 <p className="text text-base">
+//                 for Adults/Senior/Children
+//                 </p>
+//                 <a className="more" href="/service-products"
+//                   >Learn More <i className="lni-chevron-right"></i></a>
+//               </div>
+//             </div>
+//             {/* <!-- single services --> */}
+//           </div>
+//           <div className="col-lg-3 col-md-7 col-sm-8 h-full	">
+//             <div
+//               className="single-services text-center mt-30 wow fadeIn"
+//               data-wow-duration="1s"
+//               data-wow-delay="0.5s"
+//             >
+//               <div className="services-icon">
+//                 <img
+//                   className="shape"
+//                   src="assets/images/services-shape.svg"
+//                   alt="shape"
+//                 />
+//                 <img 
+//                   className="shape-1"
+//                   src="/images/Rectangle 1-4.jpg"
+//                   alt="shape"
+//                   style={{height: '100%', width: '200%'}}
+//                 />
+//                 {/* <i className="lni-cog"></i> */}
+//               </div>
+//               <div className="services-content mt-30">
+//                 <h4 className="services-title"><a href="/service-products">Computer Vision Syndrome
+// </a></h4>
+//                 <p className="texttext-base">
+//                 Eye problems caused by prolonged computer use including: Eye irritation (Dry eyes, itchy eyes, red eyes) Blurred vision. Headaches.
+//                 </p>
+//                 <a className="more" href="/service-products">Learn More <i className="lni-chevron-right"></i></a>
+//               </div>
+//             </div>
+//             {/* <!-- single services --> */}
+//           </div>
+//           <div className="col-lg-3 col-md-7 col-sm-8 h-full	">
+//             <div
+//               className="single-services text-center mt-30 wow fadeIn"
+//               data-wow-duration="1s"
+//               data-wow-delay="0.8s"
+//             >
+//               <div className="services-icon">
+//                 <img
+//                   className="shape"
+//                   src="assets/images/services-shape.svg"
+//                   alt="shape"
+//                 />
+//                 <img
+//                   className="shape-1"
+//                   src="/images/Rectangle 1-5.jpg"
+//                   alt="shape"
+//                   style={{height: '100%', width: '200%'}}
+//                 />
+//                 {/* <i className="lni-bolt-alt"></i> */}
+//               </div>
+//               <div className="services-content mt-30">
+//                 <h4 className="services-title"><a href="/service-products">Lasik/PRK Surgery Consult</a></h4>
+//                 <p className="text text-base">
+//                 Pre-Op and Post-Op Care Cataract Surgery Management, Glaucoma Treatment, Macular Degeneration Care, Diabetic Eye Care.
+//                 </p>
+//                 <a className="more" href="/service-products">Learn More <i className="lni-chevron-right"></i></a>
+//               </div>
+//             </div>
+//             {/* <!-- single services --> */}
+//           </div>
+//           <div className="col-lg-1.5 col-md-0 col-sm-0"></div>
+          
+//         </div>
+//         {/* <!-- row --> */}
+//         {/* Explore more about our services */}
+       
+//       </div>
+//       <div className="flex justify-center pt-12">
+//           <Link href="/service-products">
+//                 <u className="explore-services-container uppercase rounded-full white text-lg font-semibold px-4 py-3">
+//                 Explore more of our services{" "}
+//                 </u>
+//               </Link>
+//         </div>
+//       {/* <!-- container --> */}
+//     </section>
+<>
+      {/* <!--====== ABOUT PART START ======--> */}
+      <div className="container pt-120">
         <div className="row justify-content-center">
           <div className="col-lg-10">
             <div className="section-title text-center pb-30">
               <div className="line m-auto"></div>
-              <h3 className="title">
-                Our Services
-              </h3>
-              <h3>
-                <span className="text-lg font-semibold"><br/>Everything you need for happy, healthy eyes!</span>
-              </h3>
+              <h3 className="title text-xl">Our Services</h3>
+              <h4>
+                <span className="text-lg font-semibold	">
+                  <br />
+                  Everything you need for happy, healthy eyes!
+                </span>
+              </h4>
             </div>
             {/* <!-- section title --> */}
           </div>
         </div>
-        {/* <!-- row --> */}
-        <div className="row justify-content-center">
-        {/* <div className="flex items-stretch -mx-4"> */}
-        <div className="col-lg-1.5 col-md-0 col-sm-0"></div>
-          <div className="col-lg-3 col-md-7 col-sm-8 h-full">
-            <div
-              className="single-services text-center mt-30 wow fadeIn"
-              data-wow-duration="1s"
-              data-wow-delay="0.2s"
-            >
-              <div className="services-icon">
-                <img
-                  className="shape"
-                  src="assets/images/services-shape.svg"
-                  alt="shape"
-                />
-                <img
-                  className="shape-1"
-                  src="/images/Rectangle 1-6.jpg"
-                  alt="shape"
-                  style={{height: '100%', width: '200%'}}
-                />
-                {/* <i className="lni-baloon"></i> */}
+        <section id="about" className="about-area pt-70">
+          <div className="container">
+            <div className="row">
+              <div className="col-lg-6">
+                <div
+                  className="about-content mt-50 wow fadeInLeftBig"
+                  data-wow-duration="1s"
+                  data-wow-delay="0.5s"
+                >
+                  <div className="section-title">
+                    <div className="line"></div>
+                    <h3 className="title">Comprehensive Eye Exam</h3>
+                    <h3 className="text-lg">
+                      <span>
+                        <br />
+                        for Adults/Senior/Children.
+                      </span>
+                    </h3>
+                  </div>
+                  {/* <!-- section title --> */}
+                  {/* <p className="text text-lg">
+                  for Adults/Senior/Children.
+                  </p> */}
+                 
+                  <a href="/service-products" className="main-btn text-lg">
+                    Learn more
+                  </a>
+                </div>
+                {/* <!-- about content --> */}
               </div>
-              <div className="services-content mt-30">
-                <h4 className="services-title"><a href="/service-products" >Comprehensive Eye Exam</a></h4>
-                <p className="text text-base">
-                for Adults/Senior/Children
-                </p>
-                <a className="more" href="/service-products"
-                  >Learn More <i className="lni-chevron-right"></i></a>
-              </div>
-            </div>
-            {/* <!-- single services --> */}
-          </div>
-          <div className="col-lg-3 col-md-7 col-sm-8 h-full	">
-            <div
-              className="single-services text-center mt-30 wow fadeIn"
-              data-wow-duration="1s"
-              data-wow-delay="0.5s"
-            >
-              <div className="services-icon">
-                <img
-                  className="shape"
-                  src="assets/images/services-shape.svg"
-                  alt="shape"
-                />
-                <img 
-                  className="shape-1"
-                  src="/images/Rectangle 1-4.jpg"
-                  alt="shape"
-                  style={{height: '100%', width: '200%'}}
-                />
-                {/* <i className="lni-cog"></i> */}
-              </div>
-              <div className="services-content mt-30">
-                <h4 className="services-title"><a href="/service-products">Computer Vision Syndrome
-</a></h4>
-                <p className="texttext-base">
-                Eye problems caused by prolonged computer use including: Eye irritation (Dry eyes, itchy eyes, red eyes) Blurred vision. Headaches.
-                </p>
-                <a className="more" href="/service-products">Learn More <i className="lni-chevron-right"></i></a>
+              <div className="col-lg-6">
+                <div
+                  className="about-image text-center mt-50 wow fadeInRightBig"
+                  data-wow-duration="1s"
+                  data-wow-delay="0.5s"
+                >
+                  <img
+                    src="/images/5411448.jpg"
+                    alt="about"
+                    style={{ maxHeight: "80%", maxWidth: "80%" }}
+                  />
+                </div>
+                {/* <!-- about image --> */}
               </div>
             </div>
-            {/* <!-- single services --> */}
+            {/* <!-- row --> */}
           </div>
-          <div className="col-lg-3 col-md-7 col-sm-8 h-full	">
-            <div
-              className="single-services text-center mt-30 wow fadeIn"
-              data-wow-duration="1s"
-              data-wow-delay="0.8s"
-            >
-              <div className="services-icon">
-                <img
-                  className="shape"
-                  src="assets/images/services-shape.svg"
-                  alt="shape"
-                />
-                <img
-                  className="shape-1"
-                  src="/images/Rectangle 1-5.jpg"
-                  alt="shape"
-                  style={{height: '100%', width: '200%'}}
-                />
-                {/* <i className="lni-bolt-alt"></i> */}
+          {/* <!-- container --> */}
+          <div className="about-shape-1">
+            <img src="assets/images/about-shape-1.svg" alt="shape" />
+          </div>
+        </section>
+
+        {/* <!--====== ABOUT PART ENDS ======--> */}
+
+        {/* <!--====== ABOUT PART START ======--> */}
+
+        <section className="about-area pt-70">
+          <div className="about-shape-2">
+            <img src="/images/5917616.jpg" alt="shape" />
+          </div>
+          <div className="container">
+            <div className="row">
+              <div className="col-lg-6 order-lg-last">
+                <div
+                  className="about-content mt-50 wow fadeInLeftBig"
+                  data-wow-duration="1s"
+                  data-wow-delay="0.5s"
+                >
+                  <div className="section-title">
+                    <div className="line"></div>
+                    <h3 className="title">Computer Vision Syndrome</h3>
+                    <h3 className="text-lg">
+                      <span>
+                        <br />
+                        Eye problems caused by prolonged computer use including: Eye irritation (Dry eyes, itchy eyes, red eyes) Blurred vision. Headaches.{" "}
+                      </span>
+                    </h3>
+                  </div>
+                  {/* <!-- section title --> */}
+                  <a href="/service-products" className="main-btn">
+                    Learn more
+                  </a>
+                </div>
+                {/* <!-- about content --> */}
               </div>
-              <div className="services-content mt-30">
-                <h4 className="services-title"><a href="/service-products">Lasik/PRK Surgery Consult</a></h4>
-                <p className="text text-base">
-                Pre-Op and Post-Op Care Cataract Surgery Management, Glaucoma Treatment, Macular Degeneration Care, Diabetic Eye Care.
-                </p>
-                <a className="more" href="/service-products">Learn More <i className="lni-chevron-right"></i></a>
+              <div className="col-lg-6 order-lg-first">
+                <div
+                  className="about-image text-center mt-50 wow fadeInRightBig"
+                  data-wow-duration="1s"
+                  data-wow-delay="0.5s"
+                >
+                  <img
+                    src="assets/images/services-shape.svg"
+                    alt="about"
+                    style={{ maxHeight: "80%", maxWidth: "80%" }}
+                  />
+                </div>
+                {/* <!-- about image --> */}
               </div>
             </div>
-            {/* <!-- single services --> */}
+            {/* <!-- row --> */}
           </div>
-          <div className="col-lg-1.5 col-md-0 col-sm-0"></div>
-          
-        </div>
-        {/* <!-- row --> */}
-        {/* Explore more about our services */}
-       
-      </div>
-      <div className="flex justify-center pt-12">
+          {/* <!-- container --> */}
+        </section>
+
+        {/* <!--====== ABOUT PART START ======--> */}
+
+        <section className="about-area pt-70">
+          <div className="container">
+            <div className="row">
+              <div className="col-lg-6">
+                <div
+                  className="about-content mt-50 wow fadeInLeftBig"
+                  data-wow-duration="1s"
+                  data-wow-delay="0.5s"
+                >
+                  <div className="section-title">
+                    <div className="line"></div>
+                    <h3 className="title">Contact Lens Fitting</h3>
+                    <h3 className="text-lg">
+                      <span>
+                        <br />
+                        Whether you are a first time wearer, or a
+    seasoned Contact Lens veteran, we can help you get the most out of your contact lenses
+    by providing you with options
+    from all of the top brands. We can educate,
+    fit and recommend the contacts that best suit
+    your lifestyle needs. 
+    Ask about how to get free trial contacts!
+                      </span>
+                    </h3>
+                  </div>
+                  {/* <!-- section title --> */}
+                  {/* <p className="text text-lg">
+                  We have the relief you need with our Optometrist recommended selection of dry eye products.
+                  <br/> Relieve dry, irritated eyes with our selection of high quality eye-drops, lid and eyelash care products, and therapeutic masks.
+                  <br/>Perfect for the net addicts, cyberphiles and contact lens wearers out there!
+                  </p> */}
+                    <a href="/service-products" className="main-btn">
+                    Learn more
+                  </a>
+                </div>
+                {/* <!-- about content --> */}
+              </div>
+              <div className="col-lg-6">
+                <div
+                  className="about-image text-center mt-50 wow fadeInRightBig"
+                  data-wow-duration="1s"
+                  data-wow-delay="0.5s"
+                >
+                  <img
+                    src="/images/PVEC_ContactLenses.jpeg"
+                    alt="about"
+                    style={{ maxHeight: "80%", maxWidth: "80%" }}
+                  />
+                </div>
+                {/* <!-- about image --> */}
+              </div>
+            </div>
+            {/* <!-- row --> */}
+          </div>
+          {/* <!-- container --> */}
+          <div className="about-shape-1">
+            <img src="assets/images/about-shape-1.svg" alt="shape" />
+          </div>
+        </section>
+        <div className="flex justify-center pt-12">
           <Link href="/service-products">
-                <u className="explore-services-container uppercase rounded-full white text-lg font-semibold px-4 py-3">
-                Explore more of our services{" "}
-                </u>
-              </Link>
+            <u className="explore-services-container uppercase rounded-full white text-lg font-semibold px-4 py-3">
+              Explore our range of products{" "}
+            </u>
+          </Link>
         </div>
-      {/* <!-- container --> */}
-    </section>
+      </div>
+      {/* <!--====== ABOUT PART ENDS ======--> */}
+
+      {/* <!--====== ABOUT PART ENDS ======--> */}
+    </>
   );
 }
 
