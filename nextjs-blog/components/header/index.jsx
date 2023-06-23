@@ -217,7 +217,7 @@ export default function Header() {
               <div className="col-lg-12">
                 <nav className="navbar navbar-expand-lg pb-0">
                   <a className="navbar-brand" href="#">
-                    <img src="images/eyecare-logo.png" style={{maxWidth :'9rem', height :'4.4rem'}} alt="Logo" />
+                    <img src="images/eyecare-logo.png" style={{maxWidth :'9rem', height :'4.3rem'}} alt="Logo" />
                   </a>
                   <button
                     onClick={handleNavClick}
