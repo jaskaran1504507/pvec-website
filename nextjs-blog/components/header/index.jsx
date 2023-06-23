@@ -212,13 +212,17 @@ export default function Header() {
       <header className="header-area">
         {/* <script src="assets/js/bootstrap.min.js"></script> */}
         <div className="navbar-area">
-          <div className="container">
+          <div className="flex justify-between ">
+          <a className="navbar-brand" href="#">
+                    <img src="images/eyecare-logo.png" style={{maxWidth :'9rem', height :'4.3rem', marginLeft: '4px', marginTop : '24px', zIndex:2000 }} alt="Logo" />
+                  </a>
+            <div className="container mt-6">
             <div className="row">
               <div className="col-lg-12">
-                <nav className="navbar navbar-expand-lg pb-0">
-                  <a className="navbar-brand" href="#">
-                    <img src="images/eyecare-logo.png" style={{maxWidth :'9rem', height :'4.3rem'}} alt="Logo" />
-                  </a>
+                <nav className="navbar navbar-expand-lg">
+                  {/* <a className="navbar-brand" href="#">
+                    <img src="images/eyecare-logo.png" style={{maxWidth :'9rem', height :'4.3rem', marginRight: '4px'}} alt="Logo" />
+                  </a> */}
                   <button
                     onClick={handleNavClick}
                     className="navbar-toggler"
@@ -332,6 +336,7 @@ export default function Header() {
                 </nav>
               </div>
             </div>
+          </div>
           </div>
         </div>
 
