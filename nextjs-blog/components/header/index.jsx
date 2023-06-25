@@ -189,11 +189,11 @@ export default function Header() {
             >
               <span className="text-white flex items-center space-x-36 text-lg font-bold">
               
-                <a className="pl-2 " href="mailto:info@pveyecare.ca" target="_blank">
+                <a className="pl-2 " href="mailto:info@performancevisioneyecare.ca" target="_blank">
                   {/* <a href="mailto:info@pveyecare.ca"> */}
                   <MailOutlined  style={{color: "#349BD6"}} /> &nbsp; &nbsp;
                   <span className="hover:white focus:white" style={{color: "#349BD6"}} >
-                    info@pveyecare.ca
+                  info@performancevisioneyecare.ca
                   </span>
                   {/* </a> */}
                 </a>
