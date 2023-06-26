@@ -268,3 +268,61 @@ export const banner = [
   },
 ];
  // Limited time offer, fully coated polarised sunglasses regular price 200$ now on 99$ while supplies last.
+
+ export const homeServicesCards = [
+  {
+    text: `A comprehensive exam includes a refraction check as well as complete health
+    examination of the front and back of your eyes.
+
+    We provide the best care for your eyes which includes; full
+    comprehensive exams, prescription eye glasses sunglasses, contact
+    lenses, and top notch vitamins and drops especially to promote eye
+    health!`,
+    img: "/images/5411448.jpg",
+    head: "Comprehensive Eye Exam",
+  },
+  {
+    img: "/images/5917616.jpg",
+    head: "Computer Vision Syndrome",
+    text: `Eye problems caused by prolonged computer use including: Eye irritation (Dry eyes, itchy eyes, red eyes) Blurred vision. Headaches.`
+  },
+  {
+    img: "/images/PVEC_ContactLenses.jpeg",
+    head: "Contact Lens Fitting",
+    text: `We have the relief you need with our Optometrist recommended selection of dry eye products.
+     Relieve dry, irritated eyes with our selection of high quality eye-drops, lid and eyelash care products, and therapeutic masks.
+    Perfect for the net addicts, cyberphiles and contact lens wearers out there!`,
+  }
+];
+
+export const productCards = [
+  {
+    text: `
+    Disposable Daily, Bi-Weekly, Monthly, Astigmastic, Colored or Cos-play Contact Lenses (with or without prescription) delivered with Free Shipping!
+    Our speciality is Rigid Gas Permeable and Scleral Contact lens fittings.
+    
+    All at competitive prices with applicable manufacturer's rebates* (based on quantity ordered)`,
+    img: "/images/26415.jpg",
+    head: "Contact Lenses",
+    link: "/glasses-contacts?query=contacts",
+    linkText : "Get yours now"
+  },
+  {
+    img: "/images/eyewears.jpg",
+    head: "Eye Wear",
+    text: `New Modern Trends, Timeless Classics,Bold or Conservative and even Safety Protective eyewear; our collection has it all!
+    We are constantly updating our selections year round to keep our collection up-to-date`,
+    link: "/glasses-contacts?query=glasses",
+    linkText : "Style it now"
+  },
+  {
+    img: "/images/eyedrops.jpg",
+    head: "Eye Drops",
+    text: `Over 30% of the population struggle with dry eye syndrome which can lead to many eye complications.
+    We have the relief you need with our Optometrist recommended selection of dry eye products.
+    Relieve dry, irritated eyes with our selection of high quality eye-drops, lid and eyelash care products, and therapeutic masks.
+    Perfect for the net addicts, cyberphiles and contact lens wearers out there!`,
+    link: "/products?query=eye-medic",
+    linkText : "Get it now"
+  }
+];

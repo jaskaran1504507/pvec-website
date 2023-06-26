@@ -1,7 +1,12 @@
-import React from "react";
 import Link from "next/link";
+import Image from "next/image";
+import React, { useState } from "react";
+import { productCards } from "../../constant";
 
 export default function ProductCatalogueHomePage() {
+
+  const [seeMore, setSeeMore] = useState({});
+
   const imgArr = [
     "images/Rectangle 6-1.jpg",
     "images/Rectangle 4-2.jpg",
@@ -31,7 +36,7 @@ export default function ProductCatalogueHomePage() {
             {/* <!-- section title --> */}
           </div>
         </div>
-        <section id="about" className="about-area pt-70">
+        {/* <section id="about" className="about-area pt-70">
           <div className="container">
             <div className="row">
               <div className="col-lg-6">
@@ -52,7 +57,7 @@ export default function ProductCatalogueHomePage() {
                     </h3>
                   </div>
                   {/* <!-- section title --> */}
-                  <p className="text text-lg">
+                  {/* <p className="text text-lg">
                   Our speciality is Rigid Gas Permeable and Scleral Contact lens fittings.
                   </p>
                   <p className="text text-lg">
@@ -61,9 +66,9 @@ export default function ProductCatalogueHomePage() {
                   <a href="/glasses-contacts?query=contacts" className="main-btn text-lg">
                     Get yours now
                   </a>
-                </div>
+                </div> */}
                 {/* <!-- about content --> */}
-              </div>
+              {/* </div>
               <div className="col-lg-6">
                 <div
                   className="about-image text-center mt-50 wow fadeInRightBig"
@@ -75,23 +80,23 @@ export default function ProductCatalogueHomePage() {
                     alt="about"
                     style={{ maxHeight: "80%", maxWidth: "80%" }}
                   />
-                </div>
+                </div> */}
                 {/* <!-- about image --> */}
-              </div>
-            </div>
+              {/* </div>
+            </div> */}
             {/* <!-- row --> */}
-          </div>
+          {/* </div> */}
           {/* <!-- container --> */}
-          <div className="about-shape-1">
+          {/* <div className="about-shape-1">
             <img src="assets/images/about-shape-1.svg" alt="shape" />
           </div>
-        </section>
+        </section> */}
 
         {/* <!--====== ABOUT PART ENDS ======--> */}
 
         {/* <!--====== ABOUT PART START ======--> */}
 
-        <section className="about-area pt-70">
+        {/* <section className="about-area pt-70">
           <div className="about-shape-2">
             <img src="assets/images/about-shape-2.svg" alt="shape" />
           </div>
@@ -114,15 +119,15 @@ export default function ProductCatalogueHomePage() {
                     </h3>
                   </div>
                   {/* <!-- section title --> */}
-                  <p className="text text-lg">
+                  {/* <p className="text text-lg">
                   We are constantly updating our selections year round to keep our collection up-to-date
                   </p>
                   <a href="/glasses-contacts?query=glasses" className="main-btn">
                     Style it now
                   </a>
-                </div>
+                </div> */}
                 {/* <!-- about content --> */}
-              </div>
+              {/* </div>
               <div className="col-lg-6 order-lg-first">
                 <div
                   className="about-image text-center mt-50 wow fadeInRightBig"
@@ -134,18 +139,18 @@ export default function ProductCatalogueHomePage() {
                     alt="about"
                     style={{ maxHeight: "80%", maxWidth: "80%" }}
                   />
-                </div>
+                </div> */}
                 {/* <!-- about image --> */}
-              </div>
-            </div>
+              {/* </div>
+            </div> */}
             {/* <!-- row --> */}
-          </div>
+          {/* </div> */}
           {/* <!-- container --> */}
-        </section>
+        {/* </section> */} 
 
         {/* <!--====== ABOUT PART START ======--> */}
 
-        <section className="about-area pt-70">
+        {/* <section className="about-area pt-70">
           <div className="container">
             <div className="row">
               <div className="col-lg-6">
@@ -165,7 +170,7 @@ export default function ProductCatalogueHomePage() {
                     </h3>
                   </div>
                   {/* <!-- section title --> */}
-                  <p className="text text-lg">
+                  {/* <p className="text text-lg">
                   We have the relief you need with our Optometrist recommended selection of dry eye products.
                   <br/> Relieve dry, irritated eyes with our selection of high quality eye-drops, lid and eyelash care products, and therapeutic masks.
                   <br/>Perfect for the net addicts, cyberphiles and contact lens wearers out there!
@@ -173,9 +178,9 @@ export default function ProductCatalogueHomePage() {
                   <a href="/products?query=eye-medic" className="main-btn">
                     Get it now
                   </a>
-                </div>
+                </div> */}
                 {/* <!-- about content --> */}
-              </div>
+              {/* </div>
               <div className="col-lg-6">
                 <div
                   className="about-image text-center mt-50 wow fadeInRightBig"
@@ -187,17 +192,75 @@ export default function ProductCatalogueHomePage() {
                     alt="about"
                     style={{ maxHeight: "80%", maxWidth: "80%" }}
                   />
-                </div>
+                </div> */}
                 {/* <!-- about image --> */}
-              </div>
-            </div>
+              {/* </div>
+            </div> */}
             {/* <!-- row --> */}
-          </div>
+          {/* </div> */}
           {/* <!-- container --> */}
-          <div className="about-shape-1">
+          {/* <div className="about-shape-1">
             <img src="assets/images/about-shape-1.svg" alt="shape" />
           </div>
-        </section>
+        </section> */}
+
+
+
+        <div className="grid  gap-6 mt-10 grid-cols-1 md:grid-cols-3 u-clearfix u-sheet mx-auto u-valign-middle u-sheet-1">
+        {productCards.map(({ img, text, head, link, linkText }) => (
+          <div key={img} className="p-2 shadow-lg ">
+            <div>
+              <Image
+                // layout="fill"
+                // objectFit="cover"
+                className="rounded-lg"
+                src={img}
+                alt=""
+                srcSet=""
+                height="250"
+                width="355"
+              />
+            </div>
+            <h1 className="text-blue-900 my-3 text-center font-semibold">
+              {head}
+            </h1>
+            <div className="px-6 py-4 ">
+              {seeMore[img] || text.slice(0, 250)}
+              {text.length > 250 && (
+                <span
+                  onClick={() => {
+                    setSeeMore((prev) => ({
+                      ...prev,
+                      [img]: prev[img] ? "" : text,
+                    }));
+                  }}
+                  className=" pl-2 text-blue-900 hover:underline cursor-pointer"
+                >
+                  see {seeMore[img] ? "less" : "more"}...
+                </span>
+              )}
+            </div>
+
+            {/* <div className="flex justify-center">
+            <div className="flex-end justify-center navbar-btn d-none d-sm-inline-block"> */}
+            <div className="flex align-items-center justify-center">
+              <a
+                className="main-btn-products"
+                data-scroll-nav="0"
+                href={link}
+              >
+                {linkText}{" "}
+              </a>
+              {/* <div className="long-arrow-right"></div> */}
+            </div>
+            {/* </div>
+              </div> */}
+          </div>
+        ))}
+      </div>
+
+
+
         <div className="flex justify-center pt-12">
           <Link href="/service-products">
             <u className="explore-services-container uppercase rounded-full white text-lg font-semibold px-4 py-3">

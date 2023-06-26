@@ -1,7 +1,13 @@
-import React from "react";
 import Link from "next/link";
 
+import Image from "next/image";
+import React, { useState } from "react";
+import { homeServicesCards } from "../../constant";
+
 export default function ServicesCatalogueHomePage() {
+
+  const [seeMore, setSeeMore] = useState({});
+
   const imgArr = [
     "images/Rectangle 6-1.jpg",
     "images/Rectangle 4-2.jpg",
@@ -159,7 +165,64 @@ export default function ServicesCatalogueHomePage() {
             {/* <!-- section title --> */}
           </div>
         </div>
-        <section id="about" className="about-area pt-70">
+        <div className="grid  gap-6 mt-10 grid-cols-1 md:grid-cols-3 u-clearfix u-sheet mx-auto u-valign-middle u-sheet-1">
+        {homeServicesCards.map(({ img, text, head, conditions }) => (
+          <div key={img} className="p-2 shadow-lg ">
+            <div>
+              <Image
+                // layout="fill"
+                // objectFit="cover"
+                className="rounded-lg"
+                src={img}
+                alt=""
+                srcSet=""
+                height="250"
+                width="355"
+              />
+            </div>
+            <h1 className="text-blue-900 my-3 text-center font-semibold">
+              {head}
+            </h1>
+            <div className="px-6 py-4 ">
+              {seeMore[img] || text.slice(0, 250)}
+              {text.length > 250 && (
+                <span
+                  onClick={() => {
+                    setSeeMore((prev) => ({
+                      ...prev,
+                      [img]: prev[img] ? "" : text,
+                    }));
+                  }}
+                  className=" pl-2 text-blue-900 hover:underline cursor-pointer"
+                >
+                  see {seeMore[img] ? "less" : "more"}...
+                </span>
+              )}
+            </div>
+
+            {/* <div className="flex justify-center">
+            <div className="flex-end justify-center navbar-btn d-none d-sm-inline-block"> */}
+            <div className="flex align-items-center justify-center">
+              <a
+                className="main-btn-products"
+                data-scroll-nav="0"
+                href="https://docs.google.com/forms/d/e/1FAIpQLSfOr3fsy1F9RpZw9Gh8VyyUDAgm3Wg6HeskeIZRyiZvelRNNg/viewform?usp=sf_link" target="_blank"
+              >
+                Book your appointment{" "}
+              </a>
+              {/* <div className="long-arrow-right"></div> */}
+            </div>
+            {/* </div>
+              </div> */}
+            {conditions && (
+              <div className="px-6">
+                <p className="text-xs">{conditions} </p>
+              </div>
+            )}
+          </div>
+        ))}
+      </div>
+        {/* <section id="about" className="about-area pt-70">
           <div className="container">
             <div className="row">
               <div className="col-lg-6">
@@ -183,12 +246,12 @@ export default function ServicesCatalogueHomePage() {
                   for Adults/Senior/Children.
                   </p> */}
                  
-                  <a href="/service-products" className="main-btn text-lg">
+                  {/* <a href="/service-products" className="main-btn text-lg">
                     Learn more
-                  </a>
-                </div>
+                  </a> */}
+                {/* </div> */}
                 {/* <!-- about content --> */}
-              </div>
+              {/* </div>
               <div className="col-lg-6">
                 <div
                   className="about-image text-center mt-50 wow fadeInRightBig"
@@ -200,23 +263,23 @@ export default function ServicesCatalogueHomePage() {
                     alt="about"
                     style={{ maxHeight: "80%", maxWidth: "80%" }}
                   />
-                </div>
+                </div> */}
                 {/* <!-- about image --> */}
-              </div>
-            </div>
+              {/* </div>
+            </div> */}
             {/* <!-- row --> */}
-          </div>
+          {/* </div> */}
           {/* <!-- container --> */}
-          <div className="about-shape-1">
+          {/* <div className="about-shape-1">
             <img src="assets/images/about-shape-1.svg" alt="shape" />
           </div>
-        </section>
+        </section> */} 
 
         {/* <!--====== ABOUT PART ENDS ======--> */}
 
         {/* <!--====== ABOUT PART START ======--> */}
 
-        <section className="about-area pt-70">
+        {/* <section className="about-area pt-70">
           <div className="about-shape-2">
             <img src="/images/5917616.jpg" alt="shape" />
           </div>
@@ -239,12 +302,12 @@ export default function ServicesCatalogueHomePage() {
                     </h3>
                   </div>
                   {/* <!-- section title --> */}
-                  <a href="/service-products" className="main-btn">
+                  {/* <a href="/service-products" className="main-btn">
                     Learn more
                   </a>
-                </div>
+                </div> */}
                 {/* <!-- about content --> */}
-              </div>
+              {/* </div>
               <div className="col-lg-6 order-lg-first">
                 <div
                   className="about-image text-center mt-50 wow fadeInRightBig"
@@ -256,18 +319,18 @@ export default function ServicesCatalogueHomePage() {
                     alt="about"
                     style={{ maxHeight: "80%", maxWidth: "80%" }}
                   />
-                </div>
+                </div> */}
                 {/* <!-- about image --> */}
-              </div>
-            </div>
+              {/* </div>
+            </div> */}
             {/* <!-- row --> */}
-          </div>
+          {/* </div> */}
           {/* <!-- container --> */}
-        </section>
+        {/* </section> */}
 
         {/* <!--====== ABOUT PART START ======--> */}
 
-        <section className="about-area pt-70">
+        {/* <section className="about-area pt-70">
           <div className="container">
             <div className="row">
               <div className="col-lg-6">
@@ -298,12 +361,12 @@ export default function ServicesCatalogueHomePage() {
                   <br/> Relieve dry, irritated eyes with our selection of high quality eye-drops, lid and eyelash care products, and therapeutic masks.
                   <br/>Perfect for the net addicts, cyberphiles and contact lens wearers out there!
                   </p> */}
-                    <a href="/service-products" className="main-btn">
+                    {/* <a href="/service-products" className="main-btn">
                     Learn more
                   </a>
-                </div>
+                </div> */}
                 {/* <!-- about content --> */}
-              </div>
+              {/* </div>
               <div className="col-lg-6">
                 <div
                   className="about-image text-center mt-50 wow fadeInRightBig"
@@ -315,17 +378,17 @@ export default function ServicesCatalogueHomePage() {
                     alt="about"
                     style={{ maxHeight: "80%", maxWidth: "80%" }}
                   />
-                </div>
+                </div> */}
                 {/* <!-- about image --> */}
-              </div>
-            </div>
+              {/* </div>
+            </div> */}
             {/* <!-- row --> */}
-          </div>
+          {/* </div> */}
           {/* <!-- container --> */}
-          <div className="about-shape-1">
+          {/* <div className="about-shape-1">
             <img src="assets/images/about-shape-1.svg" alt="shape" />
           </div>
-        </section>
+        </section> */} 
         <div className="flex justify-center pt-12">
           {/* <Link href="/service-products">
             <u className="explore-services-container uppercase rounded-full white text-lg font-semibold px-4 py-3">
@@ -341,7 +404,7 @@ export default function ServicesCatalogueHomePage() {
       </div>
       {/* <!--====== ABOUT PART ENDS ======--> */}
 
-      {/* <!--====== ABOUT PART ENDS ======--> */}
+      {/* <!--====== ABOUT PART ENDS ======--> */}    
     </>
   );
 }
