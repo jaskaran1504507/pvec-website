@@ -181,6 +181,82 @@ export default function Blogs() {
               <p>*claim approvals take only 60 seconds*</p>
             </div>
           </div>
+          <div className="mt-12">
+            <h2 className="mt-2 text-2xl font-bold">6. How can I reduce eye strain and redness from working on computer screens including my tablet and phone all day?</h2>
+            <div className="ml-6">
+              <p>It is likely you are suffering from digital eye fatigue. It is advised that
+                every hour or so, spend a couple of minutes focusing on objects far away,
+                perform various blinking exercises, or just get up and stretch your legs.
+                Vitamins such as lutein, beta-carotine, and omega 3 are also helpful.</p>
+              <p>In addition, the blue light emitted from these devices can also contribute to strain.
+
+                There is new lens technology that targets this. They are referred to as “anti-
+                fatigue” lenses. These lenses help reduce eye irritability, redness, and fatigue
+
+                to heavy computer users (6 hours+ per day) by having a custom calculated
+                prescription and a special coating to filter out the blue light that also allows the
+                light to pass through without causing glare. These coatings can now be applied to
+                ANY lens we currently carry.</p>
+              <p>If you are in your late 30’s, or early 40’s, you may be an ideal candidate
+                for computer glasses. These glasses enhance your vision in your closest
+                surroundings. You don’t have to use a computer to benefit from computer glasses.
+                Anyone that works, or has hobbies, that use their hands would benefit from a
+                dedicated pair of “mid-range” eyewear. This would also apply to any musicians in
+                order to help them see their sheet music more clearly with less effort.</p>
+              <p>The best advice would be to come into Optimum Eye Care so we can fully assess
+                your situation, and give you recommendations based on your individual needs.</p>
+            </div>
+          </div>
+          <div className="mt-12">
+            <h2 className="mt-2 text-2xl font-bold">7. How do I choose the right pair of glasses?</h2>
+            <div className="ml-6">
+              <p>The first decision is whe you like your new eye wear to be minimalist or conservative, or bold and eye catching.
+                Metal frames are more subtle, and plastic frames tend to be more attention
+                grabbing. Every major fashion designer has an eye wear line so there
+                are many options of colour combinations and shapes to choose from.</p>
+              <p>Faces can be categorized in 6 shapes: Oval, Base up or down Triangle, Square,
+                Diamond, and Round. Generally, the best way to choose a shape is to go
+                opposite of your face shape. If you have a round face, rectangle frames are
+                better suited to balance your look. For women, an up swept or cat eye is
+                usually  attering. For colours, a tortoise shell brown or simple black is the
+                most versatile and easy to dress up or dress down with. A lot of new frames
+                pair a subtle colour on the front with sharp accent colours to give you a frame
+                that is neutral but not boring!</p>
+              <p>The other part of the equation is what prescription you need. Not all frames
+                are suited for all lens types. This is where you would rely on the expertise of
+                the optician. They will explain the pros and cons of picking various frame and
+                lens combinations. The possibilities are endless! For more information, come
+                in today (we’re open 7 days/week) and we will go over all of your options to
+                best meet your needs.</p>
+            </div>
+          </div>
+          <div className="mt-12">
+            <h2 className="mt-2 text-2xl font-bold">8. Are sunglasses just for fashion or are they necessary?</h2>
+            <div className="ml-6">
+              <p>They are necessary; Here is an excerpt
+                from the Vancouver Coastal Health Region
+                Institute:</p>
+              <p>Intense, focused sunlight induces heat at the focal
+                point. In the eye, the optics of the lens/cornea
+                focuses light (and hence heat) on the retina (the
+                light sensitive part of the eye that converts light into
+                electrical signals that are passed onto the brain).
+                If the heat generated is excessive then cells in the
+                retina will be killed off.</p>
+              <p>The most important factor is ultraviolet protection
+                since longer wavelength light tends to get to the retina more easily. So
+                especially look for UVA and UVB blocking lenses. If you intend to drive or sail,
+                consider polarized lenses which are especially good at filtering side-glare.
+                Colour is important as well, with grey, green or brown lenses causing the least
+                colour distortion.</p>
+              <p>Good UV filtration does not necessarily require an expensive pair of sunglasses
+                and alternatively, an expensive pair is no guarantee of good UV protection.</p>
+              <p>When buying a pair of Sunglasses consider these factors and keep in mind the
+                quality of the lens and frame is important.</p>
+              <p>For more information and to experience our selection of 200 sunglasses,
+                come by and see us! We are open 7 days a week.</p>
+            </div>
+          </div>
         </div>
       </div>
     </>
