@@ -20,7 +20,7 @@ export default function ProductCatalogueHomePage() {
   return (
     <>
       {/* <!--====== ABOUT PART START ======--> */}
-      <div className="container pt-120">
+      <div className="container pt-12">
         <div className="row justify-content-center">
           <div className="col-lg-10">
             <div className="section-title text-center pb-30">

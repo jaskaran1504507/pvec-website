@@ -149,7 +149,7 @@ export default function ServicesCatalogueHomePage() {
 //     </section>
 <>
       {/* <!--====== ABOUT PART START ======--> */}
-      <div className="container pt-120">
+      <div className="container pt-6">
         <div className="row justify-content-center">
           <div className="col-lg-10">
             <div className="section-title text-center pb-30">
