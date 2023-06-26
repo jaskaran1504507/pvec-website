@@ -39,7 +39,7 @@ export default function Blogs() {
                 <li className="text-2xl">&#x2022; Free Trial Contacts Available Today</li>
                 <li className="text-2xl">&#x2022; Convenient Hours for Pick Up (late evenings or even weekends)</li>
                 <li className="text-2xl">&#x2022; Ask about our no cost, no obligation program to take home a few pairs to show your family and friends!</li>
-                <li className="text-2xl">&#x2022; Order by phone: 604 689 9962 or Email 24/7:Vancouver@performancevisioneyecare.ca</li>
+                <li className="text-2xl">&#x2022; Order by phone: 604 689 9962 or Email 24/7:info@pveyecare.ca</li>
               </ul>
             </div>
             <div>
