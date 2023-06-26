@@ -61,7 +61,7 @@ to keep up-to-date on our latest offers, new stock announcements, and access to 
                       margin: "2px",
                       padding: "2px",
                     }}
-                    src="images/eyecare-logo.png"
+                    src="https://pvec-bucket.s3.ca-central-1.amazonaws.com/eyecare-logo.png"
                     alt="logo"
                   />
                 </a>

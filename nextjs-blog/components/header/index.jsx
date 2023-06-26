@@ -214,7 +214,7 @@ export default function Header() {
         <div className="navbar-area">
           <div className="flex justify-between ">
           <a className="navbar-brand" href="#">
-                    <img src="images/eyecare-logo.png" style={{maxWidth :'9rem', height :'4.3rem', marginLeft: '18px', marginTop : '24px', zIndex:2000 }} alt="Logo" />
+                    <img src="https://pvec-bucket.s3.ca-central-1.amazonaws.com/eyecare-logo.png" style={{maxWidth :'9rem', height :'4.3rem', marginLeft: '18px', marginTop : '24px', zIndex:2000 }} alt="Logo" />
                   </a>
             <div className="container mt-6">
             <div className="row">
