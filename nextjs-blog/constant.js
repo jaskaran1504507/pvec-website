@@ -71,6 +71,29 @@ export const cards = [
     img: "/images/Rectangle 1-5.jpg",
   },
   {
+    head: "Rigid Gas Permeable (RGPs) & Scleral Lenses Fitting",
+    text: `Treatment for corneal conditions
+    such as keratoconus, severe dry eye, past refractive complications,
+    complicated prescriptions, and
+    post corneal transplants`,
+    img: "/images/lens-fitting.jpg",
+  },
+  {
+    img: "/images/Rectangle 1-7.jpg",
+    text: `Patients experiencing ocular emergencies can be fit in same if necessary; even if we are
+    fully booked. Eye Emergencies can include irritated red eyes, foreign object removal,
+    sudden vision loss and blur, sudden peripheral vision loss, severe eye pain, and
+    symptoms of flashes, sparks and/or heavy floaters.
+    If urgent surgical care is required, we can refer to an ophthalmologist same day.
+    (Usual wait times for an appointment is 6 to 9 months currently for non emergency)`,
+    head: "Eye Emergencies",
+  },
+  {
+    img: "/images/Rectangle 1-3.jpg",
+    head: "Light Sensitivity Management",
+    text: "Light sensitivity, or photophobia, is a condition in which bright light hurts your eyes. This condition can range from mild to severe.",
+  },
+  {
     img: "/images/Rectangle 1-2.jpg",
     head: (
       <>
@@ -92,29 +115,7 @@ export const cards = [
      
    `,
   },
-  {
-    img: "/images/Rectangle 1-7.jpg",
-    text: `Patients experiencing ocular emergencies can be fit in same if necessary; even if we are
-    fully booked. Eye Emergencies can include irritated red eyes, foreign object removal,
-    sudden vision loss and blur, sudden peripheral vision loss, severe eye pain, and
-    symptoms of flashes, sparks and/or heavy floaters.
-    If urgent surgical care is required, we can refer to an ophthalmologist same day.
-    (Usual wait times for an appointment is 6 to 9 months currently for non emergency)`,
-    head: "Eye Emergencies",
-  },
-  {
-    img: "/images/Rectangle 1-3.jpg",
-    head: "Light Sensitivity Management",
-    text: "Light sensitivity, or photophobia, is a condition in which bright light hurts your eyes. This condition can range from mild to severe.",
-  },
-  {
-    head: "Rigid Gas Permeable (RGPs) & Scleral Lenses Fitting",
-    text: `Treatment for corneal conditions
-    such as keratoconus, severe dry eye, past refractive complications,
-    complicated prescriptions, and
-    post corneal transplants`,
-    img: "/images/lens-fitting.jpg",
-  },
+  
 ];
 export const navArr = [
   { name: "Home", path: "/" },
