@@ -45,61 +45,81 @@ export default function Blogs() {
             <div>
               <h2 className="mt-10 text-xl font-bold">Our associates for varied design options</h2>
               <div className="mt-4 grid grid-cols-1 md:grid-cols-4 gap-8">
-                <a href="https://fyshuk.com" target="_blank"><Image
+                {/* <a href="https://fyshuk.com" target="_blank"> */}
+                  <Image
                   src="/images/PVEC_FYSH.jpeg"
                   height="450"
                   width="400"
-                /></a>
-                <a href="https://www.gucci.com/us/en/st/capsule/women-eyewear" target="_blank"><Image
+                />
+                {/* </a> */}
+                {/* <a href="https://www.gucci.com/us/en/st/capsule/women-eyewear" target="_blank"> */}
+                  <Image
                   src="/images/PVEC_Gucci.png"
                   height="450"
                   width="400"
-                /></a>
-                <a href="https://www.armani.com/en-in/emporio-armani/man/eyewear" target="_blank"><Image
+                />
+                {/* </a> */}
+                {/* <a href="https://www.armani.com/en-in/emporio-armani/man/eyewear" target="_blank"> */}
+                  <Image
                   src="/images/PVEC_EmporioArmani.jpeg"
                   height="450"
                   width="400"
-                /></a>
-                <a href="https://www.guess.com/us/en/women/accessories/sunglasses" target="_blank"><Image
+                />
+                {/* </a> */}
+                {/* <a href="https://www.guess.com/us/en/women/accessories/sunglasses" target="_blank"> */}
+                  <Image
                   src="/images/PVEC_Guess.jpeg"
                   height="450"
                   width="400"
-                /></a>
+                />
+                {/* </a> */}
               </div>
             </div>
             <div>
               <h2 className="mt-12 text-2xl font-bold text-cyan-500">Brands That Really Turn Heads!</h2>
               <div className="mt-4 grid grid-cols-1 md:grid-cols-6 gap-8">
-                <a href="https://www.oakley.com/en-eu" target="_blank"><Image
+                {/* <a href="https://www.oakley.com/en-eu" target="_blank"> */}
+                  <Image
                   src="/images/PVEC_Oakley.png"
                   height="420"
                   width="400"
-                /></a>
-                <a href="https://www.ray-ban.com/canada/en" target="_blank"><Image
+                />
+                {/* </a> */}
+                {/* <a href="https://www.ray-ban.com/canada/en" target="_blank"> */}
+                  <Image
                   src="/images/PVEC_RayBan.png"
                   height="420"
                   width="400"
-                /></a>
-                <a href="https://www.silhouette.com/en/home" target="_blank"><Image
+                />
+                {/* </a> */}
+                {/* <a href="https://www.silhouette.com/en/home" target="_blank"> */}
+                  <Image
                   src="/images/Silhouette-logo.png"
                   height="420"
                   width="400"
-                /></a>
-                <a href="https://www.tomford.com/eyewear/men/optical/" target="_blank"><Image
+                />
+                {/* </a> */}
+                {/* <a href="https://www.tomford.com/eyewear/men/optical/" target="_blank"> */}
+                  <Image
                   src="/images/PVEC_TF.png"
                   height="420"
                   width="400"
-                /></a>
-                <a href="https://www.versace.com/international/en/women/accessories/eyewear/sunglasses/" target="_blank"><Image
+                />
+                {/* </a> */}
+                {/* <a href="https://www.versace.com/international/en/women/accessories/eyewear/sunglasses/" target="_blank"> */}
+                  <Image
                   src="/images/Versace_logo.png"
                   height="420"
                   width="400"
-                /></a>
-                <a href="https://www.toryburch.com/en-us/accessories/sunglasses-eyeglasses/" target="_blank"><Image
+                />
+                {/* </a> */}
+                {/* <a href="https://www.toryburch.com/en-us/accessories/sunglasses-eyeglasses/" target="_blank"> */}
+                  <Image
                   src="/images/Tory-Burch-Logo.png"
                   height="420"
                   width="400"
-                /></a>
+                />
+                {/* </a> */}
               </div>
             </div>
           </div>
