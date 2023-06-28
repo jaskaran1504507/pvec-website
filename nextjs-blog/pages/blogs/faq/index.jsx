@@ -26,102 +26,20 @@ export default function Blogs() {
       <div className="container mt-2">
         <div className="divide-y">
           {/* Question */}
-          <div>
-            <h2 className="text-2xl font-bold">1. Why Buy Contact Lenses In-Store vs Online?</h2>
+          <div className="mt-12">
+            <h2 className="mt-2 text-2xl font-bold">1. How often should you get your eyes checked?</h2>
             <div className="ml-6">
-              <ul>
-                <li className="text-2xl">&#x2022; Price Match with any Competitor</li>
-                <li className="text-2xl">&#x2022; Nearly 1000 Frames on hand to try</li>
-                <li className="text-2xl">&#x2022; Rebates up to $180 not available online</li>
-                <li className="text-2xl">&#x2022; Full 90 Day Satisfaction Guarantee</li>
-                <li className="text-2xl">&#x2022; Direct Billing to your Benefits Plan or Insurance Provider</li>
-                <li className="text-2xl">&#x2022; Just look at our Google Reviews!</li>
-                <li className="text-2xl">&#x2022; Free Trial Contacts Available Today</li>
-                <li className="text-2xl">&#x2022; Convenient Hours for Pick Up (late evenings or even weekends)</li>
-                <li className="text-2xl">&#x2022; Ask about our no cost, no obligation program to take home a few pairs to show your family and friends!</li>
-                <li className="text-2xl">&#x2022; Order by phone: 604 689 9962 or Email 24/7:info@pveyecare.ca</li>
-              </ul>
+              <p>An <b>annual eye exam is recommended by the College of Optometrists</b> for
+                proper eye health and vision care.</p>
+              <p>The eye is the <b>only organ</b> which allows the view to the blood vessels and
+                other structures linked to the general body health.</p>
+              <p>
+                Our <b>doctors</b> are able to <b>detect many serious health conditions</b> including:
+                diabetes, hypertension, auto-immune disorders, high cholesterol, thyroid
+                disease, tumours and even cancer.
+              </p>
+              <p>You may have <b>benefits</b> through your employer or insurance provider that <b>covers eye care</b> related expenses. Check it out!</p>
             </div>
-            {/* <div>
-              <h2 className="mt-10 text-xl font-bold">Our associates for varied design options</h2>
-              <div className="mt-4 grid grid-cols-1 md:grid-cols-4 gap-8">
-                {/* <a href="https://fyshuk.com" target="_blank"> */}
-                  {/* <Image
-                  src="/images/PVEC_FYSH.jpeg"
-                  height="450"
-                  width="400"
-                /> */}
-                {/* </a> */}
-                {/* <a href="https://www.gucci.com/us/en/st/capsule/women-eyewear" target="_blank"> */}
-                  {/* <Image
-                  src="/images/PVEC_Gucci.png"
-                  height="450"
-                  width="400"
-                /> */}
-                {/* </a> */}
-                {/* <a href="https://www.armani.com/en-in/emporio-armani/man/eyewear" target="_blank"> */}
-                  {/* <Image
-                  src="/images/PVEC_EmporioArmani.jpeg"
-                  height="450"
-                  width="400"
-                /> */}
-                {/* </a> */}
-                {/* <a href="https://www.guess.com/us/en/women/accessories/sunglasses" target="_blank"> */}
-                  {/* <Image
-                  src="/images/PVEC_Guess.jpeg"
-                  height="450"
-                  width="400"
-                /> */}
-                {/* </a> */}
-              {/* </div>
-            </div> */}
-            {/* <div>
-              <h2 className="mt-12 text-2xl font-bold text-cyan-500">Brands That Really Turn Heads!</h2>
-              <div className="mt-4 grid grid-cols-1 md:grid-cols-6 gap-8">
-                {/* <a href="https://www.oakley.com/en-eu" target="_blank"> */}
-                  {/* <Image
-                  src="/images/PVEC_Oakley.png"
-                  height="420"
-                  width="400"
-                /> */}
-                {/* </a> */}
-                {/* <a href="https://www.ray-ban.com/canada/en" target="_blank"> */}
-                  {/* <Image
-                  src="/images/PVEC_RayBan.png"
-                  height="420"
-                  width="400"
-                /> */}
-                {/* </a> */}
-                {/* <a href="https://www.silhouette.com/en/home" target="_blank"> */}
-                  {/* <Image
-                  src="/images/Silhouette-logo.png"
-                  height="420"
-                  width="400"
-                /> */}
-                {/* </a> */}
-                {/* <a href="https://www.tomford.com/eyewear/men/optical/" target="_blank"> */}
-                  {/* <Image
-                  src="/images/PVEC_TF.png"
-                  height="420"
-                  width="400"
-                /> */}
-                {/* </a> */}
-                {/* <a href="https://www.versace.com/international/en/women/accessories/eyewear/sunglasses/" target="_blank"> */}
-                  {/* <Image
-                  src="/images/Versace_logo.png"
-                  height="420"
-                  width="400"
-                /> */}
-                {/* </a> */}
-                {/* <a href="https://www.toryburch.com/en-us/accessories/sunglasses-eyeglasses/" target="_blank"> */}
-                  {/* <Image
-                  src="/images/Tory-Burch-Logo.png"
-                  height="420"
-                  width="400"
-                /> */}
-                {/* </a> */}
-              {/* </div>
-            </div> */}
           </div>
           
           {/* <div className="mt-12">
@@ -223,22 +141,105 @@ export default function Blogs() {
               <p className="text-2xl font-bold">Please ask us about our lineup of CSA approved Safety Eyewear for work or play.. because life is a contact sport!</p>
             </div>
           </div> */}
-          
-          <div className="mt-12">
-            <h2 className="mt-2 text-2xl font-bold">5. How often should you get your eyes checked?</h2>
+          <div>
+            <h2 className="text-2xl font-bold">5. Why Buy Contact Lenses In-Store vs Online?</h2>
             <div className="ml-6">
-              <p>An <b>annual eye exam is recommended by the College of Optometrists</b> for
-                proper eye health and vision care.</p>
-              <p>The eye is the <b>only organ</b> which allows the view to the blood vessels and
-                other structures linked to the general body health.</p>
-              <p>
-                Our <b>doctors</b> are able to <b>detect many serious health conditions</b> including:
-                diabetes, hypertension, auto-immune disorders, high cholesterol, thyroid
-                disease, tumours and even cancer.
-              </p>
-              <p>You may have <b>benefits</b> through your employer or insurance provider that <b>covers eye care</b> related expenses. Check it out!</p>
+              <ul>
+                <li className="text-2xl">&#x2022; Price Match with any Competitor</li>
+                <li className="text-2xl">&#x2022; Nearly 1000 Frames on hand to try</li>
+                <li className="text-2xl">&#x2022; Rebates up to $180 not available online</li>
+                <li className="text-2xl">&#x2022; Full 90 Day Satisfaction Guarantee</li>
+                <li className="text-2xl">&#x2022; Direct Billing to your Benefits Plan or Insurance Provider</li>
+                <li className="text-2xl">&#x2022; Just look at our Google Reviews!</li>
+                <li className="text-2xl">&#x2022; Free Trial Contacts Available Today</li>
+                <li className="text-2xl">&#x2022; Convenient Hours for Pick Up (late evenings or even weekends)</li>
+                <li className="text-2xl">&#x2022; Ask about our no cost, no obligation program to take home a few pairs to show your family and friends!</li>
+                <li className="text-2xl">&#x2022; Order by phone: 604 689 9962 or Email 24/7:info@pveyecare.ca</li>
+              </ul>
             </div>
+            {/* <div>
+              <h2 className="mt-10 text-xl font-bold">Our associates for varied design options</h2>
+              <div className="mt-4 grid grid-cols-1 md:grid-cols-4 gap-8">
+                {/* <a href="https://fyshuk.com" target="_blank"> */}
+                  {/* <Image
+                  src="/images/PVEC_FYSH.jpeg"
+                  height="450"
+                  width="400"
+                /> */}
+                {/* </a> */}
+                {/* <a href="https://www.gucci.com/us/en/st/capsule/women-eyewear" target="_blank"> */}
+                  {/* <Image
+                  src="/images/PVEC_Gucci.png"
+                  height="450"
+                  width="400"
+                /> */}
+                {/* </a> */}
+                {/* <a href="https://www.armani.com/en-in/emporio-armani/man/eyewear" target="_blank"> */}
+                  {/* <Image
+                  src="/images/PVEC_EmporioArmani.jpeg"
+                  height="450"
+                  width="400"
+                /> */}
+                {/* </a> */}
+                {/* <a href="https://www.guess.com/us/en/women/accessories/sunglasses" target="_blank"> */}
+                  {/* <Image
+                  src="/images/PVEC_Guess.jpeg"
+                  height="450"
+                  width="400"
+                /> */}
+                {/* </a> */}
+              {/* </div>
+            </div> */}
+            {/* <div>
+              <h2 className="mt-12 text-2xl font-bold text-cyan-500">Brands That Really Turn Heads!</h2>
+              <div className="mt-4 grid grid-cols-1 md:grid-cols-6 gap-8">
+                {/* <a href="https://www.oakley.com/en-eu" target="_blank"> */}
+                  {/* <Image
+                  src="/images/PVEC_Oakley.png"
+                  height="420"
+                  width="400"
+                /> */}
+                {/* </a> */}
+                {/* <a href="https://www.ray-ban.com/canada/en" target="_blank"> */}
+                  {/* <Image
+                  src="/images/PVEC_RayBan.png"
+                  height="420"
+                  width="400"
+                /> */}
+                {/* </a> */}
+                {/* <a href="https://www.silhouette.com/en/home" target="_blank"> */}
+                  {/* <Image
+                  src="/images/Silhouette-logo.png"
+                  height="420"
+                  width="400"
+                /> */}
+                {/* </a> */}
+                {/* <a href="https://www.tomford.com/eyewear/men/optical/" target="_blank"> */}
+                  {/* <Image
+                  src="/images/PVEC_TF.png"
+                  height="420"
+                  width="400"
+                /> */}
+                {/* </a> */}
+                {/* <a href="https://www.versace.com/international/en/women/accessories/eyewear/sunglasses/" target="_blank"> */}
+                  {/* <Image
+                  src="/images/Versace_logo.png"
+                  height="420"
+                  width="400"
+                /> */}
+                {/* </a> */}
+                {/* <a href="https://www.toryburch.com/en-us/accessories/sunglasses-eyeglasses/" target="_blank"> */}
+                  {/* <Image
+                  src="/images/Tory-Burch-Logo.png"
+                  height="420"
+                  width="400"
+                /> */}
+                {/* </a> */}
+              {/* </div>
+            </div> */}
           </div>
+          
+        
           <div className="mt-12">
             <h2 className="mt-2 text-2xl font-bold">6. How can I reduce eye strain and redness from working on computer screens including my tablet and phone all day?</h2>
             <div className="ml-6">
