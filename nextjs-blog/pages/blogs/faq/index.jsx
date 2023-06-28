@@ -42,103 +42,89 @@ export default function Blogs() {
                 <li className="text-2xl">&#x2022; Order by phone: 604 689 9962 or Email 24/7:info@pveyecare.ca</li>
               </ul>
             </div>
-            <div>
+            {/* <div>
               <h2 className="mt-10 text-xl font-bold">Our associates for varied design options</h2>
               <div className="mt-4 grid grid-cols-1 md:grid-cols-4 gap-8">
                 {/* <a href="https://fyshuk.com" target="_blank"> */}
-                  <Image
+                  {/* <Image
                   src="/images/PVEC_FYSH.jpeg"
                   height="450"
                   width="400"
-                />
+                /> */}
                 {/* </a> */}
                 {/* <a href="https://www.gucci.com/us/en/st/capsule/women-eyewear" target="_blank"> */}
-                  <Image
+                  {/* <Image
                   src="/images/PVEC_Gucci.png"
                   height="450"
                   width="400"
-                />
+                /> */}
                 {/* </a> */}
                 {/* <a href="https://www.armani.com/en-in/emporio-armani/man/eyewear" target="_blank"> */}
-                  <Image
+                  {/* <Image
                   src="/images/PVEC_EmporioArmani.jpeg"
                   height="450"
                   width="400"
-                />
+                /> */}
                 {/* </a> */}
                 {/* <a href="https://www.guess.com/us/en/women/accessories/sunglasses" target="_blank"> */}
-                  <Image
+                  {/* <Image
                   src="/images/PVEC_Guess.jpeg"
                   height="450"
                   width="400"
-                />
+                /> */}
                 {/* </a> */}
-              </div>
-            </div>
-            <div>
+              {/* </div>
+            </div> */}
+            {/* <div>
               <h2 className="mt-12 text-2xl font-bold text-cyan-500">Brands That Really Turn Heads!</h2>
               <div className="mt-4 grid grid-cols-1 md:grid-cols-6 gap-8">
                 {/* <a href="https://www.oakley.com/en-eu" target="_blank"> */}
-                  <Image
+                  {/* <Image
                   src="/images/PVEC_Oakley.png"
                   height="420"
                   width="400"
-                />
+                /> */}
                 {/* </a> */}
                 {/* <a href="https://www.ray-ban.com/canada/en" target="_blank"> */}
-                  <Image
+                  {/* <Image
                   src="/images/PVEC_RayBan.png"
                   height="420"
                   width="400"
-                />
+                /> */}
                 {/* </a> */}
                 {/* <a href="https://www.silhouette.com/en/home" target="_blank"> */}
-                  <Image
+                  {/* <Image
                   src="/images/Silhouette-logo.png"
                   height="420"
                   width="400"
-                />
+                /> */}
                 {/* </a> */}
                 {/* <a href="https://www.tomford.com/eyewear/men/optical/" target="_blank"> */}
-                  <Image
+                  {/* <Image
                   src="/images/PVEC_TF.png"
                   height="420"
                   width="400"
-                />
+                /> */}
                 {/* </a> */}
                 {/* <a href="https://www.versace.com/international/en/women/accessories/eyewear/sunglasses/" target="_blank"> */}
-                  <Image
+                  {/* <Image
                   src="/images/Versace_logo.png"
                   height="420"
                   width="400"
-                />
+                /> */}
                 {/* </a> */}
                 {/* <a href="https://www.toryburch.com/en-us/accessories/sunglasses-eyeglasses/" target="_blank"> */}
-                  <Image
+                  {/* <Image
                   src="/images/Tory-Burch-Logo.png"
                   height="420"
                   width="400"
-                />
+                /> */}
                 {/* </a> */}
-              </div>
-            </div>
+              {/* </div>
+            </div> */}
           </div>
-          <div className="mt-12">
-            <h2 className="mt-2 text-2xl font-bold">2. How often should you get your eyes checked?</h2>
-            <div className="ml-6">
-              <p>An <b>annual eye exam is recommended by the College of Optometrists</b> for
-                proper eye health and vision care.</p>
-              <p>The eye is the <b>only organ</b> which allows the view to the blood vessels and
-                other structures linked to the general body health.</p>
-              <p>
-                Our <b>doctors</b> are able to <b>detect many serious health conditions</b> including:
-                diabetes, hypertension, auto-immune disorders, high cholesterol, thyroid
-                disease, tumours and even cancer.
-              </p>
-              <p>You may have <b>benefits</b> through your employer or insurance provider that <b>covers eye care</b> related expenses. Check it out!</p>
-            </div>
-          </div>
-          <div className="mt-12">
+          
+          {/* <div className="mt-12">
             <h2 className="mt-2 text-2xl font-bold">3. Feeling a little Dried out?<br />We have the Relief you need!</h2>
             <div>
               <div className="mt-4 grid grid-cols-1 md:grid-cols-1 gap-8">
@@ -149,17 +135,17 @@ export default function Blogs() {
                 />
               </div>
             </div>
-          </div>
-          <div className="mt-12">
+          </div> */}
+          {/* <div className="mt-12">
             <h2 className=" mt-2 text-2xl font-bold">4. Spend more time online than in the Sun?</h2>
             <div className="ml-6">
               <p className="text-2xl">Please ask us about the benefits of our Computer lenses and <span className="text-blue-500">Blue Light</span> Filters.</p>
               <p className="text-2xl">They’re like sunscreen for your eyes but for screens so like...Screenscreen
               </p>
             </div>
-          </div>
+          </div> */}
           <div className="mt-12">
-            <h2 className="mt-2 text-2xl font-bold">5. What age should I get my child’s eye exams done?</h2>
+            <h2 className="mt-2 text-2xl font-bold">2. What age should I get my child’s eye exams done?</h2>
             <div className="ml-6">
               <p>The Canadian Association of <b>Optometrists recommends</b> a complete eye exam for <b>kids
                 starting at 6 months</b> of age, <b>then at 3 years old</b> and again prior to starting
@@ -175,6 +161,56 @@ export default function Blogs() {
             </div>
           </div>
           <div className="mt-12">
+            <h2 className="mt-2 text-2xl font-bold">3. How do I choose the right pair of glasses?</h2>
+            <div className="ml-6">
+              <p>The first decision is whe you like your new eye wear to be minimalist or conservative, or bold and eye catching.
+                Metal frames are more subtle, and plastic frames tend to be more attention
+                grabbing. Every major fashion designer has an eye wear line so there
+                are many options of colour combinations and shapes to choose from.</p>
+              <p>Faces can be categorized in 6 shapes: Oval, Base up or down Triangle, Square,
+                Diamond, and Round. Generally, the best way to choose a shape is to go
+                opposite of your face shape. If you have a round face, rectangle frames are
+                better suited to balance your look. For women, an up swept or cat eye is
+                usually  attering. For colours, a tortoise shell brown or simple black is the
+                most versatile and easy to dress up or dress down with. A lot of new frames
+                pair a subtle colour on the front with sharp accent colours to give you a frame
+                that is neutral but not boring!</p>
+              <p>The other part of the equation is what prescription you need. Not all frames
+                are suited for all lens types. This is where you would rely on the expertise of
+                the optician. They will explain the pros and cons of picking various frame and
+                lens combinations. The possibilities are endless! For more information, come
+                in today (we’re open 7 days/week) and we will go over all of your options to
+                best meet your needs.</p>
+            </div>
+          </div>
+          <div className="mt-12">
+            <h2 className="mt-2 text-2xl font-bold">4. Are sunglasses just for fashion or are they necessary?</h2>
+            <div className="ml-6">
+              <p>They are necessary; Here is an excerpt
+                from the Vancouver Coastal Health Region
+                Institute:</p>
+              <p>Intense, focused sunlight induces heat at the focal
+                point. In the eye, the optics of the lens/cornea
+                focuses light (and hence heat) on the retina (the
+                light sensitive part of the eye that converts light into
+                electrical signals that are passed onto the brain).
+                If the heat generated is excessive then cells in the
+                retina will be killed off.</p>
+              <p>The most important factor is ultraviolet protection
+                since longer wavelength light tends to get to the retina more easily. So
+                especially look for UVA and UVB blocking lenses. If you intend to drive or sail,
+                consider polarized lenses which are especially good at filtering side-glare.
+                Colour is important as well, with grey, green or brown lenses causing the least
+                colour distortion.</p>
+              <p>Good UV filtration does not necessarily require an expensive pair of sunglasses
+                and alternatively, an expensive pair is no guarantee of good UV protection.</p>
+              <p>When buying a pair of Sunglasses consider these factors and keep in mind the
+                quality of the lens and frame is important.</p>
+              <p>For more information and to experience our selection of 200 sunglasses,
+                come by and see us! We are open 7 days a week.</p>
+            </div>
+          </div>
+          {/* <div className="mt-12">
             <h2 className="mt-2 text-2xl font-bold">...Like it Rough?</h2>
             <div className="mt-4 grid grid-cols-1 md:grid-cols-1 gap-8">
               <Image
@@ -186,19 +222,21 @@ export default function Blogs() {
             <div className="ml-6">
               <p className="text-2xl font-bold">Please ask us about our lineup of CSA approved Safety Eyewear for work or play.. because life is a contact sport!</p>
             </div>
-          </div>
+          </div> */}
+          
           <div className="mt-12">
-            <h2 className="mt-2 text-2xl font-bold">Use ‘em or Lose ‘em <br />Your Benefits we mean!</h2>
-            <div className="mt-4 grid grid-cols-1 md:grid-cols-1 gap-8">
-              <Image
-                src="/images/insurance_providers.png"
-                height="480"
-                width="6400"
-              />
-            </div>
+            <h2 className="mt-2 text-2xl font-bold">5. How often should you get your eyes checked?</h2>
             <div className="ml-6">
-              <p className="text-2xl font-bold">We Direct Bill to all these Providers</p>
-              <p>*claim approvals take only 60 seconds*</p>
+              <p>An <b>annual eye exam is recommended by the College of Optometrists</b> for
+                proper eye health and vision care.</p>
+              <p>The eye is the <b>only organ</b> which allows the view to the blood vessels and
+                other structures linked to the general body health.</p>
+              <p>
+                Our <b>doctors</b> are able to <b>detect many serious health conditions</b> including:
+                diabetes, hypertension, auto-immune disorders, high cholesterol, thyroid
+                disease, tumours and even cancer.
+              </p>
+              <p>You may have <b>benefits</b> through your employer or insurance provider that <b>covers eye care</b> related expenses. Check it out!</p>
             </div>
           </div>
           <div className="mt-12">
@@ -228,55 +266,20 @@ export default function Blogs() {
             </div>
           </div>
           <div className="mt-12">
-            <h2 className="mt-2 text-2xl font-bold">7. How do I choose the right pair of glasses?</h2>
+            <h2 className="mt-2 text-2xl font-bold">7. Do we do direct billing? <br />Your Benefits we mean!</h2>
+            <div className="mt-4 grid grid-cols-1 md:grid-cols-1 gap-8">
+              <Image
+                src="/images/insurance_providers.png"
+                height="480"
+                width="6400"
+              />
+            </div>
             <div className="ml-6">
-              <p>The first decision is whe you like your new eye wear to be minimalist or conservative, or bold and eye catching.
-                Metal frames are more subtle, and plastic frames tend to be more attention
-                grabbing. Every major fashion designer has an eye wear line so there
-                are many options of colour combinations and shapes to choose from.</p>
-              <p>Faces can be categorized in 6 shapes: Oval, Base up or down Triangle, Square,
-                Diamond, and Round. Generally, the best way to choose a shape is to go
-                opposite of your face shape. If you have a round face, rectangle frames are
-                better suited to balance your look. For women, an up swept or cat eye is
-                usually  attering. For colours, a tortoise shell brown or simple black is the
-                most versatile and easy to dress up or dress down with. A lot of new frames
-                pair a subtle colour on the front with sharp accent colours to give you a frame
-                that is neutral but not boring!</p>
-              <p>The other part of the equation is what prescription you need. Not all frames
-                are suited for all lens types. This is where you would rely on the expertise of
-                the optician. They will explain the pros and cons of picking various frame and
-                lens combinations. The possibilities are endless! For more information, come
-                in today (we’re open 7 days/week) and we will go over all of your options to
-                best meet your needs.</p>
+              <p className="text-2xl font-bold">We Direct Bill to all these Providers</p>
+              <p>*claim approvals take only 60 seconds*</p>
             </div>
           </div>
-          <div className="mt-12">
-            <h2 className="mt-2 text-2xl font-bold">8. Are sunglasses just for fashion or are they necessary?</h2>
-            <div className="ml-6">
-              <p>They are necessary; Here is an excerpt
-                from the Vancouver Coastal Health Region
-                Institute:</p>
-              <p>Intense, focused sunlight induces heat at the focal
-                point. In the eye, the optics of the lens/cornea
-                focuses light (and hence heat) on the retina (the
-                light sensitive part of the eye that converts light into
-                electrical signals that are passed onto the brain).
-                If the heat generated is excessive then cells in the
-                retina will be killed off.</p>
-              <p>The most important factor is ultraviolet protection
-                since longer wavelength light tends to get to the retina more easily. So
-                especially look for UVA and UVB blocking lenses. If you intend to drive or sail,
-                consider polarized lenses which are especially good at filtering side-glare.
-                Colour is important as well, with grey, green or brown lenses causing the least
-                colour distortion.</p>
-              <p>Good UV filtration does not necessarily require an expensive pair of sunglasses
-                and alternatively, an expensive pair is no guarantee of good UV protection.</p>
-              <p>When buying a pair of Sunglasses consider these factors and keep in mind the
-                quality of the lens and frame is important.</p>
-              <p>For more information and to experience our selection of 200 sunglasses,
-                come by and see us! We are open 7 days a week.</p>
-            </div>
-          </div>
+          
         </div>
       </div>
     </>
