@@ -141,7 +141,7 @@ export default function Blogs() {
               <p className="text-2xl font-bold">Please ask us about our lineup of CSA approved Safety Eyewear for work or play.. because life is a contact sport!</p>
             </div>
           </div> */}
-          <div>
+          <div className="mt-12">
             <h2 className="text-2xl font-bold">5. Why Buy Contact Lenses In-Store vs Online?</h2>
             <div className="ml-6">
               <ul>
