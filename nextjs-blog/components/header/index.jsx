@@ -328,8 +328,8 @@ export default function Header() {
                         <li className="nav-item">
                           <div class="relative group">
                             <div class="absolute -inset-0.5 bg-gradient-to-r from-cyan-800 to-sky-500 rounded-lg blur opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-tilt"></div>
-                            <a className={classNames("page-scroll font-bold rounded-lg", location?.route == "/blogs" ? "bg-white" : "bg-black")} href="/blogs">
-                              <span className={classNames("px-1 font-bold", location?.route == "/blogs" ? "text-black" : "text-white")}>Blogs</span>
+                            <a className={classNames("page-scroll font-bold rounded-lg", location?.route == "/faq" ? "bg-white" : "bg-black")} href="/faq">
+                              <span className={classNames("px-1 font-bold", location?.route == "/faq" ? "text-black" : "text-white")}>FAQs</span>
                             </a>
                           </div>
                         </li>
