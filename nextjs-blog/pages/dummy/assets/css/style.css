@@ -2292,3 +2292,31 @@ h5 {
 .glasses-option:hover .dropdown-content-glasses {
   display: block;
 }
+
+.dropdown-content-faq {
+  display: none;
+  background: #f1f1f1;
+  min-width: 200px;
+  position: absolute;
+  z-index: 1;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  height:320px;
+  overflow: hidden;
+  overflow-y: scroll;
+}
+
+.dropdown-content-faq a {
+  display: block;
+  color: #000;
+  text-decoration: none;
+  padding: 17px;
+  font-size: 18px;
+}
+
+.dropdown-content-faq a:hover {
+  background: #ddd;
+}
+
+.faq-option:hover .dropdown-content-faq {
+  display: block;
+}

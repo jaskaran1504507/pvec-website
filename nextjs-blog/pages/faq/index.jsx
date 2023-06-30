@@ -23,7 +23,7 @@ export default function Blogs() {
           </h2>
         </div>
       </div>
-      <div className="container mt-2">
+      <div id="q1" className="container mt-2">
         <div className="divide-y">
           {/* Question */}
           <div className="mt-12">
@@ -62,7 +62,7 @@ export default function Blogs() {
               </p>
             </div>
           </div> */}
-          <div className="mt-12">
+          <div id="q2" className="mt-12">
             <h2 className="mt-2 text-2xl font-bold">2. What age should I get my child’s eye exams done?</h2>
             <div className="ml-6">
               <p>The Canadian Association of <b>Optometrists recommends</b> a complete eye exam for <b>kids
@@ -78,7 +78,7 @@ export default function Blogs() {
               <p>A BC Care Card will <b>cover a portion</b> of the eye exams yearly until the age of 19.</p>
             </div>
           </div>
-          <div className="mt-12">
+          <div id="q3" className="mt-12">
             <h2 className="mt-2 text-2xl font-bold">3. How do I choose the right pair of glasses?</h2>
             <div className="ml-6">
               <p>The first decision is whe you like your new eye wear to be minimalist or conservative, or bold and eye catching.
@@ -101,7 +101,7 @@ export default function Blogs() {
                 best meet your needs.</p>
             </div>
           </div>
-          <div className="mt-12">
+          <div id="q4" className="mt-12">
             <h2 className="mt-2 text-2xl font-bold">4. Are sunglasses just for fashion or are they necessary?</h2>
             <div className="ml-6">
               <p>They are necessary; Here is an excerpt
@@ -141,7 +141,7 @@ export default function Blogs() {
               <p className="text-2xl font-bold">Please ask us about our lineup of CSA approved Safety Eyewear for work or play.. because life is a contact sport!</p>
             </div>
           </div> */}
-          <div className="mt-12">
+          <div className="mt-12" id="q5">
             <h2 className="text-2xl font-bold">5. Why Buy Contact Lenses In-Store vs Online?</h2>
             <div className="ml-6">
               <ul>
@@ -240,7 +240,7 @@ export default function Blogs() {
           </div>
           
         
-          <div className="mt-12">
+          <div id="q6" className="mt-12">
             <h2 className="mt-2 text-2xl font-bold">6. How can I reduce eye strain and redness from working on computer screens including my tablet and phone all day?</h2>
             <div className="ml-6">
               <p>It is likely you are suffering from digital eye fatigue. It is advised that
@@ -266,7 +266,7 @@ export default function Blogs() {
                 your situation, and give you recommendations based on your individual needs.</p>
             </div>
           </div>
-          <div className="mt-12">
+          <div id="q7" className="mt-12">
             <h2 className="mt-2 text-2xl font-bold">7. Do we do direct billing? <br />Your Benefits we mean!</h2>
             <div className="mt-4 grid grid-cols-1 md:grid-cols-1 gap-8">
               <Image
