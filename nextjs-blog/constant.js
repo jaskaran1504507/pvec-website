@@ -186,17 +186,17 @@ export const brandsArr = [
     addr: "https://www.ray-ban.com/canada/en",
     name: "Ray Ban",
   },
-  {
-    link: "PVEC_EmporioArmani.jpeg",
-    addr: "https://www.armani.com/en-in/emporio-armani/man/eyewear",
-    name: "Armani",
-  },
+  // {
+  //   link: "PVEC_EmporioArmani.jpeg",
+  //   addr: "https://www.armani.com/en-in/emporio-armani/man/eyewear",
+  //   name: "Armani",
+  // },
   { link: "PVEC_FYSH.jpeg", addr: "https://fyshuk.com", name: "FYSH" },
-  {
-    link: "PVEC_Gucci.png",
-    addr: "https://www.gucci.com/us/en/st/capsule/women-eyewear",
-    name: "Gucci",
-  },
+  // {
+  //   link: "PVEC_Gucci.png",
+  //   addr: "https://www.gucci.com/us/en/st/capsule/women-eyewear",
+  //   name: "Gucci",
+  // },
   {
     link: "PVEC_Guess.jpeg",
     addr: "https://www.guess.com/us/en/women/accessories/sunglasses",
