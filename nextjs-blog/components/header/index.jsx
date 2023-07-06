@@ -266,7 +266,7 @@ export default function Header() {
                         <li className="nav-item">
                           <div class="glasses-option relative group">
                             <div class="absolute -inset-0.5 bg-gradient-to-r from-cyan-800 to-sky-500 rounded-lg blur opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-tilt"></div>
-                            <a className={classNames(" page-scroll font-bold rounded-lg", (location?.route == "/glasses-contacts" && location?.query?.query == "glasses") ? "bg-white" : "bg-black")} href="/glasses-contacts?query=glasses">
+                            <a className={classNames(" page-scroll font-bold rounded-lg", (location?.route == "/glasses-contacts" && location?.query?.query == "glasses") ? "bg-white" : "bg-black")} href="/glasses-contacts?query=glasses" target="_blank">
                               <span className={classNames("px-1 font-bold text-black", (location?.route == "/glasses-contacts" && location?.query?.query == "glasses") ? "text-black" : "text-white")}>Sun/Glasses</span>
                             </a>
                             <div className="dropdown-content-glasses">

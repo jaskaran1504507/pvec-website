@@ -28,7 +28,7 @@ export default function Home() {
       </Carousel>{" "}
       <ServicesCatalogueHomePage />
       <ProductCatalogueHomePage />
-      <FeedbackHomePage />
+      <FeedbackHomePage  />
     </main>
   );
 }
