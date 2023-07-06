@@ -1,9 +1,35 @@
 import React, { useEffect, useState } from "react";
 import Reviews from "../../utils/services/fetchGoogleReviews";
 import Link from "next/link";
-import axios from 'axios';
 import { callApi } from "../../utils/apiUtils";
-
+import Carousel from "react-multi-carousel";
+import "react-multi-carousel/lib/styles.css";
+const responsive = {
+  desktop: {
+    breakpoint: {
+      max: 3000,
+      min: 1024,
+    },
+    items: 3,
+    partialVisibilityGutter: 30,
+  },
+  mobile: {
+    breakpoint: {
+      max: 464,
+      min: 0,
+    },
+    items: 1,
+    partialVisibilityGutter: 30,
+  },
+  tablet: {
+    breakpoint: {
+      max: 1024,
+      min: 464,
+    },
+    items: 2,
+    partialVisibilityGutter: 30,
+  },
+};
 export default function FeedbackHomePage() {
   //   const [reviews, setReviews] = useState([]);
 
@@ -31,6 +57,7 @@ export default function FeedbackHomePage() {
   //   );
 
   const [reviews, setReviews] = useState([]);
+  const [seeMore, setSeeMore] = useState({});
 
   useEffect(() => {
     const fetchReviews = async () => {
@@ -68,48 +95,118 @@ export default function FeedbackHomePage() {
             <div className="col-lg-5">
               <div className="section-title text-center pb-10">
                 <div className="line m-auto"></div>
-                <h3 className="title">Users sharing<span> their experience</span></h3>
+                <h3 className="title">
+                  Users sharing<span> their experience</span>
+                </h3>
               </div>
               {/* <!-- section title --> */}
             </div>
           </div>
           {/* <!-- row --> */}
-          <div
+          {/* <div
             className="row testimonial-active wow fadeInUpBig"
             data-wow-duration="1s"
             data-wow-delay="0.8s"
+          > */}
+          <Carousel
+            additionalTransfrom={0}
+            arrows={false}
+            autoPlaySpeed={4000}
+            centerMode={false}
+            className=""
+            containerClass="container"
+            draggable
+            focusOnSelect={false}
+            infinite
+            itemClass=""
+            keyBoardControl
+            minimumTouchDrag={80}
+            pauseOnHover
+            renderArrowsWhenDisabled={false}
+            renderButtonGroupOutside={false}
+            responsive={responsive}
+            autoPlay
+            rewind
+            rewindWithAnimation
+            shouldResetAutoplay
+            showDots
+            sliderClass=""
+            slidesToSlide={1}
+            swipeable
           >
             {reviews && reviews.length > 0 ? (
               reviews.map((review) => (
-                <div className="col-lg-4">
-                  <div className="single-testimonial">
-                    <div
-                      className="testimonial-review d-flex align-items-center justify-content-between"
-                    >
+                <div className="">
+                  <div
+                    className="single-testimonial"
+                    style={{ height: "450px" }}
+                  >
+                    <div className="testimonial-review d-flex align-items-center justify-content-between">
                       <div className="quota">
                         <i className="lni-quotation"></i>
                       </div>
                       <div className="star">
                         <ul>
-                          {review.rating == 5 ? (<><li><i className="lni-star-filled"></i></li>
-                            <li><i className="lni-star-filled"></i></li>
-                            <li><i className="lni-star-filled"></i></li>
-                            <li><i className="lni-star-filled"></i></li>
-                            <li><i className="lni-star-filled"></i></li></>) : (
+                          {review.rating == 5 ? (
                             <>
-                              <li><i className="lni-star-filled"></i></li>
-                              <li><i className="lni-star-filled"></i></li>
-                              <li><i className="lni-star-filled"></i></li>
-                              <li><i className="lni-star-filled"></i></li>
-                              <li><i className="lni-star"></i></li></>
+                              <li>
+                                <i className="lni-star-filled"></i>
+                              </li>
+                              <li>
+                                <i className="lni-star-filled"></i>
+                              </li>
+                              <li>
+                                <i className="lni-star-filled"></i>
+                              </li>
+                              <li>
+                                <i className="lni-star-filled"></i>
+                              </li>
+                              <li>
+                                <i className="lni-star-filled"></i>
+                              </li>
+                            </>
+                          ) : (
+                            <>
+                              <li>
+                                <i className="lni-star-filled"></i>
+                              </li>
+                              <li>
+                                <i className="lni-star-filled"></i>
+                              </li>
+                              <li>
+                                <i className="lni-star-filled"></i>
+                              </li>
+                              <li>
+                                <i className="lni-star-filled"></i>
+                              </li>
+                              <li>
+                                <i className="lni-star"></i>
+                              </li>
+                            </>
                           )}
-
                         </ul>
                       </div>
                     </div>
                     <div className="testimonial-text">
                       <p className="text">
-                        {review.text}
+                        <div className="px-6 py-4 ">
+                          {seeMore[review.text] || review.text.slice(0, 250)}
+                          {review.text.length > 250 && (
+                            <span
+                              onClick={() => {
+                                setSeeMore((prev) => ({
+                                  ...prev,
+                                  [review.text]: prev[review.text]
+                                    ? ""
+                                    : review.text,
+                                }));
+                              }}
+                              className=" pl-2 text-blue-900 hover:underline cursor-pointer"
+                            >
+                              see {seeMore[review.text] ? "less" : "more"}...
+                            </span>
+                          )}
+                        </div>
                       </p>
                     </div>
                     <div className="testimonial-author d-flex align-items-center">
@@ -132,10 +229,12 @@ export default function FeedbackHomePage() {
                     </div>
                   </div>
                 </div>
-              ))) : (
+              ))
+            ) : (
               <p>No reviews found.</p>
             )}
-          </div>
+          </Carousel>
+          {/* </div> */}
         </div>
         <div className="flex justify-center pt-12">
           <Link href="https://g.page/r/Ce2p8mT6SaHEEBM/review" target="_blank">
