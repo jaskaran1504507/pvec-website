@@ -373,7 +373,7 @@ const Bookings = () => {
         </div>
       </div>
       {showAppointmentSuccess && (
-        <div id="success_tic" class="modal fade" role="dialog">
+        <div id="success_tic" className="modal fade" role="dialog">
           <div className="modal-dialog">
             {/* <!-- Modal content--> */}
             <div className="modal-content">
