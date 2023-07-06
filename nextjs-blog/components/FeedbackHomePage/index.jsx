@@ -1,22 +1,150 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import Reviews from "../../utils/services/fetchGoogleReviews";
 import Link from "next/link";
+import axios from 'axios';
+import { callApi } from "../../utils/apiUtils";
 
 export default function FeedbackHomePage() {
-  const imgArr = [
-    "images/Rectangle 6-1.jpg",
-    "images/Rectangle 4-2.jpg",
-    "images/prod_cat_2.png",
-    "images/Rectangle 6-4.jpg",
-    "images/prod_cat_1.png",
+  //   const [reviews, setReviews] = useState([]);
 
-    // "images/Rectangle 1-4.jpg",
-    // "images/PVEC_ContactLenses.jpeg",
-  ];
+  //   // useEffect(() => {
+  //   //   //Runs only on the first render
+  //   //   setReviews(fetchGoogleReviews());
+  //   // }, []);
+
+  //   const imgArr = [
+  //     "images/Rectangle 6-1.jpg",
+  //     "images/Rectangle 4-2.jpg",
+  //     "images/prod_cat_2.png",
+  //     "images/Rectangle 6-4.jpg",
+  //     "images/prod_cat_1.png",
+
+  //     // "images/Rectangle 1-4.jpg",
+  //     // "images/PVEC_ContactLenses.jpeg",
+  //   ];
+  //   return (
+  //     <>
+  //       {/* <!--====== TESTIMONIAL PART START ======--> */}
+  //       {/* <Reviews/> */}
+  //       {/* <!--====== TESTIMONIAL PART ENDS ======--> */}
+  //     </>
+  //   );
+
+  const [reviews, setReviews] = useState([]);
+
+  useEffect(() => {
+    const fetchReviews = async () => {
+      callApi({ uriEndPoint: { uri: "/reviews", method: "GET", version: "" } })
+        .then((res) => {
+          console.log("res : ", res);
+          setReviews(res.reviews);
+        })
+        .catch((err) => console.log("err", err));
+    };
+
+    fetchReviews();
+  }, []);
+
+  // Render the reviews on your website
   return (
     <>
-      {/* <!--====== TESTIMONIAL PART START ======--> */}
+      {/* <div>
+      {reviews && reviews.length > 0 ? (
+        reviews.map((review) => (
+          <div key={review.author_name}>
+            <p>{review.author_name}</p>
+            <p>{review.profile_photo_url}</p>
+            <p>{review.text}</p>
+            <p>{review.rating}</p>
+          </div>
+        ))
+      ) : (
+        <p>No reviews found.</p>
+      )}
+    </div> */}
+      <section id="testimonial" className="testimonial-area pt-120">
+        <div className="container">
+          <div className="row justify-content-center">
+            <div className="col-lg-5">
+              <div className="section-title text-center pb-10">
+                <div className="line m-auto"></div>
+                <h3 className="title">Users sharing<span> their experience</span></h3>
+              </div>
+              {/* <!-- section title --> */}
+            </div>
+          </div>
+          {/* <!-- row --> */}
+          <div
+            className="row testimonial-active wow fadeInUpBig"
+            data-wow-duration="1s"
+            data-wow-delay="0.8s"
+          >
+            {reviews && reviews.length > 0 ? (
+              reviews.map((review) => (
+                <div className="col-lg-4">
+                  <div className="single-testimonial">
+                    <div
+                      className="testimonial-review d-flex align-items-center justify-content-between"
+                    >
+                      <div className="quota">
+                        <i className="lni-quotation"></i>
+                      </div>
+                      <div className="star">
+                        <ul>
+                          {review.rating == 5 ? (<><li><i className="lni-star-filled"></i></li>
+                            <li><i className="lni-star-filled"></i></li>
+                            <li><i className="lni-star-filled"></i></li>
+                            <li><i className="lni-star-filled"></i></li>
+                            <li><i className="lni-star-filled"></i></li></>) : (
+                            <>
+                              <li><i className="lni-star-filled"></i></li>
+                              <li><i className="lni-star-filled"></i></li>
+                              <li><i className="lni-star-filled"></i></li>
+                              <li><i className="lni-star-filled"></i></li>
+                              <li><i className="lni-star"></i></li></>
+                          )}
 
-      {/* <!--====== TESTIMONIAL PART ENDS ======--> */}
+                        </ul>
+                      </div>
+                    </div>
+                    <div className="testimonial-text">
+                      <p className="text">
+                        {review.text}
+                      </p>
+                    </div>
+                    <div className="testimonial-author d-flex align-items-center">
+                      <div className="author-image">
+                        <img
+                          className="shape"
+                          src="assets/images/textimonial-shape.svg"
+                          alt="shape"
+                        />
+                        <img
+                          className="author"
+                          src={review.profile_photo_url}
+                          alt="author"
+                        />
+                      </div>
+                      <div className="author-content media-body">
+                        <h6 className="holder-name">{review.author_name}</h6>
+                        {/* <p className="text">UX Specialist, Yoast</p> */}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              ))) : (
+              <p>No reviews found.</p>
+            )}
+          </div>
+        </div>
+        <div className="flex justify-center pt-12">
+          <Link href="https://g.page/r/Ce2p8mT6SaHEEBM/review" target="_blank">
+            <u className="explore-services-container uppercase rounded-full white text-sm font-semibold px-4 py-3">
+              Help us grow, share your feedback{" "}
+            </u>
+          </Link>
+        </div>
+      </section>
     </>
   );
 }
