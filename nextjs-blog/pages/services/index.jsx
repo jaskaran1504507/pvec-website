@@ -85,60 +85,63 @@ export default function ServiceProducts() {
           </div>
         </div>{" "} */}
       </div>
-      <div className="grid  gap-6 mt-10 grid-cols-1 md:grid-cols-3 u-clearfix u-sheet mx-auto u-valign-middle u-sheet-1">
+      <div className="grid gap-1 mt-10 grid-cols-1 md:grid-cols-3 u-clearfix u-sheet mx-auto u-valign-middle u-sheet-1">
         {cards.map(({ img, text, head, conditions }) => (
-          <div key={img} className="p-2 shadow-lg ">
-            <div>
-              <Image
-                // layout="fill"
-                // objectFit="cover"
-                className="rounded-lg"
-                src={img}
-                alt=""
-                srcSet=""
-                height="250"
-                width="355"
-              />
-            </div>
-            <h1 className="text-blue-900 my-3 text-center font-semibold">
-              {head}
-            </h1>
-            <div className="px-6 py-4 ">
-              {seeMore[img] || text.slice(0, 250)}
-              {text.length > 250 && (
-                <span
-                  onClick={() => {
-                    setSeeMore((prev) => ({
-                      ...prev,
-                      [img]: prev[img] ? "" : text,
-                    }));
-                  }}
-                  className=" pl-2 text-blue-900 hover:underline cursor-pointer"
-                >
-                  see {seeMore[img] ? "less" : "more"}...
-                </span>
-              )}
+          <div key={img} className="p-2 shadow-lg card flex flex-col border border-gray-300 mx-2">
+            <div className="card-content flex-grow">
+              <div>
+                <Image
+                  // layout="fill"
+                  // objectFit="cover"
+                  className="rounded-lg"
+                  src={img}
+                  alt=""
+                  srcSet=""
+                  height="250"
+                  width="355"
+                />
+              </div>
+              <h1 className="text-blue-900 my-3 text-center font-semibold">
+                {head}
+              </h1>
+
+              <div className="px-6 py-4 ">
+                {seeMore[img] || text.slice(0, 250)}
+                {text.length > 250 && (
+                  <span
+                    onClick={() => {
+                      setSeeMore((prev) => ({
+                        ...prev,
+                        [img]: prev[img] ? "" : text,
+                      }));
+                    }}
+                    className=" pl-2 text-blue-900 hover:underline cursor-pointer"
+                  >
+                    see {seeMore[img] ? "less" : "more"}...
+                  </span>
+                )}
+              </div>
             </div>
 
             {/* <div className="flex justify-center">
             <div className="flex-end justify-center navbar-btn d-none d-sm-inline-block"> */}
-            <div className="flex align-items-center justify-center">
-              <a
-                className="main-btn-products"
-                data-scroll-nav="0"
-                href="bookings#appointment"
-              >
-                Book your appointment{" "}
-              </a>
-              {/* <div className="long-arrow-right"></div> */}
-            </div>
-            {/* </div>
-              </div> */}
+
+            <div className="card-button">
             {conditions && (
-              <div className="px-6">
-                <p className="text-xs">{conditions} </p>
+                <div className="px-6">
+                  <p className="text-xs">{conditions} </p>
+                </div>
+              )}
+              <div className="flex align-items-center justify-center">
+                <a
+                  className="main-btn-products"
+                  data-scroll-nav="0"
+                  href="bookings#appointment"
+                >
+                  Book your appointment{" "}
+                </a>
               </div>
-            )}
+            </div>
           </div>
         ))}
       </div>

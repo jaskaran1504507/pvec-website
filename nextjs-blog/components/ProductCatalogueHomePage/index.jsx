@@ -222,7 +222,6 @@ export default function ProductCatalogueHomePage() {
                     width="355"
                   />
                 </div>
-              </div>
               <h1 className="text-blue-900 mt-3 text-center font-semibold">
                 {head}
               </h1>
@@ -241,6 +240,7 @@ export default function ProductCatalogueHomePage() {
                     see {seeMore[img] ? "less" : "more"}...
                   </span>
                 )}
+              </div>
               </div>
 
               {/* <div className="flex justify-center">
