@@ -108,7 +108,9 @@ export default function FeedbackHomePage() {
             data-wow-duration="1s"
             data-wow-delay="0.8s"
           > */}
-          <Carousel
+
+          {/* <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4"> */}
+          <Carousel class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4"
             additionalTransfrom={0}
             arrows={false}
             autoPlaySpeed={4000}
@@ -136,49 +138,37 @@ export default function FeedbackHomePage() {
           >
             {reviews && reviews.length > 0 ? (
               reviews.map((review) => (
-                <div className="">
-                  <div
-                    className="single-testimonial"
-                    style={{ height: "450px" }}
-                  >
+                <div
+                  className="single-testimonial card flex flex-col border border-gray-300 mx-2"
+                  style={{ height: "480px" }}
+                >
+                  <div className="card-content flex-grow p-4">
                     <div className="testimonial-review d-flex align-items-center justify-content-between">
                       <div className="quota">
                         <i className="lni-quotation"></i>
                       </div>
                       <div className="star">
                         <ul>
+                          <li>
+                            <i className="lni-star-filled"></i>
+                          </li>
+                          <li>
+                            <i className="lni-star-filled"></i>
+                          </li>
+                          <li>
+                            <i className="lni-star-filled"></i>
+                          </li>
+                          <li>
+                            <i className="lni-star-filled"></i>
+                          </li>
                           {review.rating == 5 ? (
                             <>
-                              <li>
-                                <i className="lni-star-filled"></i>
-                              </li>
-                              <li>
-                                <i className="lni-star-filled"></i>
-                              </li>
-                              <li>
-                                <i className="lni-star-filled"></i>
-                              </li>
-                              <li>
-                                <i className="lni-star-filled"></i>
-                              </li>
                               <li>
                                 <i className="lni-star-filled"></i>
                               </li>
                             </>
                           ) : (
                             <>
-                              <li>
-                                <i className="lni-star-filled"></i>
-                              </li>
-                              <li>
-                                <i className="lni-star-filled"></i>
-                              </li>
-                              <li>
-                                <i className="lni-star-filled"></i>
-                              </li>
-                              <li>
-                                <i className="lni-star-filled"></i>
-                              </li>
                               <li>
                                 <i className="lni-star"></i>
                               </li>
@@ -189,9 +179,9 @@ export default function FeedbackHomePage() {
                     </div>
                     <div className="testimonial-text">
                       <p className="text">
-                        <div className="px-6 py-4 ">
-                          {seeMore[review.text] || review.text.slice(0, 250)}
-                          {review.text.length > 250 && (
+                        <div className="px-3 py-2 ">
+                          {seeMore[review.text] || review.text.slice(0, 300)}
+                          {review.text.length > 300 && (
                             <span
                               onClick={() => {
                                 setSeeMore((prev) => ({
@@ -201,7 +191,7 @@ export default function FeedbackHomePage() {
                                     : review.text,
                                 }));
                               }}
-                              className=" pl-2 text-blue-900 hover:underline cursor-pointer"
+                              className="pl-2 text-blue-900 hover:underline cursor-pointer"
                             >
                               see {seeMore[review.text] ? "less" : "more"}...
                             </span>
@@ -209,6 +199,8 @@ export default function FeedbackHomePage() {
                         </div>
                       </p>
                     </div>
+                  </div>
+                  <div className="card-button py-4">
                     <div className="testimonial-author d-flex align-items-center">
                       <div className="author-image">
                         <img
@@ -244,6 +236,39 @@ export default function FeedbackHomePage() {
           </Link>
         </div>
       </section>
+
+      {/* <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+        <div className="card flex flex-col border border-gray-300">
+          <div className="card-content flex-grow p-4">
+            <h3>Card 1</h3>
+            <p>This is the content of card 1. It can have varying lengths.</p>
+          </div>
+          <div className="card-button text-center py-4">
+            <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Action</button>
+          </div>
+        </div>
+
+        <div className="card flex flex-col border border-gray-300">
+          <div className="card-content flex-grow p-4">
+            <h3>Card 2</h3>
+            <p>This is the content of card 2.</p>
+          </div>
+          <div className="card-button text-center py-4">
+            <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Action</button>
+          </div>
+        </div>
+
+        <div className="card flex flex-col border border-gray-300">
+          <div className="card-content flex-grow p-4">
+            <h3>Card 3</h3>
+            <p>This is the content of card 3. It can be much longer and wrap to multiple lines.</p>
+          </div>
+          <div className="card-button text-center py-4">
+            <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Action</button>
+          </div>
+        </div>
+      </div> */}
+
     </>
   );
 }
