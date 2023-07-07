@@ -8,7 +8,7 @@ import {
   MailOutlined,
   MobileOutlined,
 } from "@ant-design/icons";
-import { brandsArr } from "../../constant";
+import { brandsArr, contactsBrandsArr } from "../../constant";
 
 export default function Header() {
   const [isNavVisible, setIsNavVisible] = useState(false);
@@ -265,12 +265,12 @@ export default function Header() {
                         <li className="nav-item">
                           <div className="glasses-option relative group">
                             <div className="absolute -inset-0.5 bg-gradient-to-r from-cyan-800 to-sky-500 rounded-lg blur opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-tilt"></div>
-                            <a className={classNames(" page-scroll font-bold rounded-lg", (location?.route == "/glasses-contacts" && location?.query?.query == "glasses") ? "bg-white" : "bg-black")} href="/glasses-contacts?query=glasses" target="_blank">
+                            <a className={classNames(" page-scroll font-bold rounded-lg", (location?.route == "/glasses-contacts" && location?.query?.query == "glasses") ? "bg-white" : "bg-black")} href="/glasses-contacts?query=glasses">
                               <span className={classNames("px-1 font-bold text-black", (location?.route == "/glasses-contacts" && location?.query?.query == "glasses") ? "text-black" : "text-white")}>Sun/Glasses</span>
                             </a>
                             <div className="dropdown-content-glasses">
                               {brandsArr.map((brand) => (
-                                <a href={brand.addr}>
+                                <a href={brand.addr} target="_blank">
                                   <div className="flex">
                                     <img className="img-fluid mx-1 img-responsive rounded product-image-v2" src={"/images/brands/" + brand.link} />
                                     <h2 className="font-bold">{brand.name}</h2>
@@ -283,11 +283,21 @@ export default function Header() {
                         </li>
 
                         <li className="nav-item">
-                          <div className="relative group">
+                          <div className="contacts-option relative group">
                             <div className="absolute -inset-0.5 bg-gradient-to-r from-cyan-800 to-sky-500 rounded-lg blur opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-tilt"></div>
                             <a className={classNames("page-scroll font-bold rounded-lg", (location?.route == "/glasses-contacts" && location?.query?.query == "contacts") ? "bg-white" : "bg-black")} href="/glasses-contacts?query=contacts">
                               <span className={classNames("px-1 font-bold text-black", (location?.route == "/glasses-contacts" && location?.query?.query == "contacts") ? "text-black" : "text-white")}>Contacts</span>
                             </a>
+                            <div className="dropdown-content-contacts">
+                              {contactsBrandsArr.map((brand) => (
+                                <a href={brand.addr} target="_blank">
+                                  <div className="flex">
+                                    <img className="img-fluid mx-1 img-responsive rounded product-image-v2" src={"/images/" + brand.link} />
+                                    <h2 className="font-bold">{brand.name}</h2>
+                                  </div>
+                                </a>
+                              ))}
+                            </div>
                           </div>
                         </li>
                         <li className="nav-item">
@@ -331,41 +341,41 @@ export default function Header() {
                               <span className={classNames("px-1 font-bold", location?.route == "/faq" ? "text-black" : "text-white")}>FAQs</span>
                             </a>
                             <div className="dropdown-content-faq">
-                                <a href="/faq#q1">
-                                  <div className="flex">
-                                    <h2 className="font-bold">How often should you get your eyes checked?</h2>
-                                  </div>
-                                </a>
-                                <a href="/faq#q2">
-                                  <div className="flex">
-                                    <h2 className="font-bold">What age should I get my child’s eye exams done?</h2>
-                                  </div>
-                                </a>
-                                <a href="/faq#q3">
-                                  <div className="flex">
-                                    <h2 className="font-bold">How do I choose the right pair of glasses?</h2>
-                                  </div>
-                                </a>
-                                <a href="/faq#q4">
-                                  <div className="flex">
-                                    <h2 className="font-bold">Are sunglasses just for fashion or are they necessary?</h2>
-                                  </div>
-                                </a>
-                                <a href="/faq#q5">
-                                  <div className="flex">
-                                    <h2 className="font-bold">Why Buy Contact Lenses In-Store vs Online?</h2>
-                                  </div>
-                                </a>
-                                <a href="/faq#q6">
-                                  <div className="flex">
-                                    <h2 className="font-bold">How can I reduce eye strain and redness?</h2>
-                                  </div>
-                                </a>
-                                <a href="/faq#q7">
-                                  <div className="flex">
-                                    <h2 className="font-bold">Do we do direct billing?</h2>
-                                  </div>
-                                </a>
+                              <a href="/faq#q1">
+                                <div className="flex">
+                                  <h2 className="font-bold">How often should you get your eyes checked?</h2>
+                                </div>
+                              </a>
+                              <a href="/faq#q2">
+                                <div className="flex">
+                                  <h2 className="font-bold">What age should I get my child’s eye exams done?</h2>
+                                </div>
+                              </a>
+                              <a href="/faq#q3">
+                                <div className="flex">
+                                  <h2 className="font-bold">How do I choose the right pair of glasses?</h2>
+                                </div>
+                              </a>
+                              <a href="/faq#q4">
+                                <div className="flex">
+                                  <h2 className="font-bold">Are sunglasses just for fashion or are they necessary?</h2>
+                                </div>
+                              </a>
+                              <a href="/faq#q5">
+                                <div className="flex">
+                                  <h2 className="font-bold">Why Buy Contact Lenses In-Store vs Online?</h2>
+                                </div>
+                              </a>
+                              <a href="/faq#q6">
+                                <div className="flex">
+                                  <h2 className="font-bold">How can I reduce eye strain and redness?</h2>
+                                </div>
+                              </a>
+                              <a href="/faq#q7">
+                                <div className="flex">
+                                  <h2 className="font-bold">Do we do direct billing?</h2>
+                                </div>
+                              </a>
                             </div>
                           </div>
                         </li>

@@ -327,3 +327,24 @@ export const productCards = [
     linkText : "Get it now"
   }
 ];
+
+export const contactsBrandsArr = [
+  {
+    link: "acuvue_logo.png",
+    addr: "https://www.acuvue.ca/",
+    name: "Acuvue",
+  },
+  {
+    link: "Bausch-Lomb-logo.png",
+    addr: "https://www.bausch.ca/en-ca/",
+    name: "Bausch+Lomb",
+  },
+  { link: "cooper_vision_logo.png",
+    addr: "https://coopervision.ca/",
+    name: "CooperVision" },
+  {
+    link: "myAlcon_logo.png",
+    addr: "https://www.myalcon.com/ca/en/",
+    name: "My Alcon",
+  },
+];
