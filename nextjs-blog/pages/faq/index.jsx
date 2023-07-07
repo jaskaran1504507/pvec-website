@@ -272,14 +272,14 @@ export default function Blogs() {
                 Anyone that works, or has hobbies, that use their hands would benefit from a
                 dedicated pair of “mid-range” eyewear. This would also apply to any musicians in
                 order to help them see their sheet music more clearly with less effort.<br/>
-              The best advice would be to come into Optimum Eye Care so we can fully assess
+              The best advice would be to come into Performance Vision Eye Care so we can fully assess
                 your situation, and give you recommendations based on your individual needs.</p>
             </div>
           </div>
           <div id="q7" className="mt-12">
             <h2 className="mt-2 text-3xl font-bold">7. Do we do direct billing?</h2>
             <div className="ml-6">
-              <p className="text-2xl">Yes we can do. All these companies and more. <br /> We can even pre-determine your benefits before you book you exam.</p>
+              <p className="text-2xl">Yes we can!<br /> We work with all these companies and more. <br /> We can even pre-determine your benefits before you book your exam.</p>
             </div>
             <div className="mt-4 grid grid-cols-1 md:grid-cols-1 gap-8">
               <Image
