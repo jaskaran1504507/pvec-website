@@ -89,14 +89,14 @@ export default function FeedbackHomePage() {
         <p>No reviews found.</p>
       )}
     </div> */}
-      <section id="testimonial" className="testimonial-area pt-120">
+      <section id="testimonial" className="testimonial-area pt-20">
         <div className="container">
           <div className="row justify-content-center">
             <div className="col-lg-5">
               <div className="section-title text-center pb-10">
                 <div className="line m-auto"></div>
                 <h3 className="title">
-                  Users sharing<span> their experience</span>
+                  See what<span> our patients</span> are saying...
                 </h3>
               </div>
               {/* <!-- section title --> */}
@@ -140,9 +140,9 @@ export default function FeedbackHomePage() {
               reviews.map((review) => (
                 <div
                   className="single-testimonial card flex flex-col border border-gray-300 mx-2"
-                  style={{ height: "480px" }}
+                  style={{ height: "420px" }}
                 >
-                  <div className="card-content flex-grow p-4">
+                  <div className="card-content flex-grow px-4 pt-2">
                     <div className="testimonial-review d-flex align-items-center justify-content-between">
                       <div className="quota">
                         <i className="lni-quotation"></i>
