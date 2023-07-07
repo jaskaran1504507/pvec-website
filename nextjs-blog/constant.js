@@ -1,5 +1,6 @@
 export const cards = [
   {
+    id: 'service-1',
     text: `
         A comprehensive exam includes a refraction check as well as complete health
         examination of the front and back of your eyes.
@@ -11,8 +12,10 @@ export const cards = [
       `,
     img: "/images/Rectangle 1-6.jpg",
     head: "Comprehensive exam starting from $100",
+    head2: "Comprehensive exam starting from $100",
   },
   {
+    id: 'service-2',
     img: "/images/AboutUs_Unslapsh.png",
     head: (
       <>
@@ -21,6 +24,7 @@ export const cards = [
         <p className="font-bold">Children: $30 - Seniors: $45</p>
       </>
     ),
+    head2: 'Children/Senior Eye exams',
     text: `Children under 19 and adults 65 and older are covered by MSP for their
           comprehensive eyes exams. Any other person between the ages of 18-65
           who is referenced from a family doctor or other specialist for a
@@ -29,6 +33,7 @@ export const cards = [
             charges.)`,
   },
   {
+    id: 'service-3',
     img: "/images/PVEC_ContactLenses.jpeg",
     head: (
       <>
@@ -37,6 +42,7 @@ export const cards = [
         <p className="font-bold">Fitting Fee: $30 to $90</p>
       </>
     ),
+    head2: 'Contact Lens Fitting',
     text: `Whether you are a first time wearer, or a
     seasoned Contact Lens veteran, we can help you get the most out of your contact lenses
     by providing you with options
@@ -46,6 +52,7 @@ export const cards = [
     Ask about how to get free trial contacts!`,
   },
   {
+    id: 'service-4',
     img: "/images/Rectangle 1.jpg",
     head: (
       <>
@@ -54,6 +61,7 @@ export const cards = [
         <p className="font-bold">Minor Eye exam: $30 - $60</p>
       </>
     ),
+    head2: 'Pink Red, Sore Eyes, or Eyelid Care',
     text: `Eye irritation or redness due to allergies, excessive computer use, prolonged contact
     lens wear, or foreign objects can be
     treated same day.
@@ -61,24 +69,30 @@ export const cards = [
     relief you are looking for.`,
   },
   {
+    id: 'service-5',
     img: "/images/Rectangle 1-4.jpg",
     head: "Dry Eye Treatment",
+    head2: 'Dry Eye Treatment',
     text: "Dry eye happens when your eye don't make enough tears to stay wet, or when your tears don't work correctly. This can make your eyes feel uncomfortable, and in some cases it can also cause vision problems.",
   },
   {
+    id: 'service-6',
     head: "LASIK/PRK Surgery Consultation",
+    head2: 'LASIK/PRK Surgery Consultation',
     text: "Pre-Op and Post-Op Care Cataract Surgery Management, Glaucoma Treatment, Macular Degeneration Care, Diabetic Eye Care",
     img: "/images/Rectangle 1-5.jpg",
   },
   {
+    id: 'service-7',
     head: "Rigid Gas Permeable (RGPs) & Scleral Lenses Fitting",
+    head2: 'Rigid Gas Permeable (RGPs) & Scleral Lenses Fitting',
     text: `Treatment for corneal conditions
     such as keratoconus, severe dry eye, past refractive complications,
-    complicated prescriptions, and
-    post corneal transplants`,
+    complicated prescriptions, and post corneal transplants`,
     img: "/images/lens-fitting.jpg",
   },
   {
+    id: 'service-8',
     img: "/images/Rectangle 1-7.jpg",
     text: `Patients experiencing ocular emergencies can be fit in same if necessary; even if we are
     fully booked. Eye Emergencies can include irritated red eyes, foreign object removal,
@@ -87,13 +101,17 @@ export const cards = [
     If urgent surgical care is required, we can refer to an ophthalmologist same day.
     (Usual wait times for an appointment is 6 to 9 months currently for non emergency)`,
     head: "Eye Emergencies",
+    head2: 'Eye Emergencies',
   },
   {
+    id: 'service-9',
     img: "/images/Rectangle 1-3.jpg",
     head: "Light Sensitivity Management",
+    head2: 'Light Sensitivity Management',
     text: "Light sensitivity, or photophobia, is a condition in which bright light hurts your eyes. This condition can range from mild to severe.",
   },
   {
+    id: 'service-10',
     img: "/images/Rectangle 1-2.jpg",
     head: (
       <>
@@ -102,6 +120,7 @@ export const cards = [
         <p className="font-bold">Direct Billing</p>
       </>
     ),
+    head2: 'Eye exams, Glasses, Sunglasses, and Contact Lenses',
     text: `
         If you have private extended health insurance from one of the below
         companies, we offer direct billing for all glasses and contact lens
@@ -111,11 +130,9 @@ export const cards = [
           Most of our common health benefits providers are: Blue Cross, Chamber
           of Commerce, Crown, Desjardins, Great-West life, Canada Life,
           Industrial Alliance, Johnson Inc., Manulife financial, Maximun
-          Benefit/Johnson Group, Standard Life, Sun Life Financial and more.
-     
-   `,
+          Benefit/Johnson Group, Standard Life, Sun Life Financial and more.`,
   },
-  
+
 ];
 export const navArr = [
   { name: "Home", path: "/" },
@@ -232,13 +249,13 @@ export const brandsArr = [
     link: "PVEC_TF.png",
     addr: "https://www.tomford.com/eyewear/men/optical/",
   },
-  
+
   // {
   //   link: "PVEC_EmporioArmani.jpeg",
   //   addr: "https://www.armani.com/en-in/emporio-armani/man/eyewear",
   //   name: "Armani",
   // },
-  
+
   // {
   //   link: "PVEC_Gucci.png",
   //   addr: "https://www.gucci.com/us/en/st/capsule/women-eyewear",
@@ -256,21 +273,21 @@ export const banner = [
   {
     textColor: "white",
     img: "banner-home-img-2",
-    text: <>We direct bill to all major insurance providers.<br/>We also partner with First Nation Health Authority (FNHA) and People with Disability (PwD) on government assistance.</>,
+    text: <>We direct bill to all major insurance providers.<br />We also partner with First Nation Health Authority (FNHA) and People with Disability (PwD) on government assistance.</>,
   },
   {
     textColor: "white",
     img: "banner-home-img-3",
     text: "The best use of your performance vision is spotting a good deal!",
-    subText : <>Clearance Sale! <br/>Now on selected eyewear from <span style={{color:'red'}}>50-90% off </span> with fully coated lenses purchase.</>,
-    subText2 : <a href="https://www.alternativeeyes.com/catalog/one-sun" target="_blank" rel="noopener noreferrer">Limited time offer! <br/>Fully coated polarized sun glasses reg price <span style={{color:'red'}}><s>200$</s></span> now for <span style={{color:'red'}}>99$</span> while supplies last.</a>,
-    subText3 : <>Are you a student or senior citizen?<br/>Please ask about our special pricing just for you.</>,
-    description : "Please come visit in store or email or call us for more information."
+    subText: <>Clearance Sale! <br />Now on selected eyewear from <span style={{ color: 'red' }}>50-90% off </span> with fully coated lenses purchase.</>,
+    subText2: <a href="https://www.alternativeeyes.com/catalog/one-sun" target="_blank" rel="noopener noreferrer">Limited time offer! <br />Fully coated polarized sun glasses reg price <span style={{ color: 'red' }}><s>200$</s></span> now for <span style={{ color: 'red' }}>99$</span> while supplies last.</a>,
+    subText3: <>Are you a student or senior citizen?<br />Please ask about our special pricing just for you.</>,
+    description: "Please come visit in store or email or call us for more information."
   },
 ];
- // Limited time offer, fully coated polarised sunglasses regular price 200$ now on 99$ while supplies last.
+// Limited time offer, fully coated polarised sunglasses regular price 200$ now on 99$ while supplies last.
 
- export const homeServicesCards = [
+export const homeServicesCards = [
   {
     text: `A comprehensive exam includes a refraction check as well as complete health
     examination of the front and back of your eyes.
@@ -306,7 +323,7 @@ export const productCards = [
     img: "/images/26415.jpg",
     head: "Contact Lenses",
     link: "/glasses-contacts?query=contacts",
-    linkText : "Get yours now"
+    linkText: "Get yours now"
   },
   {
     img: "/images/eyewears.jpg",
@@ -314,7 +331,7 @@ export const productCards = [
     text: `New Modern Trends, Timeless Classics,Bold or Conservative and even Safety Protective eyewear; our collection has it all!
     We are constantly updating our selections year round to keep our collection up-to-date`,
     link: "/glasses-contacts?query=glasses",
-    linkText : "Style it now"
+    linkText: "Style it now"
   },
   {
     img: "/images/eyedrops.jpg",
@@ -324,7 +341,7 @@ export const productCards = [
     Relieve dry, irritated eyes with our selection of high quality eye-drops, lid and eyelash care products, and therapeutic masks.
     Perfect for the net addicts, cyberphiles and contact lens wearers out there!`,
     link: "/products?query=eye-medic",
-    linkText : "Get it now"
+    linkText: "Get it now"
   }
 ];
 
@@ -339,9 +356,11 @@ export const contactsBrandsArr = [
     addr: "https://www.bausch.ca/en-ca/",
     name: "Bausch+Lomb",
   },
-  { link: "cooper_vision_logo.png",
+  {
+    link: "cooper_vision_logo.png",
     addr: "https://coopervision.ca/",
-    name: "CooperVision" },
+    name: "CooperVision"
+  },
   {
     link: "myAlcon_logo.png",
     addr: "https://www.myalcon.com/ca/en/",

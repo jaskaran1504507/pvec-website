@@ -8,7 +8,7 @@ import {
   MailOutlined,
   MobileOutlined,
 } from "@ant-design/icons";
-import { brandsArr, contactsBrandsArr } from "../../constant";
+import { brandsArr, contactsBrandsArr, cards } from "../../constant";
 
 export default function Header() {
   const [isNavVisible, setIsNavVisible] = useState(false);
@@ -301,12 +301,21 @@ export default function Header() {
                           </div>
                         </li>
                         <li className="nav-item">
-                          <div className="relative group">
+                          <div className="services-option relative group">
                             <div className="absolute -inset-0.5 bg-gradient-to-r from-cyan-800 to-sky-500 rounded-lg blur opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-tilt"></div>
 
                             <a className={classNames("page-scroll font-bold rounded-lg", location?.route == "/services" ? "bg-white" : "bg-black")} href="/services">
                               <span className={classNames("px-1 font-bold", location?.route == "/services" ? "text-black" : "text-white")}>Services</span>
                             </a>
+                            <div className="dropdown-content-services">
+                              {cards.map((service) => (
+                                <a href={"/services#"+service.id}>
+                                  <div className="flex my-1">
+                                    <h2 className="font-bold mx-2">{service.head2}</h2>
+                                  </div>
+                                </a>
+                              ))}
+                            </div>
                           </div>
                         </li>
                         <li className="nav-item">
