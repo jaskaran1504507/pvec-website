@@ -77,13 +77,13 @@ export default function Blogs() {
                 skills. These are all vital for proper learning since most of a <b>child’s learning</b> is <b>based
                   on vision.</b><br/>
               A BC Care Card will <b>cover a portion</b> of the eye exams yearly until the age of 19.<br/>
-            Please call us on <a className="text-blue-500" href="tel:+16046899962" target="_blank">+1 604 689 9962</a> or email us at <a className="text-blue-500" href="mailto:info@pveyecare.ca" target="_blank">info@pveyecare.ca</a> for more information about this.</p>
+            Please call us at <a className="text-blue-500" href="tel:+16046899962" target="_blank">+1 604 689 9962</a> or email us at <a className="text-blue-500" href="mailto:info@pveyecare.ca" target="_blank">info@pveyecare.ca</a> for more information.</p>
             </div>
           </div>
           <div id="q3" className="mt-12">
             <h2 className="mt-2 text-3xl font-bold">3. How do I choose the right pair of glasses?</h2>
             <div className="ml-6">
-              <p className="text-2xl">The first decision is whe you like your new eye wear to be minimalist or conservative, or bold and eye catching.
+              <p className="text-2xl">The first decision is wheather you like your new eye wear to be minimalist or conservative, or bold and eye catching.
                 Metal frames are more subtle, and plastic frames tend to be more attention
                 grabbing. Every major fashion designer has an eye wear line so there
                 are many options of colour combinations and shapes to choose from.<br/>
@@ -126,7 +126,7 @@ export default function Blogs() {
                 and alternatively, an expensive pair is no guarantee of good UV protection.<br/>
               When buying a pair of Sunglasses consider these factors and keep in mind the
                 quality of the lens and frame is important.<br/>
-              or more information and to experience our selection of 200 sunglasses,
+              For more information and to experience our selection of 200 sunglasses,
                 come by and see us! We are open 6 days a week.</p>
             </div>
           </div>
