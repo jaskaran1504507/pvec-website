@@ -399,12 +399,20 @@ export default function Header() {
                       > <span className="px-2 font-bold">Order Contacts</span>
                       </a>
                     </div>
-                    <div className="navbar-btn d-none d-sm-inline-block ml-4">
+                    <div className="navbar-btn d-none d-sm-inline-block ml-2">
                       <a
                         className="main-btn"
                         data-scroll-nav="0"
                         href="https://docs.google.com/forms/d/e/1FAIpQLSfOr3fsy1F9RpZw9Gh8VyyUDAgm3Wg6HeskeIZRyiZvelRNNg/viewform?usp=sf_link" target="_blank"
                       > <span className="px-2 font-bold">Book Appointment</span>
+                      </a>
+                    </div>
+                    <div className="navbar-btn d-none d-sm-inline-block ml-2">
+                      <a
+                        className="main-btn"
+                        data-scroll-nav="0"
+                        href="https://docs.google.com/forms/d/e/1FAIpQLSfp9wtUa2KDu3zc2_TVnEXurHtwvXYXEekdD8tTnuCnETidvQ/viewform?usp=sf_link" target="_blank"
+                      > <span className="px-2 font-bold">Check Benefits</span>
                       </a>
                     </div>
                   </nav>
