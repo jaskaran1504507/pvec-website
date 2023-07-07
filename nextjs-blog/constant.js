@@ -175,28 +175,7 @@ export const productCatalogue = [
 ];
 
 export const brandsArr = [
-  { link: "PVEC_Superflex.jpeg", addr: "", name: "superflex" },
-  {
-    name: "Tom Ford",
-    link: "PVEC_TF.png",
-    addr: "https://www.tomford.com/eyewear/men/optical/",
-  },
-  {
-    link: "PVEC_RayBan.png",
-    addr: "https://www.ray-ban.com/canada/en",
-    name: "Ray Ban",
-  },
-  // {
-  //   link: "PVEC_EmporioArmani.jpeg",
-  //   addr: "https://www.armani.com/en-in/emporio-armani/man/eyewear",
-  //   name: "Armani",
-  // },
   { link: "PVEC_FYSH.jpeg", addr: "https://fyshuk.com", name: "FYSH" },
-  // {
-  //   link: "PVEC_Gucci.png",
-  //   addr: "https://www.gucci.com/us/en/st/capsule/women-eyewear",
-  //   name: "Gucci",
-  // },
   {
     link: "PVEC_Guess.jpeg",
     addr: "https://www.guess.com/us/en/women/accessories/sunglasses",
@@ -222,7 +201,6 @@ export const brandsArr = [
     addr: "https://www.lafont.com/the-collection/",
     name: "Lafont",
   },
-
   {
     link: "PVEC_MarcJacobs.jpeg",
     addr: "https://www.marcjacobs.com/default/the-marc-jacobs/the-accessories/sunglasses/",
@@ -243,7 +221,29 @@ export const brandsArr = [
     addr: "https://www.oakley.com/en-eu",
     name: "Oakley",
   },
-
+  {
+    link: "PVEC_RayBan.png",
+    addr: "https://www.ray-ban.com/canada/en",
+    name: "Ray Ban",
+  },
+  { link: "PVEC_Superflex.jpeg", addr: "", name: "Superflex" },
+  {
+    name: "Tom Ford",
+    link: "PVEC_TF.png",
+    addr: "https://www.tomford.com/eyewear/men/optical/",
+  },
+  
+  // {
+  //   link: "PVEC_EmporioArmani.jpeg",
+  //   addr: "https://www.armani.com/en-in/emporio-armani/man/eyewear",
+  //   name: "Armani",
+  // },
+  
+  // {
+  //   link: "PVEC_Gucci.png",
+  //   addr: "https://www.gucci.com/us/en/st/capsule/women-eyewear",
+  //   name: "Gucci",
+  // },
   // { link: "PVEC_Staag.png", addr: "", name: "Staag" },
 ];
 
