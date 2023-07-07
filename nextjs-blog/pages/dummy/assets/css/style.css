@@ -729,7 +729,7 @@ p {
         visibility : collapse !important; } } */
 
 .navbar-nav .nav-item {
-  margin-right: 30px;
+  margin-right: 24px;
   position: relative;
 }
 @media only screen and (min-width: 992px) and (max-width: 1199px) {

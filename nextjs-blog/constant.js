@@ -12,7 +12,7 @@ export const cards = [
       `,
     img: "/images/Rectangle 1-6.jpg",
     head: "Comprehensive exam starting from $100",
-    head2: "Comprehensive exam starting from $100",
+    head2: "Comprehensive eye exam",
   },
   {
     id: 'service-2',
@@ -61,7 +61,7 @@ export const cards = [
         <p className="font-bold">Minor Eye exam: $30 - $60</p>
       </>
     ),
-    head2: 'Pink Red, Sore Eyes, or Eyelid Care',
+    head2: 'Irritated Eyes or Eyelid Care',
     text: `Eye irritation or redness due to allergies, excessive computer use, prolonged contact
     lens wear, or foreign objects can be
     treated same day.
@@ -78,14 +78,14 @@ export const cards = [
   {
     id: 'service-6',
     head: "LASIK/PRK Surgery Consultation",
-    head2: 'LASIK/PRK Surgery Consultation',
+    head2: 'LASIK/PRK Consultation',
     text: "Pre-Op and Post-Op Care Cataract Surgery Management, Glaucoma Treatment, Macular Degeneration Care, Diabetic Eye Care",
     img: "/images/Rectangle 1-5.jpg",
   },
   {
     id: 'service-7',
     head: "Rigid Gas Permeable (RGPs) & Scleral Lenses Fitting",
-    head2: 'Rigid Gas Permeable (RGPs) & Scleral Lenses Fitting',
+    head2: 'RGPs & Scleral Lenses Fitting',
     text: `Treatment for corneal conditions
     such as keratoconus, severe dry eye, past refractive complications,
     complicated prescriptions, and post corneal transplants`,
@@ -106,8 +106,8 @@ export const cards = [
   {
     id: 'service-9',
     img: "/images/Rectangle 1-3.jpg",
-    head: "Light Sensitivity Management",
-    head2: 'Light Sensitivity Management',
+    head: "Light Sensitivity Treatment",
+    head2: 'Light Sensitivity Treatment',
     text: "Light sensitivity, or photophobia, is a condition in which bright light hurts your eyes. This condition can range from mild to severe.",
   },
   {
@@ -120,7 +120,7 @@ export const cards = [
         <p className="font-bold">Direct Billing</p>
       </>
     ),
-    head2: 'Eye exams, Glasses, Sunglasses, and Contact Lenses',
+    head2: 'Billing Insurance',
     text: `
         If you have private extended health insurance from one of the below
         companies, we offer direct billing for all glasses and contact lens
