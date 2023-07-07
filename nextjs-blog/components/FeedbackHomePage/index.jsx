@@ -200,7 +200,7 @@ export default function FeedbackHomePage() {
                       </p>
                     </div>
                   </div>
-                  <div className="card-button py-4">
+                  <div className="card-button">
                     <div className="testimonial-author d-flex align-items-center">
                       <div className="author-image">
                         <img

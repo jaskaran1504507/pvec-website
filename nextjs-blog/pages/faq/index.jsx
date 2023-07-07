@@ -1,5 +1,6 @@
 import Image from "next/image";
 import React from "react";
+import FeedbackHomePage from "../../components/FeedbackHomePage";
 
 export default function Blogs() {
   return (
@@ -97,7 +98,7 @@ export default function Blogs() {
                 are suited for all lens types. This is where you would rely on the expertise of
                 the optician. They will explain the pros and cons of picking various frame and
                 lens combinations. The possibilities are endless! For more information, come
-                in today (we’re open 7 days/week) and we will go over all of your options to
+                in today (we’re open 6 days/week) and we will go over all of your options to
                 best meet your needs.</p>
             </div>
           </div>
@@ -125,7 +126,7 @@ export default function Blogs() {
               <p>When buying a pair of Sunglasses consider these factors and keep in mind the
                 quality of the lens and frame is important.</p>
               <p>For more information and to experience our selection of 200 sunglasses,
-                come by and see us! We are open 7 days a week.</p>
+                come by and see us! We are open 6 days a week.</p>
             </div>
           </div>
           {/* <div className="mt-12">
@@ -283,6 +284,7 @@ export default function Blogs() {
           
         </div>
       </div>
+      <FeedbackHomePage  />
     </>
   );
 }

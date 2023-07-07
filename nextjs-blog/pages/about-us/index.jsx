@@ -1,7 +1,6 @@
 import Image from "next/image";
-import Link from "next/link";
 import React from "react";
-import Banner from "../../components/Banner";
+import FeedbackHomePage from "../../components/FeedbackHomePage";
 
 export default function AboutUs() {
   return (
@@ -125,27 +124,24 @@ export default function AboutUs() {
 
         </div>
         <div className="mt-12">
-        <h2 className="mt-2 text-2xl font-bold">We’ve been <span className="rainbow-text">Proudly Rocking</span> the <span className="text-red-700">R</span><span className="text-orange-700">a</span><span className="text-yellow-700">i</span><span className="text-green-700">n</span>
-        <span className="text-blue-700">b</span><span className="text-indigo-700">o</span><span className="text-violet-700">w</span> since the 1700’s</h2>
-        <div className="ml-6">
-          <p className="text-2xl font-bold">Newton's <span className="text-red-700">R</span><span className="text-orange-700">a</span><span className="text-yellow-700">i</span><span className="text-green-700">n</span>
-        <span className="text-blue-700">b</span><span className="text-indigo-700">o</span><span className="text-violet-700">w</span>. In the 1660s, English physicist and mathematician Isaac Newton began a series of
-            experiments with sunlight and prisms. He demonstrated that clear white light was composed of seven visible
-            colors.</p>
+          <h2 className="mt-2 text-2xl font-bold">We’ve been <span className="rainbow-text">Proudly Rocking</span> the <span className="text-red-700">R</span><span className="text-orange-700">a</span><span className="text-yellow-700">i</span><span className="text-green-700">n</span>
+            <span className="text-blue-700">b</span><span className="text-indigo-700">o</span><span className="text-violet-700">w</span> since the 1700’s</h2>
+          <div className="ml-6">
+            <p className="text-2xl font-bold">Newton's <span className="text-red-700">R</span><span className="text-orange-700">a</span><span className="text-yellow-700">i</span><span className="text-green-700">n</span>
+              <span className="text-blue-700">b</span><span className="text-indigo-700">o</span><span className="text-violet-700">w</span>. In the 1660s, English physicist and mathematician Isaac Newton began a series of
+              experiments with sunlight and prisms. He demonstrated that clear white light was composed of seven visible
+              colors.</p>
+          </div>
+          <div className="mt-4 grid grid-cols-1 md:grid-cols-1 gap-8">
+            <Image
+              src="/images/visible-light-wave-length.jpg"
+              height="480"
+              width="6400"
+            />
+          </div>
         </div>
-        <div className="mt-4 grid grid-cols-1 md:grid-cols-1 gap-8">
-          <Image
-            src="/images/visible-light-wave-length.jpg"
-            height="480"
-            width="6400"
-          />
-        </div>
-
       </div>
-
-      </div>
-
-      
+      <FeedbackHomePage  />
     </main>
   );
 }
