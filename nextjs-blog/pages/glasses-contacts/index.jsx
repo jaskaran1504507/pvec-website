@@ -132,7 +132,7 @@ export default function GlassesContacts() {
         </ul>
       </div> */}
 
-      <div className="mt-4">
+      {/* <div className="mt-4">
         <Carousel
           autoPlay
           swipeable
@@ -149,7 +149,7 @@ export default function GlassesContacts() {
             </div>
           ))}
         </Carousel>
-      </div>
+      </div> */}
     </main>
   );
 }
