@@ -16,138 +16,138 @@ export default function ServicesCatalogueHomePage() {
     "images/prod_cat_1.png"
   ];
   return (
-    
+
     // <!--====== SERVICES PART START ======-->
 
-//     <section id="features" className="services-area pt-82 px-px-120">
-//       <div className="container">
-//         <div className="row justify-content-center">
-//           <div className="col-lg-10">
-//             <div className="section-title text-center pb-30">
-//               <div className="line m-auto"></div>
-//               <h3 className="title">
-//                 Our Services
-//               </h3>
-//               <h3>
-//                 <span className="text-lg font-semibold"><br/>Everything you need for happy, healthy eyes!</span>
-//               </h3>
-//             </div>
-//             {/* <!-- section title --> */}
-//           </div>
-//         </div>
-//         {/* <!-- row --> */}
-//         <div className="row justify-content-center">
-//         {/* <div className="flex items-stretch -mx-4"> */}
-//         <div className="col-lg-1.5 col-md-0 col-sm-0"></div>
-//           <div className="col-lg-3 col-md-7 col-sm-8 h-full">
-//             <div
-//               className="single-services text-center mt-30 wow fadeIn"
-//               data-wow-duration="1s"
-//               data-wow-delay="0.2s"
-//             >
-//               <div className="services-icon">
-//                 <img
-//                   className="shape"
-//                   src="assets/images/services-shape.svg"
-//                   alt="shape"
-//                 />
-//                 <img
-//                   className="shape-1"
-//                   src="/images/Rectangle 1-6.jpg"
-//                   alt="shape"
-//                   style={{height: '100%', width: '200%'}}
-//                 />
-//                 {/* <i className="lni-baloon"></i> */}
-//               </div>
-//               <div className="services-content mt-30">
-//                 <h4 className="services-title"><a href="/service-products" >Comprehensive Eye Exam</a></h4>
-//                 <p className="text text-base">
-//                 for Adults/Senior/Children
-//                 </p>
-//                 <a className="more" href="/service-products"
-//                   >Learn More <i className="lni-chevron-right"></i></a>
-//               </div>
-//             </div>
-//             {/* <!-- single services --> */}
-//           </div>
-//           <div className="col-lg-3 col-md-7 col-sm-8 h-full	">
-//             <div
-//               className="single-services text-center mt-30 wow fadeIn"
-//               data-wow-duration="1s"
-//               data-wow-delay="0.5s"
-//             >
-//               <div className="services-icon">
-//                 <img
-//                   className="shape"
-//                   src="assets/images/services-shape.svg"
-//                   alt="shape"
-//                 />
-//                 <img 
-//                   className="shape-1"
-//                   src="/images/Rectangle 1-4.jpg"
-//                   alt="shape"
-//                   style={{height: '100%', width: '200%'}}
-//                 />
-//                 {/* <i className="lni-cog"></i> */}
-//               </div>
-//               <div className="services-content mt-30">
-//                 <h4 className="services-title"><a href="/service-products">Computer Vision Syndrome
-// </a></h4>
-//                 <p className="texttext-base">
-//                 Eye problems caused by prolonged computer use including: Eye irritation (Dry eyes, itchy eyes, red eyes) Blurred vision. Headaches.
-//                 </p>
-//                 <a className="more" href="/service-products">Learn More <i className="lni-chevron-right"></i></a>
-//               </div>
-//             </div>
-//             {/* <!-- single services --> */}
-//           </div>
-//           <div className="col-lg-3 col-md-7 col-sm-8 h-full	">
-//             <div
-//               className="single-services text-center mt-30 wow fadeIn"
-//               data-wow-duration="1s"
-//               data-wow-delay="0.8s"
-//             >
-//               <div className="services-icon">
-//                 <img
-//                   className="shape"
-//                   src="assets/images/services-shape.svg"
-//                   alt="shape"
-//                 />
-//                 <img
-//                   className="shape-1"
-//                   src="/images/Rectangle 1-5.jpg"
-//                   alt="shape"
-//                   style={{height: '100%', width: '200%'}}
-//                 />
-//                 {/* <i className="lni-bolt-alt"></i> */}
-//               </div>
-//               <div className="services-content mt-30">
-//                 <h4 className="services-title"><a href="/service-products">Lasik/PRK Surgery Consult</a></h4>
-//                 <p className="text text-base">
-//                 Pre-Op and Post-Op Care Cataract Surgery Management, Glaucoma Treatment, Macular Degeneration Care, Diabetic Eye Care.
-//                 </p>
-//                 <a className="more" href="/service-products">Learn More <i className="lni-chevron-right"></i></a>
-//               </div>
-//             </div>
-//             {/* <!-- single services --> */}
-//           </div>
-//           <div className="col-lg-1.5 col-md-0 col-sm-0"></div>
-          
-//         </div>
-//         {/* <!-- row --> */}
-//         {/* Explore more about our services */}
-       
-//       </div>
-//       <div className="flex justify-center pt-12">
-//           <Link href="/service-products">
-//                 <u className="explore-services-container uppercase rounded-full white text-lg font-semibold px-4 py-3">
-//                 Explore more of our services{" "}
-//                 </u>
-//               </Link>
-//         </div>
-//       {/* <!-- container --> */}
-//     </section>
-<>
+    //     <section id="features" className="services-area pt-82 px-px-120">
+    //       <div className="container">
+    //         <div className="row justify-content-center">
+    //           <div className="col-lg-10">
+    //             <div className="section-title text-center pb-30">
+    //               <div className="line m-auto"></div>
+    //               <h3 className="title">
+    //                 Our Services
+    //               </h3>
+    //               <h3>
+    //                 <span className="text-lg font-semibold"><br/>Everything you need for happy, healthy eyes!</span>
+    //               </h3>
+    //             </div>
+    //             {/* <!-- section title --> */}
+    //           </div>
+    //         </div>
+    //         {/* <!-- row --> */}
+    //         <div className="row justify-content-center">
+    //         {/* <div className="flex items-stretch -mx-4"> */}
+    //         <div className="col-lg-1.5 col-md-0 col-sm-0"></div>
+    //           <div className="col-lg-3 col-md-7 col-sm-8 h-full">
+    //             <div
+    //               className="single-services text-center mt-30 wow fadeIn"
+    //               data-wow-duration="1s"
+    //               data-wow-delay="0.2s"
+    //             >
+    //               <div className="services-icon">
+    //                 <img
+    //                   className="shape"
+    //                   src="assets/images/services-shape.svg"
+    //                   alt="shape"
+    //                 />
+    //                 <img
+    //                   className="shape-1"
+    //                   src="/images/Rectangle 1-6.jpg"
+    //                   alt="shape"
+    //                   style={{height: '100%', width: '200%'}}
+    //                 />
+    //                 {/* <i className="lni-baloon"></i> */}
+    //               </div>
+    //               <div className="services-content mt-30">
+    //                 <h4 className="services-title"><a href="/service-products" >Comprehensive Eye Exam</a></h4>
+    //                 <p className="text text-base">
+    //                 for Adults/Senior/Children
+    //                 </p>
+    //                 <a className="more" href="/service-products"
+    //                   >Learn More <i className="lni-chevron-right"></i></a>
+    //               </div>
+    //             </div>
+    //             {/* <!-- single services --> */}
+    //           </div>
+    //           <div className="col-lg-3 col-md-7 col-sm-8 h-full	">
+    //             <div
+    //               className="single-services text-center mt-30 wow fadeIn"
+    //               data-wow-duration="1s"
+    //               data-wow-delay="0.5s"
+    //             >
+    //               <div className="services-icon">
+    //                 <img
+    //                   className="shape"
+    //                   src="assets/images/services-shape.svg"
+    //                   alt="shape"
+    //                 />
+    //                 <img 
+    //                   className="shape-1"
+    //                   src="/images/Rectangle 1-4.jpg"
+    //                   alt="shape"
+    //                   style={{height: '100%', width: '200%'}}
+    //                 />
+    //                 {/* <i className="lni-cog"></i> */}
+    //               </div>
+    //               <div className="services-content mt-30">
+    //                 <h4 className="services-title"><a href="/service-products">Computer Vision Syndrome
+    // </a></h4>
+    //                 <p className="texttext-base">
+    //                 Eye problems caused by prolonged computer use including: Eye irritation (Dry eyes, itchy eyes, red eyes) Blurred vision. Headaches.
+    //                 </p>
+    //                 <a className="more" href="/service-products">Learn More <i className="lni-chevron-right"></i></a>
+    //               </div>
+    //             </div>
+    //             {/* <!-- single services --> */}
+    //           </div>
+    //           <div className="col-lg-3 col-md-7 col-sm-8 h-full	">
+    //             <div
+    //               className="single-services text-center mt-30 wow fadeIn"
+    //               data-wow-duration="1s"
+    //               data-wow-delay="0.8s"
+    //             >
+    //               <div className="services-icon">
+    //                 <img
+    //                   className="shape"
+    //                   src="assets/images/services-shape.svg"
+    //                   alt="shape"
+    //                 />
+    //                 <img
+    //                   className="shape-1"
+    //                   src="/images/Rectangle 1-5.jpg"
+    //                   alt="shape"
+    //                   style={{height: '100%', width: '200%'}}
+    //                 />
+    //                 {/* <i className="lni-bolt-alt"></i> */}
+    //               </div>
+    //               <div className="services-content mt-30">
+    //                 <h4 className="services-title"><a href="/service-products">Lasik/PRK Surgery Consult</a></h4>
+    //                 <p className="text text-base">
+    //                 Pre-Op and Post-Op Care Cataract Surgery Management, Glaucoma Treatment, Macular Degeneration Care, Diabetic Eye Care.
+    //                 </p>
+    //                 <a className="more" href="/service-products">Learn More <i className="lni-chevron-right"></i></a>
+    //               </div>
+    //             </div>
+    //             {/* <!-- single services --> */}
+    //           </div>
+    //           <div className="col-lg-1.5 col-md-0 col-sm-0"></div>
+
+    //         </div>
+    //         {/* <!-- row --> */}
+    //         {/* Explore more about our services */}
+
+    //       </div>
+    //       <div className="flex justify-center pt-12">
+    //           <Link href="/service-products">
+    //                 <u className="explore-services-container uppercase rounded-full white text-lg font-semibold px-4 py-3">
+    //                 Explore more of our services{" "}
+    //                 </u>
+    //               </Link>
+    //         </div>
+    //       {/* <!-- container --> */}
+    //     </section>
+    <>
       {/* <!--====== ABOUT PART START ======--> */}
       <div className="container pt-6">
         <div className="row justify-content-center">
@@ -165,63 +165,66 @@ export default function ServicesCatalogueHomePage() {
             {/* <!-- section title --> */}
           </div>
         </div>
-        <div className="grid  gap-6 mt-10 grid-cols-1 md:grid-cols-3 u-clearfix u-sheet mx-auto u-valign-middle u-sheet-1">
-        {homeServicesCards.map(({ img, text, head, conditions }) => (
-          <div key={img} className="p-2 shadow-lg ">
-            <div>
-              <Image
-                // layout="fill"
-                // objectFit="cover"
-                className="rounded-lg"
-                src={img}
-                alt=""
-                srcSet=""
-                height="250"
-                width="355"
-              />
-            </div>
-            <h1 className="text-blue-900 my-3 text-center font-semibold">
-              {head}
-            </h1>
-            <div className="px-6 py-4 ">
-              {seeMore[img] || text.slice(0, 250)}
-              {text.length > 250 && (
-                <span
-                  onClick={() => {
-                    setSeeMore((prev) => ({
-                      ...prev,
-                      [img]: prev[img] ? "" : text,
-                    }));
-                  }}
-                  className=" pl-2 text-blue-900 hover:underline cursor-pointer"
-                >
-                  see {seeMore[img] ? "less" : "more"}...
-                </span>
-              )}
-            </div>
-
-            {/* <div className="flex justify-center">
-            <div className="flex-end justify-center navbar-btn d-none d-sm-inline-block"> */}
-            <div className="flex align-items-center justify-center">
-              <a
-                className="main-btn-products"
-                data-scroll-nav="0"
-                href="https://docs.google.com/forms/d/e/1FAIpQLSfOr3fsy1F9RpZw9Gh8VyyUDAgm3Wg6HeskeIZRyiZvelRNNg/viewform?usp=sf_link" target="_blank"
-              >
-                Book your appointment{" "}
-              </a>
-              {/* <div className="long-arrow-right"></div> */}
-            </div>
-            {/* </div>
-              </div> */}
-            {conditions && (
-              <div className="px-6">
-                <p className="text-xs">{conditions} </p>
+        <div className="grid gap-2 mt-10 grid-cols-1 md:grid-cols-3 u-clearfix u-sheet mx-auto u-valign-middle u-sheet-1">
+          {homeServicesCards.map(({ img, text, head, conditions }) => (
+            <div key={img} className="p-2 shadow-lg card flex flex-col border border-gray-300 mx-2">
+              <div className="card-content flex-grow">
+                <div>
+                  <Image
+                    // layout="fill"
+                    // objectFit="cover"
+                    className="rounded-lg"
+                    src={img}
+                    alt=""
+                    srcSet=""
+                    height="250"
+                    width="355"
+                  />
+                </div>
+                <h1 className="text-blue-900 mt-3 text-center font-semibold">
+                  {head}
+                </h1>
+                <div className="px-2 py-4">
+                  {seeMore[img] || text.slice(0, 250)}
+                  {text.length > 250 && (
+                    <span
+                      onClick={() => {
+                        setSeeMore((prev) => ({
+                          ...prev,
+                          [img]: prev[img] ? "" : text,
+                        }));
+                      }}
+                      className="pl-2 text-blue-900 hover:underline cursor-pointer"
+                    >
+                      see {seeMore[img] ? "less" : "more"}...
+                    </span>
+                  )}
+                </div>
               </div>
-            )}
-          </div>
-        ))}
-      </div>
+              {/* <div className="flex justify-center">
+            <div className="flex-end justify-center navbar-btn d-none d-sm-inline-block"> */}
+              <div className="card-button">
+                <div className="flex align-items-center justify-center">
+                  <a
+                    className="main-btn-products"
+                    data-scroll-nav="0"
+                    href="https://docs.google.com/forms/d/e/1FAIpQLSfOr3fsy1F9RpZw9Gh8VyyUDAgm3Wg6HeskeIZRyiZvelRNNg/viewform?usp=sf_link" target="_blank"
+                  >
+                    Book your appointment{" "}
+                  </a>
+                  {/* <div className="long-arrow-right"></div> */}
+                </div>
+                {/* </div>
+              </div> */}
+                {conditions && (
+                  <div className="px-6">
+                    <p className="text-xs">{conditions} </p>
+                  </div>
+                )}
+              </div>
+            </div>
+          ))}
+        </div>
         {/* <section id="about" className="about-area pt-70">
           <div className="container">
             <div className="row">
@@ -242,16 +245,16 @@ export default function ServicesCatalogueHomePage() {
                     </h3>
                   </div>
                   {/* <!-- section title --> */}
-                  {/* <p className="text text-lg">
+        {/* <p className="text text-lg">
                   for Adults/Senior/Children.
                   </p> */}
-                 
-                  {/* <a href="/service-products" className="main-btn text-lg">
+
+        {/* <a href="/service-products" className="main-btn text-lg">
                     Learn more
                   </a> */}
-                {/* </div> */}
-                {/* <!-- about content --> */}
-              {/* </div>
+        {/* </div> */}
+        {/* <!-- about content --> */}
+        {/* </div>
               <div className="col-lg-6">
                 <div
                   className="about-image text-center mt-50 wow fadeInRightBig"
@@ -264,16 +267,16 @@ export default function ServicesCatalogueHomePage() {
                     style={{ maxHeight: "80%", maxWidth: "80%" }}
                   />
                 </div> */}
-                {/* <!-- about image --> */}
-              {/* </div>
+        {/* <!-- about image --> */}
+        {/* </div>
             </div> */}
-            {/* <!-- row --> */}
-          {/* </div> */}
-          {/* <!-- container --> */}
-          {/* <div className="about-shape-1">
+        {/* <!-- row --> */}
+        {/* </div> */}
+        {/* <!-- container --> */}
+        {/* <div className="about-shape-1">
             <img src="assets/images/about-shape-1.svg" alt="shape" />
           </div>
-        </section> */} 
+        </section> */}
 
         {/* <!--====== ABOUT PART ENDS ======--> */}
 
@@ -302,12 +305,12 @@ export default function ServicesCatalogueHomePage() {
                     </h3>
                   </div>
                   {/* <!-- section title --> */}
-                  {/* <a href="/service-products" className="main-btn">
+        {/* <a href="/service-products" className="main-btn">
                     Learn more
                   </a>
                 </div> */}
-                {/* <!-- about content --> */}
-              {/* </div>
+        {/* <!-- about content --> */}
+        {/* </div>
               <div className="col-lg-6 order-lg-first">
                 <div
                   className="about-image text-center mt-50 wow fadeInRightBig"
@@ -320,12 +323,12 @@ export default function ServicesCatalogueHomePage() {
                     style={{ maxHeight: "80%", maxWidth: "80%" }}
                   />
                 </div> */}
-                {/* <!-- about image --> */}
-              {/* </div>
+        {/* <!-- about image --> */}
+        {/* </div>
             </div> */}
-            {/* <!-- row --> */}
-          {/* </div> */}
-          {/* <!-- container --> */}
+        {/* <!-- row --> */}
+        {/* </div> */}
+        {/* <!-- container --> */}
         {/* </section> */}
 
         {/* <!--====== ABOUT PART START ======--> */}
@@ -356,17 +359,17 @@ export default function ServicesCatalogueHomePage() {
                     </h3>
                   </div>
                   {/* <!-- section title --> */}
-                  {/* <p className="text text-lg">
+        {/* <p className="text text-lg">
                   We have the relief you need with our Optometrist recommended selection of dry eye products.
                   <br/> Relieve dry, irritated eyes with our selection of high quality eye-drops, lid and eyelash care products, and therapeutic masks.
                   <br/>Perfect for the net addicts, cyberphiles and contact lens wearers out there!
                   </p> */}
-                    {/* <a href="/service-products" className="main-btn">
+        {/* <a href="/service-products" className="main-btn">
                     Learn more
                   </a>
                 </div> */}
-                {/* <!-- about content --> */}
-              {/* </div>
+        {/* <!-- about content --> */}
+        {/* </div>
               <div className="col-lg-6">
                 <div
                   className="about-image text-center mt-50 wow fadeInRightBig"
@@ -379,16 +382,16 @@ export default function ServicesCatalogueHomePage() {
                     style={{ maxHeight: "80%", maxWidth: "80%" }}
                   />
                 </div> */}
-                {/* <!-- about image --> */}
-              {/* </div>
+        {/* <!-- about image --> */}
+        {/* </div>
             </div> */}
-            {/* <!-- row --> */}
-          {/* </div> */}
-          {/* <!-- container --> */}
-          {/* <div className="about-shape-1">
+        {/* <!-- row --> */}
+        {/* </div> */}
+        {/* <!-- container --> */}
+        {/* <div className="about-shape-1">
             <img src="assets/images/about-shape-1.svg" alt="shape" />
           </div>
-        </section> */} 
+        </section> */}
         <div className="flex justify-center pt-12">
           {/* <Link href="/service-products">
             <u className="explore-services-container uppercase rounded-full white text-lg font-semibold px-4 py-3">
@@ -396,15 +399,15 @@ export default function ServicesCatalogueHomePage() {
             </u>
           </Link> */}
           <Link href="/service-products">
-                <u className="explore-services-container uppercase rounded-full white text-lg font-semibold px-4 py-3">
-                Explore more of our services{" "}
-                </u>
-              </Link>
+            <u className="explore-services-container uppercase rounded-full white text-lg font-semibold px-4 py-3">
+              Explore more of our services{" "}
+            </u>
+          </Link>
         </div>
       </div>
       {/* <!--====== ABOUT PART ENDS ======--> */}
 
-      {/* <!--====== ABOUT PART ENDS ======--> */}    
+      {/* <!--====== ABOUT PART ENDS ======--> */}
     </>
   );
 }
