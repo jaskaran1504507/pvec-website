@@ -1,19 +1,26 @@
 import React, { useEffect, useState } from "react";
 import Banner from "../../components/Banner";
 // import Button from "../../components/Button";
-import { Button, DatePicker, Form, Input, Radio, Select, notification } from "antd";
+import {
+  Button,
+  DatePicker,
+  Form,
+  Input,
+  Radio,
+  Select,
+  notification,
+} from "antd";
 import FloatInput from "../../components/FloatInput";
 import dayjs from "dayjs";
 import customParseFormat from "dayjs/plugin/customParseFormat";
 import moment from "moment";
 import { callApi } from "../../utils/apiUtils";
 import Appointment from "../../utils/endpoints/Appointment";
-import { useRouter } from 'next/router'
+import { useRouter } from "next/router";
 const { TextArea } = Input;
 
 const Bookings = () => {
-
-  let router= useRouter()
+  let router = useRouter();
   // const layout = {
   //   labelCol: { span: 8 },
   //   wrapperCol: { span: 24 },
@@ -105,7 +112,7 @@ const Bookings = () => {
         message: "Appointment request is received!",
         description: "Our staff will contact you soon.",
       });
-      router.push('/service-products');
+      router.push("/service-products");
     });
   };
 
@@ -217,7 +224,7 @@ const Bookings = () => {
     // return dayjs(todaysDate.toLocaleString("en-CA"), "DD/MM/YYYY");
     console.log("date, ", todaysDate.toLocaleString("en-CA"));
     let canDate = dayjs(todaysDate.toLocaleString("en-CA"), "YYYY-MM-DD");
-    if(!canDate){
+    if (!canDate) {
       console.log("canDate#1", canDate);
       canDate = dayjs(todaysDate.toLocaleString(), "DD/MM/YYYY");
     }
@@ -230,18 +237,20 @@ const Bookings = () => {
 
   return (
     <main>
-      <Banner
-        banner="banner-bookings-img"
-        text={
-          <span className="text-black md:text-white">
-            Get a full check up
-            <br />
-            with one of our Optometrists, we're available evenings
-            <br />
-            and weekends too!
-          </span>
-        }
-      />
+      <div className="mt-28 md:mt-0">
+        <Banner
+          banner="banner-bookings-img"
+          text={
+            <span className="text-black md:text-white">
+              Get a full check up
+              <br />
+              with one of our Optometrists, we're available evenings
+              <br />
+              and weekends too!
+            </span>
+          }
+        />
+      </div>
       <div className="flex justify-center mt-10 ">
         <div
           style={{ boxShadow: "0px 2px 5px rgba(0, 0, 0, 0.25)" }}
@@ -364,7 +373,7 @@ const Bookings = () => {
                 block
                 className="book-appointment-button"
                 htmlType="submit"
-                style={{backgroundColor : "#1D3D74"}}
+                style={{ backgroundColor: "#1D3D74" }}
               >
                 Book
               </Button>

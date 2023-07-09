@@ -110,122 +110,125 @@ export default function FeedbackHomePage() {
           > */}
 
           {/* <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4"> */}
-          <Carousel class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4"
-            additionalTransfrom={0}
-            arrows={false}
-            autoPlaySpeed={4000}
-            centerMode={false}
-            className=""
-            containerClass="container"
-            draggable
-            focusOnSelect={false}
-            infinite
-            itemClass=""
-            keyBoardControl
-            minimumTouchDrag={80}
-            pauseOnHover
-            renderArrowsWhenDisabled={false}
-            renderButtonGroupOutside={false}
-            responsive={responsive}
-            autoPlay
-            rewind
-            rewindWithAnimation
-            shouldResetAutoplay
-            showDots
-            sliderClass=""
-            slidesToSlide={1}
-            swipeable
-          >
-            {reviews && reviews.length > 0 ? (
-              reviews.map((review) => (
-                <div
-                  className="single-testimonial card flex flex-col border border-gray-300 mx-2"
-                  style={{ height: "420px" }}
-                >
-                  <div className="card-content flex-grow px-4 pt-2">
-                    <div className="testimonial-review d-flex align-items-center justify-content-between">
-                      <div className="quota">
-                        <i className="lni-quotation"></i>
-                      </div>
-                      <div className="star">
-                        <ul>
-                          <li>
-                            <i className="lni-star-filled"></i>
-                          </li>
-                          <li>
-                            <i className="lni-star-filled"></i>
-                          </li>
-                          <li>
-                            <i className="lni-star-filled"></i>
-                          </li>
-                          <li>
-                            <i className="lni-star-filled"></i>
-                          </li>
-                          {review.rating == 5 ? (
-                            <>
-                              <li>
-                                <i className="lni-star-filled"></i>
-                              </li>
-                            </>
-                          ) : (
-                            <>
-                              <li>
-                                <i className="lni-star"></i>
-                              </li>
-                            </>
-                          )}
-                        </ul>
-                      </div>
-                    </div>
-                    <div className="testimonial-text">
-                      <p className="text">
-                        <div className="px-3 py-2 ">
-                          {seeMore[review.text] || review.text.slice(0, 300)}
-                          {review.text.length > 300 && (
-                            <span
-                              onClick={() => {
-                                setSeeMore((prev) => ({
-                                  ...prev,
-                                  [review.text]: prev[review.text]
-                                    ? ""
-                                    : review.text,
-                                }));
-                              }}
-                              className="pl-2 text-blue-900 hover:underline cursor-pointer"
-                            >
-                              see {seeMore[review.text] ? "less" : "more"}...
-                            </span>
-                          )}
+          <div className="flex justify-center">
+            <Carousel
+              class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4"
+              additionalTransfrom={0}
+              arrows={false}
+              autoPlaySpeed={4000}
+              centerMode={false}
+              className=""
+              containerClass="container md:px-4 px-0"
+              draggable
+              focusOnSelect={false}
+              infinite
+              itemClass=""
+              keyBoardControl
+              minimumTouchDrag={80}
+              pauseOnHover
+              renderArrowsWhenDisabled={false}
+              renderButtonGroupOutside={false}
+              responsive={responsive}
+              autoPlay
+              rewind
+              rewindWithAnimation
+              shouldResetAutoplay
+              showDots
+              sliderClass=""
+              slidesToSlide={1}
+              swipeable
+            >
+              {reviews && reviews.length > 0 ? (
+                reviews.map((review) => (
+                  <div
+                    className="single-testimonial card flex flex-col border border-gray-300 mx-2"
+                    style={{ height: "420px" }}
+                  >
+                    <div className="card-content flex-grow px-4 pt-2">
+                      <div className="testimonial-review d-flex align-items-center justify-content-between">
+                        <div className="quota">
+                          <i className="lni-quotation"></i>
                         </div>
-                      </p>
+                        <div className="star">
+                          <ul>
+                            <li>
+                              <i className="lni-star-filled"></i>
+                            </li>
+                            <li>
+                              <i className="lni-star-filled"></i>
+                            </li>
+                            <li>
+                              <i className="lni-star-filled"></i>
+                            </li>
+                            <li>
+                              <i className="lni-star-filled"></i>
+                            </li>
+                            {review.rating == 5 ? (
+                              <>
+                                <li>
+                                  <i className="lni-star-filled"></i>
+                                </li>
+                              </>
+                            ) : (
+                              <>
+                                <li>
+                                  <i className="lni-star"></i>
+                                </li>
+                              </>
+                            )}
+                          </ul>
+                        </div>
+                      </div>
+                      <div className="testimonial-text">
+                        <p className="text">
+                          <div className="px-3 py-2 ">
+                            {seeMore[review.text] || review.text.slice(0, 300)}
+                            {review.text.length > 300 && (
+                              <span
+                                onClick={() => {
+                                  setSeeMore((prev) => ({
+                                    ...prev,
+                                    [review.text]: prev[review.text]
+                                      ? ""
+                                      : review.text,
+                                  }));
+                                }}
+                                className="pl-2 text-blue-900 hover:underline cursor-pointer"
+                              >
+                                see {seeMore[review.text] ? "less" : "more"}...
+                              </span>
+                            )}
+                          </div>
+                        </p>
+                      </div>
+                    </div>
+                    <div className="card-button">
+                      <div className="testimonial-author d-flex align-items-center">
+                        <div className="author-image">
+                          <img
+                            className="shape"
+                            src="assets/images/textimonial-shape.svg"
+                            alt="shape"
+                          />
+                          <img
+                            className="author"
+                            src={review.profile_photo_url}
+                            alt="author"
+                          />
+                        </div>
+                        <div className="author-content media-body">
+                          <h6 className="holder-name">{review.author_name}</h6>
+                          {/* <p className="text">UX Specialist, Yoast</p> */}
+                        </div>
+                      </div>
                     </div>
                   </div>
-                  <div className="card-button">
-                    <div className="testimonial-author d-flex align-items-center">
-                      <div className="author-image">
-                        <img
-                          className="shape"
-                          src="assets/images/textimonial-shape.svg"
-                          alt="shape"
-                        />
-                        <img
-                          className="author"
-                          src={review.profile_photo_url}
-                          alt="author"
-                        />
-                      </div>
-                      <div className="author-content media-body">
-                        <h6 className="holder-name">{review.author_name}</h6>
-                        {/* <p className="text">UX Specialist, Yoast</p> */}
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              ))
-            ) : (
-              <p>No reviews found.</p>
-            )}
-          </Carousel>
+                ))
+              ) : (
+                <p>No reviews found.</p>
+              )}
+            </Carousel>
+          </div>
           {/* </div> */}
         </div>
         <div className="flex justify-center pt-12">
@@ -268,7 +271,6 @@ export default function FeedbackHomePage() {
           </div>
         </div>
       </div> */}
-
     </>
   );
 }

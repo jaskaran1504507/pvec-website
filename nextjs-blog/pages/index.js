@@ -11,24 +11,27 @@ export default function Home() {
   return (
     <main>
       <Helmet></Helmet>
-      <Carousel autoPlay swipeable infiniteLoop interval='5000'>
-        {banner.map((b) => (
-          <div className="pb-2 md:py-0" key={b.img}>
-            <Banner
-              banner={b.img}
-              textColor={b.textColor}
-              text={b.text}
-              description={b.description}
-              subText={b.subText}
-              subText2={b.subText2}
-              subText3={b.subText3}
-            ></Banner>
-          </div>
-        ))}
-      </Carousel>{" "}
+
+      <div className="md:mt-0 mt-28">
+        <Carousel dynamicHeight autoPlay swipeable infiniteLoop interval="5000">
+          {banner.map((b) => (
+            <div className="pb-2 md:py-0 md:h-auto h-96" key={b.img}>
+              <Banner
+                banner={b.img}
+                textColor={b.textColor}
+                text={b.text}
+                description={b.description}
+                subText={b.subText}
+                subText2={b.subText2}
+                subText3={b.subText3}
+              ></Banner>
+            </div>
+          ))}
+        </Carousel>
+      </div>
       <ServicesCatalogueHomePage />
       <ProductCatalogueHomePage />
-      <FeedbackHomePage  />
+      <FeedbackHomePage />
     </main>
   );
 }
