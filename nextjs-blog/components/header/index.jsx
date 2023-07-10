@@ -350,7 +350,6 @@ export default function Header() {
                             </div>
                           </div>
                         </li>
-
                         <li className="nav-item">
                           <div className="contacts-option relative group">
                             <div className="absolute -inset-0.5 bg-gradient-to-r from-cyan-800 to-sky-500 rounded-lg blur opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-tilt"></div>
@@ -415,11 +414,11 @@ export default function Header() {
                                 Services
                               </span>
                             </a>
-                            <div className="dropdown-content-services">
+                            <div className="dropdown-content-services top-8 right-12">
                               {cards.map((service) => (
                                 <a href={"/services#" + service.id}>
                                   <div className="flex my-1">
-                                    <h2 className="font-bold mx-2">
+                                    <h2 className="md:font-bold mx-2">
                                       {service.head2}
                                     </h2>
                                   </div>
@@ -582,6 +581,86 @@ export default function Header() {
                                 </div>
                               </a>
                             </div>
+                          </div>
+                        </li>
+                        <li className="nav-item active  md:hidden ">
+                          <div className="relative group">
+                            <div className="absolute -inset-0.5 bg-gradient-to-r from-cyan-800 to-sky-500 rounded-lg blur opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-tilt"></div>
+
+                            <a
+                              className={classNames(
+                                "page-scroll rounded-lg",
+                                "bg-black"
+                              )}
+                              href="https://docs.google.com/forms/d/e/1FAIpQLSeciQeXbMzKdezp0kkCx1Itxm1SCnUL5bv1C7rT1m1aBp1vsg/viewform?usp=sf_link"
+                              target="_blank"
+                            >
+                              <span className="flex items-center ">
+                                {" "}
+                                <span
+                                  className={classNames(
+                                    "px-1 font-bold text-black",
+                                    "text-white"
+                                  )}
+                                >
+                                  Order sontacts
+                                </span>
+                              </span>
+                            </a>
+                          </div>
+                        </li>
+                        <li className="nav-item active  md:hidden ">
+                          <div className="relative group">
+                            <div className="absolute -inset-0.5 bg-gradient-to-r from-cyan-800 to-sky-500 rounded-lg blur opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-tilt"></div>
+
+                            <a
+                              className={classNames(
+                                "page-scroll rounded-lg",
+                                "bg-black"
+                              )}
+                              href="https://docs.google.com/forms/d/e/1FAIpQLSeciQeXbMzKdezp0kkCx1Itxm1SCnUL5bv1C7rT1m1aBp1vsg/viewform?usp=sf_link"
+                              target="_blank"
+                              Check
+                              Benefits
+                            >
+                              <span className="flex items-center ">
+                                {" "}
+                                <span
+                                  className={classNames(
+                                    "px-1 font-bold text-black",
+                                    "text-white"
+                                  )}
+                                >
+                                  Book Appointment
+                                </span>
+                              </span>
+                            </a>
+                          </div>
+                        </li>{" "}
+                        <li className="nav-item active  md:hidden ">
+                          <div className="relative group">
+                            <div className="absolute -inset-0.5 bg-gradient-to-r from-cyan-800 to-sky-500 rounded-lg blur opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-tilt"></div>
+
+                            <a
+                              className={classNames(
+                                "page-scroll rounded-lg",
+                                "bg-black"
+                              )}
+                              href="https://docs.google.com/forms/d/e/1FAIpQLSeciQeXbMzKdezp0kkCx1Itxm1SCnUL5bv1C7rT1m1aBp1vsg/viewform?usp=sf_link"
+                              target="_blank"
+                            >
+                              <span className="flex items-center ">
+                                {" "}
+                                <span
+                                  className={classNames(
+                                    "px-1 font-bold text-black",
+                                    "text-white"
+                                  )}
+                                >
+                                  Check Benefits
+                                </span>
+                              </span>
+                            </a>
                           </div>
                         </li>
                       </ul>
