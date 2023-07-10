@@ -23,7 +23,7 @@ export default function ServiceProducts() {
   return (
     <main>
       <div className="grid gap-16 mt-20 grid-cols-1 md:grid-cols-2 u-clearfix u-sheet mx-auto u-valign-middle u-sheet-1">
-        <div>
+        <div className="mt-8 md:mt-0">
           <h2
             style={{
               textAlign: "left",
@@ -87,7 +87,11 @@ export default function ServiceProducts() {
       </div>
       <div className="grid gap-1 mt-10 grid-cols-1 md:grid-cols-3 u-clearfix u-sheet mx-auto u-valign-middle u-sheet-1">
         {cards.map(({ img, text, head, conditions, id }) => (
-          <div id={id} key={img} className="p-2 shadow-lg card flex flex-col border border-gray-300 mx-2">
+          <div
+            id={id}
+            key={img}
+            className="p-2 shadow-lg card flex flex-col border border-gray-300 mx-2"
+          >
             <div className="card-content flex-grow">
               <div>
                 <Image
@@ -127,7 +131,7 @@ export default function ServiceProducts() {
             <div className="flex-end justify-center navbar-btn d-none d-sm-inline-block"> */}
 
             <div className="card-button">
-            {conditions && (
+              {conditions && (
                 <div className="px-6">
                   <p className="text-xs">{conditions} </p>
                 </div>
