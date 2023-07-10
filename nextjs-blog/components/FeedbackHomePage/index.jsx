@@ -129,7 +129,7 @@ export default function FeedbackHomePage() {
               renderArrowsWhenDisabled={false}
               renderButtonGroupOutside={false}
               responsive={responsive}
-              autoPlay
+              // autoPlay
               rewind
               rewindWithAnimation
               shouldResetAutoplay
@@ -182,8 +182,8 @@ export default function FeedbackHomePage() {
                       <div className="testimonial-text">
                         <p className="text">
                           <div className="px-3 py-2 ">
-                            {seeMore[review.text] || review.text.slice(0, 300)}
-                            {review.text.length > 300 && (
+                            {seeMore[review.text] || review.text.slice(0, 250)}
+                            {review.text.length > 250 && (
                               <span
                                 onClick={() => {
                                   setSeeMore((prev) => ({
@@ -203,7 +203,7 @@ export default function FeedbackHomePage() {
                       </div>
                     </div>
                     <div className="card-button">
-                      <div className="testimonial-author d-flex align-items-center">
+                      <div className="mt-0 testimonial-author d-flex align-items-center">
                         <div className="author-image">
                           <img
                             className="shape"
