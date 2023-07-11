@@ -267,7 +267,7 @@ export default function ProductCatalogueHomePage() {
 
         <div className="flex justify-center pt-12">
           <Link href="/service-products">
-            <u className="explore-services-container uppercase rounded-full white text-lg font-semibold px-4 py-3">
+            <u className="explore-services-container uppercase rounded-full white md:text-lg font-semibold px-4 py-3">
               Explore our range of products{" "}
             </u>
           </Link>
