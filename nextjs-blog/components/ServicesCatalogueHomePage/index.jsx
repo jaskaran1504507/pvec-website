@@ -149,7 +149,7 @@ export default function ServicesCatalogueHomePage() {
     //     </section>
     <>
       {/* <!--====== ABOUT PART START ======--> */}
-      <div className="container pt-6">
+      <div className="container md:pt-6">
         <div className="row justify-content-center">
           <div className="col-lg-10">
             <div className="section-title text-center pb-30">
@@ -165,7 +165,7 @@ export default function ServicesCatalogueHomePage() {
             {/* <!-- section title --> */}
           </div>
         </div>
-        <div className="grid gap-2 mt-10 grid-cols-1 md:grid-cols-3 u-clearfix u-sheet mx-auto u-valign-middle u-sheet-1">
+        <div className="grid gap-2 md:mt-10 grid-cols-1 md:grid-cols-3 u-clearfix u-sheet mx-auto u-valign-middle u-sheet-1">
           {homeServicesCards.map(({ img, text, head, conditions }) => (
             <div key={img} className="p-2 shadow-lg card flex flex-col border border-gray-300 mx-2">
               <div className="card-content flex-grow">

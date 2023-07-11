@@ -272,7 +272,7 @@ export const banner = [
   },
   {
     textColor: "white",
-    img: "banner-home-img-2",
+    img: "banner-home-img-4",
     text: <>We direct bill to all major insurance providers.<br />We also partner with First Nation Health Authority (FNHA) and People with Disability (PwD) on government assistance.</>,
   },
   {
