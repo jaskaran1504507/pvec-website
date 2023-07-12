@@ -63,7 +63,7 @@ export default function FeedbackHomePage() {
     const fetchReviews = async () => {
       callApi({ uriEndPoint: { uri: "/reviews", method: "GET", version: "" } })
         .then((res) => {
-          console.log("res : ", res);
+          // console.log("res : ", res);
           setReviews(res.reviews);
         })
         .catch((err) => console.log("err", err));

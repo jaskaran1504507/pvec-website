@@ -1,5 +1,6 @@
 export const cards = [
   {
+    seq : 1,
     id: 'service-1',
     text: `
         A comprehensive exam includes a refraction check as well as complete health
@@ -15,6 +16,7 @@ export const cards = [
     head2: "Comprehensive eye exam",
   },
   {
+    seq : 2,
     id: 'service-2',
     img: "/images/AboutUs_Unslapsh.png",
     head: (
@@ -33,6 +35,7 @@ export const cards = [
             charges.)`,
   },
   {
+    seq : 3,
     id: 'service-3',
     img: "/images/PVEC_ContactLenses.jpeg",
     head: (
@@ -52,6 +55,7 @@ export const cards = [
     Ask about how to get free trial contacts!`,
   },
   {
+    seq : 4,
     id: 'service-4',
     img: "/images/Rectangle 1.jpg",
     head: (
@@ -69,6 +73,7 @@ export const cards = [
     relief you are looking for.`,
   },
   {
+    seq : 5,
     id: 'service-5',
     img: "/images/Rectangle 1-4.jpg",
     head: "Dry Eye Treatment",
@@ -76,6 +81,7 @@ export const cards = [
     text: "Dry eye happens when your eye don't make enough tears to stay wet, or when your tears don't work correctly. This can make your eyes feel uncomfortable, and in some cases it can also cause vision problems.",
   },
   {
+    seq : 6,
     id: 'service-6',
     head: "LASIK/PRK Surgery Consultation",
     head2: 'LASIK/PRK Consultation',
@@ -83,6 +89,7 @@ export const cards = [
     img: "/images/Rectangle 1-5.jpg",
   },
   {
+    seq : 7,
     id: 'service-7',
     head: "Rigid Gas Permeable (RGPs) & Scleral Lenses Fitting",
     head2: 'RGPs & Scleral Lenses Fitting',
@@ -92,6 +99,7 @@ export const cards = [
     img: "/images/lens-fitting.jpg",
   },
   {
+    seq : 8,
     id: 'service-8',
     img: "/images/Rectangle 1-7.jpg",
     text: `Patients experiencing ocular emergencies can be fit in same if necessary; even if we are
@@ -104,6 +112,7 @@ export const cards = [
     head2: 'Eye Emergencies',
   },
   {
+    seq : 9,
     id: 'service-9',
     img: "/images/Rectangle 1-3.jpg",
     head: "Light Sensitivity Treatment",
@@ -111,6 +120,7 @@ export const cards = [
     text: "Light sensitivity, or photophobia, is a condition in which bright light hurts your eyes. This condition can range from mild to severe.",
   },
   {
+    seq : 10,
     id: 'service-10',
     img: "/images/Rectangle 1-2.jpg",
     head: (
@@ -192,62 +202,87 @@ export const productCatalogue = [
 ];
 
 export const brandsArr = [
-  { link: "PVEC_FYSH.jpeg", addr: "https://fyshuk.com", name: "FYSH" },
+  { seq: 1, link: "PVEC_FYSH.jpeg", addr: "https://fyshuk.com", name: "FYSH",
+    backgroundImage: "fysh_bk.jpeg"
+  },
   {
+    seq: 2,
     link: "PVEC_Guess.jpeg",
     addr: "https://www.guess.com/us/en/women/accessories/sunglasses",
     name: "Guess",
+    backgroundImage: "Guess_bk.avif"
   },
   {
+    seq: 3,
     link: "PVEC_HugoBoss.png",
     addr: "https://www.hugoboss.com/men-glasses/",
     name: "Hugo Boss",
+    backgroundImage: "hugo_boss_bk.webp"
   },
   {
+    seq: 4,
     link: "PVEC_KateSpade.png",
     addr: "https://www.katespade.com/shop/accessories/sunglasses-reading-glasses",
     name: "Kate Spade",
+    backgroundImage: "kate_spade_bk.webp"
   },
   {
+    seq: 5,
     link: "PVEC_KliikDenmark.jpeg",
     addr: "https://www.kliik.com/",
     name: "KLiik",
+    backgroundImage: "kliik_bk.jpeg"
   },
   {
+    seq: 6,
     link: "PVEC_LaFont.png",
     addr: "https://www.lafont.com/the-collection/",
     name: "Lafont",
+    backgroundImage: "lofant_bk.jpeg"
   },
   {
+    seq: 7,
     link: "PVEC_MarcJacobs.jpeg",
     addr: "https://www.marcjacobs.com/default/the-marc-jacobs/the-accessories/sunglasses/",
     name: "Marc Jacobs",
+    backgroundImage: "marc_jacobs_bk.webp"
   },
   {
+    seq: 8,
     link: "PVEC_MichaelKors.jpeg",
     addr: "https://www.michaelkors.ca/men/accessories/sunglasses/_/N-285v",
     name: "Michael Kors",
+    backgroundImage: "Michael-Kors_bk.jpeg"
   },
   {
+    seq: 9,
     link: "PVEC_Moleskine.png",
     addr: "https://moleskine-eyewear.com/en/",
     name: "Moleskine",
+    backgroundImage: "moleskiene_bk.jpeg"
   },
   {
+    seq: 10,
     link: "PVEC_Oakley.png",
     addr: "https://www.oakley.com/en-eu",
     name: "Oakley",
+    backgroundImage: "Oakley_bk.jpeg"
   },
   {
+    seq: 11,
     link: "PVEC_RayBan.png",
     addr: "https://www.ray-ban.com/canada/en",
     name: "Ray Ban",
+    backgroundImage: "rayban_bk.jpeg"
   },
-  { link: "PVEC_Superflex.jpeg", addr: "", name: "Superflex" },
+  {  seq: 12, link: "PVEC_Superflex.jpeg", addr: "", name: "Superflex",
+  backgroundImage: "superflex_bk.jpg" },
   {
+    seq: 13,
     name: "Tom Ford",
     link: "PVEC_TF.png",
     addr: "https://www.tomford.com/eyewear/men/optical/",
+    backgroundImage: "tom_ford_bk.jpeg"
   },
 
   // {
