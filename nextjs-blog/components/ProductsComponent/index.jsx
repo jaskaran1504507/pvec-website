@@ -156,38 +156,6 @@ export default function ProductsComponent() {
         <div className="mt-12"> <LogoRow logos={brandsArr} /></div>
 
         {/* Advanced corousel section to showcase a brand or more, brand image on left, 4 images on right */}
-        <div className="my-8 grid grid-cols-1 md:grid-cols-2 gap-2">
-          {/* <div className="mt-4 flex justify-center md:justify-end">
-            <Image src="/images/kliilk_shop.jpg" height="300" width="300" />
-          </div> */}
-          <div className="relative" onMouseEnter={handleMouseEnter}
-            onMouseLeave={handleMouseLeave}>
-            {/* <Link href="#"> */}
-            <a className="block">
-              <img src="/images/kliilk_shop.jpg" alt="Image" className="w-full h-auto" />
-              <div
-                className={`text-slit absolute bottom-0 left-0 right-0 p-4 bg-gray-700 over:opacity-100 text-white text-center ${isHovered ? 'opacity-1' : 'opacity-0'} transition-opacity duration-200 ease-in-out text-center`}
-              >Buy KLiik</div>
-            </a>
-            {/* </Link> */}
-          </div>
-          <div className=" font-semibold text-blue-900 mt-24">
-            "Dr. Wayne Yip is the primary optometrist here at Performance
-            Vision EyeCare. <br />
-            Dr. Yip attended the University of Waterloo for his
-            undergraduate program and then graduated from the prestigious
-            New England College of Optometry in 2014; he has been working in
-            British Columbia since then. Aside from primary care, with his
-            over a decade of experience in providing comprehensive care, Dr.
-            Yip has developed a keen interest in specialized contact lenses
-            for the treatment of corneal conditions and dystrophies such as
-            keratoconus, post refractive surgery complications, and severe
-            chronic dry eye. In addition, Dr. Yip has personal experience
-            and can especially relate to patients with complicated
-            prescriptions due to his own high myopia."
-          </div>
-        </div>
-
         <div className="my-8"> <BrandsGrid /></div>
 
       </div>
