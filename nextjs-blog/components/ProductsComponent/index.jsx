@@ -7,9 +7,7 @@ import Products from "../../utils/endpoints/Products";
 import { callApi } from "../../utils/apiUtils";
 import Slider from "../../components/Slider";
 import LogoRow from "../../components/LogoRow";
-import Image from "next/image";
 import { brandsArr } from "../../constant";
-import Link from "next/link";
 import BrandsGrid from "../BrandsGrid";
 
 const { Search } = Input;
@@ -24,16 +22,6 @@ export default function ProductsComponent() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [search, setSearch] = useState("");
   const [products, setProducts] = useState([]);
-
-  const [isHovered, setIsHovered] = useState(false);
-
-  const handleMouseEnter = () => {
-    setIsHovered(true);
-  };
-
-  const handleMouseLeave = () => {
-    setIsHovered(false);
-  };
 
   const showModal = () => {
     setIsModalOpen(true);
