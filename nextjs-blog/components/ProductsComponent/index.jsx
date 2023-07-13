@@ -7,7 +7,7 @@ import Products from "../../utils/endpoints/Products";
 import { callApi } from "../../utils/apiUtils";
 import Slider from "../../components/Slider";
 import LogoRow from "../../components/LogoRow";
-import { brandsArr } from "../../constant";
+import { brandsArr, contactsBrandsArr, gridGlassesBrands, gridContactsBrands } from "../../constant";
 import BrandsGrid from "../BrandsGrid";
 
 const { Search } = Input;
@@ -107,6 +107,52 @@ export default function ProductsComponent() {
     } else if (router.pathname == "/glasses-contacts")
       return "Glasses & Contacts";
   }
+
+  function getBrands() {
+    if (router?.query?.query == "eye-medic") {
+      return null;
+    } else if (router?.query?.query == "contacts") {
+      return contactsBrandsArr;
+    } else if (router?.query?.query == "glasses") {
+      return brandsArr;
+    } else if (router.pathname == "/glasses-contacts")
+      return brandsArr;
+  }
+
+  function getBrandHead() {
+    if (router?.query?.query == "eye-medic") {
+      return null;
+    } else if (router?.query?.query == "contacts") {
+      return {
+        imageUrl: "/images/acuvue-shop1.jpeg",
+        linkUrl: "https://www.acuvue.ca/",
+        linkText: "Buy Acuvue"
+      };
+    } else if (router?.query?.query == "glasses") {
+      return {
+        imageUrl: "/images/kliilk_shop.jpg",
+        linkUrl: "https://www.kliik.com/",
+        linkText: "Buy KLiik"
+      };
+    } else if (router.pathname == "/glasses-contacts")
+      return {
+        imageUrl: "/images/kliilk_shop.jpg",
+        linkUrl: "https://www.kliik.com/",
+        linkText: "Buy KLiik"
+      };
+  }
+
+  function getGridBrands() {
+    if (router?.query?.query == "eye-medic") {
+      return null;
+    } else if (router?.query?.query == "contacts") {
+      return gridContactsBrands;
+    } else if (router?.query?.query == "glasses") {
+      return gridGlassesBrands;
+    } else if (router.pathname == "/glasses-contacts")
+      return gridGlassesBrands;
+  }
+
   const productDict = {};
   cartProducts?.forEach((product, i) => {
     productDict[product?._id] = i;
@@ -135,16 +181,16 @@ export default function ProductsComponent() {
                 subText2={b.subText2}
                 subText3={b.subText3}
               ></Banner>
-            </div>
+            </div>`
           ))}
         </Carousel> */}
-        <Slider slides={brandsArr} />
+        <Slider slides={getBrands()} />
 
         {/* Brands list with logo */}
-        <div className="mt-12"> <LogoRow logos={brandsArr} /></div>
+        <div className="mt-12"> <LogoRow logos={getBrands()} /></div>
 
         {/* Advanced corousel section to showcase a brand or more, brand image on left, 4 images on right */}
-        <div className="my-8"> <BrandsGrid /></div>
+        <div className="my-8"> <BrandsGrid head={getBrandHead()} gridBrands={getGridBrands()} /></div>
 
       </div>
       <div className="section-title mx-10">
