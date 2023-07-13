@@ -1,6 +1,6 @@
 export const cards = [
   {
-    seq : 1,
+    seq: 1,
     id: 'service-1',
     text: `
         A comprehensive exam includes a refraction check as well as complete health
@@ -16,7 +16,7 @@ export const cards = [
     head2: "Comprehensive eye exam",
   },
   {
-    seq : 2,
+    seq: 2,
     id: 'service-2',
     img: "/images/AboutUs_Unslapsh.png",
     head: (
@@ -35,7 +35,7 @@ export const cards = [
             charges.)`,
   },
   {
-    seq : 3,
+    seq: 3,
     id: 'service-3',
     img: "/images/PVEC_ContactLenses.jpeg",
     head: (
@@ -55,7 +55,7 @@ export const cards = [
     Ask about how to get free trial contacts!`,
   },
   {
-    seq : 4,
+    seq: 4,
     id: 'service-4',
     img: "/images/Rectangle 1.jpg",
     head: (
@@ -73,7 +73,7 @@ export const cards = [
     relief you are looking for.`,
   },
   {
-    seq : 5,
+    seq: 5,
     id: 'service-5',
     img: "/images/Rectangle 1-4.jpg",
     head: "Dry Eye Treatment",
@@ -81,7 +81,7 @@ export const cards = [
     text: "Dry eye happens when your eye don't make enough tears to stay wet, or when your tears don't work correctly. This can make your eyes feel uncomfortable, and in some cases it can also cause vision problems.",
   },
   {
-    seq : 6,
+    seq: 6,
     id: 'service-6',
     head: "LASIK/PRK Surgery Consultation",
     head2: 'LASIK/PRK Consultation',
@@ -89,7 +89,7 @@ export const cards = [
     img: "/images/Rectangle 1-5.jpg",
   },
   {
-    seq : 7,
+    seq: 7,
     id: 'service-7',
     head: "Rigid Gas Permeable (RGPs) & Scleral Lenses Fitting",
     head2: 'RGPs & Scleral Lenses Fitting',
@@ -99,7 +99,7 @@ export const cards = [
     img: "/images/lens-fitting.jpg",
   },
   {
-    seq : 8,
+    seq: 8,
     id: 'service-8',
     img: "/images/Rectangle 1-7.jpg",
     text: `Patients experiencing ocular emergencies can be fit in same if necessary; even if we are
@@ -112,7 +112,7 @@ export const cards = [
     head2: 'Eye Emergencies',
   },
   {
-    seq : 9,
+    seq: 9,
     id: 'service-9',
     img: "/images/Rectangle 1-3.jpg",
     head: "Light Sensitivity Treatment",
@@ -120,7 +120,7 @@ export const cards = [
     text: "Light sensitivity, or photophobia, is a condition in which bright light hurts your eyes. This condition can range from mild to severe.",
   },
   {
-    seq : 10,
+    seq: 10,
     id: 'service-10',
     img: "/images/Rectangle 1-2.jpg",
     head: (
@@ -202,7 +202,8 @@ export const productCatalogue = [
 ];
 
 export const brandsArr = [
-  { seq: 1, link: "PVEC_FYSH.jpeg", addr: "https://fyshuk.com", name: "FYSH",
+  {
+    seq: 1, link: "PVEC_FYSH.jpeg", addr: "https://fyshuk.com", name: "FYSH",
     backgroundImage: "fysh_bk.jpeg"
   },
   {
@@ -275,8 +276,10 @@ export const brandsArr = [
     name: "Ray Ban",
     backgroundImage: "rayban_bk.jpeg"
   },
-  {  seq: 12, link: "PVEC_Superflex.jpeg", addr: "", name: "Superflex",
-  backgroundImage: "superflex_bk.jpg" },
+  {
+    seq: 12, link: "PVEC_Superflex.jpeg", addr: "", name: "Superflex",
+    backgroundImage: "superflex_bk.jpg"
+  },
   {
     seq: 13,
     name: "Tom Ford",
@@ -382,23 +385,77 @@ export const productCards = [
 
 export const contactsBrandsArr = [
   {
+    seq: 1,
     link: "acuvue_logo.png",
     addr: "https://www.acuvue.ca/",
     name: "Acuvue",
+    backgroundImage : "acuvue_bk.jpeg"
   },
   {
+    seq: 2,
     link: "Bausch-Lomb-logo.png",
     addr: "https://www.bausch.ca/en-ca/",
     name: "Bausch+Lomb",
+    backgroundImage : "Bausch-Lomb_bk2.webp"
   },
   {
+    seq: 3,
     link: "cooper_vision_logo.png",
     addr: "https://coopervision.ca/",
-    name: "CooperVision"
+    name: "CooperVision",
+    backgroundImage : "cooper_vision_bk.png"
   },
   {
+    seq: 4,
     link: "myAlcon_logo.png",
     addr: "https://www.myalcon.com/ca/en/",
     name: "My Alcon",
+    backgroundImage : "alcon_bk.jpeg"
+  },
+];
+
+export const gridGlassesBrands = [
+  {
+    imageUrl: "/images/rayban_shop.jpeg",
+    linkUrl: "https://www.ray-ban.com/canada/en",
+    linkText: "Buy Ray Ban"
+  },
+  {
+    imageUrl: "/images/lafont-shop.jpeg",
+    linkUrl: "https://www.lafont.com/the-collection/",
+    linkText: "Buy Lafont"
+  },
+  {
+    imageUrl: "/images/fysh_shop2.jpeg",
+    linkUrl: "https://fyshuk.com",
+    linkText: "Buy Fysh"
+  },
+  {
+    imageUrl: "/images/hugo_boss_shop.jpeg",
+    linkUrl: "https://www.hugoboss.com/men-glasses/",
+    linkText: "Buy Hugo Boss"
+  },
+];
+
+export const gridContactsBrands = [
+  {
+    imageUrl: "/images/acuvue_shop.jpeg",
+    linkUrl: "https://www.acuvue.ca/",
+    linkText: "Buy Acuvue"
+  },
+  {
+    imageUrl: "/images/Bausch-Lomb_bk2.webp",
+    linkUrl: "https://www.bausch.ca/en-ca/",
+    linkText: "Buy Bausch+Lomb"
+  },
+  {
+    imageUrl: "/images/cooper_vision_shop.webp",
+    linkUrl: "https://coopervision.ca/",
+    linkText: "Buy CooperVision"
+  },
+  {
+    imageUrl: "/images/alcon_shop.jpeg",
+    linkUrl: "https://www.myalcon.com/ca/en/",
+    linkText: "Buy My Alcon"
   },
 ];
