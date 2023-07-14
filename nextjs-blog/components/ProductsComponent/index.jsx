@@ -193,7 +193,7 @@ export default function ProductsComponent() {
         <div className="my-8"> <BrandsGrid head={getBrandHead()} gridBrands={getGridBrands()} /></div>
 
       </div>
-      <div className="section-title mx-10">
+      {/* <div className="section-title mx-10">
         <div className="line"></div>
         <h3 className="title">{getTitle()}</h3>
       </div>
@@ -330,7 +330,7 @@ export default function ProductsComponent() {
             total={products?.totalCount}
           />
         </div>
-      </div>
+      </div> */}
     </>
   );
 }
