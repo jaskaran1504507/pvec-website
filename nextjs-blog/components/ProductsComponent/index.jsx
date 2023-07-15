@@ -110,7 +110,7 @@ export default function ProductsComponent() {
 
   function getBrands() {
     if (router?.query?.query == "eye-medic") {
-      return null;
+      return [];
     } else if (router?.query?.query == "contacts") {
       return contactsBrandsArr;
     } else if (router?.query?.query == "glasses") {

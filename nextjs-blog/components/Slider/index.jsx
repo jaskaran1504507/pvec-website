@@ -6,16 +6,18 @@ const Slider = ({ slides }) => {
     const [currentIndex, setCurrentIndex] = useState(0);
 
     useEffect(() => {
-        const interval = setInterval(() => {
-            setCurrentIndex((prevIndex) => (prevIndex + 1) % slides.length);
-        }, 4000);
+        if (slides && slides?.length > 0) {
+            const interval = setInterval(() => {
+                setCurrentIndex((prevIndex) => (prevIndex + 1) % (slides ? slides?.length : 0));
+            }, 4000);
 
-        return () => {
-            clearInterval(interval);
-        };
+            return () => {
+                clearInterval(interval);
+            };
+        }
     }, [slides]);
 
-    return (slides? (
+    return (slides ? (
         <div className="slider-container bg-gray-200 w-full h-96 flex items-center justify-center">
             <div className="slider w-full h-full overflow-hidden">
                 {slides.map((slide, index) => (
@@ -23,7 +25,7 @@ const Slider = ({ slides }) => {
                         <div
                             key={slide.seq}
                             className={`slide w-full h-full transition-opacity duration-500 ease-in-out ${index === currentIndex ? 'block' : 'hidden'
-                                }`} 
+                                }`}
                         >
                             <div className="relative w-full h-64">
                                 <div className="relative">
