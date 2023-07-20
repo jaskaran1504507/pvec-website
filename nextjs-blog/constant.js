@@ -414,6 +414,44 @@ export const contactsBrandsArr = [
   },
 ];
 
+export const eyecareProductsArr = [
+  {
+    seq: 1,
+    link: "PVEC_idrop.jpeg",
+    addr: "",
+    name: "Eye Drops",
+    backgroundImage : "PVEC_idrop.jpeg"
+  },
+  {
+    seq: 2,
+    link: "omega-3.png",
+    addr: "",
+    name: "Omega-3",
+    backgroundImage : "PVEC_omega3.jpeg"
+  },
+  {
+    seq: 3,
+    link: "PVEC_teatree.jpeg",
+    addr: "",
+    name: "Tea Tree Eyelid",
+    backgroundImage : "PVEC_teatree.jpeg"
+  },
+  {
+    seq: 4,
+    link: "PVEC_eyemask.jpeg",
+    addr: "",
+    name: "Eye Mask",
+    backgroundImage : "PVEC_eyemask.jpeg"
+  },
+  {
+    seq: 4,
+    link: "PVEC_lidlash.jpeg",
+    addr: "",
+    name: "Lid 'n Lash",
+    backgroundImage : "PVEC_lidlash.jpeg"
+  },
+];
+
 export const gridGlassesBrands = [
   {
     imageUrl: "/images/rayban_shop.jpeg",
@@ -457,5 +495,28 @@ export const gridContactsBrands = [
     imageUrl: "/images/alcon_shop.jpeg",
     linkUrl: "https://www.myalcon.com/ca/en/",
     linkText: "Buy My Alcon"
+  },
+];
+
+export const gridEyecareBrands = [
+  {
+    imageUrl: "/images/omega-3.png",
+    linkUrl: "",
+    linkText: "Buy Omega-3"
+  },
+  {
+    imageUrl: "/images/PVEC_teatree.jpeg",
+    linkUrl: "",
+    linkText: "Buy Tea Tree Eyelid"
+  },
+  {
+    imageUrl: "/images/PVEC_eyemask.jpeg",
+    linkUrl: "",
+    linkText: "Buy Eye Mask"
+  },
+  {
+    imageUrl: "/images/PVEC_lidlash.jpeg",
+    linkUrl: "",
+    linkText: "Buy Lid 'n Lash"
   },
 ];

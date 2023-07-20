@@ -7,7 +7,7 @@ import Products from "../../utils/endpoints/Products";
 import { callApi } from "../../utils/apiUtils";
 import Slider from "../../components/Slider";
 import LogoRow from "../../components/LogoRow";
-import { brandsArr, contactsBrandsArr, gridGlassesBrands, gridContactsBrands } from "../../constant";
+import { brandsArr, contactsBrandsArr, gridGlassesBrands, gridContactsBrands,eyecareProductsArr, gridEyecareBrands} from "../../constant";
 import BrandsGrid from "../BrandsGrid";
 
 const { Search } = Input;
@@ -110,7 +110,7 @@ export default function ProductsComponent() {
 
   function getBrands() {
     if (router?.query?.query == "eye-medic") {
-      return [];
+      return eyecareProductsArr;
     } else if (router?.query?.query == "contacts") {
       return contactsBrandsArr;
     } else if (router?.query?.query == "glasses") {
@@ -121,7 +121,11 @@ export default function ProductsComponent() {
 
   function getBrandHead() {
     if (router?.query?.query == "eye-medic") {
-      return null;
+      return {
+        imageUrl: "/images/eye-drops.jpg",
+        linkUrl: "",
+        linkText: "Buy Eye Drops"
+      };;
     } else if (router?.query?.query == "contacts") {
       return {
         imageUrl: "/images/acuvue-shop1.jpeg",
@@ -144,7 +148,7 @@ export default function ProductsComponent() {
 
   function getGridBrands() {
     if (router?.query?.query == "eye-medic") {
-      return null;
+      return gridEyecareBrands;
     } else if (router?.query?.query == "contacts") {
       return gridContactsBrands;
     } else if (router?.query?.query == "glasses") {
