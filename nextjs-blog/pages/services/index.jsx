@@ -86,11 +86,15 @@ export default function ServiceProducts() {
         </div>{" "} */}
       </div>
       <div className="grid gap-1 mt-10 grid-cols-1 md:grid-cols-3 u-clearfix u-sheet mx-auto u-valign-middle u-sheet-1">
-        {cards.map(({ img, text, head, conditions, id }) => (
+        {cards.map(({ img, text, head, conditions, id }, index) => (
           <div
             id={id}
             key={img}
-            className="p-2 shadow-lg card flex flex-col border border-gray-300 mx-2"
+            className={`p-2 shadow-lg card flex flex-col border border-gray-300 mx-2 ${
+              index === cards.length - 1 && cards.length % 3 === 1
+                ? 'justify-center md:col-start-2' // Center the last element when there's an odd number of elements
+                : ''
+            }`}
           >
             <div className="card-content flex-grow">
               <div>
