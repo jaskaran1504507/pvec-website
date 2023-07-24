@@ -420,35 +420,101 @@ export const eyecareProductsArr = [
     link: "PVEC_idrop.jpeg",
     addr: "",
     name: "Eye Drops",
-    backgroundImage : "PVEC_idrop.jpeg"
+    backgroundImage : "women_using_eyeDROPs.jpg"
   },
   {
     seq: 2,
     link: "omega-3.png",
     addr: "",
     name: "Omega-3",
-    backgroundImage : "PVEC_omega3.jpeg"
+    backgroundImage : "Omega-3-Fish-Oil-Supplements.webp"
   },
   {
     seq: 3,
     link: "PVEC_teatree.jpeg",
     addr: "",
     name: "Tea Tree Eyelid",
-    backgroundImage : "PVEC_teatree.jpeg"
+    backgroundImage : "tea_tree_eye.jpeg"
   },
   {
     seq: 4,
     link: "PVEC_eyemask.jpeg",
     addr: "",
     name: "Eye Mask",
-    backgroundImage : "PVEC_eyemask.jpeg"
+    backgroundImage : "s-l1600.jpg"
+  },
+];
+
+export const eyecareProductsList = [
+  {
+    seq: 1,
+    link: "eyecare_1.jpeg",
+    addr: "",
+    name: "Eye Drops",
+    backgroundImage : "women_using_eyeDROPs.jpg"
+  },
+  {
+    seq: 2,
+    link: "eyecare_2.jpeg",
+    addr: "",
+    name: "Omega-3",
+    backgroundImage : "Omega-3-Fish-Oil-Supplements.webp"
+  },
+  {
+    seq: 3,
+    link: "eyecare3.jpeg",
+    addr: "",
+    name: "Tea Tree Eyelid",
+    backgroundImage : "tea_tree_eye.jpeg"
   },
   {
     seq: 4,
-    link: "PVEC_lidlash.jpeg",
+    link: "eyecare4.jpeg",
     addr: "",
-    name: "Lid 'n Lash",
-    backgroundImage : "PVEC_lidlash.jpeg"
+    name: "Eye Mask",
+    backgroundImage : "s-l1600.jpg"
+  },
+  {
+    seq: 5,
+    link: "eyecare5.jpeg",
+    addr: "",
+    name: "Eye Mask",
+    backgroundImage : "s-l1600.jpg"
+  },
+  {
+    seq: 6,
+    link: "eyecare6.jpeg",
+    addr: "",
+    name: "Eye Mask",
+    backgroundImage : "s-l1600.jpg"
+  },
+  {
+    seq: 7,
+    link: "eyecare7.jpeg",
+    addr: "",
+    name: "Eye Mask",
+    backgroundImage : "s-l1600.jpg"
+  },
+  {
+    seq: 8,
+    link: "eyecare8.jpeg",
+    addr: "",
+    name: "Eye Mask",
+    backgroundImage : "s-l1600.jpg"
+  },
+  {
+    seq: 9,
+    link: "eyecare9.jpeg",
+    addr: "",
+    name: "Eye Mask",
+    backgroundImage : "s-l1600.jpg"
+  },
+  {
+    seq: 10,
+    link: "eyecare10.jpeg",
+    addr: "",
+    name: "Eye Mask",
+    backgroundImage : "s-l1600.jpg"
   },
 ];
 
@@ -500,23 +566,24 @@ export const gridContactsBrands = [
 
 export const gridEyecareBrands = [
   {
-    imageUrl: "/images/omega-3.png",
+    imageUrl: "/images/Omega-3-Fish-Oil-Supplements.webp",
     linkUrl: "",
     linkText: "Buy Omega-3"
   },
   {
-    imageUrl: "/images/PVEC_teatree.jpeg",
+    imageUrl: "/images/lid_n_lash.jpeg",
     linkUrl: "",
-    linkText: "Buy Tea Tree Eyelid"
+    linkText: "Buy Lid 'n Lash"
   },
   {
-    imageUrl: "/images/PVEC_eyemask.jpeg",
+    imageUrl: "/images/bl_eye_mask.jpeg",
     linkUrl: "",
     linkText: "Buy Eye Mask"
   },
   {
-    imageUrl: "/images/PVEC_lidlash.jpeg",
+    imageUrl: "/images/Tea_tree_mask.jpeg",
     linkUrl: "",
-    linkText: "Buy Lid 'n Lash"
+    linkText: "Buy Tea Tree Eyelid"
   },
+  
 ];

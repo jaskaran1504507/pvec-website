@@ -7,7 +7,7 @@ import Products from "../../utils/endpoints/Products";
 import { callApi } from "../../utils/apiUtils";
 import Slider from "../../components/Slider";
 import LogoRow from "../../components/LogoRow";
-import { brandsArr, contactsBrandsArr, gridGlassesBrands, gridContactsBrands,eyecareProductsArr, gridEyecareBrands} from "../../constant";
+import { brandsArr, contactsBrandsArr, gridGlassesBrands, gridContactsBrands,eyecareProductsArr, gridEyecareBrands, eyecareProductsList} from "../../constant";
 import BrandsGrid from "../BrandsGrid";
 
 const { Search } = Input;
@@ -119,6 +119,17 @@ export default function ProductsComponent() {
       return brandsArr;
   }
 
+  function getBrandsRow() {
+    if (router?.query?.query == "eye-medic") {
+      return eyecareProductsList;
+    } else if (router?.query?.query == "contacts") {
+      return contactsBrandsArr;
+    } else if (router?.query?.query == "glasses") {
+      return brandsArr;
+    } else if (router.pathname == "/glasses-contacts")
+      return brandsArr;
+  }
+
   function getBrandHead() {
     if (router?.query?.query == "eye-medic") {
       return {
@@ -191,7 +202,7 @@ export default function ProductsComponent() {
         <Slider slides={getBrands()} />
 
         {/* Brands list with logo */}
-        <div className="mt-12"> <LogoRow logos={getBrands()} /></div>
+        <div className="mt-12"> <LogoRow logos={getBrandsRow()} /></div>
 
         {/* Advanced corousel section to showcase a brand or more, brand image on left, 4 images on right */}
         <div className="my-8"> <BrandsGrid head={getBrandHead()} gridBrands={getGridBrands()} /></div>
