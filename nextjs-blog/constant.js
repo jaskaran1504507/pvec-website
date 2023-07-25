@@ -386,21 +386,21 @@ export const productCards = [
 export const contactsBrandsArr = [
   {
     seq: 1,
-    link: "acuvue_logo.png",
+    link: "Acuvue.jpg",
     addr: "https://www.acuvue.ca/",
     name: "Acuvue",
     backgroundImage : "acuvue_bk.jpeg"
   },
   {
     seq: 2,
-    link: "Bausch-Lomb-logo.png",
+    link: "B-L.webp",
     addr: "https://www.bausch.ca/en-ca/",
     name: "Bausch+Lomb",
     backgroundImage : "Bausch-Lomb_bk2.webp"
   },
   {
     seq: 3,
-    link: "cooper_vision_logo.png",
+    link: "cooper-vision-logo.jpg",
     addr: "https://coopervision.ca/",
     name: "CooperVision",
     backgroundImage : "cooper_vision_bk.png"
