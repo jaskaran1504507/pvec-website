@@ -186,7 +186,7 @@ export default function Header() {
               //     "linear-gradient(to right, #1d3d74 0%, #3598cf 50%, #1d3d74 100%)",
               // }}
             >
-              <span className="text-white flex items-center space-x-36 text-lg font-bold">
+              <span className="text-white flex items-center space-x-36 text-xl font-bold">
                 <a
                   className="pl-2 "
                   href="mailto:info@pveyecare.ca"
@@ -236,13 +236,17 @@ export default function Header() {
           <div className="flex justify-between ">
             <a className="navbar-brand" href="#">
               <img
+              className="border-solid border-t-2 border-black"
                 src="https://pvec-bucket.s3.ca-central-1.amazonaws.com/eyecare-logo.png"
                 style={{
-                  maxWidth: "9rem",
-                  height: "4.3rem",
-                  marginLeft: "18px",
+                  maxWidth: "11rem",
+                  height: "4.5rem",
+                  marginLeft: "24px",
                   marginTop: "24px",
                   zIndex: 2000,
+                  backgroundColor: "#fff",
+                  paddingLeft: "2px",
+                  paddingRight : "2px"
                 }}
                 alt="Logo"
               />

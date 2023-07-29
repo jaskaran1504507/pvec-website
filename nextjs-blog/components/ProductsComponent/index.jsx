@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useRouter } from "next/router";
-import { ShoppingCartOutlined } from "@ant-design/icons";
 import { Badge, Input, Modal, Pagination } from "antd";
-import Order from "../Order";
 import Products from "../../utils/endpoints/Products";
 import { callApi } from "../../utils/apiUtils";
 import Slider from "../../components/Slider";
