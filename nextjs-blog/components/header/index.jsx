@@ -650,7 +650,7 @@ export default function Header() {
                                 "page-scroll rounded-lg",
                                 "bg-black"
                               )}
-                              href="https://docs.google.com/forms/d/e/1FAIpQLSeciQeXbMzKdezp0kkCx1Itxm1SCnUL5bv1C7rT1m1aBp1vsg/viewform?usp=sf_link"
+                              href="https://docs.google.com/forms/d/e/1FAIpQLSex8fCDLOm41BPwOB235NRWKaZVdXk-tRiNbObpbV9vuUxV0Q/viewform?usp=sf_link"
                               target="_blank"
                             >
                               <span className="flex items-center ">
@@ -696,7 +696,7 @@ export default function Header() {
                       <a
                         className="main-btn"
                         data-scroll-nav="0"
-                        href="https://docs.google.com/forms/d/e/1FAIpQLSfp9wtUa2KDu3zc2_TVnEXurHtwvXYXEekdD8tTnuCnETidvQ/viewform?usp=sf_link"
+                        href="https://docs.google.com/forms/d/e/1FAIpQLSex8fCDLOm41BPwOB235NRWKaZVdXk-tRiNbObpbV9vuUxV0Q/viewform?usp=sf_link"
                         target="_blank"
                       >
                         {" "}
