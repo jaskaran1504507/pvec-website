@@ -27,7 +27,7 @@ export default function Promotions() {
       url: "/glasses-contacts",
     },
     {
-      link: "/images/Hero-3-1280x480.webp",
+      link: "/images/sunglasses_promo.jpg",
       title: "Summertime Sun Sale Limited Time Offer",
       description:
         "Select Polarized Sunglasses: Regular price $200 on for $99",
@@ -155,7 +155,7 @@ export default function Promotions() {
                     data-scroll-nav="0"
                     href={m?.url}
                   >
-                    Avail Now!!{" "}
+                    Show Me!!{" "}
                   </a>
                 </div>
               </div>
