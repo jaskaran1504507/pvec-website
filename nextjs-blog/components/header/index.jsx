@@ -236,7 +236,7 @@ export default function Header() {
           <div className="flex justify-between ">
             <a className="navbar-brand" href="#">
               <img
-              className="border-solid border-t-2 border-black"
+                className="border-solid border-t-2 border-black"
                 src="https://pvec-bucket.s3.ca-central-1.amazonaws.com/eyecare-logo.png"
                 style={{
                   maxWidth: "11rem",
@@ -246,7 +246,7 @@ export default function Header() {
                   zIndex: 2000,
                   backgroundColor: "#fff",
                   paddingLeft: "2px",
-                  paddingRight : "2px"
+                  paddingRight: "2px",
                 }}
                 alt="Logo"
               />
@@ -268,9 +268,18 @@ export default function Header() {
                       aria-expanded="false"
                       aria-label="Toggle navigation"
                     >
-                      <span className="toggler-icon"></span>
-                      <span className="toggler-icon"></span>
-                      <span className="toggler-icon"></span>
+                      <span
+                        className="toggler-icon bg-black"
+                        style={{ background: "black" }}
+                      ></span>
+                      <span
+                        className="toggler-icon bg-black"
+                        style={{ background: "black" }}
+                      ></span>
+                      <span
+                        className="toggler-icon bg-black"
+                        style={{ background: "black" }}
+                      ></span>
                     </button>
                     <div
                       // style={{
