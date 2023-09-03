@@ -322,11 +322,11 @@ export const banner = [
     subText3: <>Are you a student or senior citizen?<br />Please ask about our special pricing just for you.</>,
     description: "Please come visit in store or email or call us for more information."
   },
-  {
-    textColor: "white",
-    img: "banner-home-img-5",
-    text: "",
-  },
+  // {
+  //   textColor: "white",
+  //   img: "banner-home-img-5",
+  //   text: "",
+  // },
 ];
 // Limited time offer, fully coated polarised sunglasses regular price 200$ now on 99$ while supplies last.
 
