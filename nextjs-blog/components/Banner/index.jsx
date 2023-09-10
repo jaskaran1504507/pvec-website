@@ -24,7 +24,11 @@ export default function Banner({
         src=""
         data-image-width="1248"
         data-image-height="641"
-        style={{ backgroundImage: `url(${banner})` }}
+        style={
+          banner && banner.includes(".")
+            ? { backgroundImage: `url(${banner})` }
+            : {}
+        }
       >
         <div className="u-clearfix u-sheet flex items-center u-sheet-1 top-section md:mt-0 md:py-0 py-4">
           <div className="mt-4 md:mt-0 md:text-left">
