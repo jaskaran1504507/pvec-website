@@ -29,10 +29,12 @@ export default function ServiceProducts() {
       uriEndPoint: {
         ...Endpoints.getServices,
       },
-    }).then((res) => {
-      console.log("res", res);
-      setCards(res?.promotions);
-    });
+    })
+      .then((res) => {
+        console.log("res", res);
+        setCards(res?.promotions);
+      })
+      .catch();
   }, []);
   return (
     <main>

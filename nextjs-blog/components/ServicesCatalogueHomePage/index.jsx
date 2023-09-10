@@ -22,10 +22,12 @@ export default function ServicesCatalogueHomePage() {
       uriEndPoint: {
         ...Endpoints.getServicesHome,
       },
-    }).then((res) => {
-      console.log("res", res);
-      setHomeServicesCards(res?.promotions);
-    });
+    })
+      .then((res) => {
+        console.log("res", res);
+        setHomeServicesCards(res?.promotions);
+      })
+      .catch();
   }, []);
   return (
     // <!--====== SERVICES PART START ======-->

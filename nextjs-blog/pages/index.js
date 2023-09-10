@@ -9,6 +9,7 @@ import FeedbackHomePage from "../components/FeedbackHomePage";
 import { Helmet } from "react-helmet";
 import { callApi } from "../utils/apiUtils";
 import Endpoints from "../utils/endpoints";
+import Loading from "../components/Loading";
 
 export default function Home() {
   const [banner, setBanner] = useState([]);
@@ -18,10 +19,12 @@ export default function Home() {
       uriEndPoint: {
         ...Endpoints.getBanners,
       },
-    }).then((res) => {
-      console.log("res", res);
-      setBanner(res?.banners);
-    });
+    })
+      .then((res) => {
+        console.log("res", res);
+        setBanner(res?.banners);
+      })
+      .catch();
   }, []);
 
   return (
@@ -52,15 +55,7 @@ export default function Home() {
             ))}
           </Carousel>
         ) : (
-          <div
-            style={{
-              display: "grid",
-              placeContent: "center",
-              margin: "150px 0",
-            }}
-          >
-            <img src="/loading-pvec.gif" />
-          </div>
+          <Loading />
         )}
       </div>
 
