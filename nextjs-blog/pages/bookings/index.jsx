@@ -9,6 +9,9 @@ import {
   Radio,
   Select,
   notification,
+  Row,
+  Col,
+  Checkbox,
 } from "antd";
 import FloatInput from "../../components/FloatInput";
 import dayjs from "dayjs";
@@ -20,6 +23,7 @@ import { useRouter } from "next/router";
 const { TextArea } = Input;
 
 const Bookings = () => {
+  const [form] = Form.useForm();
   let router = useRouter();
   // const layout = {
   //   labelCol: { span: 8 },
@@ -29,17 +33,16 @@ const Bookings = () => {
 
   useEffect(() => {
     let defaultDate = getDefaultDate(true);
-
-    console.log(defaultDate, "defaultDate");
+    // console.log(defaultDate, "defaultDate");
     getAppointmentSchedulesDayWise({
       query: { date: defaultDate + "" },
       pathParams: { day: defaultDate.getDay() },
     });
-    callApi({ uriEndPoint: { uri: "/getBooking", method: "GET", version: "" } })
-      .then((res) => {
-        setDisableDate({ [new Date().toDateString()]: true });
-      })
-      .catch((err) => console.log("err", err));
+    // callApi({ uriEndPoint: { uri: "/getBooking", method: "GET", version: "" } })
+    //   .then((res) => {
+    //     setDisableDate({ [new Date().toDateString()]: true });
+    //   })
+    //   .catch((err) => console.log("err", err));
   }, []);
 
   const layout = {
@@ -89,7 +92,10 @@ const Bookings = () => {
 
   const onFinish = (values) => {
     let body = {
-      name: values.user.name,
+      firstName: values.firstName,
+      lastName: values.lastName,
+      pronouns: values.pronouns,
+      dateOfBirth: values.dateOfBirth,
       email: values.user.email,
       isExisting: values.existing_patient,
       phone: values.phone,
@@ -98,6 +104,11 @@ const Bookings = () => {
       appointmentSlot: values.slot,
       comment: values.comment,
       healthcareId: values.healthcareId,
+      examType: values.examType,
+      haveHealthNumber: values.haveHealthNumber,
+      isGlasses: values.isGlasses,
+      insuranceProvider: values?.insuranceProvider,
+      insuranceProviderOther: values.insuranceProviderOther,
     };
 
     callApi({
@@ -143,6 +154,12 @@ const Bookings = () => {
       });
 
       setSlots(newSchedules);
+      if (!newSchedules.length) {
+        notification.error({
+          message: "No slot avialable !!!",
+          message: "The selected date has no slots available.",
+        });
+      }
     }
     return schedules;
   };
@@ -201,6 +218,7 @@ const Bookings = () => {
 
   const onChangeDate = (value) => {
     console.log(`selected ${value}`);
+    form.setFieldsValue({ slot: undefined });
     let selectedAppointmentDate = new Date(value);
     console.log("selectedAppointmentDate", selectedAppointmentDate.getDay());
     if (selectedAppointmentDate.getDay()) {
@@ -240,15 +258,13 @@ const Bookings = () => {
       <div className="mt-28 md:mt-0">
         <Banner
           banner="banner-bookings-img"
-          text={
-            <span className="text-black md:text-white">
-              Get a full check up
-              <br />
-              with one of our Optometrists, we're available evenings
-              <br />
-              and weekends too!
-            </span>
-          }
+          text={`<span class="text-black md:text-white">
+            Get a full check up
+            <br />
+            with one of our Optometrists, we're available evenings
+            <br />
+            and weekends too!
+          </span>`}
         />
       </div>
       <div className="flex justify-center mt-10 ">
@@ -258,19 +274,48 @@ const Bookings = () => {
         >
           <Form
             // {...layout}
-            name="nest-messages"
+            form={form}
+            // name="nest-messages"
             onFinish={onFinish}
             // style={{ maxWidth: 800 }}
-            validateMessages={validateMessages}
+            // validateMessages={validateMessages}
             size={"large"}
             layout="vertical"
           >
             <Form.Item
-              name={["user", "name"]}
-              label="Name"
+              label="Pronouns?"
+              name="pronouns"
+              rules={[{ required: true }]}
+            >
+              <Radio.Group value={"no"}>
+                <Radio.Button value="he">He/His</Radio.Button>
+                <Radio.Button checked value="she">
+                  She/her
+                </Radio.Button>
+
+                <Radio.Button value="they">They/Their</Radio.Button>
+              </Radio.Group>
+            </Form.Item>
+            <Form.Item
+              name="firstName"
+              label="First name"
               rules={[{ required: true }]}
             >
               <Input />
+            </Form.Item>
+            <Form.Item
+              name="lastName"
+              label="Last name"
+              rules={[{ required: true }]}
+            >
+              <Input />
+            </Form.Item>
+            <Form.Item
+              name="dateOfBirth"
+              label="Date of birth"
+              rules={[{ required: true, message: "Please select date" }]}
+            >
+              <DatePicker className="w-full" />
             </Form.Item>
             <Form.Item
               name={["user", "email"]}
@@ -310,11 +355,11 @@ const Bookings = () => {
               <Input addonBefore={prefixSelector} style={{ width: "100%" }} />
             </Form.Item>
             <Form.Item
-              label="Preferred Contact Method"
+              label="Prefered Contact Method"
               name="preferred_contact_method"
               rules={[{ required: true }]}
             >
-              <Radio.Group value={"no"}>
+              <Radio.Group value={"email"}>
                 <Radio.Button value="email">Email</Radio.Button>
                 <Radio.Button value="phone">Phone</Radio.Button>
                 <Radio.Button selected value="any">
@@ -323,19 +368,73 @@ const Bookings = () => {
               </Radio.Group>
             </Form.Item>
             <Form.Item
+              label="Choose your Exam Type"
+              name="examType"
+              rules={[{ required: true, message: "Please select exam type" }]}
+            >
+              <Radio.Group value={"eye_exams_contact"}>
+                <Radio.Button value="Eye exam only (health check and refraction)">
+                  Eye exam only (health check and refraction)
+                </Radio.Button>
+                <Radio.Button value="Eye exam with contact lens">
+                  Eye exam with contact lens
+                </Radio.Button>
+              </Radio.Group>
+            </Form.Item>
+            <Form.Item
+              label="Do you have a BC Service Card or your Personal Health Number?"
+              name="haveHealthNumber"
+            >
+              <Radio.Group value={"no"}>
+                <Radio.Button value="yes">Yes</Radio.Button>
+                <Radio.Button value="no">No</Radio.Button>
+              </Radio.Group>
+            </Form.Item>
+            <Form.Item label="Do you currently wear glasses?" name="isGlasses">
+              <Radio.Group value={"no"}>
+                <Radio.Button value="yes">Yes</Radio.Button>
+                <Radio.Button value="no">No</Radio.Button>
+              </Radio.Group>
+            </Form.Item>
+            <Form.Item
+              name="insuranceProvider"
+              label="Please select your insurance provider?"
+            >
+              <Radio.Group value={"Canada Life"}>
+                <Radio.Button value="Canada Life">Canada Life</Radio.Button>
+                <Radio.Button value="Equitable Life">
+                  Equitable Life
+                </Radio.Button>
+                <Radio.Button value="Green Shield Insurance">
+                  Green Shield Insurance
+                </Radio.Button>
+                <Radio.Button value="Manu Life">Manu Life</Radio.Button>
+                <Radio.Button value="Sun Life">Sun Life</Radio.Button>
+                <Radio.Button value="Great-West Life">
+                  Great-West Life
+                </Radio.Button>
+                <Radio.Button value="Empire Life">Empire Life</Radio.Button>
+              </Radio.Group>
+            </Form.Item>
+
+            <Form.Item
+              name="insuranceProviderOther"
+              label="Insuracnce provider's name (If not in list)"
+            >
+              <Input style={{ width: "100%" }} placeholder="Other insurance" />
+            </Form.Item>
+            <Form.Item
               name="date"
               label="Appointment Date"
               rules={[{ required: true, message: "Please select date" }]}
             >
-              {/* <Input style={{ width: "100%" }} /> */}
-              {/* let date = new Date().toLocaleDateString(); */}
               <DatePicker
+                className="w-full"
                 defaultValue={getDefaultDate()}
                 disabledDate={(current) => {
                   return (
                     current.startOf("hour", 0) <= moment().startOf("hour", 0) ||
-                    current.day() === 0 ||
-                    disableDate[current.toDate().toDateString()]
+                    current.day() === 0
                   );
                 }}
                 format={"DD/MM/YYYY"}
@@ -345,13 +444,16 @@ const Bookings = () => {
             <Form.Item
               name="slot"
               label="Appointment Slot"
-              rules={[{ required: true, message: "Please select the slot" }]}
+              rules={[
+                {
+                  required: true,
+                  message: "Slot is not available for selected date",
+                },
+              ]}
             >
-              {/* <Input style={{ width: "100%" }} /> */}
               <Select
                 placeholder="Select a slot"
                 optionFilterProp="children"
-                // onSearch={onSearch}
                 filterOption={(input, option) =>
                   (option?.label ?? "")
                     .toLowerCase()

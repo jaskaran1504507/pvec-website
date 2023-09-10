@@ -599,55 +599,53 @@ export default function Header() {
                         <li className="nav-item active  md:hidden ">
                           <div className="relative group">
                             <div className="absolute -inset-0.5 bg-gradient-to-r from-cyan-800 to-sky-500 rounded-lg blur opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-tilt"></div>
-
-                            <a
-                              className={classNames(
-                                "page-scroll rounded-lg",
-                                "bg-black"
-                              )}
-                              href="https://docs.google.com/forms/d/e/1FAIpQLSeciQeXbMzKdezp0kkCx1Itxm1SCnUL5bv1C7rT1m1aBp1vsg/viewform?usp=sf_link"
-                              target="_blank"
-                            >
-                              <span className="flex items-center ">
-                                {" "}
-                                <span
-                                  className={classNames(
-                                    "px-1 font-bold text-black",
-                                    "text-white"
-                                  )}
-                                >
-                                  Order sontacts
+                            <Link href="/booking">
+                              <span
+                                className={classNames(
+                                  "page-scroll rounded-lg",
+                                  "bg-black"
+                                )}
+                                href="#"
+                              >
+                                <span className="flex items-center ">
+                                  {" "}
+                                  <span
+                                    className={classNames(
+                                      "px-1 font-bold text-black",
+                                      "text-white"
+                                    )}
+                                  >
+                                    Order sontacts
+                                  </span>
                                 </span>
                               </span>
-                            </a>
+                            </Link>
                           </div>
                         </li>
                         <li className="nav-item active  md:hidden ">
                           <div className="relative group">
                             <div className="absolute -inset-0.5 bg-gradient-to-r from-cyan-800 to-sky-500 rounded-lg blur opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-tilt"></div>
-
-                            <a
-                              className={classNames(
-                                "page-scroll rounded-lg",
-                                "bg-black"
-                              )}
-                              href="https://docs.google.com/forms/d/e/1FAIpQLSeciQeXbMzKdezp0kkCx1Itxm1SCnUL5bv1C7rT1m1aBp1vsg/viewform?usp=sf_link"
-                              target="_blank"
-                              Check
-                              Benefits
-                            >
-                              <span className="flex items-center ">
-                                {" "}
-                                <span
-                                  className={classNames(
-                                    "px-1 font-bold text-black",
-                                    "text-white"
-                                  )}
-                                >
-                                  Book Appointment
+                            <Link href="/booking">
+                              <span
+                                className={classNames(
+                                  "page-scroll rounded-lg",
+                                  "bg-black"
+                                )}
+                                href="#"
+                              >
+                                <span className="flex items-center ">
+                                  {" "}
+                                  <span
+                                    className={classNames(
+                                      "px-1 font-bold text-black",
+                                      "text-white"
+                                    )}
+                                  >
+                                    Book Appointment
+                                  </span>
                                 </span>
                               </span>
-                            </a>
+                            </Link>
                           </div>
                         </li>{" "}
                         <li className="nav-item active  md:hidden ">
