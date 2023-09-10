@@ -63,13 +63,7 @@ export default function Home() {
           </div>
         )}
       </div>
-      <button
-        onClick={() => {
-          console.log("banner", banner);
-        }}
-      >
-        CLICCJJCJ
-      </button>
+
       {/* <div className="md:mt-0 mt-28 block md:hidden">
         <Carousel dynamicHeight autoPlay swipeable infiniteLoop interval="5000">
           {banner
