@@ -1,68 +1,47 @@
 import Image from "next/image";
 import Link from "next/link";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import Endpoints from "../../utils/endpoints";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+import { callApi } from "../../utils/apiUtils";
 
 export default function Promotions() {
   const [seeMore, setSeeMore] = useState({});
+  const [cards, setCards] = useState([]);
 
-  const cards = [
-    {
-      link: "/images/10-25-17glasses.jpg",
-      title: "Clearance Sale",
-      description:
-        "Select eyewear from 50-90% off with fully coated lenses purchase",
-      url: "/glasses-contacts",
-    },
-    {
-      link: "/images/iStock-1131639271.jpg",
-      title: "Every Day Value Offer",
-      description: (
-        <>
-          Buy 1 Complete Pair (frame+lenses), Get 2nd pair 30% off frame
-          and lenses! <br />
-          Buy 1 Pair of Non-Prescription Sunglasses, get 2nd pair 20% Off!
-        </>
-      ),
-      url: "/glasses-contacts",
-    },
-    {
-      link: "/images/sunglasses_promo.jpg",
-      title: "Summertime Sun Sale Limited Time Offer",
-      description:
-        "Select Polarized Sunglasses: Regular price $200 on for $99",
-      url: "/glasses-contacts",
-    },
-    {
-      link: "/images/eyehealth.jpg",
-      title:
-        "Have Extended Insurance? Ask us how to get glasses or sunglasses for little to no expense out of your pocket!",
-      url: "/service-products",
-    },
-  ];
+  useEffect(() => {
+    callApi({
+      uriEndPoint: {
+        ...Endpoints.getPromotions,
+      },
+    }).then((res) => {
+      console.log("res", res);
+      setCards(res?.promotions);
+    });
+  }, []);
+
   return (
     <>
-    <div className="mt-20 md:mt-20">
-          <h2
-            style={{
-              textAlign: "left",
-              fontWeight: 400,
-              fontSize: "2.25rem",
-              lineHeight: 1.1,
-            }}
+      <div className="mt-20 md:mt-20">
+        <h2
+          style={{
+            textAlign: "left",
+            fontWeight: 400,
+            fontSize: "2.25rem",
+            lineHeight: 1.1,
+          }}
+        >
+          <span
+            style={{ lineHeight: 2 }}
+            className="text-blue-900 font-semibold"
           >
-            <span
-              style={{ lineHeight: 2 }}
-              className="text-blue-900 font-semibold"
-            >
-              Promotions
-            </span>
-          </h2>
-        </div>
-     <div className="grid gap-1 mt-10 grid-cols-1 md:grid-cols-3 u-clearfix u-sheet mx-auto u-valign-middle u-sheet-1">
-        {
-
-          cards.map((m, index) => (
+            Promotions
+          </span>
+        </h2>
+      </div>
+      {cards.length ? (
+        <div className="grid gap-1 mt-10 grid-cols-1 md:grid-cols-3 u-clearfix u-sheet mx-auto u-valign-middle u-sheet-1">
+          {cards.map((m, index) => (
             // <Link
             //   href={m.url}
             //   key={m.url}
@@ -116,12 +95,13 @@ export default function Promotions() {
             // </Link>
 
             <div
-              id={m.link}
-              key={m.link}
-              className={`p-2 shadow-lg card flex flex-col border border-gray-300 mx-2 ${index === cards.length - 1 && cards.length % 3 === 1
-                ? 'justify-center md:col-start-2' // Center the last element when there's an odd number of elements
-                : ''
-                }`}
+              id={m._id}
+              key={m._id}
+              className={`p-2 shadow-lg card flex flex-col border border-gray-300 mx-2 ${
+                index === cards.length - 1 && cards.length % 3 === 1
+                  ? "justify-center md:col-start-2" // Center the last element when there's an odd number of elements
+                  : ""
+              }`}
             >
               <div className="card-content flex-grow">
                 <div>
@@ -129,7 +109,7 @@ export default function Promotions() {
                     // layout="fill"
                     // objectFit="cover"
                     className="rounded-lg"
-                    src={ m.link}
+                    src={m.image}
                     alt=""
                     srcSet=""
                     height="250"
@@ -140,9 +120,7 @@ export default function Promotions() {
                   {m?.title}
                 </h1>
 
-                <div className="px-6 py-4 ">
-                  {m?.description}
-                </div>
+                <div className="px-6 py-4 ">{m?.description}</div>
               </div>
 
               {/* <div className="flex justify-center">
@@ -153,7 +131,7 @@ export default function Promotions() {
                   <a
                     className="main-btn-products"
                     data-scroll-nav="0"
-                    href={m?.url}
+                    href={m?.redirectUrl}
                   >
                     Show Me!!{" "}
                   </a>
@@ -161,7 +139,18 @@ export default function Promotions() {
               </div>
             </div>
           ))}
-      </div>
+        </div>
+      ) : (
+        <div
+          style={{
+            display: "grid",
+            placeContent: "center",
+            margin: "150px 0",
+          }}
+        >
+          <img src="/loading-pvec.gif" />
+        </div>
+      )}
     </>
   );
 }

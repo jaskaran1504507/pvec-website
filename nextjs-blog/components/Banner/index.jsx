@@ -24,6 +24,7 @@ export default function Banner({
         src=""
         data-image-width="1248"
         data-image-height="641"
+        style={{ backgroundImage: `url(${banner})` }}
       >
         <div className="u-clearfix u-sheet flex items-center u-sheet-1 top-section md:mt-0 md:py-0 py-4">
           <div className="mt-4 md:mt-0 md:text-left">
@@ -33,42 +34,43 @@ export default function Banner({
                 style={{ lineHeight: "1.25" }}
                 className="font-serif u-text text-white text-left text-2xl md:text-5xl md:mb-12 mb-2  md:text-5xl font-bold"
               >
-                <span style={{ color: textColor }}> {text}</span>
+                <span
+                  style={{ color: textColor }}
+                  dangerouslySetInnerHTML={{ __html: text }}
+                />
               </h1>
             )}
             {subText && (
               <h2
                 style={{ color: textColor, lineHeight: "1" }}
                 className="font-serif u-text text-white text-left text-xl md:text-2xl md:mb-12 mb-2  md:text-2xl font-bold "
-              >
-                {" "}
-                {subText}
-              </h2>
+                dangerouslySetInnerHTML={{ __html: subText }}
+              />
             )}
             {subText2 && (
               <h2
                 style={{ color: textColor, lineHeight: "1" }}
                 className="font-serif u-text text-white text-left text-xl md:text-2xl md:mb-12 mb-2  md:text-2xl font-bold "
-              >
-                {" "}
-                {subText2}
-              </h2>
+                dangerouslySetInnerHTML={{ __html: subText2 }}
+              />
             )}
             {subText3 && (
               <h2
                 style={{ color: textColor, lineHeight: "1" }}
                 className="font-serif u-text text-white text-left text-xl md:text-2xl md:mb-12 mb-2  md:text-2xl font-bold "
-              >
-                {subText3}
-              </h2>
+                dangerouslySetInnerHTML={{ __html: subText3 }}
+              />
             )}
             {description && (
-              <h3 style={{ color: textColor }}> {description}</h3>
+              <h3
+                style={{ color: textColor }}
+                dangerouslySetInnerHTML={{ __html: description }}
+              />
             )}
             {children}
           </div>
         </div>
-      </div>{" "}
+      </div>
     </div>
   );
 }

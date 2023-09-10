@@ -1,22 +1,33 @@
 import Link from "next/link";
 
 import Image from "next/image";
-import React, { useState } from "react";
-import { homeServicesCards } from "../../constant";
+import React, { useEffect, useState } from "react";
+import { callApi } from "../../utils/apiUtils";
+// import { homeServicesCards } from "../../constant";
+import Endpoints from "../../utils/endpoints";
+import Loading from "../Loading";
 
 export default function ServicesCatalogueHomePage() {
-
   const [seeMore, setSeeMore] = useState({});
-
+  const [homeServicesCards, setHomeServicesCards] = useState([]);
   const imgArr = [
     "images/Rectangle 6-1.jpg",
     "images/Rectangle 4-2.jpg",
     "images/prod_cat_2.png",
     "images/Rectangle 6-4.jpg",
-    "images/prod_cat_1.png"
+    "images/prod_cat_1.png",
   ];
+  useEffect(() => {
+    callApi({
+      uriEndPoint: {
+        ...Endpoints.getServicesHome,
+      },
+    }).then((res) => {
+      console.log("res", res);
+      setHomeServicesCards(res?.promotions);
+    });
+  }, []);
   return (
-
     // <!--====== SERVICES PART START ======-->
 
     //     <section id="features" className="services-area pt-82 px-px-120">
@@ -82,7 +93,7 @@ export default function ServicesCatalogueHomePage() {
     //                   src="assets/images/services-shape.svg"
     //                   alt="shape"
     //                 />
-    //                 <img 
+    //                 <img
     //                   className="shape-1"
     //                   src="/images/Rectangle 1-4.jpg"
     //                   alt="shape"
@@ -165,66 +176,76 @@ export default function ServicesCatalogueHomePage() {
             {/* <!-- section title --> */}
           </div>
         </div>
-        <div className="grid gap-2 md:mt-10 grid-cols-1 md:grid-cols-3 u-clearfix u-sheet mx-auto u-valign-middle u-sheet-1">
-          {homeServicesCards.map(({ img, text, head, conditions }) => (
-            <div key={img} className="p-2 shadow-lg card flex flex-col border border-gray-300 mx-2">
-              <div className="card-content flex-grow">
-                <div>
-                  <Image
-                    // layout="fill"
-                    // objectFit="cover"
-                    className="rounded-lg"
-                    src={img}
-                    alt=""
-                    srcSet=""
-                    height="250"
-                    width="355"
-                  />
-                </div>
-                <h1 className="text-blue-900 mt-3 text-center font-semibold">
-                  {head}
-                </h1>
-                <div className="px-2 py-4">
-                  {seeMore[img] || text.slice(0, 250)}
-                  {text.length > 250 && (
-                    <span
-                      onClick={() => {
-                        setSeeMore((prev) => ({
-                          ...prev,
-                          [img]: prev[img] ? "" : text,
-                        }));
-                      }}
-                      className="pl-2 text-blue-900 hover:underline cursor-pointer"
-                    >
-                      see {seeMore[img] ? "less" : "more"}...
-                    </span>
-                  )}
-                </div>
-              </div>
-              {/* <div className="flex justify-center">
-            <div className="flex-end justify-center navbar-btn d-none d-sm-inline-block"> */}
-              <div className="card-button">
-                <div className="flex align-items-center justify-center">
-                  <a
-                    className="main-btn-products"
-                    data-scroll-nav="0"
-                    href="https://docs.google.com/forms/d/e/1FAIpQLSfOr3fsy1F9RpZw9Gh8VyyUDAgm3Wg6HeskeIZRyiZvelRNNg/viewform?usp=sf_link" target="_blank"
-                  >
-                    Book your appointment{" "}
-                  </a>
-                  {/* <div className="long-arrow-right"></div> */}
-                </div>
-                {/* </div>
-              </div> */}
-                {conditions && (
-                  <div className="px-6">
-                    <p className="text-xs">{conditions} </p>
+        {homeServicesCards.length ? (
+          <div className="grid gap-2 md:mt-10 grid-cols-1 md:grid-cols-3 u-clearfix u-sheet mx-auto u-valign-middle u-sheet-1">
+            {homeServicesCards.map(
+              ({ image, description, head, conditions }) => (
+                <div
+                  key={image}
+                  className="p-2 shadow-lg card flex flex-col border border-gray-300 mx-2"
+                >
+                  <div className="card-content flex-grow">
+                    <div>
+                      <Image
+                        // layout="fill"
+                        // objectFit="cover"
+                        className="rounded-lg"
+                        src={image}
+                        alt=""
+                        srcSet=""
+                        height="250"
+                        width="355"
+                      />
+                    </div>
+                    <h1 className="text-blue-900 mt-3 text-center font-semibold">
+                      {head}
+                    </h1>
+                    <div className="px-2 py-4">
+                      {seeMore[image] || description.slice(0, 250)}
+                      {description.length > 250 && (
+                        <span
+                          onClick={() => {
+                            setSeeMore((prev) => ({
+                              ...prev,
+                              [image]: prev[image] ? "" : description,
+                            }));
+                          }}
+                          className="pl-2 text-blue-900 hover:underline cursor-pointer"
+                        >
+                          see {seeMore[image] ? "less" : "more"}...
+                        </span>
+                      )}
+                    </div>
                   </div>
-                )}
-              </div>
-            </div>
-          ))}
-        </div>
+                  {/* <div className="flex justify-center">
+            <div className="flex-end justify-center navbar-btn d-none d-sm-inline-block"> */}
+                  <div className="card-button">
+                    <div className="flex align-items-center justify-center">
+                      <a
+                        className="main-btn-products"
+                        data-scroll-nav="0"
+                        href="https://docs.google.com/forms/d/e/1FAIpQLSfOr3fsy1F9RpZw9Gh8VyyUDAgm3Wg6HeskeIZRyiZvelRNNg/viewform?usp=sf_link"
+                        target="_blank"
+                      >
+                        Book your appointment{" "}
+                      </a>
+                      {/* <div className="long-arrow-right"></div> */}
+                    </div>
+                    {/* </div>
+              </div> */}
+                    {conditions && (
+                      <div className="px-6">
+                        <p className="text-xs">{conditions} </p>
+                      </div>
+                    )}
+                  </div>
+                </div>
+              )
+            )}
+          </div>
+        ) : (
+          <Loading />
+        )}
         {/* <section id="about" className="about-area pt-70">
           <div className="container">
             <div className="row">
@@ -412,7 +433,8 @@ export default function ServicesCatalogueHomePage() {
   );
 }
 
-{/* <div className="container mx-auto p-6">
+{
+  /* <div className="container mx-auto p-6">
   <div className="flex items-stretch -mx-4">
     <div className="flex-1 p-4">
       <div className="block bg-white overflow-hidden border-2 h-full">
@@ -454,4 +476,5 @@ export default function ServicesCatalogueHomePage() {
       </div>
     </div>
   </div>
-</div> */}
+</div> */
+}

@@ -1,6 +1,9 @@
 import Image from "next/image";
-import React, { useState } from "react";
-import { cards, productCatalogue, brandsArr } from "../../constant";
+import React, { useEffect, useState } from "react";
+import Loading from "../../components/Loading";
+import { productCatalogue, brandsArr } from "../../constant";
+import { callApi } from "../../utils/apiUtils";
+import Endpoints from "../../utils/endpoints";
 
 const imgArr = [
   "/images/PVEC_idrop.jpeg",
@@ -19,7 +22,18 @@ const imgArr1 = [
 
 export default function ServiceProducts() {
   const [seeMore, setSeeMore] = useState({});
+  const [cards, setCards] = useState([]);
 
+  useEffect(() => {
+    callApi({
+      uriEndPoint: {
+        ...Endpoints.getServices,
+      },
+    }).then((res) => {
+      console.log("res", res);
+      setCards(res?.promotions);
+    });
+  }, []);
   return (
     <main>
       <div className="grid gap-16 mt-20 grid-cols-1 md:grid-cols-2 u-clearfix u-sheet mx-auto u-valign-middle u-sheet-1">
@@ -85,74 +99,78 @@ export default function ServiceProducts() {
           </div>
         </div>{" "} */}
       </div>
-      <div className="grid gap-1 mt-10 grid-cols-1 md:grid-cols-3 u-clearfix u-sheet mx-auto u-valign-middle u-sheet-1">
-        {cards.map(({ img, text, head, conditions, id }, index) => (
-          <div
-            id={id}
-            key={img}
-            className={`p-2 shadow-lg card flex flex-col border border-gray-300 mx-2 ${
-              index === cards.length - 1 && cards.length % 3 === 1
-                ? 'justify-center md:col-start-2' // Center the last element when there's an odd number of elements
-                : ''
-            }`}
-          >
-            <div className="card-content flex-grow">
-              <div>
-                <Image
-                  // layout="fill"
-                  // objectFit="cover"
-                  className="rounded-lg"
-                  src={img}
-                  alt=""
-                  srcSet=""
-                  height="250"
-                  width="355"
-                />
-              </div>
-              <h1 className="text-blue-900 my-3 text-center font-semibold">
-                {head}
-              </h1>
+      {cards.length ? (
+        <div className="grid gap-1 mt-10 grid-cols-1 md:grid-cols-3 u-clearfix u-sheet mx-auto u-valign-middle u-sheet-1">
+          {cards.map(({ image, description, head, conditions, id }, index) => (
+            <div
+              id={id}
+              key={image}
+              className={`p-2 shadow-lg card flex flex-col border border-gray-300 mx-2 ${
+                index === cards.length - 1 && cards.length % 3 === 1
+                  ? "justify-center md:col-start-2" // Center the last element when there's an odd number of elements
+                  : ""
+              }`}
+            >
+              <div className="card-content flex-grow">
+                <div>
+                  <Image
+                    // layout="fill"
+                    // objectFit="cover"
+                    className="rounded-lg"
+                    src={image}
+                    alt=""
+                    srcSet=""
+                    height="250"
+                    width="355"
+                  />
+                </div>
+                <h1 className="text-blue-900 my-3 text-center font-semibold">
+                  {head}
+                </h1>
 
-              <div className="px-6 py-4 ">
-                {seeMore[img] || text.slice(0, 250)}
-                {text.length > 250 && (
-                  <span
-                    onClick={() => {
-                      setSeeMore((prev) => ({
-                        ...prev,
-                        [img]: prev[img] ? "" : text,
-                      }));
-                    }}
-                    className=" pl-2 text-blue-900 hover:underline cursor-pointer"
-                  >
-                    see {seeMore[img] ? "less" : "more"}...
-                  </span>
-                )}
+                <div className="px-6 py-4 ">
+                  {seeMore[image] || description.slice(0, 250)}
+                  {description.length > 250 && (
+                    <span
+                      onClick={() => {
+                        setSeeMore((prev) => ({
+                          ...prev,
+                          [image]: prev[image] ? "" : description,
+                        }));
+                      }}
+                      className=" pl-2 text-blue-900 hover:underline cursor-pointer"
+                    >
+                      see {seeMore[image] ? "less" : "more"}...
+                    </span>
+                  )}
+                </div>
               </div>
-            </div>
 
-            {/* <div className="flex justify-center">
+              {/* <div className="flex justify-center">
             <div className="flex-end justify-center navbar-btn d-none d-sm-inline-block"> */}
 
-            <div className="card-button">
-              {conditions && (
-                <div className="px-6">
-                  <p className="text-xs">{conditions} </p>
+              <div className="card-button">
+                {conditions && (
+                  <div className="px-6">
+                    <p className="text-xs">{conditions} </p>
+                  </div>
+                )}
+                <div className="flex align-items-center justify-center">
+                  <a
+                    className="main-btn-products"
+                    data-scroll-nav="0"
+                    href="bookings#appointment"
+                  >
+                    Book your appointment{" "}
+                  </a>
                 </div>
-              )}
-              <div className="flex align-items-center justify-center">
-                <a
-                  className="main-btn-products"
-                  data-scroll-nav="0"
-                  href="bookings#appointment"
-                >
-                  Book your appointment{" "}
-                </a>
               </div>
             </div>
-          </div>
-        ))}
-      </div>
+          ))}
+        </div>
+      ) : (
+        <Loading />
+      )}
     </main>
   );
 }
