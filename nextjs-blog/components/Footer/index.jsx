@@ -142,7 +142,8 @@ export default function Footer() {
                   <ul className="link">
                     {/* <li><a href="/">Home</a></li> */}
                     <li>
-                      <a href="#">Appointment</a>
+                      <a href="https://docs.google.com/forms/d/e/1FAIpQLSfOr3fsy1F9RpZw9Gh8VyyUDAgm3Wg6HeskeIZRyiZvelRNNg/viewform?usp=sf_link"
+                        target="_blank">Appointment</a>
                     </li>
                     {/* <li><a href="#">Order Products</a></li> */}
                     <li>

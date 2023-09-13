@@ -108,7 +108,8 @@ to keep up-to-date on our latest offers, new stock announcements, and access to 
                   </div>
                   <ul className="link">
                     <li>
-                      <a href="#">Appointment</a>
+                      <a href="https://docs.google.com/forms/d/e/1FAIpQLSfOr3fsy1F9RpZw9Gh8VyyUDAgm3Wg6HeskeIZRyiZvelRNNg/viewform?usp=sf_link"
+                        target="_blank">Appointment</a>
                     </li>
                     <li>
                       <a href="/promotions">Promotions</a>
