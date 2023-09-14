@@ -419,7 +419,7 @@ const Bookings = () => {
 
             <Form.Item
               name="insuranceProviderOther"
-              label="Insuracnce provider's name (If not in list)"
+              label="Insurance provider's name (If not in list)"
             >
               <Input style={{ width: "100%" }} placeholder="Other insurance" />
             </Form.Item>
