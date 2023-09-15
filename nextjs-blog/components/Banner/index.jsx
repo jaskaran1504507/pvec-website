@@ -1,4 +1,5 @@
 import React from "react";
+const parse = require('html-react-parser');
 
 export default function Banner({
   banner,
@@ -48,28 +49,28 @@ export default function Banner({
               <h2
                 style={{ color: textColor, lineHeight: "1" }}
                 className="font-serif u-text text-white text-left text-xl md:text-2xl md:mb-12 mb-2  md:text-2xl font-bold "
-                dangerouslySetInnerHTML={{ __html: subText }}
-              />
+                // dangerouslySetInnerHTML={{ __html: subText }}
+                >{parse(subText)}</h2>
             )}
             {subText2 && (
               <h2
                 style={{ color: textColor, lineHeight: "1" }}
                 className="font-serif u-text text-white text-left text-xl md:text-2xl md:mb-12 mb-2  md:text-2xl font-bold "
-                dangerouslySetInnerHTML={{ __html: subText2 }}
-              />
+                // dangerouslySetInnerHTML={{ __html: subText2 }}
+              >{parse(subText2)}</h2>
             )}
             {subText3 && (
               <h2
                 style={{ color: textColor, lineHeight: "1" }}
                 className="font-serif u-text text-white text-left text-xl md:text-2xl md:mb-12 mb-2  md:text-2xl font-bold "
-                dangerouslySetInnerHTML={{ __html: subText3 }}
-              />
+                // dangerouslySetInnerHTML={{ __html: subText3 }}
+                >{parse(subText3)}</h2>
             )}
             {description && (
               <h3
                 style={{ color: textColor }}
-                dangerouslySetInnerHTML={{ __html: description }}
-              />
+                // dangerouslySetInnerHTML={{ __html: description }}
+                >{parse(description)}</h3>
             )}
             {children}
           </div>
