@@ -4,6 +4,7 @@ import Loading from "../../components/Loading";
 import { productCatalogue, brandsArr } from "../../constant";
 import { callApi } from "../../utils/apiUtils";
 import Endpoints from "../../utils/endpoints";
+const parse = require('html-react-parser');
 
 const imgArr = [
   "/images/PVEC_idrop.jpeg",
@@ -127,7 +128,7 @@ export default function ServiceProducts() {
                   />
                 </div>
                 <h1 className="text-blue-900 my-3 text-center font-semibold">
-                  {heading}
+                  {parse(heading)}
                 </h1>
 
                 <div className="px-6 py-4 ">
