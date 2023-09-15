@@ -178,10 +178,10 @@ export default function ServicesCatalogueHomePage() {
             {/* <!-- section title --> */}
           </div>
         </div>
-        {homeServicesCards.length ? (
+        {homeServicesCards?.length ? (
           <div className="grid gap-2 md:mt-10 grid-cols-1 md:grid-cols-3 u-clearfix u-sheet mx-auto u-valign-middle u-sheet-1">
             {homeServicesCards.map(
-              ({ image, description, head, conditions }) => (
+              ({ image, description, heading , conditions }) => (
                 <div
                   key={image}
                   className="p-2 shadow-lg card flex flex-col border border-gray-300 mx-2"
@@ -200,7 +200,7 @@ export default function ServicesCatalogueHomePage() {
                       />
                     </div>
                     <h1 className="text-blue-900 mt-3 text-center font-semibold">
-                      {head}
+                      {heading}
                     </h1>
                     <div className="px-2 py-4">
                       {seeMore[image] || description.slice(0, 250)}
