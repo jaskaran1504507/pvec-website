@@ -32,7 +32,7 @@ export default function ServiceProducts() {
     })
       .then((res) => {
         console.log("res", res);
-        setCards(res?.promotions);
+        setCards(res?.services);
       })
       .catch();
   }, []);
@@ -101,9 +101,9 @@ export default function ServiceProducts() {
           </div>
         </div>{" "} */}
       </div>
-      {cards.length ? (
+      {cards?.length ? (
         <div className="grid gap-1 mt-10 grid-cols-1 md:grid-cols-3 u-clearfix u-sheet mx-auto u-valign-middle u-sheet-1">
-          {cards.map(({ image, description, head, conditions, id }, index) => (
+          {cards.map(({ image, description, heading, conditions, id }, index) => (
             <div
               id={id}
               key={image}
@@ -127,7 +127,7 @@ export default function ServiceProducts() {
                   />
                 </div>
                 <h1 className="text-blue-900 my-3 text-center font-semibold">
-                  {head}
+                  {heading}
                 </h1>
 
                 <div className="px-6 py-4 ">
