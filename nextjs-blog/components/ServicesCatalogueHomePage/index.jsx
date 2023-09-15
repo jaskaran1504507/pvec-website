@@ -25,7 +25,7 @@ export default function ServicesCatalogueHomePage() {
     })
       .then((res) => {
         console.log("res", res);
-        setHomeServicesCards(res?.promotions);
+        setHomeServicesCards(res?.services);
       })
       .catch();
   }, []);
