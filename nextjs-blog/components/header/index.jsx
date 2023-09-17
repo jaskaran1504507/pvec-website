@@ -188,12 +188,12 @@ export default function Header() {
             >
               <span className="text-white flex items-center space-x-36 text-xl font-bold">
                 <a
-                  className="pl-2 "
+                  className="pl-1 inline-flex center"
                   href="mailto:info@pveyecare.ca"
                   target="_blank"
                 >
                   {/* <a href="mailto:info@pveyecare.ca"> */}
-                  <MailOutlined style={{ color: "#349BD6" }} /> &nbsp; &nbsp;
+                  <MailOutlined style={{ color: "#349BD6" }} className="mt-1"/> &nbsp; &nbsp;
                   <span
                     className="hover:white focus:white"
                     style={{ color: "#349BD6" }}
@@ -204,7 +204,7 @@ export default function Header() {
                 </a>
 
                 <a
-                  className="pl-2 "
+                  className="pl-1 inline-flex center"
                   style={{ color: "#349BD6" }}
                   href="tel:+16046899962"
                   target="_blank"
@@ -212,17 +212,18 @@ export default function Header() {
                   <MobileOutlined
                     twoToneColor="white"
                     style={{ color: "#349BD6" }}
+                    className="mt-1"
                   />
                   &nbsp; &nbsp;+1 604 689 9962
                 </a>
 
                 <a
-                  className="pl-2"
+                  className="pl-1 inline-flex center"
                   style={{ color: "#349BD6" }}
                   href="https://goo.gl/maps/rh7x6UiVqRNjZTBa7"
                   target="_blank"
                 >
-                  <HomeOutlined style={{ color: "#349BD6" }} /> &nbsp; &nbsp;
+                  <HomeOutlined style={{ color: "#349BD6" }} className="mt-1"/> &nbsp; &nbsp;
                   1242 Burrard Street, Vancouver BC, V6Z 1Z1
                 </a>
               </span>
