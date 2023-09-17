@@ -232,11 +232,11 @@ export default function Header() {
       )}
       <header className="header-area">
         {/* <script src="assets/js/bootstrap.min.js"></script> */}
-        <div className="navbar-area">
+        <div className="navbar-area backdrop-blur-sm">
           <div className="flex justify-between ">
-            <a className="navbar-brand" href="#">
+            <a className="navbar-brand " href="#">
               <img
-                className="border-solid border-t-2 border-black"
+                // className="border-solid border-t-2 border-black"
                 src="https://pvec-bucket.s3.ca-central-1.amazonaws.com/eyecare-logo.png"
                 style={{
                   maxWidth: "11rem",
@@ -244,7 +244,7 @@ export default function Header() {
                   marginLeft: "24px",
                   marginTop: "24px",
                   zIndex: 2000,
-                  backgroundColor: "#fff",
+                  // backgroundColor: "#fff",
                   paddingLeft: "2px",
                   paddingRight: "2px",
                 }}

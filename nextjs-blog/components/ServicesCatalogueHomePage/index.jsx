@@ -422,9 +422,9 @@ export default function ServicesCatalogueHomePage() {
             </u>
           </Link> */}
           <Link href="/service-products">
-            <u className="explore-services-container uppercase rounded-full white md:text-lg font-semibold px-4 py-3">
+            <p className="explore-services-container uppercase rounded-full white md:text-lg font-semibold px-4 py-3">
               Explore more of our services{" "}
-            </u>
+            </p>
           </Link>
         </div>
       </div>
