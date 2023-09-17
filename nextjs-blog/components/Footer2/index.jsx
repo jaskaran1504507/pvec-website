@@ -53,11 +53,11 @@ to keep up-to-date on our latest offers, new stock announcements, and access to 
                 data-wow-duration="1s"
                 data-wow-delay="0.2s"
               >
-                <a className="logo" href="#">
+                <a className="logo backdrop-blur" href="#">
                   <img
                     style={{
-                      backgroundColor: "#fff",
-                      color: "#fff",
+                      // backgroundColor: "#fff",
+                      // color: "#fff",
                       margin: "2px",
                       padding: "2px",
                     }}
