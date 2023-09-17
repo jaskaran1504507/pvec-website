@@ -243,14 +243,14 @@ export const brandsArr = [
   },
   {
     seq: 7,
-    link: "PVEC_MarcJacobs.jpeg",
+    link: "marc-jacobs-logo-vector.png",
     addr: "https://www.marcjacobs.com/default/the-marc-jacobs/the-accessories/sunglasses/",
     name: "Marc Jacobs",
     backgroundImage: "marc_jacobs_bk.webp"
   },
   {
     seq: 8,
-    link: "PVEC_MichaelKors.jpeg",
+    link: "mk_logo.jpeg",
     addr: "https://www.michaelkors.ca/men/accessories/sunglasses/_/N-285v",
     name: "Michael Kors",
     backgroundImage: "Michael-Kors_bk.jpeg"
