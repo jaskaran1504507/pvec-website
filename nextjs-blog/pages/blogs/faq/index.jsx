@@ -10,9 +10,10 @@ export default function Blogs() {
             style={{
               textAlign: "left",
               fontWeight: 400,
-              fontSize: "2.25rem",
               lineHeight: 1.1,
-            }}
+            }
+          }
+          className="text-3xl"
           >
             <span
               style={{ lineHeight: 2 }}
