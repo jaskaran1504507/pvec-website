@@ -51,17 +51,17 @@ export default function AboutUs() {
         >
           <span style={{ lineHeight: 2 }}>About Us</span>
         </h2>
-        <p className="text-blue-900 font-semibold md:pl-20 text-lg">
+        <p className="text-blue-900 text-center font-semibold md:pl-20 text-lg">
           Our practices proudly serves Greater Vancouver with a tradition of
           quality service and dedicated staff.{" "}
         </p>
-        <div className="my-20 grid grid-cols-1 md:grid-cols-1 gap-8 flex items-center">
+        <div className="my-20 grid grid-cols-1 inline-flex center gap-8 flex">
           {/* <Image
             src="/images/AboutUs_Unslapsh.png"
             height="450"
             width="400"
           /> */}
-          <div className="md:ml-24 h-full flex items-center">
+          <div className="text-center h-full">
             <div>
               {" "}
               <p className="font-bold text-2xl text-black">
@@ -83,16 +83,16 @@ export default function AboutUs() {
           </div>
         </div>
         <div className="grid gird-cols-1 gap-10 md:grid-cols-1 divide-y">
-          <div className="mt-2">
-            <h2 className="mt-2 text-2xl font-bold">
+          <div className="mt-2 text-center">
+            <p className="mt-2 text-2xl font-bold">
               {" "}
               <i className="text-blue-900">
                 "Did you know the eye is the only organ we can see blood vessels
                 and other structure linked to the general body health ?"
               </i>
-            </h2>
+            </p>
 
-            <div className="md:ml-4">
+            <div className="md:ml-4 mt-8">
               <p className="text-2xl text-blue-900">
                 "This allows our doctors to detect many serious health
                 conditions including: diabetes, hypertension, auto-immune
@@ -104,14 +104,14 @@ export default function AboutUs() {
           </div>
 
           <div>
-            <h2 className="mt-4 text-2xl font-bold text-center md:text-left">
+            <h2 className="text-2xl font-bold text-center md:text-left">
               Our Professionals
             </h2>
-            <div className="mt-4 grid grid-cols-1 md:grid-cols-3 gap-4">
-              <div className="mt-4 flex justify-center md:justify-end">
+            <div className="mt-4 flex flex-row mx-40">
+              <div className="mt-4 flex justify-center md:justify-end w-1/4">
                 <Image src="/images/Wayne.jpg" height="300" width="300" />
               </div>
-              <div className=" font-semibold text-blue-900 mt-24">
+              <div className="ml-4 font-semibold text-blue-900 mt-24  w-3/4">
                 "Dr. Wayne Yip is the primary optometrist here at Performance
                 Vision EyeCare. <br />
                 Dr. Yip attended the University of Waterloo for his
