@@ -158,7 +158,7 @@ export default function Blogs() {
                 {/* <li className="text-2xl">&#x2022; Ask about our no cost, no obligation program to take home a few pairs to show your family and friends!</li> */}
                 <li className="text-2xl">&#x2022; Order by phone: 604 689 9962 or Email 24/7:info@pveyecare.ca</li>
               </ul>
-              <div className="flex justify-center">
+              <div className="navbar-btn flex justify-center">
                 <a
                   className="main-btn mt-2"
                   data-scroll-nav="0"
@@ -289,7 +289,7 @@ export default function Blogs() {
               />
             </div>
 
-            <div className="flex justify-center">
+            <div className="flex justify-center navbar-btn">
               <a
                 className="main-btn mt-2"
                 data-scroll-nav="0"
