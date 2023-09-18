@@ -1,13 +1,34 @@
 import React, { useEffect, useState } from "react";
 import { useRouter } from "next/router";
-import { Badge, Button, Form, Input, List, Modal, Pagination, Select, Tag, message, notification } from "antd";
+import {
+  Badge,
+  Button,
+  Form,
+  Input,
+  List,
+  Modal,
+  Pagination,
+  Select,
+  Tag,
+  message,
+  notification,
+  Image,
+} from "antd";
 import { ShoppingCartOutlined } from "@ant-design/icons";
 import Products from "../../utils/endpoints/Products";
 import { callApi } from "../../utils/apiUtils";
 import Slider from "../../components/Slider";
 import LogoRow from "../../components/LogoRow";
 import Order from "../../components/Order";
-import { brandsArr, contactsBrandsArr, gridGlassesBrands, gridContactsBrands, eyecareProductsArr, gridEyecareBrands, eyecareProductsList } from "../../constant";
+import {
+  brandsArr,
+  contactsBrandsArr,
+  gridGlassesBrands,
+  gridContactsBrands,
+  eyecareProductsArr,
+  gridEyecareBrands,
+  eyecareProductsList,
+} from "../../constant";
 import BrandsGrid from "../BrandsGrid";
 import Brands from "../../utils/endpoints/Brands";
 import { debounce } from "lodash";
@@ -16,8 +37,8 @@ import OrderList from "../OrderList";
 const { Search } = Input;
 const queryObj = {
   "eye-medic": "MEDICARE",
-  "contacts": "CONTACTS",
-  "glasses": "GLASSES",
+  contacts: "CONTACTS",
+  glasses: "GLASSES",
 };
 
 export default function ProductsComponent() {
@@ -28,8 +49,8 @@ export default function ProductsComponent() {
   const [products, setProducts] = useState([]);
   const [brands, setBrands] = useState([]);
   const [brand, setBrand] = useState([]);
-  const [category, setCategory] = useState('');
-  const [keyword, setKeyword] = useState('');
+  const [category, setCategory] = useState("");
+  const [keyword, setKeyword] = useState("");
   const [startIndex, setStartIndex] = useState(0);
   const [productsCount, setProductsCount] = useState(0);
   const [images, setImages] = useState([]);
@@ -119,9 +140,9 @@ export default function ProductsComponent() {
       query: {
         startIndex: 0,
         fetchSize: 100,
-        keyword: '',
-        category: queryObj[router?.query?.query]
-      }
+        keyword: "",
+        category: queryObj[router?.query?.query],
+      },
     })
       .then((res) => {
         if (res?.brands) {
@@ -157,21 +178,21 @@ export default function ProductsComponent() {
           return "";
       }
     }
-    return '';
-  }
+    return "";
+  };
 
   const onChange = (value) => {
     setBrand(value);
     handleProductSearch({
       brandNew: value,
-    })
+    });
   };
 
   const action = (value) => {
     setKeyword(value);
     handleProductSearch({
-      keywordNew: value
-    })
+      keywordNew: value,
+    });
   };
 
   const debounceSearch = debounce(action, 400);
@@ -182,8 +203,8 @@ export default function ProductsComponent() {
       viewSize: 10,
       keyword: keyword,
       category: getCategory(),
-      brand: brand
-    }
+      brand: brand,
+    };
     if (keywordNew) {
       searchObj.keyword = keyword;
     }
@@ -208,7 +229,7 @@ export default function ProductsComponent() {
       .catch((err) => {
         console.error(err);
       });
-  }
+  };
 
   const onSearch = (val) => {
     getProducts({
@@ -246,8 +267,7 @@ export default function ProductsComponent() {
       return contactsBrandsArr;
     } else if (router?.query?.query == "glasses") {
       return brandsArr;
-    } else if (router.pathname == "/glasses-contacts")
-      return brandsArr;
+    } else if (router.pathname == "/glasses-contacts") return brandsArr;
   }
 
   function getBrandsRow() {
@@ -257,8 +277,7 @@ export default function ProductsComponent() {
       return contactsBrandsArr;
     } else if (router?.query?.query == "glasses") {
       return brandsArr;
-    } else if (router.pathname == "/glasses-contacts")
-      return brandsArr;
+    } else if (router.pathname == "/glasses-contacts") return brandsArr;
   }
 
   function getBrandHead() {
@@ -266,25 +285,25 @@ export default function ProductsComponent() {
       return {
         imageUrl: "/images/eye-drops.jpg",
         linkUrl: "",
-        linkText: "Buy Eye Drops"
-      };;
+        linkText: "Buy Eye Drops",
+      };
     } else if (router?.query?.query == "contacts") {
       return {
         imageUrl: "/images/acuvue-shop1.jpeg",
         linkUrl: "https://www.acuvue.ca/",
-        linkText: "Buy Acuvue"
+        linkText: "Buy Acuvue",
       };
     } else if (router?.query?.query == "glasses") {
       return {
         imageUrl: "/images/kliilk_shop.jpg",
         linkUrl: "https://www.kliik.com/",
-        linkText: "Buy KLiik"
+        linkText: "Buy KLiik",
       };
     } else if (router.pathname == "/glasses-contacts")
       return {
         imageUrl: "/images/kliilk_shop.jpg",
         linkUrl: "https://www.kliik.com/",
-        linkText: "Buy KLiik"
+        linkText: "Buy KLiik",
       };
   }
 
@@ -295,8 +314,7 @@ export default function ProductsComponent() {
       return gridContactsBrands;
     } else if (router?.query?.query == "glasses") {
       return gridGlassesBrands;
-    } else if (router.pathname == "/glasses-contacts")
-      return gridGlassesBrands;
+    } else if (router.pathname == "/glasses-contacts") return gridGlassesBrands;
   }
 
   const productDict = {};
@@ -314,13 +332,19 @@ export default function ProductsComponent() {
   const onFinish = (values) => {
     const formData = new FormData();
 
-    formData.append("existing", values?.existing || '');
+    formData.append("existing", values?.existing || "");
     formData.append("firstName", values?.firstName || "");
     formData.append("lastName", values?.lastName || "");
-    formData.append("preferredContactMethod", values?.preferredContactMethod || "");
+    formData.append(
+      "preferredContactMethod",
+      values?.preferredContactMethod || ""
+    );
     formData.append("typeOfContactLenses", values?.typeOfContactLenses || "");
     formData.append("totalSupplyOrder", values?.totalSupplyOrder || "");
-    formData.append("upToDatePrescriptionOnFile", values?.upToDatePrescriptionOnFile || "");
+    formData.append(
+      "upToDatePrescriptionOnFile",
+      values?.upToDatePrescriptionOnFile || ""
+    );
     formData.append("orderDelivery", values?.orderDelivery || "");
     formData.append("email", values?.email || "");
     formData.append("phone", values?.phone || "");
@@ -330,13 +354,12 @@ export default function ProductsComponent() {
       formData.append("products", JSON.stringify(cartProducts));
     }
 
-    if (fileList)
-      formData.append("files", fileList[0].originFileObj);
+    if (fileList) formData.append("files", fileList[0].originFileObj);
 
     callApi({
       uriEndPoint: {
         ...Products.createOrder,
-        headerProps:{'Content-type': 'multipart/form-date'}
+        headerProps: { "Content-type": "multipart/form-date" },
       },
       body: formData,
     })
@@ -366,15 +389,19 @@ export default function ProductsComponent() {
   return (
     <>
       <div className="container">
-
         <Slider slides={getBrands()} />
 
         {/* Brands list with logo */}
-        <div className="mt-12"> <LogoRow logos={getBrandsRow()} /></div>
+        <div className="mt-12">
+          {" "}
+          <LogoRow logos={getBrandsRow()} />
+        </div>
 
         {/* Advanced corousel section to showcase a brand or more, brand image on left, 4 images on right */}
-        <div className="my-8"> <BrandsGrid head={getBrandHead()} gridBrands={getGridBrands()} /></div>
-
+        <div className="my-8">
+          {" "}
+          <BrandsGrid head={getBrandHead()} gridBrands={getGridBrands()} />
+        </div>
       </div>
       <div className="line mt-20"></div>
 
@@ -386,8 +413,8 @@ export default function ProductsComponent() {
           <br />
           {/* <h2 className="font-bold text-lg">Search Products</h2> */}
           <br />
-          <div className="col-md-10 flex mx-4 mb-4">
-            <div className="w-3/4 flex gap-2">
+          <div className="col-md-10 md:px-auto px-0 md:flex mx-4 mb-4 items-center">
+            <div className="md:w-3/4 flex gap-2">
               <Search
                 size="large"
                 placeholder="Enter keyword here to search..."
@@ -395,25 +422,26 @@ export default function ProductsComponent() {
                 enterButton
               />
             </div>
-            
-            <div className="w/2 flex gap-2">
+
+            <div className="md:w/2 md:flex gap-2 md:my-0 my-4">
               <Select
-                className="ml-3 w-32"
+                className="md:ml-3 w-32"
                 showSearch
                 size="large"
                 placeholder="Brand"
                 optionFilterProp="children"
                 onChange={onChange}
                 filterOption={(input, option) =>
-                  (option?.label ?? "").toLowerCase()
+                  (option?.label ?? "")
+                    .toLowerCase()
                     .includes(input.toLowerCase())
                 }
                 options={brands}
               />
             </div>
-            <div className="w/2 flex gap-2 justify-end">
+            <div className="md:w/2 flex gap-2 md:mt-0  justify-between md:justify-end">
               <button
-                className="btn btn-outline-primary btn-sm ml-8"
+                className="btn btn-outline-primary btn-sm md:ml-8"
                 type="button"
                 style={{ minWidth: "100px" }}
                 onClick={showModal}
@@ -450,7 +478,6 @@ export default function ProductsComponent() {
                 width={680}
                 footer={null}
               >
-
                 <Form
                   layout="vertical"
                   hideRequiredMark
@@ -462,28 +489,69 @@ export default function ProductsComponent() {
                     cartProducts={cartProducts}
                     setCartProducts={setCartProducts}
                     setIsOrderModalOpen={setIsOrderModalOpen}
-                    images={images} setImages={setImages} form={form}
-                    fileList={fileList} setFileList={setFileList}
+                    images={images}
+                    setImages={setImages}
+                    form={form}
+                    fileList={fileList}
+                    setFileList={setFileList}
                   />
                 </Form>
               </Modal>
             </div>
           </div>
-          <div className="col-md-10">
-            <List
-              pagination={{
-                position: 'bottom', align: 'center', pageSize: 10, total: productsCount, current: startIndex + 1, onChange: (page) => {
-                  setStartIndex(page - 1);
-                  handleProductSearch({ startIndexNew: page - 1 })
-                  console.log(page);
-                },
-              }}
-              dataSource={products}
-              renderItem={(product, index) => {
-                return (
-                  <List.Item className="max-h-80"
-                    actions={[
-                      <div className="d-flex flex-column mt-4">
+          {products.length > 1 && (
+            <div className="col-md-10">
+              {products.map((product) => (
+                <div
+                  style={{ alignItems: "center" }}
+                  className="w-full my-10 md:flex-1 flex  flex-col  rounded-xl border px-4 py-4 text-center  md:flex-row md:items-start md:text-left"
+                >
+                  <div style={{ flex: 2 }} className="mb-4 md:mr-6 md:mb-0  ">
+                    <div>
+                      <div className="">
+                        <div className=" ">
+                          <Image
+                            width={220}
+                            // preview={null}
+                            src={product.image}
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="" style={{ flex: 5 }}>
+                    <p className="text-left">
+                      {product.name}{" "}
+                      <Tag bordered={false} color="success">
+                        {product?.brand?.title}
+                      </Tag>
+                    </p>
+                    <div className="">
+                      <div className="mt-1 mb-1 spec-1 text-left">
+                        {product?.tags?.map((element, arrIndex) => {
+                          let tag = (
+                            <>
+                              <span className="dot"></span>
+                              <span>{element}</span>
+                            </>
+                          );
+                          return tag;
+                        })}
+                      </div>
+                      <p className="text-justify para mb-0">
+                        {product.description}
+                        <br />
+                        <br />
+                      </p>
+                    </div>
+                    <div className="mb-3" />
+                  </div>
+                  <ul
+                    style={{ flex: 1 }}
+                    className="ant-list-item-action w-full h-full md:w-auto flex-1"
+                  >
+                    <li className="w-full md:w-auto">
+                      <div className="w-full md:w-auto d-flex flex-column mt-4">
                         {!(product?._id in productDict) ? (
                           <button
                             className="btn btn-outline-primary btn-sm mt-2"
@@ -504,41 +572,97 @@ export default function ProductsComponent() {
                           </button>
                         )}
                       </div>
-                    ]}
-                  >
-                    <List.Item.Meta
-                      avatar={
-                        <div className="bg-indigo-100 ">
-                          <img alt="product" class="object-cover h-60 w-60 " src={product.image} />
-                        </div>
-                      }
-                      title={<>{product.name} <Tag bordered={false} color="success">
-                        {product?.brand?.title}
-                      </Tag></>}
-                      description={<div className="">
-                        <div className="mt-1 mb-1 spec-1">
-                          {product?.tags?.map((element, arrIndex) => {
-                            let tag = (
-                              <>
-                                <span className="dot"></span>
-                                <span>{element}</span>
-                              </>
-                            );
-                            return tag;
-                          })}
-                        </div>
-                        <p className="text-justify para mb-0">
-                          {product.description}
-                          <br />
-                          <br />
-                        </p>
-                      </div>}
-                    />
-                  </List.Item>
-                )
-              }}
-            />
-          </div>
+                    </li>
+                  </ul>
+                </div>
+              ))}
+              {/* <List
+                pagination={{
+                  position: "bottom",
+                  align: "center",
+                  pageSize: 10,
+                  total: productsCount,
+                  current: startIndex + 1,
+                  onChange: (page) => {
+                    setStartIndex(page - 1);
+                    handleProductSearch({ startIndexNew: page - 1 });
+                    console.log(page);
+                  },
+                }}
+                dataSource={products}
+                renderItem={(product, index) => {
+                  return (
+                    <List.Item
+                      className="max-h-80"
+                      actions={[
+                        <div className="d-flex flex-column mt-4">
+                          {!(product?._id in productDict) ? (
+                            <button
+                              className="btn btn-outline-primary btn-sm mt-2"
+                              type="button"
+                              onClick={() => handleAddOrder(product)}
+                            >
+                              Add to order
+                            </button>
+                          ) : (
+                            <button
+                              className="bg-primary text-white btn-sm mt-2"
+                              type="button"
+                              onClick={() =>
+                                removeOrder(product, productDict[product?._id])
+                              }
+                            >
+                              Remove order
+                            </button>
+                          )}
+                        </div>,
+                      ]}
+                    >
+                      <List.Item.Meta
+                        avatar={
+                          <div className="bg-indigo-100 ">
+                            <img
+                              alt="product"
+                              class="object-cover h-60 w-60 "
+                              src={product.image}
+                            />
+                          </div>
+                        }
+                        title={
+                          <>
+                            {product.name}{" "}
+                            <Tag bordered={false} color="success">
+                              {product?.brand?.title}
+                            </Tag>
+                          </>
+                        }
+                        description={
+                          <div className="">
+                            <div className="mt-1 mb-1 spec-1">
+                              {product?.tags?.map((element, arrIndex) => {
+                                let tag = (
+                                  <>
+                                    <span className="dot"></span>
+                                    <span>{element}</span>
+                                  </>
+                                );
+                                return tag;
+                              })}
+                            </div>
+                            <p className="text-justify para mb-0">
+                              {product.description}
+                              <br />
+                              <br />
+                            </p>
+                          </div>
+                        }
+                      />
+                    </List.Item>
+                  );
+                }}
+              /> */}
+            </div>
+          )}
         </div>
       </div>
     </>
