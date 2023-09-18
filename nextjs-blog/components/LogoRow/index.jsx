@@ -8,7 +8,10 @@ const LogoRow = ({ logos }) => {
             (<div className="flex flex-wrap justify-center bg-slate-100">
                 {logos.map((logo, index) => (
                     <div key={index} className="w-1/6 m-1">
-                        <Link href={logo.addr} target="_blank" className={`m-1 w-11/12 center ${router?.query?.query == "eye-medic" ? 'h-48' : 'h-24'}`}>
+                        <Link 
+                        // href={logo.addr} target="_blank"
+                        href={router?.asPath.includes("#search_products") ? router?.asPath : router?.asPath + "#search_products"}
+                         className={`m-1 w-11/12 center ${router?.query?.query == "eye-medic" ? 'h-48' : 'h-24'}`}>
                             <img
                                 src={"/images/" + logo.link}
                                 alt="Logo"

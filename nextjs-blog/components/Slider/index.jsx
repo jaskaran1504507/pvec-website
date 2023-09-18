@@ -1,8 +1,10 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
+import { useRouter } from "next/router";
 
 const Slider = ({ slides }) => {
+    const router = useRouter();
     const [currentIndex, setCurrentIndex] = useState(0);
 
     useEffect(() => {
@@ -21,7 +23,11 @@ const Slider = ({ slides }) => {
         <div className="slider-container bg-gray-200 w-full h-96 flex items-center justify-center">
             <div className="slider w-full h-full overflow-hidden">
                 {slides.map((slide, index) => (
-                    <Link href={slide.addr} target="_blank">
+                    <Link 
+                    // href={slide.addr}
+                        href={router?.asPath.includes("#search_products") ? router?.asPath : router?.asPath + "#search_products"}
+                    //  target="_blank"
+                     >
                         <div
                             key={slide.seq}
                             className={`slide w-full h-full transition-opacity duration-500 ease-in-out ${index === currentIndex ? 'block' : 'hidden'

@@ -1,7 +1,9 @@
 import React from "react";
 import { DeleteOutlined } from "@ant-design/icons";
+import { Button, List, Tag } from "antd";
+import Link from "next/link";
 
-const OrderList = ({ cartProducts, setCartProducts }) => {
+const OrderList = ({ cartProducts, setCartProducts, setIsModalOpen, setIsOrderModalOpen }) => {
   const changeCount = (updatedProduct, productIdx) => {
     if (updatedProduct?.count === 0) {
       setCartProducts((prev) => [
@@ -26,65 +28,82 @@ const OrderList = ({ cartProducts, setCartProducts }) => {
     }
   };
   return (
-    <div className="m-8" style={{ maxHeight: "40vh" }}>
-      <h2 className="my-6 font-bold">Products</h2>
-      {cartProducts.map((product, idx) => (
-        <div className="my-6">
-          <li key={product?._id} className="row">
-            <span
-              className="cartColor col-md-1 font-bold"
-              style={{ background: "#fff" }}
+
+    <div className="bg-white shadow rounded">
+      <div className="p-4 border-b">
+        <List
+          header={<h2 className="font-bold text-lg">Selected product(s) to order</h2>}
+          itemLayout="horizontal"
+          dataSource={cartProducts}
+          renderItem={(product, index) => {
+            return (
+              <List.Item
+                key={product._id}
+                actions={[<a className="text-lg" key="list-loadmore-edit" onClick={() =>
+                  changeCount({ ...product, count: Number(product.count) - 1 }, index)}>-</a>, <>{product.count}</>,
+                <a className="text-lg" key="list-loadmore-more" onClick={() =>
+                  changeCount({ ...product, count: Number(product.count) + 1 }, index)}>+</a>,
+                <a key="list-loadmore-more text-center align-middle " onClick={() => changeCount({ ...product, count: 0 }, index)}> <div className="cursor-pointer text-red-500 ">
+                  <DeleteOutlined />
+                </div></a>]}
+              >
+                <List.Item.Meta
+                  avatar={
+                    // <img
+                    //   width={140}
+                    //   alt="product"
+                    //   src={product.image}
+                    // />
+
+                    <div className="bg-indigo-100 ">
+                      <img alt="product" class="object-cover h-40 w-40 " src={product.image} />
+                    </div>
+                  }
+                  title={<>{product.name} <Tag bordered={false} color="success">
+                    {product?.brand?.title}
+                  </Tag></>}
+                  description={product.description}
+                />
+              </List.Item>
+            )
+          }}
+        />
+        <br />
+        <div className="flex justify-center mt-8">
+          <Link
+            href="/glasses-contacts?query=glasses"
+          >
+            <Button
+              type="primary"
+              className="bg-primary text-white "
+            // htmlType="submit"
+            // style={{ width: "100%" }}
+            // disabled={cartProducts?.length === 0}
+            onClick={() => {
+              setIsModalOpen(false);
+              setIsOrderModalOpen(false);
+            }}
             >
-              {idx + 1}
-            </span>
-            <div className="col-md-3">
-              <img
-                className="img-fluid img-responsive rounded product-image"
-                src={product?.image}
-              />
-            </div>
-            <span className="cartColor col-md-5" style={{ background: "#fff" }}>
-              {product.name}
-            </span>
+              Explore more products
+            </Button>
 
-            <span className="col-md-2">
-              <button
-                className="font-bold"
-                onClick={() =>
-                  changeCount(
-                    { ...product, count: Number(product.count) + 1 },
-                    idx
-                  )
-                }
-              ></button>
-              <span className="cartColorQty mx-1">{product?.count}</span>
-              <button
-                className="font-bold"
-                onClick={() =>
-                  changeCount(
-                    { ...product, count: Number(product.count) - 1 },
-                    idx
-                  )
-                }
-              ></button>
-            </span>
-            <DeleteOutlined
-              className="col-md-1"
-              style={{ color: "#FF0000" }}
-              onClick={() => changeCount({ ...product, count: 0 }, idx)}
-            />
-          </li>
+          </Link>
         </div>
-      ))}
-
-      <div className="flex justify-center">
-        <button
-          className="btn btn-outline-primary btn-sm mt-4 mb-4"
-          type="button"
-          style={{ minWidth: "100px" }}
-        >
-          Explore more products
-        </button>
+        <div className="flex justify-end">
+          {cartProducts?.length > 0 && <Button
+            type="primary"
+            className="bg-primary text-white "
+            // htmlType="submit"
+            // style={{ width: "100%" }}
+            // disabled={cartProducts?.length === 0}
+            onClick={() => {
+              setIsModalOpen(false);
+              setIsOrderModalOpen(true);
+            }}
+          >
+            Next
+          </Button>}
+        </div>
       </div>
     </div>
   );
