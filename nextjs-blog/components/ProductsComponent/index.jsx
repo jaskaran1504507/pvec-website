@@ -311,7 +311,6 @@ export default function ProductsComponent() {
     setCartProducts((prev) => prev.filter((p, i) => i !== idxRemoveProduct));
   };
 
-
   const onFinish = (values) => {
     const formData = new FormData();
 
@@ -363,8 +362,6 @@ export default function ProductsComponent() {
         console.log(err);
       });
   };
-
-
 
   return (
     <>

@@ -162,7 +162,7 @@ export default function Blogs() {
                 <a
                   className="main-btn mt-2"
                   data-scroll-nav="0"
-                  href="https://docs.google.com/forms/d/e/1FAIpQLSeciQeXbMzKdezp0kkCx1Itxm1SCnUL5bv1C7rT1m1aBp1vsg/viewform?usp=sf_link" target="_blank"
+                  href="/glasses-contacts?query=contacts"
                 > <span className="px-2 font-bold">Order Contacts</span>
                 </a>
               </div>

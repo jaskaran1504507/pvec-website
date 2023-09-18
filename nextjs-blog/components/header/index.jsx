@@ -1,17 +1,102 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import { callApi } from "../../utils/apiUtils";
+import Products from "../../utils/endpoints/Products";
 import {
   HomeFilled,
   HomeOutlined,
   MailOutlined,
   MobileOutlined,
+  ShoppingCartOutlined,
 } from "@ant-design/icons";
 import { brandsArr, contactsBrandsArr, cards } from "../../constant";
+import { Badge, Form, Modal, notification } from "antd";
+import OrderList from "../OrderList";
+import Order from "../Order";
 
 export default function Header() {
   const [isNavVisible, setIsNavVisible] = useState(false);
+  const [cartProducts, setCartProducts] = useState([]);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [fileList, setFileList] = useState([]);
+  const [isOrderModalOpen, setIsOrderModalOpen] = useState(false);
+  const [images, setImages] = useState([]);
+
+  const [form] = Form.useForm();
+
+  const showModal = () => {
+    setIsModalOpen(true);
+  };
+
+  const handleOk = () => {
+    setIsModalOpen(false);
+  };
+
+  const handleCancel = () => {
+    setIsModalOpen(false);
+  };
+  const handleCancelOrderModal = () => {
+    setIsOrderModalOpen(false);
+  };
+
+  const onFinish = (values) => {
+    const formData = new FormData();
+
+    formData.append("existing", values?.existing || '');
+    formData.append("firstName", values?.firstName || "");
+    formData.append("lastName", values?.lastName || "");
+    formData.append("preferredContactMethod", values?.preferredContactMethod || "");
+    formData.append("typeOfContactLenses", values?.typeOfContactLenses || "");
+    formData.append("totalSupplyOrder", values?.totalSupplyOrder || "");
+    formData.append("upToDatePrescriptionOnFile", values?.upToDatePrescriptionOnFile || "");
+    formData.append("orderDelivery", values?.orderDelivery || "");
+    formData.append("email", values?.email || "");
+    formData.append("phone", values?.phone || "");
+    formData.append("notes", values?.notes || "");
+    formData.append("type", "online");
+    if (cartProducts) {
+      formData.append("products", JSON.stringify(cartProducts));
+    }
+
+    if (fileList)
+      formData.append("files", fileList[0].originFileObj);
+
+    callApi({
+      uriEndPoint: {
+        ...Products.createOrder,
+        headerProps:{'Content-type': 'multipart/form-date'}
+      },
+      body: formData,
+    })
+      .then(() => {
+        localStorage.setItem("products", "[]");
+        setCartProducts([]);
+        notification.success({
+          message: "Order submitted",
+          description: "We will update you on your order soon",
+        });
+        setIsModalOpen(false);
+        setIsOrderModalOpen(false);
+        form.resetFields();
+      })
+      .catch((err) => {
+        setIsModalOpen(false);
+        setIsOrderModalOpen(false);
+        form.resetFields();
+        notification.error({
+          message: "Order failed!",
+          description: "Please contact support for the assistance.",
+        });
+        console.log(err);
+      });
+  };
+
+  useEffect(() => {
+    const localCartProducts = localStorage.getItem("products") || "[]";
+    setCartProducts(JSON.parse(localCartProducts));
+  }, []);
   const handleNavClick = () => {
     setIsNavVisible((prev) => !prev);
   };
@@ -181,10 +266,10 @@ export default function Header() {
           <div className="mx-auto  flex justify-end">
             <div
               className="pl-8 pr-2"
-              // style={{
-              //   background:
-              //     "linear-gradient(to right, #1d3d74 0%, #3598cf 50%, #1d3d74 100%)",
-              // }}
+            // style={{
+            //   background:
+            //     "linear-gradient(to right, #1d3d74 0%, #3598cf 50%, #1d3d74 100%)",
+            // }}
             >
               <span className="text-white flex items-center space-x-36 text-xl font-bold">
                 <a
@@ -193,7 +278,7 @@ export default function Header() {
                   target="_blank"
                 >
                   {/* <a href="mailto:info@pveyecare.ca"> */}
-                  <MailOutlined style={{ color: "#349BD6" }} className="mt-1"/> &nbsp; &nbsp;
+                  <MailOutlined style={{ color: "#349BD6" }} className="mt-1" /> &nbsp; &nbsp;
                   <span
                     className="hover:white focus:white"
                     style={{ color: "#349BD6" }}
@@ -223,7 +308,7 @@ export default function Header() {
                   href="https://goo.gl/maps/rh7x6UiVqRNjZTBa7"
                   target="_blank"
                 >
-                  <HomeOutlined style={{ color: "#349BD6" }} className="mt-1"/> &nbsp; &nbsp;
+                  <HomeOutlined style={{ color: "#349BD6" }} className="mt-1" /> &nbsp; &nbsp;
                   1242 Burrard Street, Vancouver BC, V6Z 1Z1
                 </a>
               </span>
@@ -607,8 +692,8 @@ export default function Header() {
                                 "bg-black"
                               )}
                               data-scroll-nav="0"
-                              href="https://docs.google.com/forms/d/e/1FAIpQLSfOr3fsy1F9RpZw9Gh8VyyUDAgm3Wg6HeskeIZRyiZvelRNNg/viewform?usp=sf_link"
-                              target="_blank"
+                              // href="https://docs.google.com/forms/d/e/1FAIpQLSfOr3fsy1F9RpZw9Gh8VyyUDAgm3Wg6HeskeIZRyiZvelRNNg/viewform?usp=sf_link"
+                              // target="_blank"
                             >
                               <span className="flex items-center ">
                                 {" "}
@@ -618,7 +703,14 @@ export default function Header() {
                                     "text-white"
                                   )}
                                 >
-                                  Order sontacts
+                                  <button
+                                    type="button"
+                                    style={{ minWidth: "82px" }}
+                                    onClick={showModal}
+                                  >
+                                    Order contacts
+                                  </button>
+                                  {/* Order contacts */}
                                 </span>
                               </span>
                             </a>
@@ -633,8 +725,9 @@ export default function Header() {
                                 "bg-black"
                               )}
                               data-scroll-nav="0"
-                              href="https://docs.google.com/forms/d/e/1FAIpQLSfOr3fsy1F9RpZw9Gh8VyyUDAgm3Wg6HeskeIZRyiZvelRNNg/viewform?usp=sf_link"
-                              target="_blank"
+                              // href="https://docs.google.com/forms/d/e/1FAIpQLSfOr3fsy1F9RpZw9Gh8VyyUDAgm3Wg6HeskeIZRyiZvelRNNg/viewform?usp=sf_link"
+                              href="/bookings#appointment"
+                              // target="_blank"
                             >
                               <span className="flex items-center ">
                                 {" "}
@@ -683,19 +776,32 @@ export default function Header() {
                       <a
                         className="main-btn"
                         data-scroll-nav="0"
-                        href="https://docs.google.com/forms/d/e/1FAIpQLSeciQeXbMzKdezp0kkCx1Itxm1SCnUL5bv1C7rT1m1aBp1vsg/viewform?usp=sf_link"
-                        target="_blank"
+                      // href="https://docs.google.com/forms/d/e/1FAIpQLSeciQeXbMzKdezp0kkCx1Itxm1SCnUL5bv1C7rT1m1aBp1vsg/viewform?usp=sf_link"
+                      // target="_blank"
                       >
                         {" "}
-                        <span className="px-2 font-bold">Order Contacts</span>
+                        {/* <span className="px-2 font-bold">Order Contacts</span>
+                         */}
+                        <button
+                          className=" font-bold text-white"
+                          type="button"
+                          style={{ minWidth: "82px" }}
+                          onClick={showModal}
+                        >
+                          Order
+                        </button>
+                        <Badge className="mr-3" count={cartProducts.length}>
+                          <ShoppingCartOutlined style={{ fontSize: "30px" }} />
+                        </Badge>
                       </a>
                     </div>
                     <div className="navbar-btn d-none d-sm-inline-block ml-2">
                       <a
                         className="main-btn"
                         data-scroll-nav="0"
-                        href="https://docs.google.com/forms/d/e/1FAIpQLSfOr3fsy1F9RpZw9Gh8VyyUDAgm3Wg6HeskeIZRyiZvelRNNg/viewform?usp=sf_link"
-                        target="_blank"
+                        // href="https://docs.google.com/forms/d/e/1FAIpQLSfOr3fsy1F9RpZw9Gh8VyyUDAgm3Wg6HeskeIZRyiZvelRNNg/viewform?usp=sf_link"
+                        // target="_blank"
+                        href="/bookings#appointment"
                       >
                         {" "}
                         <span className="px-2 font-bold">Book Appointment</span>
@@ -742,6 +848,50 @@ export default function Header() {
             <div id="particles-1" className="particles"></div>
         </div>  */}
       </header>
+      <Modal
+        title="Order your products"
+        open={isModalOpen}
+        onOk={handleOk}
+        okText="Place your order"
+        onCancel={handleCancel}
+        centered
+        width={900}
+        footer={null}
+      >
+        <OrderList
+          cartProducts={cartProducts}
+          setCartProducts={setCartProducts}
+          setIsModalOpen={setIsModalOpen}
+          setIsOrderModalOpen={setIsOrderModalOpen}
+        />
+      </Modal>
+      <Modal
+        title="Order details"
+        open={isOrderModalOpen}
+        onOk={handleOk}
+        okText="Place your order"
+        onCancel={handleCancelOrderModal}
+        centered
+        width={680}
+        footer={null}
+      >
+
+        <Form
+          layout="vertical"
+          hideRequiredMark
+          colon={false}
+          onFinish={onFinish}
+          form={form}
+        >
+          <Order
+            cartProducts={cartProducts}
+            setCartProducts={setCartProducts}
+            setIsOrderModalOpen={setIsOrderModalOpen}
+            images={images} setImages={setImages} form={form}
+            fileList={fileList} setFileList={setFileList}
+          />
+        </Form>
+      </Modal>
     </>
   );
 }
