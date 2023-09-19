@@ -20,6 +20,7 @@ import { callApi } from "../../utils/apiUtils";
 import Slider from "../../components/Slider";
 import LogoRow from "../../components/LogoRow";
 import Order from "../../components/Order";
+import context from "../context";
 import {
   brandsArr,
   contactsBrandsArr,
@@ -62,7 +63,7 @@ export default function ProductsComponent() {
     //   url: 'https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png',
     // },
   ]);
-
+  const currContext = useContext(context);
   const [form] = Form.useForm();
 
   const showModal = () => {
@@ -97,6 +98,7 @@ export default function ProductsComponent() {
         });
       } else {
         const localCartProducts = localStorage.getItem("products") || "[]";
+        currContext.dispatch({ count: JSON.parse(localCartProducts).length });
         setCartProducts(JSON.parse(localCartProducts));
         getProducts({
           query: {
@@ -556,7 +558,12 @@ export default function ProductsComponent() {
                           <button
                             className="btn btn-outline-primary btn-sm md:mt-2"
                             type="button"
-                            onClick={() => handleAddOrder(product)}
+                            onClick={() => {
+                              currContext.dispatch({
+                                count: cartProducts.length + 1,
+                              });
+                              handleAddOrder(product);
+                            }}
                           >
                             Add to order
                           </button>
@@ -564,9 +571,12 @@ export default function ProductsComponent() {
                           <button
                             className="bg-primary text-white btn-sm mt-2"
                             type="button"
-                            onClick={() =>
-                              removeOrder(product, productDict[product?._id])
-                            }
+                            onClick={() => {
+                              currContext.dispatch({
+                                count: cartProducts.length - 1,
+                              });
+                              removeOrder(product, productDict[product?._id]);
+                            }}
                           >
                             Remove order
                           </button>

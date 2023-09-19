@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { callApi } from "../../utils/apiUtils";
 import Products from "../../utils/endpoints/Products";
 import {
@@ -15,6 +15,7 @@ import { brandsArr, contactsBrandsArr, cards } from "../../constant";
 import { Badge, Form, Modal, notification } from "antd";
 import OrderList from "../OrderList";
 import Order from "../Order";
+import context from "../context";
 
 export default function Header() {
   const [isNavVisible, setIsNavVisible] = useState(false);
@@ -26,6 +27,8 @@ export default function Header() {
 
   const [form] = Form.useForm();
 
+  const currContext = useContext(context);
+  console.log("currContext", currContext);
   const showModal = () => {
     setIsModalOpen(true);
   };
@@ -44,13 +47,19 @@ export default function Header() {
   const onFinish = (values) => {
     const formData = new FormData();
 
-    formData.append("existing", values?.existing || '');
+    formData.append("existing", values?.existing || "");
     formData.append("firstName", values?.firstName || "");
     formData.append("lastName", values?.lastName || "");
-    formData.append("preferredContactMethod", values?.preferredContactMethod || "");
+    formData.append(
+      "preferredContactMethod",
+      values?.preferredContactMethod || ""
+    );
     formData.append("typeOfContactLenses", values?.typeOfContactLenses || "");
     formData.append("totalSupplyOrder", values?.totalSupplyOrder || "");
-    formData.append("upToDatePrescriptionOnFile", values?.upToDatePrescriptionOnFile || "");
+    formData.append(
+      "upToDatePrescriptionOnFile",
+      values?.upToDatePrescriptionOnFile || ""
+    );
     formData.append("orderDelivery", values?.orderDelivery || "");
     formData.append("email", values?.email || "");
     formData.append("phone", values?.phone || "");
@@ -60,13 +69,12 @@ export default function Header() {
       formData.append("products", JSON.stringify(cartProducts));
     }
 
-    if (fileList)
-      formData.append("files", fileList[0].originFileObj);
+    if (fileList) formData.append("files", fileList[0].originFileObj);
 
     callApi({
       uriEndPoint: {
         ...Products.createOrder,
-        headerProps:{'Content-type': 'multipart/form-date'}
+        headerProps: { "Content-type": "multipart/form-date" },
       },
       body: formData,
     })
@@ -95,6 +103,8 @@ export default function Header() {
 
   useEffect(() => {
     const localCartProducts = localStorage.getItem("products") || "[]";
+    currContext.dispatch({ count: JSON.parse(localCartProducts).length });
+
     setCartProducts(JSON.parse(localCartProducts));
   }, []);
   const handleNavClick = () => {
@@ -266,10 +276,10 @@ export default function Header() {
           <div className="mx-auto  flex justify-end">
             <div
               className="pl-8 pr-2"
-            // style={{
-            //   background:
-            //     "linear-gradient(to right, #1d3d74 0%, #3598cf 50%, #1d3d74 100%)",
-            // }}
+              // style={{
+              //   background:
+              //     "linear-gradient(to right, #1d3d74 0%, #3598cf 50%, #1d3d74 100%)",
+              // }}
             >
               <span className="text-white flex items-center space-x-36 text-xl font-bold">
                 <a
@@ -278,7 +288,11 @@ export default function Header() {
                   target="_blank"
                 >
                   {/* <a href="mailto:info@pveyecare.ca"> */}
-                  <MailOutlined style={{ color: "#349BD6" }} className="mt-1" /> &nbsp; &nbsp;
+                  <MailOutlined
+                    style={{ color: "#349BD6" }}
+                    className="mt-1"
+                  />{" "}
+                  &nbsp; &nbsp;
                   <span
                     className="hover:white focus:white"
                     style={{ color: "#349BD6" }}
@@ -308,8 +322,8 @@ export default function Header() {
                   href="https://goo.gl/maps/rh7x6UiVqRNjZTBa7"
                   target="_blank"
                 >
-                  <HomeOutlined style={{ color: "#349BD6" }} className="mt-1" /> &nbsp; &nbsp;
-                  1242 Burrard Street, Vancouver BC, V6Z 1Z1
+                  <HomeOutlined style={{ color: "#349BD6" }} className="mt-1" />{" "}
+                  &nbsp; &nbsp; 1242 Burrard Street, Vancouver BC, V6Z 1Z1
                 </a>
               </span>
             </div>
@@ -776,8 +790,8 @@ export default function Header() {
                       <a
                         className="main-btn"
                         data-scroll-nav="0"
-                      // href="https://docs.google.com/forms/d/e/1FAIpQLSeciQeXbMzKdezp0kkCx1Itxm1SCnUL5bv1C7rT1m1aBp1vsg/viewform?usp=sf_link"
-                      // target="_blank"
+                        // href="https://docs.google.com/forms/d/e/1FAIpQLSeciQeXbMzKdezp0kkCx1Itxm1SCnUL5bv1C7rT1m1aBp1vsg/viewform?usp=sf_link"
+                        // target="_blank"
                       >
                         {" "}
                         {/* <span className="px-2 font-bold">Order Contacts</span>
@@ -790,7 +804,7 @@ export default function Header() {
                         >
                           Order
                         </button>
-                        <Badge className="mr-3" count={cartProducts.length}>
+                        <Badge className="mr-3" count={currContext.state.count}>
                           <ShoppingCartOutlined style={{ fontSize: "30px" }} />
                         </Badge>
                       </a>
@@ -853,7 +867,10 @@ export default function Header() {
         open={isModalOpen}
         onOk={handleOk}
         okText="Place your order"
-        onCancel={handleCancel}
+        onCancel={() => {
+          currContext.dispatch({ count: cartProducts.length });
+          handleCancel();
+        }}
         centered
         width={900}
         footer={null}
@@ -875,7 +892,6 @@ export default function Header() {
         width={680}
         footer={null}
       >
-
         <Form
           layout="vertical"
           hideRequiredMark
@@ -887,8 +903,11 @@ export default function Header() {
             cartProducts={cartProducts}
             setCartProducts={setCartProducts}
             setIsOrderModalOpen={setIsOrderModalOpen}
-            images={images} setImages={setImages} form={form}
-            fileList={fileList} setFileList={setFileList}
+            images={images}
+            setImages={setImages}
+            form={form}
+            fileList={fileList}
+            setFileList={setFileList}
           />
         </Form>
       </Modal>
