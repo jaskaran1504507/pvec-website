@@ -499,12 +499,12 @@ export default function ProductsComponent() {
               </Modal>
             </div>
           </div>
-          {products.length > 1 && (
+          {products.length > 0 && (
             <div className="col-md-10">
               {products.map((product) => (
                 <div
                   style={{ alignItems: "center" }}
-                  className="w-full my-10 md:flex-1 flex  flex-col  rounded-xl border px-4 py-4 text-center  md:flex-row md:items-start md:text-left"
+                  className="w-full md:my-10 my-2 md:flex-1 flex  flex-col  rounded-xl border p-4 text-center  md:flex-row md:items-start md:text-left"
                 >
                   <div style={{ flex: 2 }} className="mb-4 md:mr-6 md:mb-0  ">
                     <div>
@@ -551,10 +551,10 @@ export default function ProductsComponent() {
                     className="ant-list-item-action w-full h-full md:w-auto flex-1"
                   >
                     <li className="w-full md:w-auto">
-                      <div className="w-full md:w-auto d-flex flex-column mt-4">
+                      <div className="w-full md:w-auto d-flex flex-column md:mt-4 mt-2">
                         {!(product?._id in productDict) ? (
                           <button
-                            className="btn btn-outline-primary btn-sm mt-2"
+                            className="btn btn-outline-primary btn-sm md:mt-2"
                             type="button"
                             onClick={() => handleAddOrder(product)}
                           >
