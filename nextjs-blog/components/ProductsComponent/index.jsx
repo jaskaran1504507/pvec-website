@@ -423,7 +423,7 @@ export default function ProductsComponent() {
               />
             </div>
 
-            <div className="md:w/2 md:flex gap-2 md:my-0 my-4">
+            <div className="w/2 md:flex gap-2 md:my-0 my-4">
               <Select
                 className="md:ml-3 w-32"
                 showSearch
@@ -439,7 +439,7 @@ export default function ProductsComponent() {
                 options={brands}
               />
             </div>
-            <div className="md:w/2 flex gap-2 md:mt-0  justify-between md:justify-end">
+            <div className="w/2 flex gap-2 md:mt-0  justify-between md:justify-end">
               <button
                 className="btn btn-outline-primary btn-sm md:ml-8"
                 type="button"

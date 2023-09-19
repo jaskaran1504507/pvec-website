@@ -4,7 +4,7 @@ const BrandsGrid = ({ head, gridBrands }) => {
     return (
         (head && gridBrands) ? (
             <div>
-                <div className="grid grid-cols-2 gap-4">
+                <div className="grid md:grid-cols-2 gap-4">
                     <div>
                         <ImageWithTextSlit
                             imageUrl={head.imageUrl}
@@ -12,7 +12,7 @@ const BrandsGrid = ({ head, gridBrands }) => {
                             linkText={head.linkText}
                         />
                     </div>
-                    <div className="grid grid-cols-2 gap-8">
+                    <div className="grid md:grid-cols-2 grid-cols-2 gap-8">
                         {gridBrands.map(a =>
                             <div>
                                 <ImageWithTextSlit

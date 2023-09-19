@@ -7,7 +7,7 @@ const LogoRow = ({ logos }) => {
         logos ?
             (<div className="flex flex-wrap justify-center bg-slate-100">
                 {logos.map((logo, index) => (
-                    <div key={index} className="w-1/6 m-1">
+                    <div key={index} className="md:w-1/6 w-1/4 m-1">
                         <Link 
                         // href={logo.addr} target="_blank"
                         href={router?.asPath.includes("#search_products") ? router?.asPath : router?.asPath + "#search_products"}
