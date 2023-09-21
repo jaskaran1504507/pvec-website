@@ -425,9 +425,9 @@ export default function ProductsComponent() {
               />
             </div>
 
-            <div className="w/2 md:flex gap-2 md:my-0 my-4">
+            <div className="w/2 flex justify-between  gap-2 md:my-0 my-4">
               <Select
-                className="md:ml-3 w-32"
+                className="md:ml-3 w-32 flex-1"
                 showSearch
                 size="large"
                 placeholder="Brand"
@@ -440,19 +440,34 @@ export default function ProductsComponent() {
                 }
                 options={brands}
               />
+              <span className="flex justify-around flex-1 md:hidden">
+                <button
+                  className="btn  btn-outline-primary btn-sm md:ml-8"
+                  type="button"
+                  style={{ minWidth: "100px" }}
+                  onClick={showModal}
+                >
+                  Order
+                </button>
+                <Badge count={cartProducts.length}>
+                  <ShoppingCartOutlined style={{ fontSize: "30px" }} />
+                </Badge>
+              </span>
             </div>
             <div className="w/2 flex gap-2 md:mt-0  justify-between md:justify-end">
-              <button
-                className="btn btn-outline-primary btn-sm md:ml-8"
-                type="button"
-                style={{ minWidth: "100px" }}
-                onClick={showModal}
-              >
-                Order
-              </button>
-              <Badge count={cartProducts.length}>
-                <ShoppingCartOutlined style={{ fontSize: "30px" }} />
-              </Badge>
+              <span className="hidden md:flex">
+                <button
+                  className="btn  btn-outline-primary btn-sm md:ml-8"
+                  type="button"
+                  style={{ minWidth: "100px" }}
+                  onClick={showModal}
+                >
+                  Order
+                </button>
+                <Badge count={cartProducts.length}>
+                  <ShoppingCartOutlined style={{ fontSize: "30px" }} />
+                </Badge>
+              </span>
               <Modal
                 title="Order your products"
                 open={isModalOpen}

@@ -34,12 +34,12 @@ const OrderList = ({
   };
   return (
     <div className="bg-white  rounded">
-      <div className="p-4 ">
+      <div className="md:p-4  p-2">
         {cartProducts.length ? (
           cartProducts.map((product, index) => (
             <div
               style={{ alignItems: "center" }}
-              className="w-full my-0 md:flex-1 flex  flex-col  rounded-xl border px-4 py-4 text-center  md:flex-row md:items-start md:text-left"
+              className="w-full my-0 md:flex-1 flex  flex-col  rounded-xl border md:px-4 p-2 md:py-4 text-center  md:flex-row md:items-start md:text-left"
             >
               <div style={{ flex: 1 }} className="mb-4 md:mr-6 md:mb-0  ">
                 <div>
@@ -87,7 +87,7 @@ const OrderList = ({
               >
                 <div
                   style={{ display: "flex", flexDirection: "row" }}
-                  className="w-full flex md:w-auto  flex-row "
+                  className="w-full flex md:w-auto mb-1 flex-row "
                 >
                   <a
                     style={{ flex: 1, background: "#e9e9e9" }}
