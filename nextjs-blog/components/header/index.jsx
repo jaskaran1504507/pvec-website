@@ -66,7 +66,7 @@ export default function Header() {
     callApi({
       uriEndPoint: {
         ...Products.createOrder,
-        headerProps:{'Content-type': 'multipart/form-date'}
+        headerProps: { 'Content-type': 'multipart/form-date' }
       },
       body: formData,
     })
@@ -692,8 +692,8 @@ export default function Header() {
                                 "bg-black"
                               )}
                               data-scroll-nav="0"
-                              // href="https://docs.google.com/forms/d/e/1FAIpQLSfOr3fsy1F9RpZw9Gh8VyyUDAgm3Wg6HeskeIZRyiZvelRNNg/viewform?usp=sf_link"
-                              // target="_blank"
+                            // href="https://docs.google.com/forms/d/e/1FAIpQLSfOr3fsy1F9RpZw9Gh8VyyUDAgm3Wg6HeskeIZRyiZvelRNNg/viewform?usp=sf_link"
+                            // target="_blank"
                             >
                               <span className="flex items-center ">
                                 {" "}
@@ -708,9 +708,12 @@ export default function Header() {
                                     style={{ minWidth: "82px" }}
                                     onClick={showModal}
                                   >
-                                    Order contacts
+                                    Order
                                   </button>
                                   {/* Order contacts */}
+                                  <Badge className="mr-3" count={cartProducts.length}>
+                                    <ShoppingCartOutlined style={{ fontSize: "30px" }} />
+                                  </Badge>
                                 </span>
                               </span>
                             </a>
@@ -727,7 +730,7 @@ export default function Header() {
                               data-scroll-nav="0"
                               // href="https://docs.google.com/forms/d/e/1FAIpQLSfOr3fsy1F9RpZw9Gh8VyyUDAgm3Wg6HeskeIZRyiZvelRNNg/viewform?usp=sf_link"
                               href="/bookings#appointment"
-                              // target="_blank"
+                            // target="_blank"
                             >
                               <span className="flex items-center ">
                                 {" "}
