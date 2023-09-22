@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import {
   Badge,
@@ -20,6 +20,7 @@ import { callApi } from "../../utils/apiUtils";
 import Slider from "../../components/Slider";
 import LogoRow from "../../components/LogoRow";
 import Order from "../../components/Order";
+import context from "../context";
 import {
   brandsArr,
   contactsBrandsArr,
@@ -62,7 +63,7 @@ export default function ProductsComponent() {
     //   url: 'https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png',
     // },
   ]);
-
+  const currContext = useContext(context);
   const [form] = Form.useForm();
 
   const showModal = () => {
@@ -97,6 +98,7 @@ export default function ProductsComponent() {
         });
       } else {
         const localCartProducts = localStorage.getItem("products") || "[]";
+        currContext.dispatch({ count: JSON.parse(localCartProducts).length });
         setCartProducts(JSON.parse(localCartProducts));
         getProducts({
           query: {
@@ -423,9 +425,9 @@ export default function ProductsComponent() {
               />
             </div>
 
-            <div className="w/2 md:flex gap-2 md:my-0 my-4">
+            <div className="w/2 flex justify-between  gap-2 md:my-0 my-4">
               <Select
-                className="md:ml-3 w-32"
+                className="md:ml-3 w-32 flex-1"
                 showSearch
                 size="large"
                 placeholder="Brand"
@@ -438,19 +440,34 @@ export default function ProductsComponent() {
                 }
                 options={brands}
               />
+              <span className="flex justify-around flex-1 md:hidden">
+                <button
+                  className="btn  btn-outline-primary btn-sm md:ml-8"
+                  type="button"
+                  style={{ minWidth: "100px" }}
+                  onClick={showModal}
+                >
+                  Order
+                </button>
+                <Badge count={cartProducts.length}>
+                  <ShoppingCartOutlined style={{ fontSize: "30px" }} />
+                </Badge>
+              </span>
             </div>
             <div className="w/2 flex gap-2 md:mt-0  justify-between md:justify-end">
-              <button
-                className="btn btn-outline-primary btn-sm md:ml-8"
-                type="button"
-                style={{ minWidth: "100px" }}
-                onClick={showModal}
-              >
-                Order
-              </button>
-              <Badge count={cartProducts.length}>
-                <ShoppingCartOutlined style={{ fontSize: "30px" }} />
-              </Badge>
+              <span className="hidden md:flex">
+                <button
+                  className="btn  btn-outline-primary btn-sm md:ml-8"
+                  type="button"
+                  style={{ minWidth: "100px" }}
+                  onClick={showModal}
+                >
+                  Order
+                </button>
+                <Badge count={cartProducts.length}>
+                  <ShoppingCartOutlined style={{ fontSize: "30px" }} />
+                </Badge>
+              </span>
               <Modal
                 title="Order your products"
                 open={isModalOpen}
@@ -556,7 +573,12 @@ export default function ProductsComponent() {
                           <button
                             className="btn btn-outline-primary btn-sm md:mt-2"
                             type="button"
-                            onClick={() => handleAddOrder(product)}
+                            onClick={() => {
+                              currContext.dispatch({
+                                count: cartProducts.length + 1,
+                              });
+                              handleAddOrder(product);
+                            }}
                           >
                             Add to order
                           </button>
@@ -564,9 +586,12 @@ export default function ProductsComponent() {
                           <button
                             className="bg-primary text-white btn-sm mt-2"
                             type="button"
-                            onClick={() =>
-                              removeOrder(product, productDict[product?._id])
-                            }
+                            onClick={() => {
+                              currContext.dispatch({
+                                count: cartProducts.length - 1,
+                              });
+                              removeOrder(product, productDict[product?._id]);
+                            }}
                           >
                             Remove order
                           </button>

@@ -13,14 +13,16 @@ import "./../pages/dummy/assets/css/bootstrap.min.css";
 import "./../pages/dummy/assets/css/default.css";
 import "./../pages/dummy/assets/css/style.css";
 import "./../components/FloatInput/index.css";
-import './../styles/globals.css';
+import "./../styles/globals.css";
 import { useRouter } from "next/router";
-import { useEffect, useState } from "react";
+import React, { useContext, useEffect, useReducer, useState } from "react";
+import Context from "../components/context";
 
 // This default export is required in a new `pages/_app.js` file.
 export default function MyApp({ Component, pageProps }) {
   const router = useRouter();
   const [isVisited, setIsVisited] = useState(true);
+  const [state, dispatch] = useState({ count: 0 });
   useEffect(() => {
     if (!localStorage.getItem("isVisited")) {
       setIsVisited(false);
@@ -39,8 +41,10 @@ export default function MyApp({ Component, pageProps }) {
         <title>PV Eye Care</title>
         <link rel="icon" href="/pvec-small.ico" />
       </Head>
-      <Header />
-      <Component {...pageProps} />
+      <Context.Provider value={{ state, dispatch }}>
+        <Header />
+        <Component {...pageProps} />
+      </Context.Provider>
       {router.pathname == "/about-us" ? <Footer2 /> : <Footer />}
       {!isVisited && (
         <div
