@@ -25,6 +25,8 @@ export default function Header() {
   const [isOrderModalOpen, setIsOrderModalOpen] = useState(false);
   const [images, setImages] = useState([]);
 
+  const [brandsArr, setBrandsArr] = useState([]);
+  const [contactsBrandsArr, setCcontactsBrandsArr] = useState([]);
   const [form] = Form.useForm();
 
   const currContext = useContext(context);
@@ -104,6 +106,28 @@ export default function Header() {
   useEffect(() => {
     const localCartProducts = localStorage.getItem("products") || "[]";
     currContext.dispatch({ count: JSON.parse(localCartProducts).length });
+    callApi({
+      uriEndPoint: { version: "", uri: "/brands", method: "GET" },
+      query: {
+        category: "GLASSES",
+      },
+    })
+      .then((res) => {
+        console.log("res", res);
+        setBrandsArr(res?.brands || []);
+      })
+      .catch();
+    callApi({
+      uriEndPoint: { version: "", uri: "/brands", method: "GET" },
+      query: {
+        category: "CONTACTS",
+      },
+    })
+      .then((res) => {
+        console.log("res", res);
+        setCcontactsBrandsArr(res?.brands || []);
+      })
+      .catch();
 
     setCartProducts(JSON.parse(localCartProducts));
   }, []);
@@ -449,14 +473,16 @@ export default function Header() {
                               </span>
                             </a>
                             <div className="dropdown-content-glasses">
-                              {brandsArr.map((brand) => (
-                                <a href={brand.addr} target="_blank">
+                              {brandsArr?.map((brand) => (
+                                <a href={brand?.redirectUrl} target="_blank">
                                   <div className="flex">
                                     <img
                                       className="img-fluid mx-1 img-responsive rounded product-image-v2"
-                                      src={"/images/brands/" + brand.link}
+                                      src={brand?.image}
                                     />
-                                    <h2 className="font-bold">{brand.name}</h2>
+                                    <h2 className="font-bold">
+                                      {brand?.title}
+                                    </h2>
                                   </div>
                                 </a>
                               ))}
@@ -490,13 +516,15 @@ export default function Header() {
                             </a>
                             <div className="dropdown-content-contacts">
                               {contactsBrandsArr.map((brand) => (
-                                <a href={brand.addr} target="_blank">
+                                <a href={brand?.redirectUrl} target="_blank">
                                   <div className="flex">
                                     <img
                                       className="img-fluid mx-1 img-responsive rounded product-image-v2"
-                                      src={"/images/" + brand.link}
+                                      src={brand?.image}
                                     />
-                                    <h2 className="font-bold">{brand.name}</h2>
+                                    <h2 className="font-bold">
+                                      {brand?.title}
+                                    </h2>
                                   </div>
                                 </a>
                               ))}
@@ -706,8 +734,8 @@ export default function Header() {
                                 "bg-black"
                               )}
                               data-scroll-nav="0"
-                            // href="https://docs.google.com/forms/d/e/1FAIpQLSfOr3fsy1F9RpZw9Gh8VyyUDAgm3Wg6HeskeIZRyiZvelRNNg/viewform?usp=sf_link"
-                            // target="_blank"
+                              // href="https://docs.google.com/forms/d/e/1FAIpQLSfOr3fsy1F9RpZw9Gh8VyyUDAgm3Wg6HeskeIZRyiZvelRNNg/viewform?usp=sf_link"
+                              // target="_blank"
                             >
                               <span className="flex items-center ">
                                 {" "}
@@ -725,8 +753,13 @@ export default function Header() {
                                     Order
                                   </button>
                                   {/* Order contacts */}
-                                  <Badge className="mr-3" count={cartProducts.length}>
-                                    <ShoppingCartOutlined style={{ fontSize: "30px" }} />
+                                  <Badge
+                                    className="mr-3"
+                                    count={cartProducts.length}
+                                  >
+                                    <ShoppingCartOutlined
+                                      style={{ fontSize: "30px" }}
+                                    />
                                   </Badge>
                                 </span>
                               </span>
@@ -744,7 +777,7 @@ export default function Header() {
                               data-scroll-nav="0"
                               // href="https://docs.google.com/forms/d/e/1FAIpQLSfOr3fsy1F9RpZw9Gh8VyyUDAgm3Wg6HeskeIZRyiZvelRNNg/viewform?usp=sf_link"
                               href="/bookings#appointment"
-                            // target="_blank"
+                              // target="_blank"
                             >
                               <span className="flex items-center ">
                                 {" "}
