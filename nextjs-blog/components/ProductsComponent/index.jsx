@@ -55,6 +55,9 @@ export default function ProductsComponent() {
   const [startIndex, setStartIndex] = useState(0);
   const [productsCount, setProductsCount] = useState(0);
   const [images, setImages] = useState([]);
+  // const [brandsArr, setBrandsArr] = useState([]);
+  const [contactsBrandsArr, setCcontactsBrandsArr] = useState([]);
+
   const [fileList, setFileList] = useState([
     // {
     //   uid: '-1',
@@ -138,6 +141,28 @@ export default function ProductsComponent() {
   };
 
   useEffect(() => {
+    callApi({
+      uriEndPoint: { version: "", uri: "/brands", method: "GET" },
+      query: {
+        category: getBrands(),
+      },
+    })
+      .then((res) => {
+        console.log("res", res);
+        // setBrandsArr(res?.brands || []);
+      })
+      .catch();
+    callApi({
+      uriEndPoint: { version: "", uri: "/brands", method: "GET" },
+      query: {
+        category: getBrandsRow(),
+      },
+    })
+      .then((res) => {
+        console.log("res", res);
+        setCcontactsBrandsArr(res?.brands || []);
+      })
+      .catch();
     getBrandsFromServer({
       query: {
         startIndex: 0,
@@ -274,12 +299,12 @@ export default function ProductsComponent() {
 
   function getBrandsRow() {
     if (router?.query?.query == "eye-medic") {
-      return eyecareProductsList;
+      return "MEDICARE";
     } else if (router?.query?.query == "contacts") {
-      return contactsBrandsArr;
+      return "CONTACTS";
     } else if (router?.query?.query == "glasses") {
-      return brandsArr;
-    } else if (router.pathname == "/glasses-contacts") return brandsArr;
+      return "GLASSES";
+    } else if (router.pathname == "/glasses-contacts") return "GLASSES";
   }
 
   function getBrandHead() {
@@ -395,8 +420,7 @@ export default function ProductsComponent() {
 
         {/* Brands list with logo */}
         <div className="mt-12">
-          {" "}
-          <LogoRow logos={getBrandsRow()} />
+          <LogoRow logos={contactsBrandsArr} />
         </div>
 
         {/* Advanced corousel section to showcase a brand or more, brand image on left, 4 images on right */}
