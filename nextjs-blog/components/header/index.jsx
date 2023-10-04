@@ -633,8 +633,9 @@ export default function Header() {
                                 "bg-black"
                               )}
                               data-scroll-nav="0"
-                              href="https://docs.google.com/forms/d/e/1FAIpQLSfOr3fsy1F9RpZw9Gh8VyyUDAgm3Wg6HeskeIZRyiZvelRNNg/viewform?usp=sf_link"
-                              target="_blank"
+                              // href="https://docs.google.com/forms/d/e/1FAIpQLSfOr3fsy1F9RpZw9Gh8VyyUDAgm3Wg6HeskeIZRyiZvelRNNg/viewform?usp=sf_link"
+                              // target="_blank"
+                              href="/bookings#appointment"
                             >
                               <span className="flex items-center ">
                                 {" "}
@@ -694,8 +695,9 @@ export default function Header() {
                       <a
                         className="main-btn"
                         data-scroll-nav="0"
-                        href="https://docs.google.com/forms/d/e/1FAIpQLSfOr3fsy1F9RpZw9Gh8VyyUDAgm3Wg6HeskeIZRyiZvelRNNg/viewform?usp=sf_link"
-                        target="_blank"
+                        // href="https://docs.google.com/forms/d/e/1FAIpQLSfOr3fsy1F9RpZw9Gh8VyyUDAgm3Wg6HeskeIZRyiZvelRNNg/viewform?usp=sf_link"
+                        // target="_blank"
+                        href="/bookings#appointment"
                       >
                         {" "}
                         <span className="px-2 font-bold">Book Appointment</span>
