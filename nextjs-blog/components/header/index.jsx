@@ -168,7 +168,7 @@ export default function Header() {
     //   </div>
     // </>
     <>
-      {!isNavVisible && (
+      {/* {!isNavVisible && (
         <div
           style={{
             position: "sticky",
@@ -176,15 +176,11 @@ export default function Header() {
             // top: "111px",
             zIndex: 2000,
           }}
-          className="hidden md:block pr-4"
+          className="hidden md:block pr-4 flex flex-col"
         >
           <div className="mx-auto  flex justify-end">
             <div
               className="pl-8 pr-2"
-              // style={{
-              //   background:
-              //     "linear-gradient(to right, #1d3d74 0%, #3598cf 50%, #1d3d74 100%)",
-              // }}
             >
               <span className="text-white flex items-center space-x-36 text-xl font-bold">
                 <a
@@ -192,15 +188,13 @@ export default function Header() {
                   href="mailto:info@pveyecare.ca"
                   target="_blank"
                 >
-                  {/* <a href="mailto:info@pveyecare.ca"> */}
-                  <MailOutlined style={{ color: "#349BD6" }} className="mt-1"/> &nbsp; &nbsp;
+                  <MailOutlined style={{ color: "#349BD6" }} className="mt-1" /> &nbsp; &nbsp;
                   <span
                     className="hover:white focus:white"
                     style={{ color: "#349BD6" }}
                   >
                     info@pveyecare.ca
                   </span>
-                  {/* </a> */}
                 </a>
 
                 <a
@@ -223,27 +217,26 @@ export default function Header() {
                   href="https://goo.gl/maps/rh7x6UiVqRNjZTBa7"
                   target="_blank"
                 >
-                  <HomeOutlined style={{ color: "#349BD6" }} className="mt-1"/> &nbsp; &nbsp;
+                  <HomeOutlined style={{ color: "#349BD6" }} className="mt-1" /> &nbsp; &nbsp;
                   1242 Burrard Street, Vancouver BC, V6Z 1Z1
                 </a>
               </span>
             </div>
           </div>
         </div>
-      )}
-      <header className="header-area">
-        {/* <script src="assets/js/bootstrap.min.js"></script> */}
-        <div className="navbar-area backdrop-blur-sm">
-          <div className="flex justify-between ">
+      )} */}
+      {/* <header className="flex ">
+        <div className=" backdrop-blur-sm">
+          <div className="flex flex-col justify-between ">
             <a className="navbar-brand " href="#">
               <img
                 // className="border-solid border-t-2 border-black"
                 src="https://pvec-bucket.s3.ca-central-1.amazonaws.com/eyecare-logo.png"
                 style={{
                   maxWidth: "11rem",
-                  height: "4.5rem",
-                  marginLeft: "24px",
-                  marginTop: "24px",
+                  height: "5rem",
+                  // marginLeft: "24px",
+                  // marginTop: "24px",
                   zIndex: 2000,
                   // backgroundColor: "#fff",
                   paddingLeft: "2px",
@@ -252,13 +245,10 @@ export default function Header() {
                 alt="Logo"
               />
             </a>
-            <div className="container mt-6">
+            <div className="flex flex-col mt-6">
               <div className="row">
                 <div className="col-lg-12">
-                  <nav className="navbar navbar-expand-lg flex justify-end">
-                    {/* <a className="navbar-brand" href="#">
-                    <img src="images/eyecare-logo.png" style={{maxWidth :'9rem', height :'4.3rem', marginRight: '4px'}} alt="Logo" />
-                  </a> */}
+                  <nav className="navbar-expand-lg  flex flex-col">
                     <button
                       onClick={handleNavClick}
                       className="navbar-toggler"
@@ -295,9 +285,8 @@ export default function Header() {
                       }}
                       id="navbarSupportedContent"
                     >
-                      {/* <div className="collapse navbar-collapse sub-menu-bar" id="navbarSupportedContent"> */}
-                      <ul id="nav" className="navbar-nav ml-auto font-bold">
-                        <li className="nav-item active ">
+                      <ul id="nav" className="ml-auto font-bold flex flex-col">
+                        <li className=" active ">
                           <div className="relative group">
                             <div className="absolute -inset-0.5 bg-gradient-to-r from-cyan-800 to-sky-500 rounded-lg blur opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-tilt"></div>
 
@@ -324,7 +313,7 @@ export default function Header() {
                             </a>
                           </div>
                         </li>
-                        <li className="nav-item">
+                        <li className="">
                           <div className="glasses-option relative group">
                             <div className="absolute -inset-0.5 bg-gradient-to-r from-cyan-800 to-sky-500 rounded-lg blur opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-tilt"></div>
                             <a
@@ -364,7 +353,7 @@ export default function Header() {
                             </div>
                           </div>
                         </li>
-                        <li className="nav-item">
+                        <li className="">
                           <div className="contacts-option relative group">
                             <div className="absolute -inset-0.5 bg-gradient-to-r from-cyan-800 to-sky-500 rounded-lg blur opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-tilt"></div>
                             <a
@@ -404,7 +393,7 @@ export default function Header() {
                             </div>
                           </div>
                         </li>
-                        <li className="nav-item">
+                        <li className="">
                           <div className="services-option relative group">
                             <div className="absolute -inset-0.5 bg-gradient-to-r from-cyan-800 to-sky-500 rounded-lg blur opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-tilt"></div>
 
@@ -441,7 +430,7 @@ export default function Header() {
                             </div>
                           </div>
                         </li>
-                        <li className="nav-item">
+                        <li className="">
                           <div className="relative group">
                             <div className="absolute -inset-0.5 bg-gradient-to-r from-cyan-800 to-sky-500 rounded-lg blur opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-tilt"></div>
 
@@ -469,7 +458,7 @@ export default function Header() {
                             </a>
                           </div>
                         </li>
-                        <li className="nav-item">
+                        <li className="">
                           <div className="relative group">
                             <div className="absolute -inset-0.5 bg-gradient-to-r from-cyan-800 to-sky-500 rounded-lg blur opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-tilt"></div>
                             <a
@@ -494,7 +483,7 @@ export default function Header() {
                             </a>
                           </div>
                         </li>
-                        <li className="nav-item">
+                        <li className="">
                           <div className="relative group">
                             <div className="absolute -inset-0.5 bg-gradient-to-r from-cyan-800 to-sky-500 rounded-lg blur opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-tilt"></div>
                             <a
@@ -519,7 +508,7 @@ export default function Header() {
                             </a>
                           </div>
                         </li>
-                        <li className="nav-item">
+                        <li className="">
                           <div className="faq-option relative group">
                             <div className="absolute -inset-0.5 bg-gradient-to-r from-cyan-800 to-sky-500 rounded-lg blur opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-tilt"></div>
                             <a
@@ -679,7 +668,6 @@ export default function Header() {
                         </li>
                       </ul>
                     </div>
-                    {/* #1D3D74 #3598CF */}
                     <div className="navbar-btn d-none d-sm-inline-block">
                       <a
                         className="main-btn"
@@ -720,30 +708,378 @@ export default function Header() {
             </div>
           </div>
         </div>
+      </header> */}
+      <div className="flex h-screen ">
+        {/* Sidebar */}
+        <div className="text-white w-56 flex flex-col items-center py-2">
+          {/* Logo */}
+          <div className="mb-4 mt-8">
+            <img src="https://pvec-bucket.s3.ca-central-1.amazonaws.com/eyecare-logo.png" alt="Logo" className="w-44 h-18" />
+          </div>
 
-        {/* <div id="home" className="header-hero bg_cover" style={{backgroundImage: "assets/images/banner-bg.svg"}}>
-            <div className="container">
-                <div className="row justify-content-center">
-                    <div className="col-lg-8">
-                        <div className="header-hero-content text-center">
-                            <h3 className="header-sub-title wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.2s">Basic - SaaS Landing Page</h3>
-                            <h2 className="header-title wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.5s">Kickstart Your SaaS or App Site</h2>
-                            <p className="text wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.8s">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor</p>
-                            <a href="#" className="main-btn wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="1.1s">Get Started</a>
-                        </div> 
-                    </div>
+          {/* Navigation Options */}
+          <ul className="text-lg">
+            {/* <li className="mb-4">
+              <a href="/" className="text-black hover:text-gray-300">Home</a>
+            </li> */}
+
+            <li className="mb-4 active ">
+              <div className="relative group">
+                <div className="absolute"></div>
+
+                <a
+                  className={classNames(
+                    "page-scroll rounded-lg",
+                    location?.route == "/" ? "bg-black" : "bg-white"
+                  )}
+                  href="/"
+                >
+                  <span className="flex items-center ">
+                    {" "}
+                    <span
+                      className={classNames(
+                        "px-1 font-bold text-black",
+                        location?.route == "/"
+                          ? "text-white"
+                          : "text-black"
+                      )}
+                    >
+                      Home
+                    </span>
+                  </span>
+                </a>
+              </div>
+            </li>
+
+            <li className="mb-4">
+              <div className="glasses-option relative group">
+                <div className="absolute "></div>
+                <a
+                  className={classNames(
+                    " page-scroll font-bold rounded-lg hover:text-gray-300",
+                    location?.route == "/glasses-contacts" &&
+                      location?.query?.query == "glasses"
+                      ? "bg-black"
+                      : "bg-white"
+                  )}
+                  href="/glasses-contacts?query=glasses"
+                >
+                  <span
+                    className={classNames(
+                      "px-1 font-bold text-black hover:text-gray-300",
+                      location?.route == "/glasses-contacts" &&
+                        location?.query?.query == "glasses"
+                        ? "text-white"
+                        : "text-black"
+                    )}
+                  >
+                    Sun/Glasses
+                  </span>
+                </a>
+                <div className="dropdown-content-glasses top-6 left-20">
+                  {brandsArr.map((brand) => (
+                    <a href={brand.addr} target="_blank">
+                      <div className="flex">
+                        <img
+                          className="img-fluid mx-1 img-responsive rounded product-image-v2"
+                          src={"/images/brands/" + brand.link}
+                        />
+                        <h2 className="font-bold">{brand.name}</h2>
+                      </div>
+                    </a>
+                  ))}
                 </div>
-                <div className="row">
-                    <div className="col-lg-12">
-                        <div className="header-hero-image text-center wow fadeIn" data-wow-duration="1.3s" data-wow-delay="1.4s">
-                            <img src="assets/images/header-hero.png" alt="hero"/>
-                        </div> 
+              </div>
+            </li>
+            <li className="mb-4">
+              <div className="contacts-option relative group">
+                <div className="absolute "></div>
+                <a
+                  className={classNames(
+                    "page-scroll font-bold rounded-lg hover:text-gray-300",
+                    location?.route == "/glasses-contacts" &&
+                      location?.query?.query == "contacts"
+                      ? "bg-black"
+                      : "bg-white"
+                  )}
+                  href="/glasses-contacts?query=contacts"
+                >
+                  <span
+                    className={classNames(
+                      "px-1 font-bold text-black",
+                      location?.route == "/glasses-contacts" &&
+                        location?.query?.query == "contacts"
+                        ? "text-white"
+                        : "text-black"
+                    )}
+                  >
+                    Contacts
+                  </span>
+                </a>
+                <div className="dropdown-content-contacts  top-6 left-20">
+                  {contactsBrandsArr.map((brand) => (
+                    <a href={brand.addr} target="_blank">
+                      <div className="flex">
+                        <img
+                          className="img-fluid mx-1 img-responsive rounded product-image-v2"
+                          src={"/images/" + brand.link}
+                        />
+                        <h2 className="font-bold">{brand.name}</h2>
+                      </div>
+                    </a>
+                  ))}
+                </div>
+              </div>
+            </li>
+            <li className="mb-4">
+              <div className="services-option relative group">
+                <div className="absolute"></div>
+
+                <a
+                  className={classNames(
+                    "page-scroll font-bold rounded-lg hover:text-gray-300",
+                    location?.route == "/services"
+                      ? "bg-black"
+                      : "bg-white"
+                  )}
+                  href="/services"
+                >
+                  <span
+                    className={classNames(
+                      "px-1 font-bold",
+                      location?.route == "/services"
+                        ? "text-white"
+                        : "text-black"
+                    )}
+                  >
+                    Services
+                  </span>
+                </a>
+                <div className="dropdown-content-services top-6 left-20">
+                  {cards.map((service) => (
+                    <a href={"/services#" + service.id}>
+                      <div className="flex my-1">
+                        <h2 className="md:font-bold mx-2">
+                          {service.head2}
+                        </h2>
+                      </div>
+                    </a>
+                  ))}
+                </div>
+              </div>
+            </li>
+            <li className="mb-4">
+              <div className="relative group">
+                <div className="absolute"></div>
+
+                <a
+                  className={classNames(
+                    "page-scroll font-bold rounded-lg hover:text-gray-300",
+                    location?.route == "/products" &&
+                      location?.query?.query == "eye-medic"
+                      ? "bg-black"
+                      : "bg-white"
+                  )}
+                  href="/products?query=eye-medic"
+                >
+                  <span
+                    className={classNames(
+                      "px-1 font-bold text-black",
+                      location?.route == "/products" &&
+                        location?.query?.query == "eye-medic"
+                        ? "text-white"
+                        : "text-black"
+                    )}
+                  >
+                    EyeCare
+                  </span>
+                </a>
+              </div>
+            </li>
+            <li className="mb-4">
+              <div className="relative group">
+                <div className="absolute"></div>
+                <a
+                  className={classNames(
+                    "page-scroll font-bold rounded-lg hover:text-gray-300",
+                    location?.route == "/promotions"
+                      ? "bg-black"
+                      : "bg-white"
+                  )}
+                  href="/promotions"
+                >
+                  <span
+                    className={classNames(
+                      "px-1 font-bold",
+                      location?.route == "/promotions"
+                        ? "text-white"
+                        : "text-black"
+                    )}
+                  >
+                    Promotions
+                  </span>
+                </a>
+              </div>
+            </li>
+            <li className="mb-4">
+              <div className="faq-option relative group">
+                <div className="absolute"></div>
+                <a
+                  className={classNames(
+                    "page-scroll font-bold rounded-lg hover:text-gray-300",
+                    location?.route == "/faq"
+                      ? "bg-black"
+                      : "bg-white"
+                  )}
+                  href="/faq"
+                >
+                  <span
+                    className={classNames(
+                      "px-1 font-bold",
+                      location?.route == "/faq"
+                        ? "text-white"
+                        : "text-black"
+                    )}
+                  >
+                    FAQs
+                  </span>
+                </a>
+                <div className="dropdown-content-faq top-2 left-14">
+                  <a href="/faq#q1">
+                    <div className="flex">
+                      <h2 className="font-bold">
+                        How often should you get your eyes checked?
+                      </h2>
                     </div>
-                </div> 
-            </div>
-            <div id="particles-1" className="particles"></div>
-        </div>  */}
-      </header>
+                  </a>
+                  <a href="/faq#q2">
+                    <div className="flex">
+                      <h2 className="font-bold">
+                        What age should I get my child’s eye exams
+                        done?
+                      </h2>
+                    </div>
+                  </a>
+                  <a href="/faq#q3">
+                    <div className="flex">
+                      <h2 className="font-bold">
+                        How do I choose the right pair of glasses?
+                      </h2>
+                    </div>
+                  </a>
+                  <a href="/faq#q4">
+                    <div className="flex">
+                      <h2 className="font-bold">
+                        Are sunglasses just for fashion or are they
+                        necessary?
+                      </h2>
+                    </div>
+                  </a>
+                  <a href="/faq#q5">
+                    <div className="flex">
+                      <h2 className="font-bold">
+                        Why Buy Contact Lenses In-Store vs Online?
+                      </h2>
+                    </div>
+                  </a>
+                  <a href="/faq#q6">
+                    <div className="flex">
+                      <h2 className="font-bold">
+                        How can I reduce eye strain and redness?
+                      </h2>
+                    </div>
+                  </a>
+                  <a href="/faq#q7">
+                    <div className="flex">
+                      <h2 className="font-bold">
+                        Do we do direct billing?
+                      </h2>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </li>
+            <li className="mb-4">
+              <div className="relative group">
+                <div className="absolute"></div>
+                <a
+                  className={classNames(
+                    "page-scroll font-bold rounded-lg hover:text-gray-300",
+                    location?.route == "/about-us"
+                      ? "bg-black"
+                      : "bg-white"
+                  )}
+                  href="/about-us"
+                >
+                  <span
+                    className={classNames(
+                      "px-1 font-bold",
+                      location?.route == "/about-us"
+                        ? "text-white"
+                        : "text-black"
+                    )}
+                  >
+                    About
+                  </span>
+                </a>
+              </div>
+            </li>
+          </ul>
+          <div className="mb-3">
+            <a
+              className="main-btn"
+              data-scroll-nav="0"
+              href="https://docs.google.com/forms/d/e/1FAIpQLSeciQeXbMzKdezp0kkCx1Itxm1SCnUL5bv1C7rT1m1aBp1vsg/viewform?usp=sf_link"
+              target="_blank"
+            >
+              {" "}
+              <span className="px-2 font-bold">Order Contacts</span>
+            </a>
+          </div>
+          <div className="mb-3">
+            <a
+              className="main-btn"
+              data-scroll-nav="0"
+              // href="https://docs.google.com/forms/d/e/1FAIpQLSfOr3fsy1F9RpZw9Gh8VyyUDAgm3Wg6HeskeIZRyiZvelRNNg/viewform?usp=sf_link"
+              // target="_blank"
+              href="/bookings#appointment"
+            >
+              {" "}
+              <span className="px-2 font-bold">Book Appointment</span>
+            </a>
+          </div>
+          <div className="mb-3">
+            <a
+              className="main-btn"
+              data-scroll-nav="0"
+              href="https://docs.google.com/forms/d/e/1FAIpQLSex8fCDLOm41BPwOB235NRWKaZVdXk-tRiNbObpbV9vuUxV0Q/viewform?usp=sf_link"
+              target="_blank"
+            >
+              {" "}
+              <span className="px-2 font-bold">Check Benefits</span>
+            </a>
+          </div>
+          <ul className="social text-black flex flex-row space-x-4">
+            <li >
+              <a href="https://www.facebook.com/PerformanceVisionEyeCare/" target="_blank">
+                <i className="lni-facebook-filled"></i>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.instagram.com/performancevisioneyecare/?hl=en">
+                <i className="lni-instagram-filled"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+
+        {/* Main Content */}
+        <div className="flex-1 border-r-2 flex flex-col overflow-x-hidden overflow-y-auto p-2">
+          {/* Content Goes Here */}
+        </div>
+      </div>
+
     </>
   );
 }

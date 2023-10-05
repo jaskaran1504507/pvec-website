@@ -283,7 +283,7 @@ const Bookings = () => {
             layout="vertical"
           >
             <Form.Item
-              label="Pronouns?"
+              label="Pronouns"
               name="pronouns"
               rules={[{ required: true }]}
             >

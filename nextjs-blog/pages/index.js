@@ -10,6 +10,7 @@ import { Helmet } from "react-helmet";
 import { callApi } from "../utils/apiUtils";
 import Endpoints from "../utils/endpoints";
 import Loading from "../components/Loading";
+import BannerSlider from "../components/BannerSlider";
 
 export default function Home() {
   const [banner, setBanner] = useState([]);
@@ -33,27 +34,28 @@ export default function Home() {
 
       <div className="md:mt-0 mt-28 hidden md:block">
         {banner.length ? (
-          <Carousel
-            dynamicHeight
-            autoPlay
-            swipeable
-            infiniteLoop
-            interval="5000"
-          >
-            {banner.map((b) => (
-              <div className="pb-2 md:py-0 md:h-auto h-96" key={b._id}>
-                <Banner
-                  banner={b.image}
-                  textColor={b.textColor}
-                  text={b.text}
-                  description={b.description}
-                  subText={b.subText}
-                  subText2={b.subText2}
-                  subText3={b.subText3}
-                ></Banner>
-              </div>
-            ))}
-          </Carousel>
+          // <Carousel
+          //   dynamicHeight
+          //   autoPlay
+          //   swipeable
+          //   infiniteLoop
+          //   interval="5000"
+          // >
+          //   {banner.map((b) => (
+          //     <div className="pb-2 md:py-0 md:h-auto h-96" key={b._id}>
+          //       <Banner
+          //         banner={b.image}
+          //         textColor={b.textColor}
+          //         text={b.text}
+          //         description={b.description}
+          //         subText={b.subText}
+          //         subText2={b.subText2}
+          //         subText3={b.subText3}
+          //       ></Banner>
+          //     </div>
+          //   ))}
+          // </Carousel>
+          <BannerSlider slides={banner}/>
         ) : (
           <Loading />
         )}

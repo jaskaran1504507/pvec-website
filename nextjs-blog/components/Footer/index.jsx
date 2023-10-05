@@ -29,7 +29,7 @@ export default function Footer() {
 
     // <!--====== FOOTER PART START ======-->
 
-    <footer id="footer" className="footer-area pt-96">
+    <footer id="footer" className="footer-area pt-1 mt-8">
       <div className="container">
         {/* <div
           className="subscribe-area wow fadeIn"
@@ -60,9 +60,9 @@ export default function Footer() {
           </div>
         </div> */}
         {/* <!-- subscribe area --> */}
-        <div className="footer-widget pb-4">
+        <div className="footer-widget pb-2">
           <div className="row">
-            <div className="col-lg-6 col-md-6 col-sm-8">
+            <div className="col-lg-8 col-md-10 col-sm-12">
               <div
                 className="footer-about mt-50 wow fadeIn"
                 data-wow-duration="1s"
@@ -89,30 +89,20 @@ export default function Footer() {
                 </p>
                 <ul className="social">
                   <li>
-                    <a href="#">
+                    <a href="https://www.facebook.com/PerformanceVisionEyeCare/" target="_blank">
                       <i className="lni-facebook-filled"></i>
                     </a>
                   </li>
                   <li>
-                    <a href="#">
-                      <i className="lni-twitter-filled"></i>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">
+                    <a href="https://www.instagram.com/performancevisioneyecare/?hl=en">
                       <i className="lni-instagram-filled"></i>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">
-                      <i className="lni-linkedin-original"></i>
                     </a>
                   </li>
                 </ul>
               </div>
               {/* <!-- footer about --> */}
             </div>
-            <div className="col-lg-3 col-md-7 col-sm-7">
+            {/* <div className="col-lg-3 col-md-7 col-sm-7">
               <div className="footer-link d-flex mt-50 justify-content-md-between">
                 {/* <div
                   className="link-wrapper wow fadeIn"
@@ -131,7 +121,7 @@ export default function Footer() {
                   </ul>
                 </div> */}
                 {/* <!-- footer wrapper --> */}
-                <div
+                {/* <div
                   className="link-wrapper wow fadeIn"
                   data-wow-duration="1s"
                   data-wow-delay="0.6s"
@@ -139,17 +129,17 @@ export default function Footer() {
                   <div className="footer-title">
                     <h4 className="title">Resources</h4>
                   </div>
-                  <ul className="link">
+                  <ul className="link"> */}
                     {/* <li><a href="/">Home</a></li> */}
-                    <li>
+                    {/* <li>
                       <a 
                       // href="https://docs.google.com/forms/d/e/1FAIpQLSfOr3fsy1F9RpZw9Gh8VyyUDAgm3Wg6HeskeIZRyiZvelRNNg/viewform?usp=sf_link"
                       //   target="_blank"
                       href="/bookings#appointment"
                         >Appointment</a>
-                    </li>
+                    </li> */}
                     {/* <li><a href="#">Order Products</a></li> */}
-                    <li>
+                    {/* <li>
                       <a href="/promotions">Promotions</a>
                     </li>
                     <li>
@@ -158,17 +148,16 @@ export default function Footer() {
                     <li>
                       <a href="/glasses-contacts">Glasses & Contacts</a>
                     </li>
-                    {/* <li><a href="/about-us">About</a></li> */}
                     <li>
                       <a href="/blogs">Blogs</a>
                     </li>
                   </ul>
-                </div>
+                </div> */}
                 {/* <!-- footer wrapper --> */}
-              </div>
+              {/* </div> */}
               {/* <!-- footer link --> */}
-            </div>
-            <div className="col-lg-3 col-md-5 col-sm-5">
+            {/* </div> */}
+            <div className="col-lg-4 col-md-8 col-sm-8">
               <div
                 className="footer-contact mt-50 wow fadeIn"
                 data-wow-duration="1s"
