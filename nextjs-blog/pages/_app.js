@@ -39,10 +39,10 @@ export default function MyApp({ Component, pageProps }) {
         <link rel="icon" href="/pvec-small.ico" />
       </Head>
       <div className="flex h-screen">
-        <div className="w-1/6 text-black p-2">
+        {/* <div className="w-1/6 text-black p-2"> */}
           {/* Header content goes here */}
           <Header/>
-        </div>
+        {/* </div> */}
         <div className="flex-1 flex flex-col overflow-x-hidden overflow-y-auto">
           {/* The Component */}
           <Component {...pageProps} />
