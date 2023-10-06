@@ -25,11 +25,11 @@ export default function Promotions() {
       <div className="mt-20 md:mt-20">
         <h2
           style={{
-            textAlign: "left",
             fontWeight: 400,
             fontSize: "2.25rem",
             lineHeight: 1.1,
           }}
+          className="md:ml-2 md:text-left text-center ml-0"
         >
           <span
             style={{ lineHeight: 2 }}
@@ -40,7 +40,7 @@ export default function Promotions() {
         </h2>
       </div>
       {cards.length ? (
-        <div className="grid gap-1 mt-10 grid-cols-1 md:grid-cols-3 u-clearfix u-sheet mx-auto u-valign-middle u-sheet-1">
+        <div className="grid gap-1 card-centre-service mt-10 grid-cols-1 md:grid-cols-3 u-clearfix u-sheet mx-auto u-valign-middle u-sheet-1">
           {cards.map((m, index) => (
             // <Link
             //   href={m.url}
