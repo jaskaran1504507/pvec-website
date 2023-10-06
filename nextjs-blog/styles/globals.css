@@ -1,3 +1,12 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.card-centre-service {
+  place-items: center;
+}
+@media (min-width: 768px) {
+  .card-centre-service {
+    place-items: initial;
+  }
+}

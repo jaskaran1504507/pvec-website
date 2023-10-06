@@ -4,7 +4,7 @@ import Loading from "../../components/Loading";
 import { productCatalogue, brandsArr } from "../../constant";
 import { callApi } from "../../utils/apiUtils";
 import Endpoints from "../../utils/endpoints";
-const parse = require('html-react-parser');
+const parse = require("html-react-parser");
 
 const imgArr = [
   "/images/PVEC_idrop.jpeg",
@@ -43,15 +43,15 @@ export default function ServiceProducts() {
         <div className="mt-8 md:mt-0">
           <h2
             style={{
-              textAlign: "left",
               fontWeight: 400,
               fontSize: "2.25rem",
               lineHeight: 1.1,
             }}
+            className="md:ml-2 ml-0 text-center md:text-left"
           >
             <span
               style={{ lineHeight: 2 }}
-              className="text-blue-900 font-semibold"
+              className="text-blue-900   font-semibold"
             >
               Services
             </span>
@@ -103,73 +103,75 @@ export default function ServiceProducts() {
         </div>{" "} */}
       </div>
       {cards?.length ? (
-        <div className="grid gap-1 mt-10 grid-cols-1 md:grid-cols-3 u-clearfix u-sheet mx-auto u-valign-middle u-sheet-1">
-          {cards.map(({ image, description, heading, conditions, id }, index) => (
-            <div
-              id={id}
-              key={image}
-              className={`p-2 shadow-lg card flex flex-col border border-gray-300 mx-2 ${
-                index === cards.length - 1 && cards.length % 3 === 1
-                  ? "justify-center md:col-start-2" // Center the last element when there's an odd number of elements
-                  : ""
-              }`}
-            >
-              <div className="card-content flex-grow">
-                <div>
-                  <Image
-                    // layout="fill"
-                    // objectFit="cover"
-                    className="rounded-lg"
-                    src={image}
-                    alt=""
-                    srcSet=""
-                    height="250"
-                    width="355"
-                  />
-                </div>
-                <h1 className="text-blue-900 my-3 text-center font-semibold">
-                  {parse(heading)}
-                </h1>
+        <div className="grid card-centre-service gap-1 mt-10 grid-cols-1 md:grid-cols-3 u-clearfix u-sheet mx-auto u-valign-middle u-sheet-1">
+          {cards.map(
+            ({ image, description, heading, conditions, id }, index) => (
+              <div
+                id={id}
+                key={image}
+                className={`p-2 shadow-lg card flex flex-col border border-gray-300 mx-2 ${
+                  index === cards.length - 1 && cards.length % 3 === 1
+                    ? "justify-center md:col-start-2" // Center the last element when there's an odd number of elements
+                    : ""
+                }`}
+              >
+                <div className="card-content flex-grow">
+                  <div>
+                    <Image
+                      // layout="fill"
+                      // objectFit="cover"
+                      className="rounded-lg"
+                      src={image}
+                      alt=""
+                      srcSet=""
+                      height="250"
+                      width="355"
+                    />
+                  </div>
+                  <h1 className="text-blue-900 my-3 text-center font-semibold">
+                    {parse(heading)}
+                  </h1>
 
-                <div className="px-6 py-4 ">
-                  {seeMore[image] || description.slice(0, 250)}
-                  {description.length > 250 && (
-                    <span
-                      onClick={() => {
-                        setSeeMore((prev) => ({
-                          ...prev,
-                          [image]: prev[image] ? "" : description,
-                        }));
-                      }}
-                      className=" pl-2 text-blue-900 hover:underline cursor-pointer"
-                    >
-                      see {seeMore[image] ? "less" : "more"}...
-                    </span>
-                  )}
+                  <div className="px-6 py-4 ">
+                    {seeMore[image] || description.slice(0, 250)}
+                    {description.length > 250 && (
+                      <span
+                        onClick={() => {
+                          setSeeMore((prev) => ({
+                            ...prev,
+                            [image]: prev[image] ? "" : description,
+                          }));
+                        }}
+                        className=" pl-2 text-blue-900 hover:underline cursor-pointer"
+                      >
+                        see {seeMore[image] ? "less" : "more"}...
+                      </span>
+                    )}
+                  </div>
                 </div>
-              </div>
 
-              {/* <div className="flex justify-center">
+                {/* <div className="flex justify-center">
             <div className="flex-end justify-center navbar-btn d-none d-sm-inline-block"> */}
 
-              <div className="card-button">
-                {conditions && (
-                  <div className="px-6">
-                    <p className="text-xs">{conditions} </p>
+                <div className="card-button">
+                  {conditions && (
+                    <div className="px-6">
+                      <p className="text-xs">{conditions} </p>
+                    </div>
+                  )}
+                  <div className="flex align-items-center justify-center">
+                    <a
+                      className="main-btn-products"
+                      data-scroll-nav="0"
+                      href="bookings#appointment"
+                    >
+                      Book your appointment{" "}
+                    </a>
                   </div>
-                )}
-                <div className="flex align-items-center justify-center">
-                  <a
-                    className="main-btn-products"
-                    data-scroll-nav="0"
-                    href="bookings#appointment"
-                  >
-                    Book your appointment{" "}
-                  </a>
                 </div>
               </div>
-            </div>
-          ))}
+            )
+          )}
         </div>
       ) : (
         <Loading />
