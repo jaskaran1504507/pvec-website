@@ -115,7 +115,7 @@ export default function Header() {
                 >
                   <span
                     className={classNames(
-                      "px-1 font-bold text-black",
+                      "px-1 font-bold text-black hover:text-gray-300",
                       location?.route == "/glasses-contacts" &&
                         location?.query?.query == "contacts"
                         ? "text-white"
@@ -155,7 +155,7 @@ export default function Header() {
                 >
                   <span
                     className={classNames(
-                      "px-1 font-bold",
+                      "px-1 font-bold hover:text-gray-300",
                       location?.route == "/services"
                         ? "text-white"
                         : "text-black"
@@ -193,7 +193,7 @@ export default function Header() {
                 >
                   <span
                     className={classNames(
-                      "px-1 font-bold text-black",
+                      "px-1 font-bold text-black hover:text-gray-300",
                       location?.route == "/products" &&
                         location?.query?.query == "eye-medic"
                         ? "text-white"
@@ -219,7 +219,7 @@ export default function Header() {
                 >
                   <span
                     className={classNames(
-                      "px-1 font-bold",
+                      "px-1 font-bold hover:text-gray-300",
                       location?.route == "/promotions"
                         ? "text-white"
                         : "text-black"
@@ -244,7 +244,7 @@ export default function Header() {
                 >
                   <span
                     className={classNames(
-                      "px-1 font-bold",
+                      "px-1 font-bold hover:text-gray-300",
                       location?.route == "/faq"
                         ? "text-white"
                         : "text-black"
@@ -322,7 +322,7 @@ export default function Header() {
                 >
                   <span
                     className={classNames(
-                      "px-1 font-bold",
+                      "px-1 font-bold hover:text-gray-300",
                       location?.route == "/about-us"
                         ? "text-white"
                         : "text-black"
@@ -333,8 +333,64 @@ export default function Header() {
                 </a>
               </div>
             </li>
+            <li className="mb-4">
+              <div className="relative group">
+                <div className="absolute"></div>
+                <a
+                  className="page-scroll font-bold rounded-lg hover:text-gray-300 bg-white"
+                  href="https://docs.google.com/forms/d/e/1FAIpQLSeciQeXbMzKdezp0kkCx1Itxm1SCnUL5bv1C7rT1m1aBp1vsg/viewform?usp=sf_link"
+                  target="_blank"
+                >
+                  <span
+                    className="px-1 font-bold text-black hover:text-gray-300"
+                  >
+                    Order Contacts
+                  </span>
+                </a>
+              </div>
+            </li>
+            <li className="mb-4">
+              <div className="relative group">
+                <div className="absolute"></div>
+                <a
+                  className={classNames(
+                    "page-scroll font-bold rounded-lg hover:text-gray-300",
+                    location?.route == "/bookings"
+                      ? "bg-black"
+                      : "bg-white"
+                  )}
+                  href="/bookings#appointment"
+                >
+                  <span
+                    className={classNames(
+                      "px-1 font-bold hover:text-gray-300",
+                      location?.route == "/bookings"
+                        ? "text-white"
+                        : "text-black"
+                    )}
+                  >
+                    Book Appointment
+                  </span>
+                </a>
+              </div>
+            </li>
+            <li className="mb-4">
+              <div className="relative group">
+                <div className="absolute"></div>
+                <a
+                  className="page-scroll font-bold rounded-lg hover:text-gray-300 bg-white"
+                  href="https://docs.google.com/forms/d/e/1FAIpQLSex8fCDLOm41BPwOB235NRWKaZVdXk-tRiNbObpbV9vuUxV0Q/viewform?usp=sf_link"
+                  target="_blank"
+                >
+                  <span
+                    className="px-1 font-bold text-black hover:text-gray-300"
+                  > Check Benefits
+                  </span>
+                </a>
+              </div>
+            </li>
           </ul>
-          <div className="mb-3">
+          {/* <div className="mb-3">
             <a
               className="main-btn"
               data-scroll-nav="0"
@@ -367,7 +423,7 @@ export default function Header() {
               {" "}
               <span className="px-2 font-bold">Check Benefits</span>
             </a>
-          </div>
+          </div> */}
           <ul className="social text-black flex flex-row space-x-4">
             <li >
               <a href="https://www.facebook.com/PerformanceVisionEyeCare/" target="_blank">
