@@ -60,7 +60,7 @@ export default function Footer() {
           </div>
         </div> */}
         {/* <!-- subscribe area --> */}
-        <div className="footer-widget pb-2">
+        <div className="footer-widget pb-2 m-2 md:m-1">
           <div className="row">
             <div className="col-lg-8 col-md-10 col-sm-12">
               <div
