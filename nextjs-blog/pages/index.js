@@ -32,29 +32,8 @@ export default function Home() {
     <main>
       <Helmet></Helmet>
 
-      <div className="md:mt-0 mt-28 hidden md:block">
+      <div className="md:mt-0 mt-2 ">
         {banner.length ? (
-          // <Carousel
-          //   dynamicHeight
-          //   autoPlay
-          //   swipeable
-          //   infiniteLoop
-          //   interval="5000"
-          // >
-          //   {banner.map((b) => (
-          //     <div className="pb-2 md:py-0 md:h-auto h-96" key={b._id}>
-          //       <Banner
-          //         banner={b.image}
-          //         textColor={b.textColor}
-          //         text={b.text}
-          //         description={b.description}
-          //         subText={b.subText}
-          //         subText2={b.subText2}
-          //         subText3={b.subText3}
-          //       ></Banner>
-          //     </div>
-          //   ))}
-          // </Carousel>
           <BannerSlider slides={banner}/>
         ) : (
           <Loading />
