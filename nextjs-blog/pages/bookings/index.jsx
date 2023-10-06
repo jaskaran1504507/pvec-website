@@ -255,7 +255,7 @@ const Bookings = () => {
 
   return (
     <main>
-      <div className="mt-28 md:mt-0">
+      <div className="md:mt-0">
         <Banner
           banner="banner-bookings-img"
           text={`<span class="text-black md:text-white">
@@ -267,10 +267,10 @@ const Bookings = () => {
           </span>`}
         />
       </div>
-      <div className="flex justify-center mt-10 ">
+      <div className="flex justify-center md:mt-10 ">
         <div
-          style={{ boxShadow: "0px 2px 5px rgba(0, 0, 0, 0.25)" }}
-          className="px-8 py-4 rounded-border mx-auto md:w-2/5 w-3/4"
+          // style={{ boxShadow: "0px 2px 5px rgba(0, 0, 0, 0.25)" }}
+          className="md:px-8 py-4 rounded-border mx-auto md:w-2/5 w-11/12 md:shadow-sm"
         >
           <Form
             // {...layout}
@@ -374,7 +374,7 @@ const Bookings = () => {
             >
               <Radio.Group value={"eye_exams_contact"}>
                 <Radio.Button value="Eye exam only (health check and refraction)">
-                  Eye exam only (health check and refraction)
+                  Eye exam only (health check & refraction)
                 </Radio.Button>
                 <Radio.Button value="Eye exam with contact lens">
                   Eye exam with contact lens
