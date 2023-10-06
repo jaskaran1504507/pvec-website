@@ -66,12 +66,12 @@ export default function MyApp({ Component, pageProps }) {
                     style={{ height: "35px", margin: "45px 25px 0 0" }}
                   />
                 </div>
-                <ul className="text-lg" style={{ marginTop: "6rem" }}>
+                <ul className="text-lg" style={{ marginTop: "2rem" }}>
                   {/* <li className="mb-4">
               <a href="/" className="text-black hover:text-gray-300">Home</a>
             </li> */}
 
-                  <li className="mb-6 active ">
+                  <li className="mb-3 active ">
                     <div className="relative group text-center">
                       <div className="absolute"></div>
 
@@ -82,7 +82,7 @@ export default function MyApp({ Component, pageProps }) {
                         <span className="flex items-center ">
                           {" "}
                           <span
-                            style={{ fontSize: "2.5rem", fontWeight: "200" }}
+                            style={{ fontSize: "1.8rem", fontWeight: "200" }}
                             className="text-white"
                           >
                             Home
@@ -92,7 +92,7 @@ export default function MyApp({ Component, pageProps }) {
                     </div>
                   </li>
 
-                  <li className="mb-6">
+                  <li className="mb-3">
                     <div className="glasses-option relative group text-center">
                       <div className="absolute "></div>
                       <a
@@ -105,7 +105,7 @@ export default function MyApp({ Component, pageProps }) {
                           className={classNames(
                             "px-1   hover:text-gray-300 text-white"
                           )}
-                          style={{ fontSize: "2.5rem", fontWeight: "200" }}
+                          style={{ fontSize: "1.8rem", fontWeight: "200" }}
                         >
                           Sun/Glasses
                         </span>
@@ -126,7 +126,7 @@ export default function MyApp({ Component, pageProps }) {
                       </div>
                     </div>
                   </li>
-                  <li className="mb-4">
+                  <li className="mb-3">
                     <div className="contacts-option relative group text-center">
                       <div className="absolute "></div>
                       <a
@@ -136,7 +136,7 @@ export default function MyApp({ Component, pageProps }) {
                         href="/glasses-contacts?query=contacts"
                       >
                         <span
-                          style={{ fontSize: "2.5rem", fontWeight: "200" }}
+                          style={{ fontSize: "1.8rem", fontWeight: "200" }}
                           className="text-white"
                         >
                           Contacts
@@ -157,7 +157,7 @@ export default function MyApp({ Component, pageProps }) {
                       </div>
                     </div>
                   </li>
-                  <li className="mb-4">
+                  <li className="mb-3">
                     <div className="services-option relative group text-center">
                       <div className="absolute"></div>
 
@@ -169,7 +169,7 @@ export default function MyApp({ Component, pageProps }) {
                       >
                         <span
                           className={classNames("px-1 ")}
-                          style={{ fontSize: "2.5rem", fontWeight: "200" }}
+                          style={{ fontSize: "1.8rem", fontWeight: "200" }}
                         >
                           Services
                         </span>
@@ -187,7 +187,7 @@ export default function MyApp({ Component, pageProps }) {
                       </div>
                     </div>
                   </li>
-                  <li className="mb-4">
+                  <li className="mb-3">
                     <div className="relative group text-center">
                       <div className="absolute"></div>
 
@@ -198,7 +198,7 @@ export default function MyApp({ Component, pageProps }) {
                         href="/products?query=eye-medic"
                       >
                         <span
-                          style={{ fontSize: "2.5rem", fontWeight: "200" }}
+                          style={{ fontSize: "1.8rem", fontWeight: "200" }}
                           className={classNames("px-1  text-white")}
                         >
                           EyeCare
@@ -206,7 +206,7 @@ export default function MyApp({ Component, pageProps }) {
                       </a>
                     </div>
                   </li>
-                  <li className="mb-4">
+                  <li className="mb-3">
                     <div className="relative group text-center">
                       <div className="absolute"></div>
                       <a
@@ -217,14 +217,14 @@ export default function MyApp({ Component, pageProps }) {
                       >
                         <span
                           className={classNames("px-1  text-white")}
-                          style={{ fontSize: "2.5rem", fontWeight: "200" }}
+                          style={{ fontSize: "1.8rem", fontWeight: "200" }}
                         >
                           Promotions
                         </span>
                       </a>
                     </div>
                   </li>
-                  <li className="mb-4">
+                  <li className="mb-3">
                     <div className="faq-option relative group text-center">
                       <div className="absolute"></div>
                       <a
@@ -235,7 +235,7 @@ export default function MyApp({ Component, pageProps }) {
                       >
                         <span
                           className={classNames("px-1 text-white")}
-                          style={{ fontSize: "2.5rem", fontWeight: "200" }}
+                          style={{ fontSize: "1.8rem", fontWeight: "200" }}
                         >
                           FAQs
                         </span>
@@ -294,7 +294,7 @@ export default function MyApp({ Component, pageProps }) {
                       </div>
                     </div>
                   </li>
-                  <li className="mb-4">
+                  <li className="mb-3">
                     <div className="relative group text-center">
                       <div className="absolute"></div>
                       <a
@@ -304,7 +304,7 @@ export default function MyApp({ Component, pageProps }) {
                         href="/about-us"
                       >
                         <span
-                          style={{ fontSize: "2.5rem", fontWeight: "200" }}
+                          style={{ fontSize: "1.8rem", fontWeight: "200" }}
                           className={classNames("px-1 text-center text-white")}
                         >
                           About
@@ -312,8 +312,61 @@ export default function MyApp({ Component, pageProps }) {
                       </a>
                     </div>
                   </li>
+                  <li className="mb-3">
+                    <div className="relative group text-center">
+                      <div className="absolute"></div>
+                      <a
+                        className={classNames(
+                          "page-scroll  rounded-lg hover:text-gray-300"
+                        )}
+                        href="https://docs.google.com/forms/d/e/1FAIpQLSeciQeXbMzKdezp0kkCx1Itxm1SCnUL5bv1C7rT1m1aBp1vsg/viewform?usp=sf_link"
+                        target="_blank"
+                      >
+                        <span
+                          style={{ fontSize: "1.8rem", fontWeight: "200" }}
+                          className={classNames("px-1 text-center text-white")}
+                        >
+                          Order Contact
+                        </span>
+                      </a>
+                    </div>
+                  </li>
+                  <li className="mb-3">
+                    <div className="relative group text-center">
+                      <div className="absolute"></div>
+                      <a
+                        className={classNames(
+                          "page-scroll  rounded-lg hover:text-gray-300"
+                        )}
+                        href="/bookings#appointment"
+                      >
+                        <span
+                          style={{ fontSize: "1.8rem", fontWeight: "200" }}
+                          className={classNames("px-1 text-center text-white")}
+                        >Book Appointment
+                        </span>
+                      </a>
+                    </div>
+                  </li>
+                  <li className="mb-3">
+                    <div className="relative group text-center">
+                      <div className="absolute"></div>
+                      <a
+                        className={classNames(
+                          "page-scroll  rounded-lg hover:text-gray-300"
+                        )}
+                        href="https://docs.google.com/forms/d/e/1FAIpQLSex8fCDLOm41BPwOB235NRWKaZVdXk-tRiNbObpbV9vuUxV0Q/viewform?usp=sf_link"
+                        target="_blank"
+                      >
+                        <span
+                          style={{ fontSize: "1.8rem", fontWeight: "200" }}
+                          className={classNames("px-1 text-center text-white")}
+                        >Check Benefits
+                        </span>
+                      </a>
+                    </div>
+                  </li>
                 </ul>
-
                 {/* END */}
               </div>
             </div>
