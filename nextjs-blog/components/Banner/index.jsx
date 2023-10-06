@@ -55,14 +55,14 @@ export default function Banner({
             {subText2 && (
               <h2
                 style={{ color: textColor, lineHeight: "1" }}
-                className="font-serif u-text text-white text-left text-xl md:text-2xl md:mb-12 mb-2  md:text-2xl font-bold "
+                className="font-serif u-text text-white text-left text-xl md:text-2xl md:mb-12 mb-2  md:text-2xl font-bold hidden md:block "
                 // dangerouslySetInnerHTML={{ __html: subText2 }}
               >{parse(subText2)}</h2>
             )}
             {subText3 && (
               <h2
                 style={{ color: textColor, lineHeight: "1" }}
-                className="font-serif u-text text-white text-left text-xl md:text-2xl md:mb-12 mb-2  md:text-2xl font-bold "
+                className="font-serif u-text text-white text-left text-xl md:text-2xl md:mb-12 mb-2  md:text-2xl font-bold hidden md:block"
                 // dangerouslySetInnerHTML={{ __html: subText3 }}
                 >{parse(subText3)}</h2>
             )}
