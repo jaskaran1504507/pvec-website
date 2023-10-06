@@ -19,7 +19,7 @@ const BannerSlider = ({ slides }) => {
     }, [slides]);
 
     return (slides ? (
-        <div className="slider-container bg-gray-200 w-full h-screen flex items-center justify-center">
+        <div className="slider-container bg-gray-200 w-full md:h-screen flex items-center justify-center">
             <div className="slider w-full h-full overflow-hidden">
                 {slides.map((slide, index) => (
                     <div
@@ -27,7 +27,7 @@ const BannerSlider = ({ slides }) => {
                         className={`slide w-full h-full transition-opacity duration-500 ease-in-out ${index === currentIndex ? 'block' : 'hidden'
                             }`}
                     >
-                        <div className="pb-2 md:py-0 md:h-auto h-fit" key={slide._id}>
+                        <div className="md:pb-2 md:py-0 md:h-auto h-fit" key={slide._id}>
                             <Banner
                                 banner={slide.image}
                                 textColor={slide.textColor}
