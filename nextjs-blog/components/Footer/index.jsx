@@ -29,7 +29,7 @@ export default function Footer() {
 
     // <!--====== FOOTER PART START ======-->
 
-    <footer id="footer" className="footer-area pt-96">
+    <footer id="footer" className="footer-area pt-1 mt-8">
       <div className="container">
         {/* <div
           className="subscribe-area wow fadeIn"
@@ -60,7 +60,7 @@ export default function Footer() {
           </div>
         </div> */}
         {/* <!-- subscribe area --> */}
-        <div className="footer-widget pb-4">
+        <div className="footer-widget pb-2 m-2 md:m-1">
           <div className="row">
             <div className="col-lg-6 col-md-6 col-sm-8">
               <div
@@ -89,23 +89,13 @@ export default function Footer() {
                 </p>
                 <ul className="social">
                   <li>
-                    <a href="#">
+                    <a href="https://www.facebook.com/PerformanceVisionEyeCare/" target="_blank">
                       <i className="lni-facebook-filled"></i>
                     </a>
                   </li>
                   <li>
-                    <a href="#">
-                      <i className="lni-twitter-filled"></i>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">
+                    <a href="https://www.instagram.com/performancevisioneyecare/?hl=en">
                       <i className="lni-instagram-filled"></i>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">
-                      <i className="lni-linkedin-original"></i>
                     </a>
                   </li>
                 </ul>

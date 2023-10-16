@@ -2,9 +2,11 @@ import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import React, { useContext, useEffect, useState } from "react";
+import navImage from "../../public/images/door.jpeg"
 import { callApi } from "../../utils/apiUtils";
 import Products from "../../utils/endpoints/Products";
 import {
+  DownOutlined,
   HomeFilled,
   HomeOutlined,
   MailOutlined,
@@ -263,7 +265,7 @@ export default function Header() {
     //   </div>
     // </>
     <>
-      {!isNavVisible && (
+      {/* {!isNavVisible && (
         <div
           style={{
             position: "sticky",
@@ -287,7 +289,6 @@ export default function Header() {
                   href="mailto:info@pveyecare.ca"
                   target="_blank"
                 >
-                  {/* <a href="mailto:info@pveyecare.ca"> */}
                   <MailOutlined
                     style={{ color: "#349BD6" }}
                     className="mt-1"
@@ -299,7 +300,6 @@ export default function Header() {
                   >
                     info@pveyecare.ca
                   </span>
-                  {/* </a> */}
                 </a>
 
                 <a
@@ -329,9 +329,9 @@ export default function Header() {
             </div>
           </div>
         </div>
-      )}
-      <header className="header-area">
-        {/* <script src="assets/js/bootstrap.min.js"></script> */}
+      )} */}
+
+      {/* <header className="header-area">
         <div className="navbar-area backdrop-blur-sm">
           <div className="flex justify-between ">
             <a className="navbar-brand " href="#">
@@ -355,9 +355,6 @@ export default function Header() {
               <div className="row">
                 <div className="col-lg-12">
                   <nav className="navbar navbar-expand-lg flex justify-end">
-                    {/* <a className="navbar-brand" href="#">
-                    <img src="images/eyecare-logo.png" style={{maxWidth :'9rem', height :'4.3rem', marginRight: '4px'}} alt="Logo" />
-                  </a> */}
                     <button
                       onClick={handleNavClick}
                       className="navbar-toggler"
@@ -394,7 +391,6 @@ export default function Header() {
                       }}
                       id="navbarSupportedContent"
                     >
-                      {/* <div className="collapse navbar-collapse sub-menu-bar" id="navbarSupportedContent"> */}
                       <ul id="nav" className="navbar-nav ml-auto font-bold">
                         <li className="nav-item active ">
                           <div className="relative group">
@@ -724,7 +720,6 @@ export default function Header() {
                                   >
                                     Order
                                   </button>
-                                  {/* Order contacts */}
                                   <Badge className="mr-3" count={cartProducts.length}>
                                     <ShoppingCartOutlined style={{ fontSize: "30px" }} />
                                   </Badge>
@@ -788,28 +783,16 @@ export default function Header() {
                         </li>
                       </ul>
                     </div>
-                    {/* #1D3D74 #3598CF */}
                     <div className="navbar-btn d-none d-sm-inline-block">
                       <a
                         className="main-btn"
                         data-scroll-nav="0"
-                        // href="https://docs.google.com/forms/d/e/1FAIpQLSeciQeXbMzKdezp0kkCx1Itxm1SCnUL5bv1C7rT1m1aBp1vsg/viewform?usp=sf_link"
-                        // target="_blank"
+                        href="https://docs.google.com/forms/d/e/1FAIpQLSeciQeXbMzKdezp0kkCx1Itxm1SCnUL5bv1C7rT1m1aBp1vsg/viewform?usp=sf_link"
+                        target="_blank"
                       >
                         {" "}
-                        {/* <span className="px-2 font-bold">Order Contacts</span>
-                         */}
-                        <button
-                          className=" font-bold text-white"
-                          type="button"
-                          style={{ minWidth: "82px" }}
-                          onClick={showModal}
-                        >
-                          Order
-                        </button>
-                        <Badge className="mr-3" count={currContext.state.count}>
-                          <ShoppingCartOutlined style={{ fontSize: "30px" }} />
-                        </Badge>
+                        <span className="px-2 font-bold">Order Contacts</span>
+                        
                       </a>
                     </div>
                     <div className="navbar-btn d-none d-sm-inline-block ml-2">
@@ -842,29 +825,187 @@ export default function Header() {
           </div>
         </div>
 
-        {/* <div id="home" className="header-hero bg_cover" style={{backgroundImage: "assets/images/banner-bg.svg"}}>
-            <div className="container">
-                <div className="row justify-content-center">
-                    <div className="col-lg-8">
-                        <div className="header-hero-content text-center">
-                            <h3 className="header-sub-title wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.2s">Basic - SaaS Landing Page</h3>
-                            <h2 className="header-title wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.5s">Kickstart Your SaaS or App Site</h2>
-                            <p className="text wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.8s">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor</p>
-                            <a href="#" className="main-btn wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="1.1s">Get Started</a>
-                        </div> 
-                    </div>
+      </header> */}
+      <div className="block">
+        <header className="h-10 bg-gray-800 text-white">
+          <nav className="h-full flex items-center justify-center">
+            <ul className="flex space-x-6 font-bold text-xl">
+              <li><a href="/" className="hover:text-gray-300">Home</a></li>
+              <li><div className="services-option relative group">
+                <div className="absolute "></div>
+                <a className="page-scroll font-bold rounded-lg" href="/services">
+                  <span className="font-bold"> Services </span>
+                </a>
+                <div className="dropdown-content-services">
+                  {cards.map((service) => (
+                    <a href={"/services#" + service.id}>
+                      <div className="flex">
+                        <h2 className="md:font-bold">
+                          {service.head2}
+                        </h2>
+                      </div>
+                    </a>
+                  ))}
                 </div>
-                <div className="row">
-                    <div className="col-lg-12">
-                        <div className="header-hero-image text-center wow fadeIn" data-wow-duration="1.3s" data-wow-delay="1.4s">
-                            <img src="assets/images/header-hero.png" alt="hero"/>
-                        </div> 
-                    </div>
-                </div> 
-            </div>
-            <div id="particles-1" className="particles"></div>
-        </div>  */}
-      </header>
+              </div></li>
+              <li><div className="products-option relative group">
+                <a className="page-scroll font-bold rounded-lg" ><span className="px-1 font-bold">Products</span>
+                  <div className="dropdown-content-products">
+                    {/* <a href="/faq#q1">
+                      <div className="glasses-option relative group">
+                        <a
+                          className="page-scroll font-bold rounded-lg"
+                          href="/glasses-contacts?query=glasses"
+                        >
+                          <span className="font-bold text-black"> Sun/Glasses</span>
+                        </a>
+                        <div className="dropdown-content-glasses top-6 left-32">
+                          {brandsArr.map((brand) => (
+                            <a href={brand.addr} target="_blank">
+                              <div className="flex">
+                                <img
+                                  className="img-fluid img-responsive rounded product-image-v2"
+                                  src={"/images/brands/" + brand.link}
+                                />
+                                <h2 className="font-bold">{brand.name}</h2>
+                              </div>
+                            </a>
+                          ))}
+                        </div>
+                      </div>
+                    </a> */}
+                    <a href="/glasses-contacts?query=glasses">
+                      <div className="flex">
+                        <h2 className="font-bold">Sun/Glasses</h2>
+                      </div>
+                    </a>
+                    <a href="/glasses-contacts?query=contacts">
+                      <div className="flex">
+                        <h2 className="font-bold">Contacts</h2>
+                      </div>
+                    </a>
+                    <a href="/products?query=eye-medic">
+                      <div className="flex">
+                        <h2 className="font-bold">Eye Care Products</h2>
+                      </div>
+                    </a>
+                  </div>
+                </a>
+              </div></li>
+              <li><a href="/bookings#appointment" className="hover:text-gray-300">Book Appointment</a></li>
+              <li><a href="/about-us" className="hover:text-gray-300">About Us</a></li>
+              <li>
+                <div className="faq-option relative group">
+                  <div className="absolute"></div>
+                  <a
+                    className={classNames(
+                      "page-scroll font-bold rounded-lg",
+                      // location?.route == "/faq"
+                      //   ? "bg-white"
+                      //   : "bg-black"
+                    )}
+                    href="/faq"
+                  >
+                    <span
+                      className={classNames(
+                        "px-1 font-bold",
+                        // location?.route == "/faq"
+                        //   ? "text-black"
+                        //   : "text-white"
+                      )}
+                    >
+                      FAQs
+                    </span>
+                  </a>
+                  <div className="dropdown-content-faq">
+                    <a href="/faq#q1">
+                      <div className="flex">
+                        <h2 className="font-bold">
+                          How often should you get your eyes checked?
+                        </h2>
+                      </div>
+                    </a>
+                    <a href="/faq#q2">
+                      <div className="flex">
+                        <h2 className="font-bold">
+                          What age should I get my child’s eye exams
+                          done?
+                        </h2>
+                      </div>
+                    </a>
+                    <a href="/faq#q3">
+                      <div className="flex">
+                        <h2 className="font-bold">
+                          How do I choose the right pair of glasses?
+                        </h2>
+                      </div>
+                    </a>
+                    <a href="/faq#q4">
+                      <div className="flex">
+                        <h2 className="font-bold">
+                          Are sunglasses just for fashion or are they
+                          necessary?
+                        </h2>
+                      </div>
+                    </a>
+                    <a href="/faq#q5">
+                      <div className="flex">
+                        <h2 className="font-bold">
+                          Why Buy Contact Lenses In-Store vs Online?
+                        </h2>
+                      </div>
+                    </a>
+                    <a href="/faq#q6">
+                      <div className="flex">
+                        <h2 className="font-bold">
+                          How can I reduce eye strain and redness?
+                        </h2>
+                      </div>
+                    </a>
+                    <a href="/faq#q7">
+                      <div className="flex">
+                        <h2 className="font-bold">
+                          Do we do direct billing?
+                        </h2>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </nav>
+        </header>
+        <style jsx>{`
+                header {
+                  background: url('https://pvec-bucket.s3.ca-central-1.amazonaws.com/banners/door-8b366fa5-88cd-451b-8a7c-d19980bed73a.jpeg') center/cover;
+                  color: white;
+                    padding: 1rem;
+                    text-align: center;
+                }
+
+                nav ul {
+                    list-style: none;
+                    padding: 0;
+                }
+
+                nav ul li {
+                    display: inline;
+                    margin-right: 20px;
+                }
+
+                main {
+                    padding: 2rem;
+                    text-align: center;
+                }
+
+                img {
+                    width: 100%;
+                    max-width: 600px;
+                    margin: 2rem 0;
+                }
+            `}</style>
+      </div>
+
       <Modal
         title="Order your products"
         open={isModalOpen}

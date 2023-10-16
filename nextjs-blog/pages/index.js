@@ -3,7 +3,7 @@ import Banner from "../components/Banner";
 import ServicesCatalogueHomePage from "../components/ServicesCatalogueHomePage";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from "react-responsive-carousel";
-// import { banner } from "../constant";
+import { banner } from "../constant";
 import ProductCatalogueHomePage from "../components/ProductCatalogueHomePage";
 import FeedbackHomePage from "../components/FeedbackHomePage";
 import { Helmet } from "react-helmet";
@@ -12,20 +12,20 @@ import Endpoints from "../utils/endpoints";
 import Loading from "../components/Loading";
 
 export default function Home() {
-  const [banner, setBanner] = useState([]);
+  // const [banner, setBanner] = useState([]);
 
-  useEffect(() => {
-    callApi({
-      uriEndPoint: {
-        ...Endpoints.getBanners,
-      },
-    })
-      .then((res) => {
-        console.log("res", res);
-        setBanner(res?.banners);
-      })
-      .catch();
-  }, []);
+  // useEffect(() => {
+  //   callApi({
+  //     uriEndPoint: {
+  //       ...Endpoints.getBanners,
+  //     },
+  //   })
+  //     .then((res) => {
+  //       console.log("res", res);
+  //       setBanner(res?.banners);
+  //     })
+  //     .catch();
+  // }, []);
 
   return (
     <main>
@@ -33,13 +33,14 @@ export default function Home() {
 
       <div className="md:mt-0 mt-28 hidden md:block">
         {banner.length ? (
-          <Carousel
-            dynamicHeight
-            autoPlay
-            swipeable
-            infiniteLoop
-            interval="5000"
-          >
+          // <Carousel
+          //   dynamicHeight
+          //   autoPlay
+          //   swipeable
+          //   infiniteLoop
+          //   interval="5000"
+          // >
+          <>
             {banner.map((b) => (
               <div className="pb-2 md:py-0 md:h-auto h-96" key={b._id}>
                 <Banner
@@ -53,7 +54,8 @@ export default function Home() {
                 ></Banner>
               </div>
             ))}
-          </Carousel>
+             </>
+          // </Carousel>
         ) : (
           <Loading />
         )}

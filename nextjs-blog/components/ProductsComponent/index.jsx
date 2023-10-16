@@ -408,12 +408,11 @@ export default function ProductsComponent() {
       <div className="line mt-20"></div>
 
       {/* The products section starts */}
-      <div id="search_products" className="container mt-2 mb-5">
+      {/* <div id="search_products" className="container mt-2 mb-5">
         <h2 className="font-bold text-2xl">Search & Order Products</h2>
         <br />
         <div className="d-flex justify-content-center row">
           <br />
-          {/* <h2 className="font-bold text-lg">Search Products</h2> */}
           <br />
           <div className="col-md-10 md:px-auto px-0 md:flex mx-4 mb-4 items-center">
             <div className="md:w-3/4 flex gap-2">
@@ -601,95 +600,10 @@ export default function ProductsComponent() {
                   </ul>
                 </div>
               ))}
-              {/* <List
-                pagination={{
-                  position: "bottom",
-                  align: "center",
-                  pageSize: 10,
-                  total: productsCount,
-                  current: startIndex + 1,
-                  onChange: (page) => {
-                    setStartIndex(page - 1);
-                    handleProductSearch({ startIndexNew: page - 1 });
-                    console.log(page);
-                  },
-                }}
-                dataSource={products}
-                renderItem={(product, index) => {
-                  return (
-                    <List.Item
-                      className="max-h-80"
-                      actions={[
-                        <div className="d-flex flex-column mt-4">
-                          {!(product?._id in productDict) ? (
-                            <button
-                              className="btn btn-outline-primary btn-sm mt-2"
-                              type="button"
-                              onClick={() => handleAddOrder(product)}
-                            >
-                              Add to order
-                            </button>
-                          ) : (
-                            <button
-                              className="bg-primary text-white btn-sm mt-2"
-                              type="button"
-                              onClick={() =>
-                                removeOrder(product, productDict[product?._id])
-                              }
-                            >
-                              Remove order
-                            </button>
-                          )}
-                        </div>,
-                      ]}
-                    >
-                      <List.Item.Meta
-                        avatar={
-                          <div className="bg-indigo-100 ">
-                            <img
-                              alt="product"
-                              class="object-cover h-60 w-60 "
-                              src={product.image}
-                            />
-                          </div>
-                        }
-                        title={
-                          <>
-                            {product.name}{" "}
-                            <Tag bordered={false} color="success">
-                              {product?.brand?.title}
-                            </Tag>
-                          </>
-                        }
-                        description={
-                          <div className="">
-                            <div className="mt-1 mb-1 spec-1">
-                              {product?.tags?.map((element, arrIndex) => {
-                                let tag = (
-                                  <>
-                                    <span className="dot"></span>
-                                    <span>{element}</span>
-                                  </>
-                                );
-                                return tag;
-                              })}
-                            </div>
-                            <p className="text-justify para mb-0">
-                              {product.description}
-                              <br />
-                              <br />
-                            </p>
-                          </div>
-                        }
-                      />
-                    </List.Item>
-                  );
-                }}
-              /> */}
             </div>
           )}
         </div>
-      </div>
+      </div> */}
     </>
   );
 }

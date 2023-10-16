@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Footer2() {
   return (
-    <footer id="footer" className="footer-area pt-120">
+    <footer id="footer" className="footer-area pt-1 mt-8">
       <div className="container">
         {/* <div
           className="subscribe-area wow fadeIn"
@@ -32,7 +32,7 @@ to keep up-to-date on our latest offers, new stock announcements, and access to 
           </div>
         </div> */}
         {/* Map goes here */}
-        <div className=" mt-20 flex justify-center">
+        <div className=" mt-4 flex justify-center">
           {/* <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2602.890499360897!2d-123.13233812330994!3d49.27847207105212!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x548673d361e5189d%3A0xc4a149fa64f2a9ed!2sPerformance%20Vision%20Eye%20Care!5e0!3m2!1sen!2sin!4v1681929243514!5m2!1sen!2sin" width="400" height="300" style={{border:0}} allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2602.890499360897!2d-123.13233812330994!3d49.27847207105212!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x548673d361e5189d%3A0xc4a149fa64f2a9ed!2sPerformance%20Vision%20Eye%20Care!5e0!3m2!1sen!2sin!4v1681929761028!5m2!1sen!2sin" width="600" height="440" style={{border:0}} allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> */}
           <iframe
@@ -74,30 +74,20 @@ to keep up-to-date on our latest offers, new stock announcements, and access to 
                 </p>
                 <ul className="social">
                   <li>
-                    <a href="#">
+                    <a href="https://www.facebook.com/PerformanceVisionEyeCare/" target="_blank">
                       <i className="lni-facebook-filled"></i>
                     </a>
                   </li>
                   <li>
-                    <a href="#">
-                      <i className="lni-twitter-filled"></i>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">
+                    <a href="https://www.instagram.com/performancevisioneyecare/?hl=en">
                       <i className="lni-instagram-filled"></i>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">
-                      <i className="lni-linkedin-original"></i>
                     </a>
                   </li>
                 </ul>
               </div>
             </div>
             <div className="col-lg-3 col-md-7 col-sm-7">
-              <div className="footer-link d-flex mt-50 justify-content-md-between">
+              <div className="footer-link d-flex mt-24 justify-content-md-between">
                 <div
                   className="link-wrapper wow fadeIn"
                   data-wow-duration="1s"
@@ -129,7 +119,7 @@ to keep up-to-date on our latest offers, new stock announcements, and access to 
             </div>
             <div className="col-lg-3 col-md-5 col-sm-5">
               <div
-                className="footer-contact mt-50 wow fadeIn"
+                className="footer-contact mt-24 wow fadeIn"
                 data-wow-duration="1s"
                 data-wow-delay="0.8s"
               >

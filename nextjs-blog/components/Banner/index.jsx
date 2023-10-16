@@ -1,3 +1,4 @@
+import { HomeOutlined, MobileOutlined } from "@ant-design/icons";
 import React from "react";
 const parse = require('html-react-parser');
 
@@ -31,8 +32,8 @@ export default function Banner({
             : {}
         }
       >
-        <div className="u-clearfix u-sheet flex items-center u-sheet-1 top-section md:mt-0 md:py-0 py-4">
-          <div className="mt-4 md:mt-0 md:text-left">
+        <div className="u-clearfix u-sheet flex items-center h-full w-full justify-between u-sheet-1 top-section flex-col md:mt-0 md:py-0 py-4">
+          {/* <div className="mt-10 md:mt-0 md:text-left">
             {" "}
             {text && (
               <h1
@@ -73,6 +74,56 @@ export default function Banner({
                 >{parse(description)}</h3>
             )}
             {children}
+          </div> */}
+          <div className="h-1/2 w-full flex justify-between">
+            <div> <img
+              src="https://pvec-bucket.s3.ca-central-1.amazonaws.com/eyecare-logo.png"
+              style={{
+                maxWidth: "11rem",
+                height: "4.5rem",
+                marginLeft: "24px",
+                marginTop: "24px",
+                zIndex: 2000,
+              }}
+              alt="Logo"
+            /></div>
+            <div className="flex flex-col justify-center mr-12"> <h1 className="text-lg"> <a
+              className="pl-1 inline-flex center"
+              href="https://goo.gl/maps/rh7x6UiVqRNjZTBa7"
+              target="_blank"
+            >
+              &nbsp; &nbsp; 1242 Burrard Street, Vancouver BC
+            </a></h1>
+              <h1 className="text-3xl"> <a
+                className="pl-1 inline-flex center"
+                href="tel:+16046899962"
+                target="_blank"
+              >
+                &nbsp; &nbsp;+1 604 689 9962
+              </a></h1></div>
+          </div>
+          <div className="h-1/2 w-full place-content-center just">
+            <div className="flex justify-center">
+              <div className="d-none bg-blue-300 d-sm-inline-block text-3xl place-content-center h-12 border-2 border-black" >
+                <a
+                  className=""
+                  data-scroll-nav="0"
+                  href="https://docs.google.com/forms/d/e/1FAIpQLSeciQeXbMzKdezp0kkCx1Itxm1SCnUL5bv1C7rT1m1aBp1vsg/viewform?usp=sf_link"
+                  target="_blank"
+                >
+                  <span className="px-2">Order Contacts</span>
+                </a>
+              </div>
+              <div className="ml-8 bg-blue-300 d-none d-sm-inline-block ml-2 text-3xl place-content-center h-12 border-2 border-black">
+                <a
+                  className=""
+                  data-scroll-nav="0"
+                  href="/bookings#appointment"
+                >
+                  <span className="px-2">Book Appointment</span>
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </div>
