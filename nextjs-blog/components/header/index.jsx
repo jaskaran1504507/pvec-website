@@ -21,6 +21,7 @@ import context from "../context";
 
 export default function Header() {
   const [isNavVisible, setIsNavVisible] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
   const [cartProducts, setCartProducts] = useState([]);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [fileList, setFileList] = useState([]);
