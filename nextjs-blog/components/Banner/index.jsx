@@ -32,7 +32,7 @@ export default function Banner({
             : {}
         }
       >
-        <div className="u-clearfix u-sheet flex items-center h-full w-full justify-between u-sheet-1 top-section flex-col md:mt-0 md:py-0 py-4">
+        <div className="u-clearfix u-sheet flex items-center h-full w-full justify-between u-sheet-1 top-section flex-col md:mt-0 md:py-0 py-4 md:block hidden">
           {/* <div className="mt-10 md:mt-0 md:text-left">
             {" "}
             {text && (
@@ -102,6 +102,31 @@ export default function Banner({
                 &nbsp; &nbsp;+1 604 689 9962
               </a></h1></div>
           </div>
+          <div className="h-1/2 w-full place-content-center just">
+            <div className="flex justify-center">
+              <div className="d-none bg-blue-300 d-sm-inline-block text-3xl place-content-center h-12 border-2 border-black" >
+                <a
+                  className=""
+                  data-scroll-nav="0"
+                  href="https://docs.google.com/forms/d/e/1FAIpQLSeciQeXbMzKdezp0kkCx1Itxm1SCnUL5bv1C7rT1m1aBp1vsg/viewform?usp=sf_link"
+                  target="_blank"
+                >
+                  <span className="px-2">Order Contacts</span>
+                </a>
+              </div>
+              <div className="ml-8 bg-blue-300 d-none d-sm-inline-block ml-2 text-3xl place-content-center h-12 border-2 border-black">
+                <a
+                  className=""
+                  data-scroll-nav="0"
+                  href="/bookings#appointment"
+                >
+                  <span className="px-2">Book Appointment</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="u-clearfix u-sheet flex items-center h-full w-full justify-between u-sheet-1 top-section flex-col md:mt-0 md:py-0 py-4 block md:hidden">
           <div className="h-1/2 w-full place-content-center just">
             <div className="flex justify-center">
               <div className="d-none bg-blue-300 d-sm-inline-block text-3xl place-content-center h-12 border-2 border-black" >

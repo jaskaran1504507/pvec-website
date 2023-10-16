@@ -31,7 +31,7 @@ export default function Home() {
     <main>
       <Helmet></Helmet>
 
-      <div className="md:mt-0 mt-28 hidden md:block">
+      <div className="mt-0 block">
         {banner.length ? (
           // <Carousel
           //   dynamicHeight

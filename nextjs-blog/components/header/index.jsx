@@ -826,7 +826,7 @@ export default function Header() {
         </div>
 
       </header> */}
-      <div className="block">
+      <div className="md:block hidden">
         <header className="h-10 bg-gray-800 text-white">
           <nav className="h-full flex items-center justify-center">
             <ul className="flex space-x-6 font-bold text-xl">
@@ -1005,6 +1005,335 @@ export default function Header() {
                 }
             `}</style>
       </div>
+
+      {isVisible && (
+          <div className="md:hidden block ">
+            <div style={{ position: "relative" }}>
+              <div
+                style={{
+                  position: "absolute",
+                  height: "100vh",
+                  width: "100vw",
+                  background: "black",
+                  zIndex: 21,
+                }}
+              >
+                {/* START */}
+                <div style={{ display: "flex", justifyContent: "end" }}>
+                  <img
+                    onClick={() => {
+                      setIsVisible((prev) => !prev);
+                    }}
+                    src="/cross.png"
+                    style={{ height: "35px", margin: "45px 25px 0 0" }}
+                  />
+                </div>
+                <ul className="text-lg" style={{ marginTop: "2rem" }}>
+                  {/* <li className="mb-4">
+              <a href="/" className="text-black hover:text-gray-300">Home</a>
+            </li> */}
+
+                  <li className="mb-3 active ">
+                    <div className="relative group text-center">
+                      <div className="absolute"></div>
+
+                      <a
+                        className={classNames("page-scroll rounded-lg")}
+                        href="/"
+                      >
+                        <span className="flex items-center ">
+                          {" "}
+                          <span
+                            style={{ fontSize: "1.8rem", fontWeight: "200" }}
+                            className="text-white"
+                          >
+                            Home
+                          </span>
+                        </span>
+                      </a>
+                    </div>
+                  </li>
+
+                  <li className="mb-3">
+                    <div className="glasses-option relative group text-center">
+                      <div className="absolute "></div>
+                      <a
+                        className={classNames(
+                          " page-scroll  rounded-lg hover:text-gray-300"
+                        )}
+                        href="/glasses-contacts?query=glasses"
+                      >
+                        <span
+                          className={classNames(
+                            "px-1   hover:text-gray-300 text-white"
+                          )}
+                          style={{ fontSize: "1.8rem", fontWeight: "200" }}
+                        >
+                          Sun/Glasses
+                        </span>
+                      </a>
+                      <div className="dropdown-content-glasses top-6 left-20">
+                        {brandsArr.map((brand) => (
+                          <a href={brand.addr} target="_blank">
+                            <div className="flex">
+                              <img
+                                onClick={() => setIsVisible(false)}
+                                className="img-fluid mx-1 img-responsive rounded product-image-v2"
+                                src={"/images/brands/" + brand.link}
+                              />
+                              <h2 className="font-bold">{brand.name}</h2>
+                            </div>
+                          </a>
+                        ))}
+                      </div>
+                    </div>
+                  </li>
+                  <li className="mb-3">
+                    <div className="contacts-option relative group text-center">
+                      <div className="absolute "></div>
+                      <a
+                        className={classNames(
+                          "page-scroll  rounded-lg hover:text-gray-300"
+                        )}
+                        href="/glasses-contacts?query=contacts"
+                      >
+                        <span
+                          style={{ fontSize: "1.8rem", fontWeight: "200" }}
+                          className="text-white"
+                        >
+                          Contacts
+                        </span>
+                      </a>
+                      <div className="dropdown-content-contacts  top-6 left-20">
+                        {contactsBrandsArr.map((brand) => (
+                          <a href={brand.addr} target="_blank">
+                            <div className="flex">
+                              <img
+                                className="img-fluid mx-1 img-responsive rounded product-image-v2"
+                                src={"/images/" + brand.link}
+                              />
+                              <h2 className="font-bold">{brand.name}</h2>
+                            </div>
+                          </a>
+                        ))}
+                      </div>
+                    </div>
+                  </li>
+                  <li className="mb-3">
+                    <div className="services-option relative group text-center">
+                      <div className="absolute"></div>
+
+                      <a
+                        className={classNames(
+                          "page-scroll  rounded-lg text-white"
+                        )}
+                        href="/services"
+                      >
+                        <span
+                          className={classNames("px-1 ")}
+                          style={{ fontSize: "1.8rem", fontWeight: "200" }}
+                        >
+                          Services
+                        </span>
+                      </a>
+                      <div className="dropdown-content-services top-6 left-20">
+                        {cards.map((service) => (
+                          <a href={"/services#" + service.id}>
+                            <div className="flex my-1">
+                              <h2 className="md:font-bold mx-2">
+                                {service.head2}
+                              </h2>
+                            </div>
+                          </a>
+                        ))}
+                      </div>
+                    </div>
+                  </li>
+                  <li className="mb-3">
+                    <div className="relative group text-center">
+                      <div className="absolute"></div>
+
+                      <a
+                        className={classNames(
+                          "page-scroll rounded-lg hover:text-gray-300"
+                        )}
+                        href="/products?query=eye-medic"
+                      >
+                        <span
+                          style={{ fontSize: "1.8rem", fontWeight: "200" }}
+                          className={classNames("px-1  text-white")}
+                        >
+                          EyeCare
+                        </span>
+                      </a>
+                    </div>
+                  </li>
+                  <li className="mb-3">
+                    <div className="relative group text-center">
+                      <div className="absolute"></div>
+                      <a
+                        className={classNames(
+                          "page-scroll font-bold rounded-lg hover:text-gray-300"
+                        )}
+                        href="/promotions"
+                      >
+                        <span
+                          className={classNames("px-1  text-white")}
+                          style={{ fontSize: "1.8rem", fontWeight: "200" }}
+                        >
+                          Promotions
+                        </span>
+                      </a>
+                    </div>
+                  </li>
+                  <li className="mb-3">
+                    <div className="faq-option relative group text-center">
+                      <div className="absolute"></div>
+                      <a
+                        className={classNames(
+                          "page-scroll  rounded-lg hover:text-gray-300"
+                        )}
+                        href="/faq"
+                      >
+                        <span
+                          className={classNames("px-1 text-white")}
+                          style={{ fontSize: "1.8rem", fontWeight: "200" }}
+                        >
+                          FAQs
+                        </span>
+                      </a>
+                      <div className="dropdown-content-faq top-2 left-14">
+                        <a href="/faq#q1">
+                          <div className="flex">
+                            <h2 className="font-bold">
+                              How often should you get your eyes checked?
+                            </h2>
+                          </div>
+                        </a>
+                        <a href="/faq#q2">
+                          <div className="flex">
+                            <h2 className="font-bold">
+                              What age should I get my child’s eye exams done?
+                            </h2>
+                          </div>
+                        </a>
+                        <a href="/faq#q3">
+                          <div className="flex">
+                            <h2 className="font-bold">
+                              How do I choose the right pair of glasses?
+                            </h2>
+                          </div>
+                        </a>
+                        <a href="/faq#q4">
+                          <div className="flex">
+                            <h2 className="font-bold">
+                              Are sunglasses just for fashion or are they
+                              necessary?
+                            </h2>
+                          </div>
+                        </a>
+                        <a href="/faq#q5">
+                          <div className="flex">
+                            <h2 className="font-bold">
+                              Why Buy Contact Lenses In-Store vs Online?
+                            </h2>
+                          </div>
+                        </a>
+                        <a href="/faq#q6">
+                          <div className="flex">
+                            <h2 className="font-bold">
+                              How can I reduce eye strain and redness?
+                            </h2>
+                          </div>
+                        </a>
+                        <a href="/faq#q7">
+                          <div className="flex">
+                            <h2 className="font-bold">
+                              Do we do direct billing?
+                            </h2>
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+                  </li>
+                  <li className="mb-3">
+                    <div className="relative group text-center">
+                      <div className="absolute"></div>
+                      <a
+                        className={classNames(
+                          "page-scroll  rounded-lg hover:text-gray-300"
+                        )}
+                        href="/about-us"
+                      >
+                        <span
+                          style={{ fontSize: "1.8rem", fontWeight: "200" }}
+                          className={classNames("px-1 text-center text-white")}
+                        >
+                          About
+                        </span>
+                      </a>
+                    </div>
+                  </li>
+                  <li className="mb-3">
+                    <div className="relative group text-center">
+                      <div className="absolute"></div>
+                      <a
+                        className={classNames(
+                          "page-scroll  rounded-lg hover:text-gray-300"
+                        )}
+                        href="https://docs.google.com/forms/d/e/1FAIpQLSeciQeXbMzKdezp0kkCx1Itxm1SCnUL5bv1C7rT1m1aBp1vsg/viewform?usp=sf_link"
+                        target="_blank"
+                      >
+                        <span
+                          style={{ fontSize: "1.8rem", fontWeight: "200" }}
+                          className={classNames("px-1 text-center text-white")}
+                        >
+                          Order Contact
+                        </span>
+                      </a>
+                    </div>
+                  </li>
+                  <li className="mb-3">
+                    <div className="relative group text-center">
+                      <div className="absolute"></div>
+                      <a
+                        className={classNames(
+                          "page-scroll  rounded-lg hover:text-gray-300"
+                        )}
+                        href="/bookings#appointment"
+                      >
+                        <span
+                          style={{ fontSize: "1.8rem", fontWeight: "200" }}
+                          className={classNames("px-1 text-center text-white")}
+                        >Book Appointment
+                        </span>
+                      </a>
+                    </div>
+                  </li>
+                  <li className="mb-3">
+                    <div className="relative group text-center">
+                      <div className="absolute"></div>
+                      <a
+                        className={classNames(
+                          "page-scroll  rounded-lg hover:text-gray-300"
+                        )}
+                        href="https://docs.google.com/forms/d/e/1FAIpQLSex8fCDLOm41BPwOB235NRWKaZVdXk-tRiNbObpbV9vuUxV0Q/viewform?usp=sf_link"
+                        target="_blank"
+                      >
+                        <span
+                          style={{ fontSize: "1.8rem", fontWeight: "200" }}
+                          className={classNames("px-1 text-center text-white")}
+                        >Check Benefits
+                        </span>
+                      </a>
+                    </div>
+                  </li>
+                </ul>
+                {/* END */}
+              </div>
+            </div>
+          </div>
+        )}
 
       <Modal
         title="Order your products"
