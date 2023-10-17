@@ -24,7 +24,6 @@ export default function ServicesCatalogueHomePage() {
       },
     })
       .then((res) => {
-        console.log("res", res);
         setHomeServicesCards(res?.services);
       })
       .catch();
@@ -421,7 +420,7 @@ export default function ServicesCatalogueHomePage() {
               Explore our range of products{" "}
             </u>
           </Link> */}
-          <Link href="/service-products">
+          <Link href="/products">
             <p className="explore-services-container uppercase rounded-full white md:text-lg font-semibold px-4 py-3">
               Explore more of our services{" "}
             </p>

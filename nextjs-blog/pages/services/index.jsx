@@ -32,7 +32,6 @@ export default function ServiceProducts() {
       },
     })
       .then((res) => {
-        console.log("res", res);
         setCards(res?.services);
       })
       .catch();

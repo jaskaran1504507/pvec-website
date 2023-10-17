@@ -2,33 +2,6 @@ import React from "react";
 
 export default function Footer() {
   return (
-    // <footer className="bg-sky-900 mx-auto flex justify-center py-20 mt-10">
-    //   <div className="grid grid-cols-1 md:grid-cols-2 place-items-center	">
-    //     <div>
-    //       <p className="text-white font-semibold text-base">
-    //         {" "}
-    //         1234 NW Bobcat Lane,
-    //       </p>
-    //       <p className="text-white font-semibold text-base">
-    //         {" "}
-    //         Robert Robertson,
-    //       </p>
-    //       <p className="text-white font-semibold text-base">
-    //         St. Robert, MO 65584-5678.
-    //       </p>
-    //     </div>
-    //     <div style={{ height: "200px", width: "348px" }}>
-    //       <img
-    //         src="https://i.stack.imgur.com/xYkPu.png"
-    //         alt=""
-    //         className="rounded-lg"
-    //       />
-    //     </div>
-    //   </div>
-    // </footer>
-
-    // <!--====== FOOTER PART START ======-->
-
     <footer id="footer" className="footer-area pt-1 mt-8">
       <div className="container">
         {/* <div
@@ -59,7 +32,8 @@ export default function Footer() {
             </div>
           </div>
         </div> */}
-         <div className=" mt-4 flex justify-center">
+        {/* Map goes here */}
+        <div className=" mt-4 flex justify-center">
           {/* <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2602.890499360897!2d-123.13233812330994!3d49.27847207105212!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x548673d361e5189d%3A0xc4a149fa64f2a9ed!2sPerformance%20Vision%20Eye%20Care!5e0!3m2!1sen!2sin!4v1681929243514!5m2!1sen!2sin" width="400" height="300" style={{border:0}} allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2602.890499360897!2d-123.13233812330994!3d49.27847207105212!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x548673d361e5189d%3A0xc4a149fa64f2a9ed!2sPerformance%20Vision%20Eye%20Care!5e0!3m2!1sen!2sin!4v1681929761028!5m2!1sen!2sin" width="600" height="440" style={{border:0}} allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> */}
           <iframe
@@ -116,25 +90,8 @@ export default function Footer() {
               {/* <!-- footer about --> */}
             </div>
             {/* <div className="col-lg-3 col-md-7 col-sm-7">
-              <div className="footer-link d-flex mt-50 justify-content-md-between">
-                {/* <div
-                  className="link-wrapper wow fadeIn"
-                  data-wow-duration="1s"
-                  data-wow-delay="0.4s"
-                >
-                  <div className="footer-title">
-                    <h4 className="title">Quick Link</h4>
-                  </div>
-                  <ul className="link">
-                    <li><a href="#">Road Map</a></li>
-                    <li><a href="#">Privacy Policy</a></li>
-                    <li><a href="#">Refund Policy</a></li>
-                    <li><a href="#">Terms of Service</a></li>
-                    <li><a href="#">Pricing</a></li>
-                  </ul>
-                </div> */}
-                {/* <!-- footer wrapper --> */}
-                {/* <div
+              <div className="footer-link d-flex mt-24 justify-content-md-between">
+                <div
                   className="link-wrapper wow fadeIn"
                   data-wow-duration="1s"
                   data-wow-delay="0.6s"
@@ -213,7 +170,5 @@ export default function Footer() {
       {/* <!-- container --> */}
       <div id="particles-3"></div>
     </footer>
-
-    // <!--====== FOOTER PART ENDS ======-->
   );
 }

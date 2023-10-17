@@ -3,7 +3,7 @@ import Banner from "../components/Banner";
 import ServicesCatalogueHomePage from "../components/ServicesCatalogueHomePage";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from "react-responsive-carousel";
-// import { banner } from "../constant";
+import { banner } from "../constant";
 import ProductCatalogueHomePage from "../components/ProductCatalogueHomePage";
 import FeedbackHomePage from "../components/FeedbackHomePage";
 import { Helmet } from "react-helmet";
@@ -13,28 +13,50 @@ import Loading from "../components/Loading";
 import BannerSlider from "../components/BannerSlider";
 
 export default function Home() {
-  const [banner, setBanner] = useState([]);
+  // const [banner, setBanner] = useState([]);
 
-  useEffect(() => {
-    callApi({
-      uriEndPoint: {
-        ...Endpoints.getBanners,
-      },
-    })
-      .then((res) => {
-        console.log("res", res);
-        setBanner(res?.banners);
-      })
-      .catch();
-  }, []);
+  // useEffect(() => {
+  //   callApi({
+  //     uriEndPoint: {
+  //       ...Endpoints.getBanners,
+  //     },
+  //   })
+  //     .then((res) => {
+  //       console.log("res", res);
+  //       setBanner(res?.banners);
+  //     })
+  //     .catch();
+  // }, []);
 
   return (
     <main>
       <Helmet></Helmet>
 
-      <div className="md:mt-0 mt-2 ">
+      <div className="mt-0 block">
         {banner.length ? (
-          <BannerSlider slides={banner}/>
+          // <Carousel
+          //   dynamicHeight
+          //   autoPlay
+          //   swipeable
+          //   infiniteLoop
+          //   interval="5000"
+          // >
+          <>
+            {banner.map((b) => (
+              <div className="pb-2 md:py-0 md:h-auto h-72 md:h-96" key={b._id}>
+                <Banner
+                  banner={b.image}
+                  textColor={b.textColor}
+                  text={b.text}
+                  description={b.description}
+                  subText={b.subText}
+                  subText2={b.subText2}
+                  subText3={b.subText3}
+                ></Banner>
+              </div>
+            ))}
+             </>
+          // </Carousel>
         ) : (
           <Loading />
         )}

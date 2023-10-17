@@ -304,24 +304,43 @@ export const brandsArr = [
 
 export const banner = [
   {
-    textColor: "white",
-    img: "banner-about-us-img",
-    text: "We are now accepting new patients in our Downtown Vancouver clinic.",
+    // textColor: "white",
+    sequence : 1,
+    image: "banner-about-us-img",
+    text: `<div className="d-none d-sm-inline-block text-3xl bg-slate-950" style="font-size:6vh;background: rgba(255, 255, 255, 0.2);backdrop-filter: blur(8px); margin-top:0.5rem; " >
+    <a
+      className=""
+      data-scroll-nav="0"
+      href="https://docs.google.com/forms/d/e/1FAIpQLSeciQeXbMzKdezp0kkCx1Itxm1SCnUL5bv1C7rT1m1aBp1vsg/viewform?usp=sf_link"
+      target="_blank"
+    >
+      <span className="px-2 font-bold">Order Contacts</span>
+    </a>
+  </div>
+  <div className=" d-none d-sm-inline-block ml-2 text-3xl bg-slate-950" style="font-size:6vh; background: rgba(255, 255, 255, 0.2);backdrop-filter: blur(8px); margin-top:0.5rem;">
+    <a
+      className=""
+      data-scroll-nav="0"
+      href="/bookings#appointment"
+    >
+      <span className="px-2 font-bold">Book Appointment</span>
+    </a>
+  </div>`,
   },
-  {
-    textColor: "white",
-    img: "banner-home-img-4",
-    text: <>We direct bill to all major insurance providers.<br />We also partner with First Nation Health Authority (FNHA) and People with Disability (PwD) on government assistance.</>,
-  },
-  {
-    textColor: "white",
-    img: "banner-home-img-3",
-    text: "The best use of your performance vision is spotting a good deal!",
-    subText: <>Clearance Sale! <br />Now on selected eyewear from <span style={{ color: 'red' }}>50-90% off </span> with fully coated lenses purchase.</>,
-    subText2: <a href="https://www.alternativeeyes.com/catalog/one-sun" target="_blank" rel="noopener noreferrer">Limited time offer! <br />Fully coated polarized sun glasses reg price <span style={{ color: 'red' }}><s>200$</s></span> now for <span style={{ color: 'red' }}>99$</span> while supplies last.</a>,
-    subText3: <>Are you a student or senior citizen?<br />Please ask about our special pricing just for you.</>,
-    description: "Please come visit in store or email or call us for more information."
-  },
+  // {
+  //   textColor: "white",
+  //   img: "banner-home-img-4",
+  //   text: <>We direct bill to all major insurance providers.<br />We also partner with First Nation Health Authority (FNHA) and People with Disability (PwD) on government assistance.</>,
+  // },
+  // {
+  //   textColor: "white",
+  //   img: "banner-home-img-3",
+  //   text: "The best use of your performance vision is spotting a good deal!",
+  //   subText: <>Clearance Sale! <br />Now on selected eyewear from <span style={{ color: 'red' }}>50-90% off </span> with fully coated lenses purchase.</>,
+  //   subText2: <a href="https://www.alternativeeyes.com/catalog/one-sun" target="_blank" rel="noopener noreferrer">Limited time offer! <br />Fully coated polarized sun glasses reg price <span style={{ color: 'red' }}><s>200$</s></span> now for <span style={{ color: 'red' }}>99$</span> while supplies last.</a>,
+  //   subText3: <>Are you a student or senior citizen?<br />Please ask about our special pricing just for you.</>,
+  //   description: "Please come visit in store or email or call us for more information."
+  // },
   // {
   //   textColor: "white",
   //   img: "banner-home-img-5",

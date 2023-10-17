@@ -123,7 +123,7 @@ const callAxios = ({
     withCredentials: true,
     headers: {
       ...getDefaultHeaders(),
-      // ...uriEndPoint.headerProps,
+      ...uriEndPoint.headerProps,
     },
     data: body || {},
   });
