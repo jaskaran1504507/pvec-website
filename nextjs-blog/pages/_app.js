@@ -49,97 +49,35 @@ export default function MyApp({ Component, pageProps }) {
         <Component {...pageProps} />
       </Context.Provider>
       {router.pathname == "/about-us" ? <Footer2 /> : <Footer />}
-      <div className="w-1/6 text-black p-2 md:block hidden">
-        {/* Header content goes here */}
-
-        <Header />
-      </div>
-      <div className="flex-1 flex flex-col overflow-x-hidden overflow-y-auto">
-        {/* The Component */}
-        <div className=" flex md:hidden justify-between ">
-          <a className="navbar-brand " href="#">
-            <img
-              src="https://pvec-bucket.s3.ca-central-1.amazonaws.com/eyecare-logo.png"
-              style={{
-                maxWidth: "11rem",
-                height: "4.5rem",
-                marginLeft: 24,
-                marginTop: 24,
-                zIndex: 2000,
-                paddingLeft: 2,
-                paddingRight: 2,
+      {!isVisited && (
+        <div
+          style={{
+            position: "fixed",
+            width: "100%",
+            bottom: "0px",
+            zIndex: 2000,
+          }}
+        >
+          <div
+            className="alert bg-black text-white text-center cookiealert show"
+            role="alert"
+          >
+            <b>Do you like cookies ?</b>🍪 We use cookies to ensure you get
+            the best experience on our website. By using our website, you
+            agree to our use of cookies
+            <button
+              type="button"
+              onClick={() => {
+                localStorage.setItem("isVisited", "true");
+                setIsVisited((p) => !p);
               }}
-              alt="Logo"
-            />
-          </a>
-          <div className="container mt-6">
-            <div className="row">
-              <div className="col-lg-12">
-                <nav className="navbar navbar-expand-lg flex justify-end">
-                  <button
-                    className="navbar-toggler"
-                    type="button"
-                    data-toggle="collapse"
-                    data-target="#navbarSupportedContent"
-                    aria-controls="navbarSupportedContent"
-                    aria-expanded="false"
-                    aria-label="Toggle navigation"
-                    onClick={() => {
-                      setIsVisible((prev) => !prev);
-                    }}
-                  >
-                    <span
-                      className="toggler-icon bg-black"
-                      style={{ background: "black" }}
-                    />
-                    <span
-                      className="toggler-icon bg-black"
-                      style={{ background: "black" }}
-                    />
-                    <span
-                      className="toggler-icon bg-black"
-                      style={{ background: "black" }}
-                    />
-                  </button>
-                </nav>
-              </div>
-            </div>
+              className="ant-btn ml-2 mt-2 ant-btn-primary"
+            >
+              <span>Confirm</span>
+            </button>
           </div>
         </div>
-        <Component {...pageProps} />
-        {location.pathname == "/about-us" ? <Footer2 /> : <Footer />}
-        {!isVisited && (
-          <div
-            style={{
-              position: "fixed",
-              width: "100%",
-              bottom: "0px",
-              zIndex: 2000,
-            }}
-          >
-            <div
-              className="alert bg-black text-white text-center cookiealert show"
-              role="alert"
-            >
-              <b>Do you like cookies ?</b>🍪 We use cookies to ensure you get
-              the best experience on our website. By using our website, you
-              agree to our use of cookies
-              <button
-                type="button"
-                onClick={() => {
-                  localStorage.setItem("isVisited", "true");
-                  setIsVisited((p) => !p);
-                }}
-                className="ant-btn ml-2 mt-2 ant-btn-primary"
-              >
-                <span>Confirm</span>
-              </button>
-            </div>
-          </div>
-        )}
-      </div>
+      )}
     </>
   );
-
-
 }
