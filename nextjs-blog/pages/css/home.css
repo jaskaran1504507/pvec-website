@@ -59,10 +59,11 @@ h6 {
 .banner-about-us-img {
   background-image: url("../../public/images/bn-backgroun_1.jpg");
   background-position-x: inherit !important;
-  background-size: 120% !important;
+  /* background-size: 120% !important; */
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  object-fit: scale-down;
 }
 
 .banner-contact-img-1 {
@@ -91,7 +92,7 @@ h6 {
   background-repeat: no-repeat;
 }
 .u-section-1-1 .u-sheet-1 {
-  min-height: 800px;
+  min-height: 650px;
   /* max-width: 80vh; */
 }
 .u-sheet {
@@ -131,7 +132,7 @@ h1.u-title {
 }
 @media (max-width: 1199px) {
   .u-section-1-1 .u-sheet-1 {
-    min-height: 660px;
+    min-height: 600px;
   }
 
   .u-section-1-1 .u-text-1 {

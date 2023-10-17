@@ -1,4 +1,3 @@
-import { HomeOutlined, MobileOutlined } from "@ant-design/icons";
 import React from "react";
 const parse = require('html-react-parser');
 
@@ -25,7 +24,7 @@ export default function Banner({
         className={`${banner} u-active text-center u-section-1-1 banner-img  u-carousel-item  justify-center flex u-clearfix u-image u-shading `}
         src=""
         data-image-width="1248"
-        data-image-height="641"
+        data-image-height="600"
         style={
           banner && banner.includes(".")
             ? { backgroundImage: `url(${banner})` }

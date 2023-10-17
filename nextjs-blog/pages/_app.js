@@ -21,6 +21,7 @@ import Context from "../components/context";
 // This default export is required in a new `pages/_app.js` file.
 export default function MyApp({ Component, pageProps }) {
   const router = useRouter();
+  const [isVisible, setIsVisible] = useState(true);
   const [isVisited, setIsVisited] = useState(true);
   const [state, dispatch] = useState({ count: 0 });
   useEffect(() => {
@@ -77,4 +78,6 @@ export default function MyApp({ Component, pageProps }) {
       )}
     </>
   );
+
+  
 }

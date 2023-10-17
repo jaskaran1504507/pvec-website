@@ -2296,7 +2296,7 @@ h5 {
 
 .dropdown-content-faq {
   display: none;
-  /* background: #f1f1f1; */
+  background: #f1f1f1;
   min-width: 280px;
   position: absolute;
   z-index: 1;

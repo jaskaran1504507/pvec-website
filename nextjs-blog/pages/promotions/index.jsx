@@ -15,7 +15,6 @@ export default function Promotions() {
         ...Endpoints.getPromotions,
       },
     }).then((res) => {
-      console.log("res", res);
       setCards(res?.promotions);
     });
   }, []);

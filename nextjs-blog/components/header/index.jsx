@@ -828,11 +828,12 @@ export default function Header() {
 
       </header> */}
       <div className="md:block hidden">
-        <header className="h-10 bg-gray-800 text-white">
+        <header className="h-10 bg-gray-800 text-black">
           <nav className="h-full flex items-center justify-center">
             <ul className="flex space-x-6 font-bold text-xl">
-              <li><a href="/" className="hover:text-gray-300">Home</a></li>
-              <li><div className="services-option relative group">
+              <li><a href="/" className="hover:text-gray-500">Home</a></li>
+              <li>|</li>
+              <li><div className="services-option relative group hover:text-gray-500">
                 <div className="absolute "></div>
                 <a className="page-scroll font-bold rounded-lg" href="/services">
                   <span className="font-bold"> Services </span>
@@ -849,7 +850,8 @@ export default function Header() {
                   ))}
                 </div>
               </div></li>
-              <li><div className="products-option relative group">
+              <li>|</li>
+              <li><div className="products-option relative group hover:text-gray-500">
                 <a className="page-scroll font-bold rounded-lg" ><span className="px-1 font-bold">Products</span>
                   <div className="dropdown-content-products">
                     {/* <a href="/faq#q1">
@@ -893,10 +895,13 @@ export default function Header() {
                   </div>
                 </a>
               </div></li>
-              <li><a href="/bookings#appointment" className="hover:text-gray-300">Book Appointment</a></li>
-              <li><a href="/about-us" className="hover:text-gray-300">About Us</a></li>
+              <li>|</li>
+              <li><a href="/bookings#appointment" className="hover:text-gray-500">Book Appointment</a></li>
+              <li>|</li>
+              <li><a href="/about-us" className="hover:text-gray-500">About Us</a></li>
+              <li>|</li>
               <li>
-                <div className="faq-option relative group">
+                <div className="faq-option relative group hover:text-gray-500">
                   <div className="absolute"></div>
                   <a
                     className={classNames(
@@ -978,8 +983,7 @@ export default function Header() {
         </header>
         <style jsx>{`
                 header {
-                  background: url('https://pvec-bucket.s3.ca-central-1.amazonaws.com/banners/door-8b366fa5-88cd-451b-8a7c-d19980bed73a.jpeg') center/cover;
-                  color: white;
+                  background-color: #CADAFE;
                     padding: 1rem;
                     text-align: center;
                 }
