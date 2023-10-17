@@ -42,7 +42,7 @@ export default function Home() {
           // >
           <>
             {banner.map((b) => (
-              <div className="pb-2 md:py-0 md:h-auto h-96" key={b._id}>
+              <div className="pb-2 md:py-0 md:h-auto h-72 md:h-96" key={b._id}>
                 <Banner
                   banner={b.image}
                   textColor={b.textColor}
