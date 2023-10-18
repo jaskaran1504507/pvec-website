@@ -66,7 +66,7 @@ export default function HeadBrandHomePage() {
           <div id="obj2" className="flex absolute top-0 left-0 w-full h-full">
             <div className="w-2/5 h-full ">
               <img
-                className="p-2 object-cover w-full h-full shadow-lg"
+                className="p-2 object-cover w-full h-full drop-shadow-md"
                 src="/images/hermosa_n_despoda.jpeg"
                 alt="Logo"
               />
@@ -77,11 +77,12 @@ export default function HeadBrandHomePage() {
                 <div className="h-3/5 mt-4 mr-2 text-left text-xl font-mono text-white"><span className="font-bold">Hermosa & Despada - </span> Luxury eyeglasses and luxury sunglasses made in Europe. Servicing Eyes on the Performance vision since 2004.</div>
                 <div className="h-2/5 my-4 flex ">
                   <div className="h-full w-1/3 flex justify-center">
-                    <a className={`text-white font-bold py-6 px-4 my-1 border-2 text-xl flex justify-center content-center`}>
+                    <a className={`text-white font-bold py-4 px-4 my-1 border-2 text-xl flex justify-center content-center`}>
                       VISIT US TODAY
                     </a>
                   </div>
-                  <div className="h-full w-2/3 bg-blue-100 flex mb-2 p-2 ml-2">
+                  <div className="h-full w-2/3 flex p-2 ml-2">
+                    <div className="flex bg-blue-100">
                     <div className="w-1/2">  <img
                       className=" object-fill w-full h-full shadow-lg"
                       src="https://pvec-bucket.s3.ca-central-1.amazonaws.com/eyecare-logo.png"
@@ -92,6 +93,7 @@ export default function HeadBrandHomePage() {
                       src="/images/DESPADA-LOGO-BLACK.png"
                       alt="Logo"
                     /></div>
+                    </div>
                   </div>
                 </div>
               </div>
