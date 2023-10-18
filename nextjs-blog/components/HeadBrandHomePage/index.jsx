@@ -84,7 +84,7 @@ export default function HeadBrandHomePage() {
                   <div className="h-full w-2/3 flex p-2 ml-2">
                     <div className="flex bg-blue-100">
                     <div className="w-1/2">  <img
-                      className=" object-fill w-full h-full shadow-lg px-4 py-1"
+                      className=" object-fill w-full h-full shadow-lg px-10 py-1"
                       src="https://pvec-bucket.s3.ca-central-1.amazonaws.com/eyecare-logo.png"
                       alt="Logo"
                     /></div>
