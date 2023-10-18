@@ -51,11 +51,11 @@ export default function HeadBrandHomePage() {
           </div>
         </div> */}
 
-        <div className="w-full bg-black h-56 relative">
+        <div className="w-full bg-black h-64 relative hidden md:block">
           <div id="obj1" className="flex">
-            <div className="w-1/3 bg-blue-100 h-56">
+            <div className="w-1/3 bg-blue-100 h-64">
             </div>
-            <div className="w-2/3 h-56 flex items-center justify-center relative z-0">
+            <div className="w-2/3 h-64 flex items-center justify-center relative z-0">
               <img
                 className="object-cover w-full h-full"
                 src="/images/water.jpg"
@@ -72,7 +72,6 @@ export default function HeadBrandHomePage() {
               />
             </div>
             <div className="w-3/5 h-full flex items-center justify-center relative z-10">
-              {/* Content for obj2 */}
               <div className="flex w-full h-full flex-col">
                 <div className="h-3/5 mt-4 mr-2 text-left text-xl font-mono text-white"><span className="font-bold">Hermosa & Despada - </span> Luxury eyeglasses and luxury sunglasses made in Europe. Servicing Eyes on the Performance vision since 2004.</div>
                 <div className="h-2/5 my-4 flex ">
@@ -83,16 +82,16 @@ export default function HeadBrandHomePage() {
                   </div>
                   <div className="h-full w-2/3 flex p-2 ml-2">
                     <div className="flex bg-blue-100">
-                    <div className="w-1/2">  <img
-                      className=" object-fill w-full h-full shadow-lg px-10 py-1"
-                      src="https://pvec-bucket.s3.ca-central-1.amazonaws.com/eyecare-logo.png"
-                      alt="Logo"
-                    /></div>
-                    <div className="w-1/2">  <img
-                      className=" object-fill w-full h-full shadow-lg"
-                      src="/images/DESPADA-LOGO-BLACK.png"
-                      alt="Logo"
-                    /></div>
+                      <div className="w-1/2">  <img
+                        className=" object-fill w-full h-full shadow-lg px-4 py-1"
+                        src="https://pvec-bucket.s3.ca-central-1.amazonaws.com/eyecare-logo.png"
+                        alt="Logo"
+                      /></div>
+                      <div className="w-1/2">  <img
+                        className=" object-fill w-full h-full shadow-lg"
+                        src="/images/DESPADA-LOGO-BLACK.png"
+                        alt="Logo"
+                      /></div>
                     </div>
                   </div>
                 </div>
@@ -101,7 +100,79 @@ export default function HeadBrandHomePage() {
           </div>
         </div>
 
-
+        <div className="w-full bg-black h-56 mb-80 relative md:hidden block">
+          <div id="obj1" className="flex flex-col">
+            <div className="w-full bg-blue-100 h-56">
+              <div className="w-full h-full ">
+                <img
+                  className="p-2 object-cover w-full h-full drop-shadow-md"
+                  src="/images/hermosa_n_despoda.jpeg"
+                  alt="Logo"
+                />
+              </div>
+            </div>
+            <div className="w-full h-56 flex items-center justify-center relative z-0">
+              <img
+                className="object-cover w-full h-full"
+                src="/images/water.jpg"
+                alt="Logo"
+              />
+              <div className="absolute top-0 left-0 w-full h-full">
+                <div className="h-3/5 mt-2 mx-2 text-left text-xl font-mono text-white"><span className="font-bold">Hermosa & Despada - </span> Luxury eyeglasses and luxury sunglasses made in Europe. Servicing Eyes on the Performance vision since 2004.</div>
+                <div className="h-10 mt-10 w-full flex justify-center">
+                    <a className={`text-white font-bold p-1 border-2 text-xl flex justify-center content-center`}>
+                      VISIT US TODAY
+                    </a>
+                  </div>
+                <div className="flex bg-blue-50 m-2">
+                  <div className="w-1/2">  <img
+                    className=" object-fill w-full h-full shadow-lg px-2 py-1"
+                    src="https://pvec-bucket.s3.ca-central-1.amazonaws.com/eyecare-logo.png"
+                    alt="Logo"
+                  /></div>
+                  <div className="w-1/2">  <img
+                    className=" object-fill w-full h-full shadow-lg"
+                    src="/images/DESPADA-LOGO-BLACK.png"
+                    alt="Logo"
+                  /></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="obj2" className="flex absolute top-0 left-0 w-full h-full">
+            <div className="w-2/5 h-full ">
+              {/* <img
+                className="p-2 object-cover w-full h-full drop-shadow-md"
+                src="/images/hermosa_n_despoda.jpeg"
+                alt="Logo"
+              /> */}
+              <div className="flex w-full h-full flex-col">
+                {/* <div className="h-3/5 mt-4 mr-2 text-left text-xl font-mono text-white"><span className="font-bold">Hermosa & Despada - </span> Luxury eyeglasses and luxury sunglasses made in Europe. Servicing Eyes on the Performance vision since 2004.</div> */}
+                <div className="h-2/5 my-4 flex ">
+                  {/* <div className="h-full w-1/3 flex justify-center">
+                    <a className={`text-white font-bold py-4 px-4 my-1 border-2 text-xl flex justify-center content-center`}>
+                      VISIT US TODAY
+                    </a>
+                  </div> */}
+                  {/* <div className="h-full w-2/3 flex p-2 ml-2">
+                    <div className="flex bg-blue-100">
+                      <div className="w-1/2">  <img
+                        className=" object-fill w-full h-full shadow-lg px-10 py-1"
+                        src="https://pvec-bucket.s3.ca-central-1.amazonaws.com/eyecare-logo.png"
+                        alt="Logo"
+                      /></div>
+                      <div className="w-1/2">  <img
+                        className=" object-fill w-full h-full shadow-lg"
+                        src="/images/DESPADA-LOGO-BLACK.png"
+                        alt="Logo"
+                      /></div>
+                    </div>
+                  </div> */}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
         {/* <div className="col-lg-10">
           <div className="section-title text-center pb-30">
             <div className="line m-auto"></div>
