@@ -11,6 +11,7 @@ import { callApi } from "../utils/apiUtils";
 import Endpoints from "../utils/endpoints";
 import Loading from "../components/Loading";
 import BannerSlider from "../components/BannerSlider";
+import HeadBrandHomePage from "../components/HeadBrandHomePage";
 
 export default function Home() {
   // const [banner, setBanner] = useState([]);
@@ -106,6 +107,7 @@ export default function Home() {
           </div>
         </Carousel>
       </div> */}
+      <HeadBrandHomePage/>
       <ServicesCatalogueHomePage />
       <ProductCatalogueHomePage />
       <FeedbackHomePage />
