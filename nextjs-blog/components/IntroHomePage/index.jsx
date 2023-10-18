@@ -29,7 +29,7 @@ export default function IntroHomePage() {
       .catch();
   }, []);
   return (
-    <div className="container md:mt-20">
+    <div className="container md:mt-20 md:block hidden">
       <div className="row justify-content-center">
         <div className="w-full flex h-[80vh] relative">
           <div id="obj1" className="w-1/2 mx-24 h-full flex">
