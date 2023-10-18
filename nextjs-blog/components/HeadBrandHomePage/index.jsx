@@ -55,7 +55,7 @@ export default function HeadBrandHomePage() {
           <div id="obj1" className="flex">
             <div className="w-1/3 bg-blue-100 h-56">
             </div>
-            <div className="w-2/3 h-56 bg-green-400 flex items-center justify-center relative z-0">
+            <div className="w-2/3 h-56 flex items-center justify-center relative z-0">
               <img
                 className="object-cover w-full h-full"
                 src="/images/water.jpg"
@@ -84,7 +84,7 @@ export default function HeadBrandHomePage() {
                   <div className="h-full w-2/3 flex p-2 ml-2">
                     <div className="flex bg-blue-100">
                     <div className="w-1/2">  <img
-                      className=" object-fill w-full h-full shadow-lg"
+                      className=" object-fill w-full h-full shadow-lg px-4 py-1"
                       src="https://pvec-bucket.s3.ca-central-1.amazonaws.com/eyecare-logo.png"
                       alt="Logo"
                     /></div>
