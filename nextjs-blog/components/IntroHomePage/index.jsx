@@ -32,7 +32,7 @@ export default function IntroHomePage() {
     <>
       <div className="container md:mt-20 md:block hidden">
         <div className="row justify-content-center">
-          <div className="w-[78vw] xl:w-[66vw] lg:w-[66vw] flex h-[80vh] relative">
+          <div className="w-[78vw] flex h-[80vh] relative">
             <div id="obj1" className="w-1/2 h-full flex">
               <div className="bg-black mt-64 w-72 h-72">
                 <img
@@ -41,10 +41,10 @@ export default function IntroHomePage() {
                   alt="Logo"
                 />
               </div>
-              <div className="absolute top-0 left-0 ml-6 xl:ml-1 lg:ml-1 bg-blue-400 w-[58vh] h-[58vh]">
+              <div className="absolute top-0 left-6 ml-6 xl:ml-1 lg:ml-1 bg-blue-400 w-[58vh] h-[58vh]">
                 <img
                   className="object-cover w-full h-full shadow-xl shadow-black"
-                  src="/images/bg-gl.jpg"
+                  src="/images/bg-shenaaz.jpeg"
                   alt="Logo"
                 />
               </div>
@@ -77,7 +77,7 @@ export default function IntroHomePage() {
               <div className="bg-blue-400 w-full h-[55vh]">
                 <img
                   className="object-cover w-full h-full "
-                  src="/images/bg-gl.jpg"
+                  src="/images/bg-shenaaz.jpeg"
                   alt="Logo"
                 />
               </div>
