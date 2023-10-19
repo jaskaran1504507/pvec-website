@@ -161,12 +161,19 @@ export default function ServicesCatalogueHomePage() {
     //     </section>
     <>
       {/* <!--====== ABOUT PART START ======--> */}
-      <div className="container md:pt-2 mt-42">
-        <div className="row justify-content-center">
+      <div className="container md:pt-2 mt-42 bg-gray-200">
+        <div className="row">
           <div className="col-lg-10">
-            <div className="section-title text-center pb-30">
-              <div className="line m-auto"></div>
+            <div className="section-title text-left pb-30">
               <h3 className="title text-xl">Our Services</h3>
+              <div className="w-full flex mt-3">
+                <div className="w-1/4 border-2 mt-8 border-[#23ADCA] m-auto">
+
+                </div>
+                <div className="w-3/4">
+                  
+                </div>
+              </div>
               <h4>
                 <span className="text-xl font-semibold">
                   <br />
@@ -180,7 +187,7 @@ export default function ServicesCatalogueHomePage() {
         {homeServicesCards?.length ? (
           <div className="grid gap-2 md:mt-10 grid-cols-1 md:grid-cols-3 u-clearfix u-sheet mx-auto u-valign-middle u-sheet-1">
             {homeServicesCards.map(
-              ({ image, description, heading , conditions }) => (
+              ({ image, description, heading, conditions }) => (
                 <div
                   key={image}
                   className="p-2 shadow-lg card flex flex-col border border-gray-300 mx-2"
@@ -421,7 +428,7 @@ export default function ServicesCatalogueHomePage() {
             </u>
           </Link> */}
           <Link href="/products">
-            <p className="explore-services-container uppercase rounded-full white md:text-lg font-semibold px-4 py-3">
+            <p className="explore-services-container uppercase white md:text-lg font-semibold px-4 py-3">
               Explore more of our services{" "}
             </p>
           </Link>

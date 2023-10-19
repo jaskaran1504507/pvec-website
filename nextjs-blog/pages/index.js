@@ -13,6 +13,7 @@ import Loading from "../components/Loading";
 import BannerSlider from "../components/BannerSlider";
 import HeadBrandHomePage from "../components/HeadBrandHomePage";
 import IntroHomePage from "../components/IntroHomePage";
+import ClinicDetailsHomePage from "../components/ClinicDetailsHomePage";
 
 export default function Home() {
   // const [banner, setBanner] = useState([]);
@@ -112,6 +113,7 @@ export default function Home() {
       <IntroHomePage/>
       <ServicesCatalogueHomePage />
       <ProductCatalogueHomePage />
+      <ClinicDetailsHomePage />
       <FeedbackHomePage />
     </main>
   );

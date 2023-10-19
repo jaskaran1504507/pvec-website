@@ -63,7 +63,7 @@ export default function IntroHomePage() {
           </div>
         </div>
       </div>
-      <div className="container mt-12 mb-8 md:hidden block">
+      <div className="container mt-12 md:mb-8 mb-52 md:hidden block">
         <div className="row justify-content-center">
           <div className="w-full flex flex-col h-[80vh] ">
             <div id="obj1" className="w-full h-full flex">
