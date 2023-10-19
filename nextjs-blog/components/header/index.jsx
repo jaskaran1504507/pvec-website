@@ -36,6 +36,13 @@ export default function Header() {
     setIsModalOpen(true);
   };
 
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleDropdown = () => {
+    console.log("This is it")
+    setIsOpen(!isOpen);
+  };
+
   const handleOk = () => {
     setIsModalOpen(false);
   };
@@ -997,7 +1004,7 @@ export default function Header() {
               <span className="px-2 font-bold">Check Benefits</span>
             </a>
           </div> */}
-          {/* <ul className="social text-black flex flex-row space-x-4">
+      {/* <ul className="social text-black flex flex-row space-x-4">
             <li >
               <a href="https://www.facebook.com/PerformanceVisionEyeCare/" target="_blank">
                 <i className="lni-facebook-filled"></i>
@@ -1013,7 +1020,7 @@ export default function Header() {
 
       </header> */}
       <div className="md:block hidden">
-        <header className="h-10 bg-gray-800 text-black">
+        <header className="h-10 bg-gray-800 ">
           <nav className="h-full flex items-center justify-center">
             <ul className="flex space-x-6 font-bold text-xl">
               <li><a href="/" className="hover:text-gray-500">Home</a></li>
@@ -1023,8 +1030,8 @@ export default function Header() {
                 <a className="page-scroll font-bold rounded-lg" href="/services">
                   <span className="font-bold"> Services </span>
                 </a>
-                <div className="dropdown-content-services">
-                  {cards.map((service) => (
+                <div className="dropdown-content-services font-normal">
+                  {/* {cards.map((service) => (
                     <a href={"/services#" + service.id}>
                       <div className="flex">
                         <h2 className="md:font-bold">
@@ -1032,49 +1039,120 @@ export default function Header() {
                         </h2>
                       </div>
                     </a>
-                  ))}
+                  ))} */}
+
+                  {/* <ul className="space-y-2">
+                      <li className="font-semibold pb-2 border-b border-gray-300">Eye Exams</li>
+                      <li>Adult Eye Exams</li>
+                      <li>Children's Eye Exams</li>
+                      <li>Senior's Eye Exams</li>
+                      <li className="font-semibold pb-2 border-b border-gray-300">Eye Issues & Diseases</li>
+                      <li>Age-Related Macular Degeneration</li>
+                      <li>Conjunctivitis (Red Eye)</li>
+                      <li>Flashes & Floaters</li>
+                      <li>Glaucoma Testing & Management</li>
+                      <li>Emergency Services</li>
+                      <li className="font-semibold pb-2 border-b border-gray-300">Specialized Services</li>
+                      <li>Dry Eye Treatment</li>
+                      <li>Corneal Mapping</li>
+                      <li>Latisse</li>
+                      <li>Sports, Safety & Specialty Eyewear</li>
+                      <li>Visual Field Testing</li>
+                    </ul> */}
+
+                  <div className="flex pl-2 pt-2 bg-gray-200">
+                      <h2 className="font-semibold pb-2 border-b border-gray-300">Eye Exams</h2>
+                  </div>
+                  <a href="/services">
+                    <div className="flex">
+                      <h2 className="">Adult Eye Exams</h2>
+                    </div>
+                  </a>
+                  <a href="/services">
+                    <div className="flex">
+                      <h2 className="">Children's Eye Exams</h2>
+                    </div>
+                  </a>
+                  <a href="/services">
+                    <div className="flex">
+                      <h2 className="">Senior's Eye Exam</h2>
+                    </div>
+                  </a>
+                  <div className="flex pl-2 pt-2 bg-gray-200">
+                      <h2 className="font-semibold pb-2 border-b border-gray-300">Eye Issues & Diseases</h2>
+                  </div>
+                  <a href="/services">
+                    <div className="flex">
+                      <h2 className="">Age-Related Macular Degeneration</h2>
+                    </div>
+                  </a>
+                  <a href="/services">
+                    <div className="flex">
+                      <h2 className="">Conjunctivitis (Red Eye)</h2>
+                    </div>
+                  </a>
+                  <a href="/services">
+                    <div className="flex">
+                      <h2 className="">Flashes & Floaters</h2>
+                    </div>
+                  </a>
+                  <a href="/services">
+                    <div className="flex">
+                      <h2 className="">Glaucoma Testing & Management</h2>
+                    </div>
+                  </a>
+                  <a href="/services">
+                    <div className="flex">
+                      <h2 className="">Emergency Services</h2>
+                    </div>
+                  </a>
+                  <div className="flex pl-2 pt-2 bg-gray-200">
+                      <h2 className="font-semibold pb-2 border-b border-gray-300">Specialized Services</h2>
+                  </div>
+                  <a href="/services">
+                    <div className="flex">
+                      <h2 className="">Dry Eye Treatment</h2>
+                    </div>
+                  </a>
+                  <a href="/services">
+                    <div className="flex">
+                      <h2 className="">Corneal Mapping</h2>
+                    </div>
+                  </a>
+                  <a href="/services">
+                    <div className="flex">
+                      <h2 className="">Latisse</h2>
+                    </div>
+                  </a>
+                  <a href="/services">
+                    <div className="flex">
+                      <h2 className="">Sports, Safety & Specialty Eyewear</h2>
+                    </div>
+                  </a>
+                  <a href="/services">
+                    <div className="flex">
+                      <h2 className="">Visual Field Testing</h2>
+                    </div>
+                  </a>
                 </div>
               </div></li>
               <li>|</li>
               <li><div className="products-option relative group hover:text-gray-500">
                 <a className="page-scroll font-bold rounded-lg" ><span className="px-1 font-bold">Products</span>
-                  <div className="dropdown-content-products">
-                    {/* <a href="/faq#q1">
-                      <div className="glasses-option relative group">
-                        <a
-                          className="page-scroll font-bold rounded-lg"
-                          href="/glasses-contacts?query=glasses"
-                        >
-                          <span className="font-bold text-black"> Sun/Glasses</span>
-                        </a>
-                        <div className="dropdown-content-glasses top-6 left-32">
-                          {brandsArr.map((brand) => (
-                            <a href={brand.addr} target="_blank">
-                              <div className="flex">
-                                <img
-                                  className="img-fluid img-responsive rounded product-image-v2"
-                                  src={"/images/brands/" + brand.link}
-                                />
-                                <h2 className="font-bold">{brand.name}</h2>
-                              </div>
-                            </a>
-                          ))}
-                        </div>
-                      </div>
-                    </a> */}
+                  <div className="dropdown-content-products font-normal">
                     <a href="/glasses-contacts?query=glasses">
                       <div className="flex">
-                        <h2 className="font-bold">Sun/Glasses</h2>
+                        <h2 className="">Sun/Glasses</h2>
                       </div>
                     </a>
                     <a href="/glasses-contacts?query=contacts">
                       <div className="flex">
-                        <h2 className="font-bold">Contacts</h2>
+                        <h2 className="">Contacts</h2>
                       </div>
                     </a>
                     <a href="/products?query=eye-medic">
                       <div className="flex">
-                        <h2 className="font-bold">Eye Care Products</h2>
+                        <h2 className="">Eye Care Products</h2>
                       </div>
                     </a>
                   </div>
@@ -1108,17 +1186,17 @@ export default function Header() {
                       FAQs
                     </span>
                   </a>
-                  <div className="dropdown-content-faq">
+                  <div className="dropdown-content-faq font-normal">
                     <a href="/faq#q1">
                       <div className="flex">
-                        <h2 className="font-bold">
+                        <h2 className="">
                           How often should you get your eyes checked?
                         </h2>
                       </div>
                     </a>
                     <a href="/faq#q2">
                       <div className="flex">
-                        <h2 className="font-bold">
+                        <h2 className="">
                           What age should I get my child’s eye exams
                           done?
                         </h2>
@@ -1126,14 +1204,14 @@ export default function Header() {
                     </a>
                     <a href="/faq#q3">
                       <div className="flex">
-                        <h2 className="font-bold">
+                        <h2 className="">
                           How do I choose the right pair of glasses?
                         </h2>
                       </div>
                     </a>
                     <a href="/faq#q4">
                       <div className="flex">
-                        <h2 className="font-bold">
+                        <h2 className="">
                           Are sunglasses just for fashion or are they
                           necessary?
                         </h2>
@@ -1141,21 +1219,21 @@ export default function Header() {
                     </a>
                     <a href="/faq#q5">
                       <div className="flex">
-                        <h2 className="font-bold">
+                        <h2 className="">
                           Why Buy Contact Lenses In-Store vs Online?
                         </h2>
                       </div>
                     </a>
                     <a href="/faq#q6">
                       <div className="flex">
-                        <h2 className="font-bold">
+                        <h2 className="">
                           How can I reduce eye strain and redness?
                         </h2>
                       </div>
                     </a>
                     <a href="/faq#q7">
                       <div className="flex">
-                        <h2 className="font-bold">
+                        <h2 className="">
                           Do we do direct billing?
                         </h2>
                       </div>
