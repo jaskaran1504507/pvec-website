@@ -29,6 +29,7 @@ export default function IntroHomePage() {
       .catch();
   }, []);
   return (
+    <>
     <div className="container md:mt-20 md:block hidden">
       <div className="row justify-content-center">
         <div className="w-full flex h-[80vh] relative">
@@ -62,5 +63,38 @@ export default function IntroHomePage() {
         </div>
       </div>
     </div>
+    <div className="container mt-12 mb-8 md:hidden block">
+      <div className="row justify-content-center">
+        <div className="w-full flex flex-col h-[80vh] ">
+          <div id="obj1" className="w-full h-full flex">
+            {/* <div className="bg-black mt-52 w-full h-full">
+              <img
+                className="object-cover w-full h-full"
+                src="/images/water.jpg"
+                alt="Logo"
+              />
+            </div> */}
+            <div className="bg-blue-400 w-full h-[55vh]">
+                <img
+                className="object-cover w-full h-full "
+                src="/images/bg-gl.jpg"
+                alt="Logo"
+              />
+            </div>
+          </div>
+          <div id="obj2" className="w-full h-full p-4 content-start font-mono">
+            <h2 className="title text-xl uppercase ">Servicing Eyes on the Performance vision since 2004</h2>
+            <div className="mt-8 leading-loose"><h3 className="title ">Welcome to performance vision eye care, located at 1242 Burrard st,Vancouver, BC. <br />
+              We provide a full range of eye care services. From fashion-forward eyewear to family-oriented service, we are here to fulfill all of your eye health needs.</h3></div>
+            <div className="mt-4 text-lg">
+              <a className="page-scroll  rounded-lg hover:underline text-[#21AECA]" href="/bookings#appointment">
+                Request an appointment for your next eye exam.
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </>
   );
 }

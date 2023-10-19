@@ -51,7 +51,7 @@ export default function HeadBrandHomePage() {
           </div>
         </div> */}
 
-        <div className="w-full bg-black h-64 relative hidden md:block">
+        <div className="h-[80vh] bg-black h-64 relative hidden md:block">
           <div id="obj1" className="flex">
             <div className="w-1/3 bg-blue-100 h-64">
             </div>
