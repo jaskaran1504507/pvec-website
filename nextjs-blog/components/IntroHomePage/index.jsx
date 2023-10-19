@@ -41,7 +41,7 @@ export default function IntroHomePage() {
                   alt="Logo"
                 />
               </div>
-              <div className="absolute top-0 left-0 ml-6 bg-blue-400 w-[58vh] h-[58vh]">
+              <div className="absolute top-0 left-0 ml-6 2xl:ml-2 bg-blue-400 w-[58vh] h-[58vh]">
                 <img
                   className="object-cover w-full h-full shadow-xl shadow-black"
                   src="/images/bg-gl.jpg"

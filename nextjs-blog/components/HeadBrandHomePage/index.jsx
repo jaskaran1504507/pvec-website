@@ -88,7 +88,7 @@ export default function HeadBrandHomePage() {
                         alt="Logo"
                       /></div>
                       <div className="w-1/2">  <img
-                        className=" object-fill w-full h-full shadow-lg"
+                        className=" object-fill w-full h-full shadow-lg px-4"
                         src="/images/DESPADA-LOGO-BLACK.png"
                         alt="Logo"
                       /></div>

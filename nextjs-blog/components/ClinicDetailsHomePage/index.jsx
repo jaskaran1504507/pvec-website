@@ -82,12 +82,13 @@ export default function ClinicDetailsHomePage() {
               <div className="mt-3 leading-loose"><h3 className="title text-xl"><a href="tel:+16046899962" target="_blank">+1 604 689 9962</a></h3></div>
               <div className="leading-loose"><h3 className="title text-xl"><a href="mailto:info@pveyecare.ca" target="_blank">info@pveyecare.ca</a></h3></div>
               <h2 className="title mt-8 text-3xl uppercase text-[#21AECA]">CLINIC HOURS</h2>
-              <div className="w-3/4 mt-3 leading-loose flex justify-between"><span className="title text-xl">Monday:</span><span className="title text-xl">8:30 AM - 5:30 PM</span></div>
-              <div className="w-3/4 mt-3 leading-loose flex justify-between"><span className="title text-xl">Tuesday:</span><span className="title text-xl">8:30 AM - 5:30 PM</span></div>
-              <div className="w-3/4 mt-3 leading-loose flex justify-between"><span className="title text-xl">Wednesday:</span><span className="title text-xl">8:30 AM - 5:30 PM</span></div>
-              <div className="w-3/4 mt-3 leading-loose flex justify-between"><span className="title text-xl">Thursday:</span><span className="title text-xl">8:30 AM - 5:30 PM</span></div>
-              <div className="w-3/4 mt-3 leading-loose flex justify-between"><span className="title text-xl">Friday:</span><span className="title text-xl">8:30 AM - 5:30 PM</span></div>
-              <div className="w-3/4 mt-3 leading-loose flex justify-between"><span className="title text-xl">Saturday:</span><span className="title text-xl">9:00 AM - 4:30 PM</span></div>
+              <div className="w-3/4 mt-3 leading-loose flex justify-between"><span className="title text-xl">Monday:</span><span className="title text-xl">10:00 AM - 6:00 PM</span></div>
+              <div className="w-3/4 mt-3 leading-loose flex justify-between"><span className="title text-xl">Tuesday:</span><span className="title text-xl">10:00 AM - 6:00 PM</span></div>
+              <div className="w-3/4 mt-3 leading-loose flex justify-between"><span className="title text-xl">Wednesday:</span><span className="title text-xl">10:00 AM - 6:00 PM</span></div>
+              <div className="w-3/4 mt-3 leading-loose flex justify-between"><span className="title text-xl">Thursday:</span><span className="title text-xl">10:00 AM - 6:00 PM</span></div>
+              <div className="w-3/4 mt-3 leading-loose flex justify-between"><span className="title text-xl">Friday:</span><span className="title text-xl">10:00 AM - 6:00 PM</span></div>
+              <div className="w-3/4 mt-3 leading-loose flex justify-between"><span className="title text-xl">Saturday:</span><span className="title text-xl">11:00 AM - 4:00 PM</span></div>
+              <div className="w-3/4 mt-3 leading-loose flex justify-between"><span className="title text-xl">Sunday:</span><span className="title text-xl">Closed</span></div>
               <div className="mt-8 text-xl">
                 <a className="page-scroll hover:underline text-[#21AECA] uppercase border-2 border-[#21AECA] p-2" href="/bookings#appointment">
                   Request appointment
@@ -116,12 +117,13 @@ export default function ClinicDetailsHomePage() {
               <div className="mt-3 leading-loose"><h3 className="title text-lg"><a href="tel:+16046899962" target="_blank">+1 604 689 9962</a></h3></div>
               <div className="leading-loose"><h3 className="title text-lg"><a href="mailto:info@pveyecare.ca" target="_blank">info@pveyecare.ca</a></h3></div>
               <h2 className="title mt-4 text-2xl uppercase text-[#21AECA]">CLINIC HOURS</h2>
-              <div className="w-3/4 mt-1 leading-loose flex justify-between"><span className="title text-base">Monday:</span><span className="title text-base">8:30AM - 5:30PM</span></div>
-              <div className="w-3/4 mt-1 leading-loose flex justify-between"><span className="title text-base">Tuesday:</span><span className="title text-base	">8:30AM - 5:30PM</span></div>
-              <div className="w-3/4 mt-1 leading-loose flex justify-between"><span className="title text-base">Wednesday:</span><span className="title text-base	">8:30AM - 5:30PM</span></div>
-              <div className="w-3/4 mt-1 leading-loose flex justify-between"><span className="title text-base">Thursday:</span><span className="title text-base	">8:30AM - 5:30PM</span></div>
-              <div className="w-3/4 mt-1 leading-loose flex justify-between"><span className="title text-base">Friday:</span><span className="title text-base	">8:30AM - 5:30PM</span></div>
-              <div className="w-3/4 mt-1 leading-loose flex justify-between"><span className="title text-base">Saturday:</span><span className="title text-base">9:00AM - 4:30PM</span></div>
+              <div className="w-3/4 mt-1 leading-loose flex justify-between"><span className="title text-base">Monday:</span><span className="title text-base">10:00AM - 6:00PM</span></div>
+              <div className="w-3/4 mt-1 leading-loose flex justify-between"><span className="title text-base">Tuesday:</span><span className="title text-base	">10:00AM - 6:00PM</span></div>
+              <div className="w-3/4 mt-1 leading-loose flex justify-between"><span className="title text-base">Wednesday:</span><span className="title text-base	">10:00AM - 6:00PM</span></div>
+              <div className="w-3/4 mt-1 leading-loose flex justify-between"><span className="title text-base">Thursday:</span><span className="title text-base	">10:00AM - 6:00PM</span></div>
+              <div className="w-3/4 mt-1 leading-loose flex justify-between"><span className="title text-base">Friday:</span><span className="title text-base	">10:00AM - 6:00PM</span></div>
+              <div className="w-3/4 mt-1 leading-loose flex justify-between"><span className="title text-base">Saturday:</span><span className="title text-base">11:00AM - 4:00PM</span></div>
+              <div className="w-3/4 mt-1 leading-loose flex justify-between"><span className="title text-base">Sunday:</span><span className="title text-base">Closed</span></div>
               <div className="mt-4 text-lg">
                 <a className="page-scroll hover:underline text-[#21AECA] uppercase border-2 border-[#21AECA] p-2" href="/bookings#appointment">
                   Request appointment
