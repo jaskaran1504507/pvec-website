@@ -233,7 +233,7 @@ export default function FeedbackHomePage() {
         </div>
         <div className="flex justify-center pt-12">
           <Link href="https://g.page/r/Ce2p8mT6SaHEEBM/review" target="_blank">
-            <p className="explore-services-container uppercase rounded-full white text-sm font-semibold px-4 py-3">
+            <p className="explore-services-container uppercase white text-sm font-semibold px-4 py-3">
               Help us grow, share your feedback{" "}
             </p>
           </Link>
