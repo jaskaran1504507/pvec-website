@@ -46,14 +46,14 @@ export default function ClinicDetailsHomePage() {
               <h4>
                 <span className="">
                   <br />
-                  Performance Vision Eye Care is a conveniently located eye doctor's clinic on 1242 Burrard Street in Vancouver. <br />Call us at
+                  Performance Vision Eye Care is a conveniently located eye doctor's clinic on 1242 Burrard Street in Vancouver.(just across from the Esso Gas Station). Call us at
                   <a
                     className="pl-1 inline-flex center text-[#21AECA]"
                     href="tel:+16046899962"
                     target="_blank"
                    
                   >&nbsp;+1 (604) 689 9962&nbsp;
-                  </a> to make an appointment with our Optometrists to talk about your eyeglasses, contact lenses or specialty lens needs.
+                  </a> or email <a className="pl-1 inline-flex center text-[#21AECA]" href="mailto:info@pveyecare.ca" target="_blank">info@pveyecare.ca</a> to make an appointment with one of our Optometrists, or just to ask about your eyecare needs. 
                 </span>
               </h4>
             </div>
