@@ -50,7 +50,7 @@ export default function IntroHomePage() {
               </div>
             </div>
             <div id="obj2" className="w-1/2 h-full content-start font-mono">
-              <h2 className="title text-4xl uppercase">Servicing since 2004</h2>
+              <h2 className="title text-4xl uppercase">Proudly serving the downtown (DT) core since 2004. </h2>
               <div className="w-full flex mt-3">
                 <div className="w-1/4 border-2 mt-8 border-[#23ADCA] m-auto">
                 </div>
@@ -58,8 +58,9 @@ export default function IntroHomePage() {
                 </div>
               </div>
               <div className="mt-8 leading-loose"><h3 className="title text-xl">Welcome to performance vision eye care, located at 1242 Burrard st, Vancouver, BC. <br />
-                We provide a full range of eye care services. From fashion-forward eyewear to family-oriented service, we are here to fulfill all of your eye health needs.</h3></div>
-              <div className="mt-20 text-xl">
+              We pride ourselves on providing the complete eyecare experience which includes, a comprehensive eye exam, a selection of modern and timeless eyewear to choose from, an extensive sunglass collection ranging from active to elegant, and all of the top name brand contact lenses Best of all, we Direct bill to most insurance providers so you pay little to no money out of pocket*! </h3> 
+              <br/> <span className="title text-xs"> *Terms and conditions apply. Based on eligibility.</span></div>
+              <div className="mt-8 text-xl">
                 <a className="page-scroll  rounded-lg hover:underline text-[#21AECA]" href="/bookings#appointment">
                   Request an appointment for your next eye exam.
                 </a>
