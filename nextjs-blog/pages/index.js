@@ -15,6 +15,7 @@ import HeadBrandHomePage from "../components/HeadBrandHomePage";
 import IntroHomePage from "../components/IntroHomePage";
 import ClinicDetailsHomePage from "../components/ClinicDetailsHomePage";
 import ProductsAndDetailsHomePage from "../components/ProductsAndDetailsHomePage";
+import BrandDetailsHomePage from "../components/BrandDetailsHomePage";
 
 export default function Home() {
   // const [banner, setBanner] = useState([]);
@@ -116,6 +117,7 @@ export default function Home() {
       <ProductsAndDetailsHomePage />
       {/* <ProductCatalogueHomePage /> */}
       <ClinicDetailsHomePage />
+      <BrandDetailsHomePage />
       <FeedbackHomePage />
     </main>
   );
