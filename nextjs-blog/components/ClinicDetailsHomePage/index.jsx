@@ -98,7 +98,7 @@ export default function ClinicDetailsHomePage() {
           </div>
         </div>
       </div>
-      <div className="container mt-2 mb-80 md:hidden block">
+      <div className="container mt-2 mb-96 md:hidden block">
         <div className="row justify-content-center">
           <div className="w-full flex flex-col h-[80vh] ">
             <div id="obj1" className="w-full h-full flex">
