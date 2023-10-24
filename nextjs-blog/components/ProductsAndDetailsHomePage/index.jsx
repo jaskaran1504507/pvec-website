@@ -43,7 +43,7 @@ export default function ProductsAndDetailsHomePage() {
                   <div className="w-3/4">
                   </div>
                 </div>
-                <h4><br />We may have the solution for you. Book a consultation for a scleral contact lens fit.</h4>
+                <h4 className="text-xl"><br />We may have the solution for you. Book a consultation for a scleral contact lens fit.</h4>
               </div>
 
               <div className="section-title text-left pb-30 mt-28">
@@ -54,7 +54,7 @@ export default function ProductsAndDetailsHomePage() {
                   <div className="w-3/4">
                   </div>
                 </div>
-                <h4><br />Each piece is hand selected by our team of expert stylists. We factor in design quality, complimentary colour palettes, and flattering shapes that suit faces of all types. We are constantly on the lookout for new and exciting styles our patients will look great in!</h4>
+                <h4 className="text-xl"><br />Each piece is hand selected by our team of expert stylists. We factor in design quality, complimentary colour palettes, and flattering shapes that suit faces of all types. We are constantly on the lookout for new and exciting styles our patients will look great in!</h4>
               </div>
 
               <div className="section-title text-left pb-30 mt-28">
@@ -65,7 +65,7 @@ export default function ProductsAndDetailsHomePage() {
                   <div className="w-3/4">
                   </div>
                 </div>
-                <h4><br />We partner with government assistance programs to provide your eyecare at little to no expense to you.* </h4>
+                <h4 className="text-xl"><br />We partner with government assistance programs to provide your eyecare at little to no expense to you.* </h4>
                 <h5 className="text-xs"> <br />*Terms & conditions apply. Based on eligibility.</h5>
               </div>
             </div>
