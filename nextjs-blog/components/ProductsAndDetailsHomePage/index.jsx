@@ -30,7 +30,7 @@ export default function ProductsAndDetailsHomePage() {
   }, []);
   return (
     <>
-      <div className="container md:mt-20 md:block hidden">
+      <div className="container md:mt-20 md:block hidden bg-gray-100">
         <div className="row justify-content-center">
           <div className="w-[78vw] flex h-[172vh] relative">
             <div id="obj2" className="w-1/2 h-full content-start font-mono">
@@ -89,7 +89,7 @@ export default function ProductsAndDetailsHomePage() {
           </div>
         </div>
       </div>
-      <div className="container mt-2 mb-80 md:hidden block">
+      <div className="container mt-2 mb-80 md:hidden block bg-gray-100">
         <div className="row justify-content-center">
           <div className="w-full flex flex-col h-[80vh] ">
             <div id="obj2" className="w-full h-full py-4 px-3 content-start font-mono">

@@ -112,9 +112,9 @@ export default function Home() {
       </div> */}
       <HeadBrandHomePage/>
       <IntroHomePage/>
-      <ServicesCatalogueHomePage />
+      {/* <ServicesCatalogueHomePage /> */}
       <ProductsAndDetailsHomePage />
-      <ProductCatalogueHomePage />
+      {/* <ProductCatalogueHomePage /> */}
       <ClinicDetailsHomePage />
       <FeedbackHomePage />
     </main>
