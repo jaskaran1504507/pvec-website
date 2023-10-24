@@ -38,9 +38,9 @@ export default function ProductsAndDetailsHomePage() {
               <div className="section-title text-left pb-30 mt-24">
                 <h3 className="title text-lg">Do you suffer from Dry Eyes, Keratoconus or Post Refractive surgery complications?</h3>
                 <div className="w-full flex mt-3">
-                  <div className="w-1/4 border-2 mt-8 border-[#23ADCA] m-auto">
+                  <div className="w-3/4 border-2 mt-8 border-[#23ADCA] m-auto">
                   </div>
-                  <div className="w-3/4">
+                  <div className="w-1/4">
                   </div>
                 </div>
                 <h4 className="text-xl"><br />We may have the solution for you. Book a consultation for a scleral contact lens fit.</h4>
@@ -49,9 +49,9 @@ export default function ProductsAndDetailsHomePage() {
               <div className="section-title text-left pb-30 mt-28">
                 <h3 className="title text-lg">Carefully Curated Glasses </h3>
                 <div className="w-full flex mt-3">
-                  <div className="w-1/4 border-2 mt-8 border-[#23ADCA] m-auto">
+                  <div className="w-4/5 border-2 mt-8 border-[#23ADCA] m-auto">
                   </div>
-                  <div className="w-3/4">
+                  <div className="w-1/5">
                   </div>
                 </div>
                 <h4 className="text-xl"><br />Each piece is hand selected by our team of expert stylists. We factor in design quality, complimentary colour palettes, and flattering shapes that suit faces of all types. We are constantly on the lookout for new and exciting styles our patients will look great in!</h4>

@@ -36,10 +36,10 @@ export default function ClinicDetailsHomePage() {
             <div className="section-title text-left pb-30">
               <h3 className="title text-xl uppercase">VISIT OUR PRACTICE <br />AT 1242 Burrard Street</h3>
               <div className="w-full flex mt-3">
-                <div className="w-1/4 border-2 mt-8 border-[#23ADCA] m-auto">
+                <div className="w-2/5 border-2 mt-8 border-[#23ADCA] m-auto">
 
                 </div>
-                <div className="w-3/4">
+                <div className="w-3/5">
 
                 </div>
               </div>
@@ -75,7 +75,7 @@ export default function ClinicDetailsHomePage() {
                 />
               </div>
             </div>
-            <div id="obj2" className="w-1/2 h-full content-start font-mono">
+            <div id="obj2" className="w-1/2 h-full content-start ">
               <h2 className="title text-3xl uppercase text-[#21AECA]">Performance Vision Eye Care</h2>
               <div className="mt-3 leading-loose"><h3 className="title text-xl">1242 Burrard Street <br/> Vancouver, BC, V6Z 1Z1</h3></div>
               <h2 className="title mt-8 text-3xl uppercase text-[#21AECA]">CONTACT INFORMATION</h2>

@@ -58,7 +58,18 @@ export default function BrandDetailsHomePage() {
               </h4>
             </div>
           </div> */}
-          <div className="w-full flex h-[80vh] relative">
+          <div className="col-lg-10">
+            <div className="section-title text-left pb-30">
+              <h3 className="title text-xl uppercase">VISIT OUR PRACTICE <br />AT 1242 Burrard Street</h3>
+              <div className="w-full flex mt-3">
+                <div className="w-2/5 border-2 mt-8 border-[#23ADCA] m-auto">
+                </div>
+                <div className="w-3/5">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="w-[75vw] flex h-[80vh] relative">
             <div id="obj1" className="w-full h-full flex">
               <div className="bg-black mt-64 w-full h-84">
                 <img
