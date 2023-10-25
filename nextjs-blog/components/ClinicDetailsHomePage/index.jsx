@@ -110,7 +110,7 @@ export default function ClinicDetailsHomePage() {
                 />
               </div>
             </div>
-            <div id="obj2" className="w-full h-full py-4 px-3 content-start font-mono">
+            <div id="obj2" className="w-full h-full py-4 px-3 content-start">
             <h2 className="title text-2xl uppercase text-[#21AECA]">Performance Vision Eye Care</h2>
               <div className="mt-1 leading-loose"><h3 className="title text-lg">1242 Burrard Street <br/> Vancouver, BC, V6Z 1Z1</h3></div>
               <h2 className="title mt-4 text-2xl uppercase text-[#21AECA]">CONTACT INFORMATION</h2>
