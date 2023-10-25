@@ -204,7 +204,7 @@ export const productCatalogue = [
 export const brandsArr = [
   {
     seq: 1, link: "PVEC_FYSH.jpeg", addr: "https://fyshuk.com", name: "FYSH",
-    backgroundImage: "FYSH_bk.jpg"
+    backgroundImage: "Best-glasses-for-blonde-hair.webp"
   },
   {
     seq: 2,
@@ -232,7 +232,7 @@ export const brandsArr = [
     link: "PVEC_KliikDenmark.jpeg",
     addr: "https://www.kliik.com/",
     name: "KLiik",
-    backgroundImage: "kliik_bk.jpeg"
+    backgroundImage: "kliik-k-716.jpg"
   },
   {
     seq: 6,
