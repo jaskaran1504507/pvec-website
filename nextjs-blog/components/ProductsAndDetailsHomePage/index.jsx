@@ -127,7 +127,7 @@ export default function ProductsAndDetailsHomePage() {
           <div className="w-full flex flex-col h-[80vh] ">
             <div id="obj2" className="w-full h-full py-4 px-3 content-start font-mono">
               <div className="section-title text-left pb-30">
-                <h3 className="title text-lg uppercase">Do you suffer from Dry Eyes, Keratoconus or post refractive surgery complications?</h3>
+                <h3 className="title text-lg">Do you suffer from Dry Eyes, Keratoconus or Post Refractive Surgery complications?</h3>
                 <div className="w-full flex mt-3">
                   <div className="w-1/4 border-2 mt-8 border-[#23ADCA] m-auto">
                   </div>
@@ -138,7 +138,7 @@ export default function ProductsAndDetailsHomePage() {
               </div>
 
               <div className="section-title text-left pb-30">
-                <h3 className="title text-lg uppercase">Carefully Curated Glasses </h3>
+                <h3 className="title text-lg">Carefully Curated Glasses </h3>
                 <div className="w-full flex mt-3">
                   <div className="w-1/4 border-2 mt-8 border-[#23ADCA] m-auto">
                   </div>
@@ -149,7 +149,7 @@ export default function ProductsAndDetailsHomePage() {
               </div>
 
               <div className="section-title text-left pb-30">
-                <h3 className="title text-lg uppercase">Are you on Disability/low income assistance or First Nations status?</h3>
+                <h3 className="title text-lg">Are you on Disability/low income assistance or First Nations status?</h3>
                 <div className="w-full flex mt-3">
                   <div className="w-1/4 border-2 mt-8 border-[#23ADCA] m-auto">
                   </div>
