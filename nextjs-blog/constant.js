@@ -204,7 +204,7 @@ export const productCatalogue = [
 export const brandsArr = [
   {
     seq: 1, link: "PVEC_FYSH.jpeg", addr: "https://fyshuk.com", name: "FYSH",
-    backgroundImage: "fysh_bk.jpeg"
+    backgroundImage: "FYSH_bk.jpg"
   },
   {
     seq: 2,
@@ -218,7 +218,7 @@ export const brandsArr = [
     link: "PVEC_HugoBoss.png",
     addr: "https://www.hugoboss.com/men-glasses/",
     name: "Hugo Boss",
-    backgroundImage: "hugo_boss_bk.webp"
+    backgroundImage: "hugo-boss-glasses-henry-carvell.jpg"
   },
   {
     seq: 4,
@@ -246,28 +246,28 @@ export const brandsArr = [
     link: "marc-jacobs-logo-vector.png",
     addr: "https://www.marcjacobs.com/default/the-marc-jacobs/the-accessories/sunglasses/",
     name: "Marc Jacobs",
-    backgroundImage: "marc_jacobs_bk.webp"
+    backgroundImage: "Marc_Jacobs.jpg"
   },
   {
     seq: 8,
     link: "mk_logo.jpeg",
     addr: "https://www.michaelkors.ca/men/accessories/sunglasses/_/N-285v",
     name: "Michael Kors",
-    backgroundImage: "Michael-Kors_bk.jpeg"
+    backgroundImage: "micheal-kors-banner.png"
   },
   {
     seq: 9,
     link: "PVEC_Moleskine.png",
     addr: "https://moleskine-eyewear.com/en/",
     name: "Moleskine",
-    backgroundImage: "moleskiene_bk.jpeg"
+    backgroundImage: "moleskine-banner.jpeg"
   },
   {
     seq: 10,
     link: "PVEC_Oakley.png",
     addr: "https://www.oakley.com/en-eu",
     name: "Oakley",
-    backgroundImage: "Oakley_bk.jpeg"
+    backgroundImage: "ookley.jpeg"
   },
   {
     seq: 11,

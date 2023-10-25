@@ -7,7 +7,7 @@ export default function Products() {
   const [seeMore, setSeeMore] = useState({});
 
   return (
-    <main className="mt-32">
+    <main className="mt-8">
       {/* <div className="grid gap-16 mt-20 grid-cols-1 md:grid-cols-2 u-clearfix u-sheet mx-auto u-valign-middle u-sheet-1">
         <div className="px-6">
           <h2

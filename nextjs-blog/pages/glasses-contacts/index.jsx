@@ -39,7 +39,7 @@ console.log(brands);
 export default function GlassesContacts() {
   const router = useRouter();
   return (
-    <main className="mt-32">
+    <main className="mt-8">
       <ProductsComponent />
       {/* <Banner
         banner="banner-contact-img"

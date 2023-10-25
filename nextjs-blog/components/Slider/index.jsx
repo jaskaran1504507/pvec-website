@@ -20,7 +20,7 @@ const Slider = ({ slides }) => {
     }, [slides]);
 
     return (slides ? (
-        <div className="slider-container bg-gray-200 w-full md:h-[60vh] h-56 flex items-center justify-center">
+        <div className="slider-container bg-gray-200 w-full md:h-[52vh] h-48 flex items-center justify-center">
             <div className="slider w-full h-full overflow-hidden">
                 {slides.map((slide, index) => (
                     <Link 
