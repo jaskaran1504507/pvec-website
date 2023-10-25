@@ -123,10 +123,10 @@ export default function ProductsAndDetailsHomePage() {
           </div>
         </div>
       </div>
-      <div className="container mt-2 mb-80 md:hidden block bg-gray-100">
+      <div className="container mt-2 md:hidden block bg-gray-100">
         <div className="row justify-content-center">
-          <div className="w-full flex flex-col h-[80vh] ">
-            <div id="obj2" className="w-full h-full py-4 px-3 content-start font-mono">
+          <div className="w-full flex flex-col h-fit ">
+            <div id="obj2" className="w-full h-full px-3 content-start font-mono">
               <div className="section-title text-left pb-30">
                 <h3 className="title text-lg">Carefully Curated Glasses </h3>
                 {/* <div className="w-full flex mt-3">
@@ -149,7 +149,7 @@ export default function ProductsAndDetailsHomePage() {
                 </div> */}
                 <h4><br />We may have the solution for you. Book a consultation for a scleral contact lens fit.</h4>
               </div>
-              <div className="section-title text-left pb-30">
+              <div className="section-title text-left">
                 <h3 className="title text-lg">Are you on Disability/low income assistance or First Nations status?</h3>
                 {/* <div className="w-full flex mt-3">
                   <div className="w-1/4 border-2 mt-8 border-[#23ADCA] m-auto">
