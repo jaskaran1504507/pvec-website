@@ -34,29 +34,6 @@ export default function ProductsAndDetailsHomePage() {
         <div className="row justify-content-center">
           <div className="w-[78vw] flex flex-col h-[120vh] relative">
 
-            <div className="w-full h-full flex content-start mt-8 font-mono">
-              <div className="w-1/4 h-full">
-                <img
-                  className="object-cover w-full h-4/5 shadow-xl shadow-black"
-                  src="/images/dry_eye.avif"
-                  alt="Logo"
-                />
-              </div>
-              <div className="w-3/4 h-full content-start px-12">
-
-                <div className="section-title text-left">
-                  <h3 className="title text-lg">Do you suffer from Dry Eyes, Keratoconus or Post Refractive surgery complications?</h3>
-                  <div className="w-full flex mt-3">
-                    <div className="w-10/12 border-2 mt-8 border-[#23ADCA] m-auto">
-                    </div>
-                    <div className="w-1/12">
-                    </div>
-                  </div>
-                  <h4 className="text-xl"><br />We may have the solution for you. Book a consultation for a scleral contact lens fit.</h4>
-                </div>
-              </div>
-
-            </div>
             <div className="w-full h-full flex content-start font-mono">
               <div className="w-1/4 h-full">
                 <img
@@ -80,6 +57,30 @@ export default function ProductsAndDetailsHomePage() {
               </div>
 
             </div>
+            <div className="w-full h-full flex content-start mt-8 font-mono">
+              <div className="w-1/4 h-full">
+                <img
+                  className="object-cover w-full h-4/5 shadow-xl shadow-black"
+                  src="/images/dry_eye.avif"
+                  alt="Logo"
+                />
+              </div>
+              <div className="w-3/4 h-full content-start px-12">
+
+                <div className="section-title text-left">
+                  <h3 className="title text-lg">Do you suffer from Dry Eyes, Keratoconus or Post Refractive surgery complications?</h3>
+                  <div className="w-full flex mt-3">
+                    <div className="w-10/12 border-2 mt-8 border-[#23ADCA] m-auto">
+                    </div>
+                    <div className="w-1/12">
+                    </div>
+                  </div>
+                  <h4 className="text-xl"><br />We may have the solution for you. Book a consultation for a scleral contact lens fit.</h4>
+                </div>
+              </div>
+
+            </div>
+
             <div className="w-full h-full flex content-start font-mono">
               <div className="w-1/4 h-full">
                 <img
@@ -127,35 +128,36 @@ export default function ProductsAndDetailsHomePage() {
           <div className="w-full flex flex-col h-[80vh] ">
             <div id="obj2" className="w-full h-full py-4 px-3 content-start font-mono">
               <div className="section-title text-left pb-30">
-                <h3 className="title text-lg">Do you suffer from Dry Eyes, Keratoconus or Post Refractive Surgery complications?</h3>
-                <div className="w-full flex mt-3">
-                  <div className="w-1/4 border-2 mt-8 border-[#23ADCA] m-auto">
-                  </div>
-                  <div className="w-3/4">
-                  </div>
-                </div>
-                <h4><br />We may have the solution for you. Book a consultation for a scleral contact lens fit.</h4>
-              </div>
-
-              <div className="section-title text-left pb-30">
                 <h3 className="title text-lg">Carefully Curated Glasses </h3>
-                <div className="w-full flex mt-3">
+                {/* <div className="w-full flex mt-3">
                   <div className="w-1/4 border-2 mt-8 border-[#23ADCA] m-auto">
                   </div>
                   <div className="w-3/4">
                   </div>
-                </div>
+                </div> */}
+                <br />
                 <h4><br />Each piece is hand selected by our team of expert stylists. We factor in design quality, complimentary colour palettes, and flattering shapes that suit faces of all types. We are constantly on the lookout for new and exciting styles our patients will look great in!</h4>
               </div>
-
               <div className="section-title text-left pb-30">
-                <h3 className="title text-lg">Are you on Disability/low income assistance or First Nations status?</h3>
-                <div className="w-full flex mt-3">
+                <h3 className="title text-lg">Do you suffer from Dry Eyes, Keratoconus or Post Refractive Surgery complications?</h3>
+                <br />
+                {/* <div className="w-full flex mt-3">
                   <div className="w-1/4 border-2 mt-8 border-[#23ADCA] m-auto">
                   </div>
                   <div className="w-3/4">
                   </div>
-                </div>
+                </div> */}
+                <h4><br />We may have the solution for you. Book a consultation for a scleral contact lens fit.</h4>
+              </div>
+              <div className="section-title text-left pb-30">
+                <h3 className="title text-lg">Are you on Disability/low income assistance or First Nations status?</h3>
+                {/* <div className="w-full flex mt-3">
+                  <div className="w-1/4 border-2 mt-8 border-[#23ADCA] m-auto">
+                  </div>
+                  <div className="w-3/4">
+                  </div>
+                </div> */}
+                <br />
                 <h4><br />We partner with government assistance programs to provide your eyecare at little to no expense to you.* </h4>
                 <h5 className="text-xs"> <br />*Terms & conditions apply. Based on eligibility.</h5>
               </div>
