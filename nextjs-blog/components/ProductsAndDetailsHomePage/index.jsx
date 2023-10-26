@@ -75,7 +75,8 @@ export default function ProductsAndDetailsHomePage() {
                     <div className="w-1/12">
                     </div> */}
                   </div>
-                  <h4 className="text-xl"><br />We may have the solution for you. Book a consultation for a scleral contact lens fit.</h4>
+                  <h4 className="text-xl"><br />We may have the solution for you. <a className="page-scroll  rounded-lg hover:underline text-[#21AECA]" href="/bookings#appointment">
+                  Book a consultation</a> for a scleral contact lens fit.</h4>
                 </div>
               </div>
 
@@ -146,7 +147,8 @@ export default function ProductsAndDetailsHomePage() {
                   <div className="w-3/4">
                   </div> */}
                 </div>
-                <h4><br />We may have the solution for you. Book a consultation for a scleral contact lens fit.</h4>
+                <h4><br />We may have the solution for you. <a className="page-scroll  rounded-lg hover:underline text-[#21AECA]" href="/bookings#appointment">
+                  Book a consultation</a> for a scleral contact lens fit.</h4>
               </div>
               <div className="section-title text-left">
                 <h3 className="title text-lg">Are you on Disability/low income assistance or First Nations status?</h3>

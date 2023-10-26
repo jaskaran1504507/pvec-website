@@ -73,7 +73,7 @@ export default function HeadBrandHomePage() {
             </div>
             <div className="w-3/5 h-full flex items-center justify-center relative z-10">
               <div className="flex w-full h-full flex-col">
-                <div className="h-3/5 mt-4 mr-2 text-left text-xl font-mono text-white"><span className="font-bold">Hermosa & Despada - </span> Luxury eyeglasses and luxury sunglasses made in Europe. Servicing Eyes on the Performance vision since 2004.</div>
+                <div className="h-3/5 mt-4 mr-2 text-left text-xl font-mono text-white"><span className="font-bold">Hermosa & Despada - </span> Luxury eyeglasses and luxury sunglasses made in Europe. Exculsive in Performance Vision Eye Care.</div>
                 <div className="h-2/5 my-4 flex ">
                   <div className="h-full w-1/3 flex justify-center">
                     <a className={`text-white font-bold py-4 px-4 my-1 border-2 text-xl flex justify-center content-center`}>
@@ -118,7 +118,7 @@ export default function HeadBrandHomePage() {
                 alt="Logo"
               />
               <div className="absolute top-0 left-0 w-full h-full">
-                <div className="h-3/5 mt-2 mx-2 text-left text-xl font-mono text-white"><span className="font-bold">Hermosa & Despada - </span> Luxury eyeglasses and luxury sunglasses made in Europe. Servicing Eyes on the Performance vision since 2004.</div>
+                <div className="h-3/5 mt-2 mx-2 text-left text-xl font-mono text-white"><span className="font-bold">Hermosa & Despada - </span> Luxury eyeglasses and luxury sunglasses made in Europe. Exculsive in Performance Vision Eye Care.</div>
                 <div className="h-10 mt-10 w-full flex justify-center">
                     <a className={`text-white font-bold p-1 border-2 text-xl flex justify-center content-center`}>
                       VISIT US TODAY
