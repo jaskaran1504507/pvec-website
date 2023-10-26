@@ -203,12 +203,12 @@ export const productCatalogue = [
 
 export const brandsArr = [
   {
-    seq: 1, link: "PVEC_FYSH.jpeg", addr: "https://fyshuk.com", name: "FYSH",
+    seq: 1, link: "fysh-logo.jpg", addr: "https://fyshuk.com", name: "FYSH",
     backgroundImage: "Best-glasses-for-blonde-hair.webp"
   },
   {
     seq: 2,
-    link: "PVEC_Guess.jpeg",
+    link: "guess_logo_.jpeg",
     addr: "https://www.guess.com/us/en/women/accessories/sunglasses",
     name: "Guess",
     backgroundImage: "Guess_bk.avif"
@@ -229,7 +229,7 @@ export const brandsArr = [
   },
   {
     seq: 5,
-    link: "PVEC_KliikDenmark.jpeg",
+    link: "kliik-logo.jpg",
     addr: "https://www.kliik.com/",
     name: "KLiik",
     backgroundImage: "kliik-k-716.jpg"
@@ -246,11 +246,11 @@ export const brandsArr = [
     link: "marc-jacobs-logo-vector.png",
     addr: "https://www.marcjacobs.com/default/the-marc-jacobs/the-accessories/sunglasses/",
     name: "Marc Jacobs",
-    backgroundImage: "Marc_Jacobs.jpg"
+    backgroundImage: "mj-banner.jpeg"
   },
   {
     seq: 8,
-    link: "mk_logo.jpeg",
+    link: "Michael_Kors_(brand)_logo.png",
     addr: "https://www.michaelkors.ca/men/accessories/sunglasses/_/N-285v",
     name: "Michael Kors",
     backgroundImage: "micheal-kors-banner.png"
@@ -264,17 +264,17 @@ export const brandsArr = [
   },
   {
     seq: 10,
-    link: "PVEC_Oakley.png",
+    link: "oakley9768.jpg",
     addr: "https://www.oakley.com/en-eu",
     name: "Oakley",
     backgroundImage: "ookley.jpeg"
   },
   {
     seq: 11,
-    link: "PVEC_RayBan.png",
+    link: "Ray-Ban-logo.png",
     addr: "https://www.ray-ban.com/canada/en",
     name: "Ray Ban",
-    backgroundImage: "rayban_bk.jpeg"
+    backgroundImage: "ray-ban-banner.png"
   },
   {
     seq: 12, link: "PVEC_Superflex.jpeg", addr: "", name: "Superflex",

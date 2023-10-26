@@ -6,21 +6,21 @@ const LogoRow = ({ logos }) => {
     return (
         logos ?
             (<div className="flex flex-wrap justify-center">
-                {logos.map((logo, index) => (
-                    <div key={index} className="md:w-1/6 w-1/4 m-1">
-                        <Link 
-                        // href={logo.addr} target="_blank"
+            {logos.map((logo, index) => (
+                <div key={index} className="md:w-1/3 sm:w-1/2 py-4 px-2">
+                    <Link
                         href={router?.asPath.includes("#search_products") ? router?.asPath : router?.asPath + "#search_products"}
-                         className={`m-1 w-11/12 center ${router?.query?.query == "eye-medic" ? 'h-48' : 'h-24'}`}>
-                            <img
-                                src={"/images/" + logo.link}
-                                alt="Logo"
-                                className="w-full h-full"
-                            />
-                        </Link>
-                    </div>
-                ))}
-            </div>) : (<></>)
+                        className={`block mx-auto ${router?.query?.query == "eye-medic" ? 'h-48' : 'h-24'}`}
+                    >
+                        <img
+                            src={"/images/" + logo.link}
+                            alt="Logo"
+                            className="w-full h-full object-contain"
+                        />
+                    </Link>
+                </div>
+            ))}
+        </div>) : (<></>)
     );
 };
 
