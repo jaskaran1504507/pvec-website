@@ -58,7 +58,7 @@ export default function IntroHomePage() {
                 </div>
               </div>
               <div className="mt-8 leading-loose"><h3 className="title text-xl">Welcome to Performance Vision Eye Care. <br/>Located at 1242 Burrard St, Vancouver, BC. <br />
-              We pride ourselves on providing the complete eyecare experience which includes, a comprehensive eye exam, a selection of modern and timeless eyewear to choose from, an extensive sunglass collection ranging from active to elegant, and all of the top name brand contact lenses.<br/> Best of all, we Direct bill to most insurance providers so you pay little to no money out of pocket*! </h3> 
+              We pride ourselves on providing the complete eyecare experience which includes: a comprehensive eye exam, a selection of modern and timeless eyewear to choose from, an extensive sunglass collection ranging from active to elegant, and all of the top name brand contact lenses.<br/> Best of all, we Direct bill to most insurance providers so you pay little to no money out of pocket*! </h3> 
               <br/> <span className="title text-xs"> *Terms and conditions apply. Based on eligibility.</span></div>
               <div className="mt-8 text-xl">
                 <a className="page-scroll  rounded-lg hover:underline text-[#21AECA]" href="/bookings#appointment">
