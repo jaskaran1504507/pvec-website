@@ -521,7 +521,7 @@ export const eyecareProductsList = [
   },
   {
     seq: 8,
-    link: "eyecare8.jpeg",
+    link: "515ugeq76Q.jpg",
     addr: "",
     name: "Eye Mask",
     backgroundImage : "s-l1600.jpg"
