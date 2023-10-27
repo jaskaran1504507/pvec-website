@@ -1183,7 +1183,7 @@ export default function Header() {
                         //   : "text-white"
                       )}
                     >
-                      FAQs
+                      FAQ
                     </span>
                   </a>
                   <div className="dropdown-content-faq font-normal">
@@ -1467,7 +1467,7 @@ export default function Header() {
                         className={classNames("px-1 text-white")}
                         style={{ fontSize: "1.8rem", fontWeight: "200" }}
                       >
-                        FAQs
+                        FAQ
                       </span>
                     </a>
                     <div className="dropdown-content-faq top-2 left-14">

@@ -1,5 +1,4 @@
 import Link from "next/link";
-
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
 import { callApi } from "../../utils/apiUtils";
@@ -53,7 +52,7 @@ export default function ProductsAndDetailsHomePage() {
                     </div> */}
                   </div>
                   <h4 className="text-xl"><br />Each piece is hand selected by our team of expert stylists. We factor in design quality, complimentary colour palettes, and flattering shapes that suit faces of all types. We are constantly on the lookout for new and exciting styles our patients will look great in! <a className="page-scroll  rounded-lg hover:underline text-[#21AECA]" href="/glasses-contacts?query=glasses">
-                  Browse our brands</a></h4>
+                  Browse our Brands</a></h4>
                 </div>
               </div>
 
@@ -138,7 +137,7 @@ export default function ProductsAndDetailsHomePage() {
                   </div> */}
                 </div>
                 <h4><br />Each piece is hand selected by our team of expert stylists. We factor in design quality, complimentary colour palettes, and flattering shapes that suit faces of all types. We are constantly on the lookout for new and exciting styles our patients will look great in! <a className="page-scroll  rounded-lg hover:underline text-[#21AECA]" href="/glasses-contacts?query=glasses">
-                  Browse our brands</a></h4>
+                  Browse our Brands</a></h4>
               </div>
               <div className="section-title text-left pb-30">
                 <h3 className="title text-lg">Do you suffer from Dry Eyes, Keratoconus or Post Refractive Surgery complications?</h3>
