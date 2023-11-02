@@ -30,7 +30,7 @@ export default function ClinicDetailsHomePage() {
   }, []);
   return (
     <>
-      <div className="container md:mt-20 md:block hidden">
+      <div className="container md:mt-20 xl:mt-24 lg:mt-24 2xl:mt-24 md:block hidden">
         <div className="row justify-content-center">
           <div className="col-lg-10">
             <div className="section-title text-left pb-30">
@@ -88,7 +88,7 @@ export default function ClinicDetailsHomePage() {
               <div className="w-3/4 mt-3 leading-loose flex justify-between"><span className="title text-xl">Thursday:</span><span className="title text-xl">10:00 AM - 6:00 PM</span></div>
               <div className="w-3/4 mt-3 leading-loose flex justify-between"><span className="title text-xl">Friday:</span><span className="title text-xl">10:00 AM - 6:00 PM</span></div>
               <div className="w-3/4 mt-3 leading-loose flex justify-between"><span className="title text-xl">Saturday:</span><span className="title text-xl">11:00 AM - 4:00 PM</span></div>
-              <div className="w-3/4 mt-3 leading-loose flex justify-between"><span className="title text-xl">Sunday:</span><span className="title text-xl">Closed</span></div>
+              <div className="w-3/4 mt-3 leading-loose flex justify-between"><span className="title text-xl">Sunday\Holidays:</span><span className="title text-xl">Closed</span></div>
               <div className="mt-8 text-xl">
                 <a className="page-scroll hover:underline text-[#21AECA] uppercase border-2 border-[#21AECA] p-2" href="/bookings#appointment">
                   Request appointment
@@ -123,7 +123,7 @@ export default function ClinicDetailsHomePage() {
               <div className="w-3/4 mt-1 leading-loose flex justify-between"><span className="title text-base">Thursday:</span><span className="title text-base	">10:00AM - 6:00PM</span></div>
               <div className="w-3/4 mt-1 leading-loose flex justify-between"><span className="title text-base">Friday:</span><span className="title text-base	">10:00AM - 6:00PM</span></div>
               <div className="w-3/4 mt-1 leading-loose flex justify-between"><span className="title text-base">Saturday:</span><span className="title text-base">11:00AM - 4:00PM</span></div>
-              <div className="w-3/4 mt-1 leading-loose flex justify-between"><span className="title text-base">Sunday:</span><span className="title text-base">Closed</span></div>
+              <div className="w-3/4 mt-1 leading-loose flex justify-between"><span className="title text-base">Sunday\Holidays:</span><span className="title text-base">Closed</span></div>
               <div className="mt-4 text-lg">
                 <a className="page-scroll hover:underline text-[#21AECA] uppercase border-2 border-[#21AECA] p-2" href="/bookings#appointment">
                   Request appointment
