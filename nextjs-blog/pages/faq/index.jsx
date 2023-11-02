@@ -126,7 +126,7 @@ export default function Blogs() {
                 and alternatively, an expensive pair is no guarantee of good UV protection.<br />
                 When buying a pair of Sunglasses consider these factors and keep in mind the
                 quality of the lens and frame is important.<br />
-                For more information and to experience our selection of 200 sunglasses,
+                For more information and to experience our selection of 250+ sunglasses,
                 come by and see us! We are open 6 days a week.</p>
             </div>
           </div>
