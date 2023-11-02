@@ -112,7 +112,7 @@ export default function AboutUs() {
                 <Image src="/images/Wayne.jpg" height="300" width="300" />
               </div>
               <div className="ml-4 font-semibold text-blue-900 mt-24  w-3/4">
-                "Dr. Wayne Yip is the primary optometrist here at Performance
+                "Dr. Wayne Yip is the primary Optometrist here at Performance
                 Vision EyeCare. <br />
                 Dr. Yip attended the University of Waterloo for his
                 undergraduate program and then graduated from the prestigious
