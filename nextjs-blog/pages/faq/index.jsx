@@ -91,7 +91,7 @@ export default function Blogs() {
                 Diamond, and Round. Generally, the best way to choose a shape is to go
                 opposite of your face shape. If you have a round face, rectangle frames are
                 better suited to balance your look. For women, an up swept or cat eye is
-                usually  attering. For colours, a tortoise shell brown or simple black is the
+                usually flattering. For colours, a tortoise shell brown or simple black is the
                 most versatile and easy to dress up or dress down with. A lot of new frames
                 pair a subtle colour on the front with sharp accent colours to give you a frame
                 that is neutral but not boring!<br />
