@@ -94,11 +94,11 @@ export default function AboutUs() {
 
             <div className="md:ml-4 mt-8">
               <p className="text-2xl text-blue-900">
-                "This allows our doctors to detect many serious health
+                This allows our doctors to detect many serious health
                 conditions including: diabetes, hypertension, auto-immune
                 disorders, high cholesterol, thyroid disease, tumors and even
                 cancer! The eye exam is really a window into your overall health
-                and well-being. "
+                and well-being.
               </p>
             </div>
           </div>
