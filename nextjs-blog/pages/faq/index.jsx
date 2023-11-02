@@ -155,6 +155,7 @@ export default function Blogs() {
                 <li className="text-2xl">&#x2022; Just look at our Google Reviews!</li>
                 <li className="text-2xl">&#x2022; Free Trial Contacts Available Today</li>
                 <li className="text-2xl">&#x2022; Convenient Hours for Pick Up (late evenings or even weekends)</li>
+                <li className="text-2xl">&#x2022; Free shipping available (*based on quantity)</li>
                 {/* <li className="text-2xl">&#x2022; Ask about our no cost, no obligation program to take home a few pairs to show your family and friends!</li> */}
                 <li className="text-2xl">&#x2022; Order by phone: 604 689 9962 or Email 24/7:info@pveyecare.ca</li>
               </ul>
