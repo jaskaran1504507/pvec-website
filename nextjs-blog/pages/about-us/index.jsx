@@ -52,7 +52,7 @@ export default function AboutUs() {
           <span style={{ lineHeight: 2 }}>About Us</span>
         </h2>
         <p className="text-blue-900 text-center font-semibold md:pl-20 text-lg">
-          Our practices proudly serves Greater Vancouver with a tradition of
+          Our practice proudly serves Greater Vancouver with a tradition of
           quality service and dedicated staff.{" "}
         </p>
         <div className="my-20 grid grid-cols-1 inline-flex center gap-8 flex">

@@ -25,10 +25,10 @@ const ImageWithTextSlit = ({ imageUrl, linkUrl, linkText }) => {
             href={router?.asPath.includes("#search_products") ? router?.asPath : router?.asPath + "#search_products"}
             >
                 <img src={imageUrl} alt="Image" className="w-full h-auto" />
-                <div
+                {/* <div
                      className={`text-slit absolute bottom-0 left-0 right-0 p-2 bg-black text-white text-center ${ isHovered ? 'opacity-1' : 'opacity-0'} transition-opacity duration-300 ease-in-out`}>
                     {linkText}
-                </div>
+                </div> */}
             </a>
         </div>
     );
