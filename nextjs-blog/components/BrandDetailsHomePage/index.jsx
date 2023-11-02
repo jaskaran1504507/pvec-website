@@ -30,7 +30,7 @@ export default function BrandDetailsHomePage() {
   }, []);
   return (
     <>
-      <div className="container md:mt-20 md:block hidden">
+      <div className="container md:mt-20 xl:mt-24 lg:mt-24 2xl:mt-24 md:block hidden">
         <div className="row justify-content-center">
           {/* <div className="col-lg-10">
             <div className="section-title text-left pb-30">
@@ -60,7 +60,7 @@ export default function BrandDetailsHomePage() {
           </div> */}
           <div className="col-lg-10">
             <div className="section-title text-left pb-30">
-              <h3 className="title text-xl uppercase">VISIT OUR PRACTICE <br />AT 1242 Burrard Street</h3>
+              {/* <h3 className="title text-xl uppercase">VISIT OUR PRACTICE <br />AT 1242 Burrard Street</h3> */}
               <div className="w-full flex mt-3">
                 <div className="w-2/5 border-2 mt-8 border-[#23ADCA] m-auto">
                 </div>
