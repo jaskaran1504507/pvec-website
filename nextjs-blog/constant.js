@@ -78,7 +78,7 @@ export const cards = [
     img: "/images/Rectangle 1-4.jpg",
     head: "Dry Eye Treatment",
     head2: 'Dry Eye Treatment',
-    text: "Dry eye happens when your eye don't make enough tears to stay wet, or when your tears don't work correctly. This can make your eyes feel uncomfortable, and in some cases it can also cause vision problems.",
+    text: "Dry eye syndrome is an extremely common issue amongst young and old patients alike. It can be as a result of the surrounding environment, seasonal changes, medications, use of screens, and many other reasons. It can also have a variety of symptoms ranging from burning and irritation to headaches and blurry vision. There are many viable treatment options available nowadays.",
   },
   {
     seq: 6,
