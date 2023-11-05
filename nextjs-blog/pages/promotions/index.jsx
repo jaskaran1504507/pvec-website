@@ -4,6 +4,7 @@ import React, { useEffect, useState } from "react";
 import Endpoints from "../../utils/endpoints";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { callApi } from "../../utils/apiUtils";
+const parse = require('html-react-parser');
 
 export default function Promotions() {
   const [seeMore, setSeeMore] = useState({});
@@ -118,8 +119,7 @@ export default function Promotions() {
                 <h1 className="text-blue-900 my-3 text-center font-semibold">
                   {m?.title}
                 </h1>
-
-                <div className="px-6 py-4 ">{m?.description}</div>
+                <div className="px-6 py-4 "> {parse(m?.description)}</div>
               </div>
 
               {/* <div className="flex justify-center">
