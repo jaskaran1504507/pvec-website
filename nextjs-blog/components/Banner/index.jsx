@@ -103,7 +103,7 @@ export default function Banner({
           </div>
           <div className="h-1/2 w-full mt-96">
             <div className="flex justify-center">
-              <div className="d-none bg-blue-300 d-sm-inline-block text-3xl place-content-center h-12 border-2 border-black" >
+              <div className="d-none d-sm-inline-block text-white text-3xl place-content-center h-12 border-2 border-white" >
                 <a
                   className=""
                   data-scroll-nav="0"
@@ -113,7 +113,7 @@ export default function Banner({
                   <span className="px-2">Order Contacts</span>
                 </a>
               </div>
-              <div className="ml-8 bg-blue-300 d-none d-sm-inline-block ml-2 text-3xl place-content-center h-12 border-2 border-black">
+              <div className="ml-8 d-none d-sm-inline-block text-white ml-2 text-3xl place-content-center h-12 border-2 border-white">
                 <a
                   className=""
                   data-scroll-nav="0"
