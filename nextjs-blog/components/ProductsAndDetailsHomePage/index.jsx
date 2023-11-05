@@ -37,7 +37,7 @@ export default function ProductsAndDetailsHomePage() {
               <div className="w-1/4 h-full">
                 <img
                   className="object-cover w-full h-4/5 shadow-xl shadow-black"
-                  src="/images/s1.jpeg"
+                  src="/images/couple-with-sunglasses-posing-street.jpg"
                   alt="Logo"
                 />
               </div>
