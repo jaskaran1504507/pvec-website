@@ -1161,6 +1161,8 @@ export default function Header() {
               <li>|</li>
               <li><a href="/bookings#appointment" className="hover:text-gray-500">Book Appointment</a></li>
               <li>|</li>
+              <li><a href="/promotions" className="hover:text-gray-500">Promotions</a></li>
+              <li>|</li>
               <li><a href="/about-us" className="hover:text-gray-500">About Us</a></li>
               <li>|</li>
               <li>
@@ -1246,7 +1248,7 @@ export default function Header() {
         </header>
         <style jsx>{`
                 header {
-                  background-color: #CADAFE;
+                  background-color: #3A9DD6;
                     padding: 1rem;
                     text-align: center;
                 }
