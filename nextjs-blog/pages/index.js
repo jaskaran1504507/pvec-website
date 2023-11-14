@@ -3,7 +3,7 @@ import Banner from "../components/Banner";
 import ServicesCatalogueHomePage from "../components/ServicesCatalogueHomePage";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from "react-responsive-carousel";
-import { banner } from "../constant";
+// import { banner } from "../constant";
 import ProductCatalogueHomePage from "../components/ProductCatalogueHomePage";
 import FeedbackHomePage from "../components/FeedbackHomePage";
 import { Helmet } from "react-helmet";
@@ -18,20 +18,21 @@ import ProductsAndDetailsHomePage from "../components/ProductsAndDetailsHomePage
 import BrandDetailsHomePage from "../components/BrandDetailsHomePage";
 
 export default function Home() {
-  // const [banner, setBanner] = useState([]);
+  const [banner, setBanner] = useState([]);
 
-  // useEffect(() => {
-  //   callApi({
-  //     uriEndPoint: {
-  //       ...Endpoints.getBanners,
-  //     },
-  //   })
-  //     .then((res) => {
-  //       console.log("res", res);
-  //       setBanner(res?.banners);
-  //     })
-  //     .catch();
-  // }, []);
+  useEffect(() => {
+    callApi({
+      uriEndPoint: {
+        ...Endpoints.getBanners,
+      },
+    })
+      .then((res) => {
+        console.log("res", res);
+        setBanner(res?.banners);
+      })
+      .catch();
+  }, []);
+
 
   return (
     <main>
