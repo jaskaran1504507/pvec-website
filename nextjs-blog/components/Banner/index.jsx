@@ -103,7 +103,7 @@ export default function Banner({
           </div>
           <div className="h-1/2 w-full mt-96">
             <div className="flex justify-center">
-              <div className="d-none d-sm-inline-block text-white text-3xl place-content-center h-12 border-2 border-white" >
+              <div className="d-none d-sm-inline-block text-white text-3xl place-content-center h-12 border-2 border-white bg-slate-400" >
                 <a
                   className=""
                   data-scroll-nav="0"
@@ -113,7 +113,7 @@ export default function Banner({
                   <span className="px-2">Order Contacts</span>
                 </a>
               </div>
-              <div className="ml-8 d-none d-sm-inline-block text-white ml-2 text-3xl place-content-center h-12 border-2 border-white">
+              <div className="ml-8 d-none d-sm-inline-block text-white ml-2 text-3xl place-content-center h-12 border-2 border-white bg-slate-400">
                 <a
                   className=""
                   data-scroll-nav="0"
@@ -127,7 +127,7 @@ export default function Banner({
         </div>
         <div className="u-clearfix u-sheet flex justify-end h-full w-full mt-28 u-sheet-1 top-section flex-col md:mt-0 md:py-0 py-4 sm:block md:hidden lg:hidden xl:hidden 2xl:hidden ">
           <div className="w-full flex flex-col justify-center place-content-center ">
-            <div className="bg-blue-300 text-xl place-content-center h-8 border-2 border-black" >
+            <div className="text-xl place-content-center h-8 border-2 border-black" >
               <a
                 className=""
                 data-scroll-nav="0"
@@ -137,7 +137,7 @@ export default function Banner({
                 <span className="px-2">Order Contacts</span>
               </a>
             </div>
-            <div className="ml-8 bg-blue-300 text-xl mt-2 place-content-center h-8 border-2 border-black mx-2">
+            <div className="ml-8 text-xl mt-2 place-content-center h-8 border-2 border-black mx-2">
               <a
                 className=""
                 data-scroll-nav="0"
