@@ -232,8 +232,11 @@ const Bookings = () => {
   const getDefaultDate = (fromUseEffect = false) => {
     let todaysDate = new Date();
     // todaysDate = new Date(Date.now() + (3600 * 1000 * 24));
-    if (todaysDate.getDay() == 0) {
+    // current.day() === 0 || current.day() === 2 || current.day() === 3 || current.day() === 5
+    if (todaysDate.getDay() == 0 || todaysDate.getDay() == 3 || todaysDate.getDay() == 5) {
       todaysDate.setDate(todaysDate.getDate() + 1);
+    }else if (todaysDate.getDay() == 2) {
+      todaysDate.setDate(todaysDate.getDate() + 2);
     }
     if (fromUseEffect) {
       return todaysDate;
@@ -434,7 +437,7 @@ const Bookings = () => {
                 disabledDate={(current) => {
                   return (
                     current.startOf("hour", 0) <= moment().startOf("hour", 0) ||
-                    current.day() === 0
+                    current.day() === 0 || current.day() === 2 || current.day() === 3 || current.day() === 5
                   );
                 }}
                 format={"DD/MM/YYYY"}
