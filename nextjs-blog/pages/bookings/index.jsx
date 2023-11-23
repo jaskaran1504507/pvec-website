@@ -235,7 +235,7 @@ const Bookings = () => {
     // current.day() === 0 || current.day() === 2 || current.day() === 3 || current.day() === 5
     if (todaysDate.getDay() == 0 || todaysDate.getDay() == 3 || todaysDate.getDay() == 5) {
       todaysDate.setDate(todaysDate.getDate() + 1);
-    }else if (todaysDate.getDay() == 2) {
+    } else if (todaysDate.getDay() == 2) {
       todaysDate.setDate(todaysDate.getDate() + 2);
     }
     if (fromUseEffect) {
@@ -255,6 +255,18 @@ const Bookings = () => {
 
   const [slots, setSlots] = useState([]);
   const [showAppointmentSuccess, setShowAppointmentSuccess] = useState(true);
+  const [existingPatientValue, setExistingPatientValue] = useState("-");
+  const [bcCard, setBcCardValue] = useState("-");
+
+  const onChangeExistingPatient = (e) => {
+    console.log('radio checked', e.target.value);
+    setExistingPatientValue(e.target.value);
+  };
+
+  const onChangeBcCard = (e) => {
+    console.log('radio checked', e.target.value);
+    setBcCardValue(e.target.value);
+  };
 
   return (
     <main>
@@ -327,27 +339,42 @@ const Bookings = () => {
             >
               <Input />
             </Form.Item>
-            <Form.Item
-              name="healthcareId"
-              label="Healthcare Id"
-              rules={[
-                { required: true, message: "Health care id is required" },
-              ]}
-            >
-              <Input />
-            </Form.Item>
+
             <Form.Item
               label="Existing patient?"
               name="existing_patient"
               rules={[{ required: true }]}
             >
-              <Radio.Group value={"no"}>
+              <Radio.Group value={"no"} onChange={onChangeExistingPatient}>
                 <Radio.Button value="yes">Yes</Radio.Button>
-                <Radio.Button checked value="no">
-                  No
+                <Radio.Button checked value="no"> No
                 </Radio.Button>
               </Radio.Group>
             </Form.Item>
+            {existingPatientValue == "no" && (<>
+              <Form.Item
+                label="Do you have a BC Service Card or your Personal Health Number?"
+                name="haveHealthNumber"
+                rules={[{ required: existingPatientValue == "no" }]}
+              >
+                <Radio.Group value={"no"} onChange={onChangeBcCard}>
+                  <Radio.Button value="yes">Yes</Radio.Button>
+                  <Radio.Button value="no">No</Radio.Button>
+                </Radio.Group>
+              </Form.Item>
+              {bcCard == "yes" && (<> <Form.Item
+                name="healthcareId"
+                label="Healthcare Id"
+                rules={[
+                  { required: bcCard == "yes", message: "Health care id is required" },
+                ]}
+              >
+                <Input />
+              </Form.Item>
+              </>)
+              }
+            </>)
+            }
             <Form.Item
               name="phone"
               label="Phone Number"
@@ -382,15 +409,6 @@ const Bookings = () => {
                 <Radio.Button value="Eye exam with contact lens">
                   Eye exam with contact lens
                 </Radio.Button>
-              </Radio.Group>
-            </Form.Item>
-            <Form.Item
-              label="Do you have a BC Service Card or your Personal Health Number?"
-              name="haveHealthNumber"
-            >
-              <Radio.Group value={"no"}>
-                <Radio.Button value="yes">Yes</Radio.Button>
-                <Radio.Button value="no">No</Radio.Button>
               </Radio.Group>
             </Form.Item>
             <Form.Item label="Do you currently wear glasses?" name="isGlasses">
