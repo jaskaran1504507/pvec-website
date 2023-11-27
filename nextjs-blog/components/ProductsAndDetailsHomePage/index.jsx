@@ -29,7 +29,7 @@ export default function ProductsAndDetailsHomePage() {
   }, []);
   return (
     <>
-      <div className="container md:mt-12 md:block hidden bg-gray-100">
+      <div className="container md:mt-12 lg:mt-32 xl:mt-32 2xl:mt-32 md:block hidden bg-gray-100">
         <div className="row justify-content-center">
           <div className="w-[78vw] flex flex-col h-[120vh] relative">
 
