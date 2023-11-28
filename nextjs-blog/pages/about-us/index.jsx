@@ -94,11 +94,10 @@ export default function AboutUs() {
 
             <div className="md:ml-4 mt-8">
               <p className="text-2xl text-blue-900">
-                This allows our doctors to detect many serious health
-                conditions including: diabetes, hypertension, auto-immune
-                disorders, high cholesterol, thyroid disease, tumors and even
-                cancer! The eye exam is really a window into your overall health
-                and well-being.
+                This allows our doctors to detect many serious health conditions
+                including: diabetes, hypertension, auto-immune disorders, high
+                cholesterol, thyroid disease, tumors and even cancer! The eye
+                exam is really a window into your overall health and well-being.
               </p>
             </div>
           </div>
@@ -107,11 +106,11 @@ export default function AboutUs() {
             <h2 className="text-2xl font-bold text-center md:text-left">
               Our Professionals
             </h2>
-            <div className="mt-4 flex flex-row mx-40">
-              <div className="mt-4 flex justify-center md:justify-end w-1/4">
+            <div className="mt-4 flex flex-col md:flex-row md:mx-40">
+              <div className="mt-4 flex justify-center md:justify-end md:w-1/4">
                 <Image src="/images/Wayne.jpg" height="300" width="300" />
               </div>
-              <div className="ml-4 font-semibold text-blue-900 mt-24  w-3/4">
+              <div className="md:ml-4 font-semibold text-blue-900 mt-24  md:w-3/4">
                 "Dr. Wayne Yip is the primary Optometrist here at Performance
                 Vision EyeCare. <br />
                 Dr. Yip attended the University of Waterloo for his
