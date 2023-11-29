@@ -130,7 +130,7 @@ export default function AboutUs() {
           <div></div>
         </div>
         <div className="mt-12">
-          <h2 className="mt-2 text-2xl font-bold">
+          <h2 className="mt-2 text-2xl sm:text-xl font-bold">
             We’ve been <span className="rainbow-text">Proudly Rocking</span> the{" "}
             <span className="text-red-700">R</span>
             <span className="text-orange-700">a</span>
