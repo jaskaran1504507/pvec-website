@@ -119,7 +119,7 @@ export default function Promotions() {
                 <h1 className="text-blue-900 my-3 text-center font-semibold">
                   {parse(m?.title)}
                 </h1>
-                <div className="px-6 py-4 "> {parse(m?.description)}</div>
+                <div className="px-6 py-4 text-center"> {parse(m?.description)}</div>
               </div>
 
               {/* <div className="flex justify-center">
