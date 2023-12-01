@@ -44,7 +44,7 @@ export default function ProductsAndDetailsHomePage() {
               <div className="w-3/4 h-full content-start px-12">
 
                 <div className="section-title text-left">
-                  <h3 className="title text-lg">Carefully Curated Glasses </h3>
+                  <h3 className="title text-lg text-left">Carefully Curated Glasses </h3>
                   <div className="w-full flex mt-3 border-2 mt-8 border-[#23ADCA] m-auto">
                     {/* <div className="w-3/5 border-2 mt-8 border-[#23ADCA] m-auto">
                     </div>
@@ -68,7 +68,7 @@ export default function ProductsAndDetailsHomePage() {
               <div className="w-3/4 h-full content-start px-12">
 
                 <div className="section-title text-left">
-                  <h3 className="title text-lg">Do you suffer from Dry Eyes, Keratoconus or Post Refractive surgery complications?</h3>
+                  <h3 className="title text-lg text-left">Do you suffer from Dry Eyes, Keratoconus or Post Refractive surgery complications?</h3>
                   <div className="w-full flex mt-3 border-2 mt-8 border-[#23ADCA] m-auto">
                     {/* <div className="w-10/12 border-2 mt-8 border-[#23ADCA] m-auto">
                     </div>
@@ -92,7 +92,7 @@ export default function ProductsAndDetailsHomePage() {
               </div>
               <div className="w-3/4 h-full content-start px-12">
                 <div className="section-title text-left">
-                  <h3 className="title text-lg">Are you on disability/low income assistance or First Nations status?</h3>
+                  <h3 className="title text-lg text-left">Are you on disability/low income assistance or First Nations status?</h3>
                   <div className="w-full flex mt-3 border-2 mt-8 border-[#23ADCA] m-auto">
                     {/* <div className="w-9/12 border-2 mt-8 border-[#23ADCA] m-auto">
                     </div>
@@ -129,7 +129,7 @@ export default function ProductsAndDetailsHomePage() {
           <div className="w-full flex flex-col h-fit ">
             <div id="obj2" className="w-full h-full px-3 content-start font-mono">
               <div className="section-title text-left pb-30">
-                <h3 className="title text-lg">Carefully Curated Glasses </h3>
+                <h3 className="title text-lg text-left">Carefully Curated Glasses </h3>
                 <div className="w-full border-2 mt-8 border-[#23ADCA] m-auto">
                   {/* <div className="w-1/4 border-2 mt-8 border-[#23ADCA] m-auto">
                   </div>
@@ -140,7 +140,7 @@ export default function ProductsAndDetailsHomePage() {
                   Browse our Brands</a></h4>
               </div>
               <div className="section-title text-left pb-30">
-                <h3 className="title text-lg">Do you suffer from Dry Eyes, Keratoconus or Post Refractive Surgery complications?</h3>
+                <h3 className="title text-lg text-left">Do you suffer from Dry Eyes, Keratoconus or Post Refractive Surgery complications?</h3>
                 {/* <br /> */}
                 <div className="w-full flex mt-3 border-2 mt-8 border-[#23ADCA] m-auto">
                   {/* <div className="w-1/4 border-2 mt-8 border-[#23ADCA] m-auto">
@@ -152,7 +152,7 @@ export default function ProductsAndDetailsHomePage() {
                   Book a consultation</a> for a scleral contact lens fit.</h4>
               </div>
               <div className="section-title text-left">
-                <h3 className="title text-lg">Are you on Disability/low income assistance or First Nations status?</h3>
+                <h3 className="title text-lg text-left">Are you on Disability/low income assistance or First Nations status?</h3>
                 <div className="w-full flex mt-3 border-2 mt-8 border-[#23ADCA] m-auto">
                   {/* <div className="w-1/4 border-2 mt-8 border-[#23ADCA] m-auto">
                   </div>
