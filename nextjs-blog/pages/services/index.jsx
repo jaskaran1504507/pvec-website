@@ -127,11 +127,11 @@ export default function ServiceProducts() {
                       width="355"
                     />
                   </div>
-                  <h1 className="text-blue-900 my-3 text-left font-semibold">
+                  <h1 className="text-blue-900 my-3 text-center font-semibold">
                     {parse(heading)}
                   </h1>
 
-                  <div className="px-6 py-4 md:text-start">
+                  <div className="px-6 py-4 md:text-start text-left">
                     {seeMore[image] || description.slice(0, 250)}
                     {description.length > 250 && (
                       <span
