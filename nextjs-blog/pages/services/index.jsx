@@ -127,7 +127,7 @@ export default function ServiceProducts() {
                       width="355"
                     />
                   </div>
-                  <h1 className="text-blue-900 my-3 text-center font-semibold">
+                  <h1 className="text-blue-900 my-3 text-left font-semibold">
                     {parse(heading)}
                   </h1>
 
