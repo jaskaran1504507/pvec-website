@@ -32,9 +32,9 @@ export default function IntroHomePage() {
     <>
       <div className="container md:mt-20 md:block hidden">
         <div className="row justify-content-center">
-          <div className="w-[78vw] flex h-[80vh] relative">
+          <div className="w-[84vw] flex h-[80vh] relative">
             <div id="obj1" className="w-1/2 h-full flex">
-              <div className="bg-black mt-64 w-72 h-72">
+              <div className="bg-black mt-64 2xl:mt-56 w-72 h-72">
                 <img
                   className="object-cover w-full h-full"
                   src="/images/water.jpg"
@@ -61,7 +61,7 @@ export default function IntroHomePage() {
               {/* <br/>Located at 1242 Burrard St, Vancouver, BC.  */}
               <br />
               <br />
-              We pride ourselves on providing the complete eyecare experience which includes: a comprehensive eye exam, a selection of modern and timeless eyewear to choose from, an extensive sunglass collection ranging from active to elegant, and all of the top name brand contact lenses.<br/> Best of all, we Direct bill to most insurance providers so you pay little to no money out of pocket*! </h3> 
+              We pride ourselves on providing the complete eyecare experience which includes: a comprehensive eye exam, a selection of modern and timeless eyewear to choose from, an extensive sunglass collection ranging from active to elegant, and all of the top name brand contact lenses.<br/> Best of all, we direct bill to most insurance providers so you pay little to no money out of pocket*! </h3> 
               <br/> <span className="title text-xs"> *Terms and conditions apply. Based on eligibility.</span></div>
               <div className="mt-8 xl:ml-8 2xl:mb-8 text-xl">
                 <a className="page-scroll  rounded-lg hover:underline text-[#21AECA]" href="/bookings#appointment">
