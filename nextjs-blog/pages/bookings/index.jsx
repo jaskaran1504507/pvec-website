@@ -409,6 +409,9 @@ const Bookings = () => {
                 <Radio.Button value="Eye exam with contact lens">
                   Eye exam with contact lens
                 </Radio.Button>
+                <Radio.Button value="Scleral fitting">
+                  Scleral fitting
+                </Radio.Button>
               </Radio.Group>
             </Form.Item>
             <Form.Item label="Do you currently wear glasses?" name="isGlasses">
@@ -431,10 +434,14 @@ const Bookings = () => {
                 </Radio.Button>
                 <Radio.Button value="Manu Life">Manu Life</Radio.Button>
                 <Radio.Button value="Sun Life">Sun Life</Radio.Button>
-                <Radio.Button value="Great-West Life">
-                  Great-West Life
-                </Radio.Button>
                 <Radio.Button value="Empire Life">Empire Life</Radio.Button>
+                <Radio.Button value="Empire Life">Pacific Blue Cross</Radio.Button>
+                <Radio.Button value="Empire Life">Cooperators</Radio.Button>
+                <Radio.Button value="Empire Life">SSQ</Radio.Button>
+                <Radio.Button value="Empire Life">NexgenRx</Radio.Button>
+                <Radio.Button value="Empire Life">Chambers of Commerce</Radio.Button>
+                <Radio.Button value="Empire Life">Desjardins</Radio.Button>
+                <Radio.Button value="Empire Life">Group Health</Radio.Button>
               </Radio.Group>
             </Form.Item>
 
