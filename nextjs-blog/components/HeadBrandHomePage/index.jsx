@@ -76,7 +76,7 @@ export default function HeadBrandHomePage() {
                 <div className="h-3/5 mt-4 mr-2 text-left text-xl font-mono text-white"><span className="font-bold">Hermosa & Despada - </span> Luxury eyeglasses and luxury sunglasses made in Europe. Exclusive to Performance Vision Eye Care.</div>
                 <div className="h-2/5 my-4 flex ">
                   <div className="h-full w-1/3 flex justify-center">
-                    <a className={`text-white font-bold py-4 px-4 my-1 border-2 text-xl flex justify-center content-center`}>
+                    <a className={`text-white font-bold py-4 px-4 xl:px-2 my-1 border-2 text-xl flex justify-center content-center`}>
                       VISIT US TODAY
                     </a>
                   </div>
