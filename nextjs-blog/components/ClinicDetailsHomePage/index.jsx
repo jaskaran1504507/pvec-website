@@ -6,6 +6,7 @@ import { callApi } from "../../utils/apiUtils";
 // import { homeServicesCards } from "../../constant";
 import Endpoints from "../../utils/endpoints";
 import Loading from "../Loading";
+import { CopyOutlined, MailOutlined, PhoneOutlined, PrinterOutlined } from "@ant-design/icons";
 
 export default function ClinicDetailsHomePage() {
   const [seeMore, setSeeMore] = useState({});
@@ -79,8 +80,9 @@ export default function ClinicDetailsHomePage() {
               <h2 className="title text-3xl uppercase text-[#21AECA]">Performance Vision Eye Care</h2>
               <div className="mt-3 leading-loose"><h3 className="title text-xl">1242 Burrard Street <br/> Vancouver, BC, V6Z 1Z1</h3></div>
               <h2 className="title mt-8 text-3xl uppercase text-[#21AECA]">CONTACT INFORMATION</h2>
-              <div className="mt-3 leading-loose"><h3 className="title text-xl"><a href="tel:+16046899962" target="_blank">+1 604 689 9962</a></h3></div>
-              <div className="leading-loose"><h3 className="title text-xl"><a href="mailto:info@pveyecare.ca" target="_blank">info@pveyecare.ca</a></h3></div>
+              <div className="mt-3 leading-loose"><h3 className="title text-xl"><a href="tel:+16046899962" target="_blank"> <PhoneOutlined /> +1 604 689 9962</a></h3></div>
+              <div className="mt-3 leading-loose"><h3 className="title text-xl"><a href="tel:+16046899962" target="_blank"><PrinterOutlined /> +1 604 689 9964</a></h3></div>
+              <div className="leading-loose"><h3 className="title text-xl"><a href="mailto:info@pveyecare.ca" target="_blank"><MailOutlined />info@pveyecare.ca</a></h3></div>
               <h2 className="title mt-8 text-3xl uppercase text-[#21AECA]">CLINIC HOURS</h2>
               <div className="w-3/4 mt-3 leading-loose flex justify-between"><span className="title text-xl">Monday:</span><span className="title text-xl">10:00 AM - 6:00 PM</span></div>
               <div className="w-3/4 mt-3 leading-loose flex justify-between"><span className="title text-xl">Tuesday:</span><span className="title text-xl">10:00 AM - 6:00 PM</span></div>
