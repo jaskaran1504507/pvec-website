@@ -426,22 +426,18 @@ const Bookings = () => {
             >
               <Radio.Group value={"Canada Life"}>
                 <Radio.Button value="Canada Life">Canada Life</Radio.Button>
-                <Radio.Button value="Equitable Life">
-                  Equitable Life
-                </Radio.Button>
-                <Radio.Button value="Green Shield Insurance">
-                  Green Shield Insurance
-                </Radio.Button>
+                <Radio.Button value="Equitable Life">Equitable Life</Radio.Button>
+                <Radio.Button value="Green Shield Insurance">Green Shield Insurance</Radio.Button>
                 <Radio.Button value="Manu Life">Manu Life</Radio.Button>
                 <Radio.Button value="Sun Life">Sun Life</Radio.Button>
                 <Radio.Button value="Empire Life">Empire Life</Radio.Button>
-                <Radio.Button value="Empire Life">Pacific Blue Cross</Radio.Button>
-                <Radio.Button value="Empire Life">Cooperators</Radio.Button>
-                <Radio.Button value="Empire Life">SSQ</Radio.Button>
-                <Radio.Button value="Empire Life">NexgenRx</Radio.Button>
-                <Radio.Button value="Empire Life">Chambers of Commerce</Radio.Button>
-                <Radio.Button value="Empire Life">Desjardins</Radio.Button>
-                <Radio.Button value="Empire Life">Group Health</Radio.Button>
+                <Radio.Button value="Pacific Blue Cross">Pacific Blue Cross</Radio.Button>
+                <Radio.Button value="Cooperators">Cooperators</Radio.Button>
+                <Radio.Button value="SSQ">SSQ</Radio.Button>
+                <Radio.Button value="NexgenRx">NexgenRx</Radio.Button>
+                <Radio.Button value="Chambers of Commerce">Chambers of Commerce</Radio.Button>
+                <Radio.Button value="Desjardins">Desjardins</Radio.Button>
+                <Radio.Button value="Group Health">Group Health</Radio.Button>
               </Radio.Group>
             </Form.Item>
 
