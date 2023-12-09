@@ -47,7 +47,7 @@ export default function AboutUs() {
             marginTop: "20px",
             marginBottom: "20px",
           }}
-          className="text-blue-900 text-center md:text-left text-4xl font-semibold"
+          className="text-blue-900 text-center md:text-left text-4xl xl:text-3xl font-semibold"
         >
           <span style={{ lineHeight: 2 }}>About Us</span>
         </h2>

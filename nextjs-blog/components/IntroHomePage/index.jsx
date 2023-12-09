@@ -50,7 +50,7 @@ export default function IntroHomePage() {
               </div>
             </div>
             <div id="obj2" className="w-1/2 h-full content-start font-mono">
-              <h2 className="title text-4xl uppercase text-left">Proudly serving the downtown (DT) core since 2004. </h2>
+              <h2 className="title text-4xl xl:text-3xl uppercase text-left">Proudly serving the downtown (DT) core since 2004. </h2>
               <div className="w-full flex mt-3">
                 <div className="w-1/4 border-2 mt-8 border-[#23ADCA] m-auto">
                 </div>

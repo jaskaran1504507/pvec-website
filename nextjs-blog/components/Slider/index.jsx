@@ -42,7 +42,7 @@ const Slider = ({ slides }) => {
                                     />
                                 </div>
                                 <div className="backdrop-blur absolute md:top-80 left-0 right-0 bottom-0 flex items-center justify-center backdrop-blur backdrop-filter backdrop-saturate-150">
-                                    <h1 className="font-serif font-bold md:text-6xl text-4xl font-bold text-sky-600">{slide.name}</h1>
+                                    <h1 className="font-serif font-bold md:text-6xl text-4xl xl:text-3xl font-bold text-sky-600">{slide.name}</h1>
                                 </div>
                             </div>
 

@@ -77,13 +77,13 @@ export default function ClinicDetailsHomePage() {
               </div>
             </div>
             <div id="obj2" className="w-1/2 h-full content-start ">
-              <h2 className="title text-3xl uppercase text-[#21AECA]">Performance Vision Eye Care</h2>
+              <h2 className="title text-3xl xl:text-2xl uppercase text-[#21AECA]">Performance Vision Eye Care</h2>
               <div className="mt-3 leading-loose"><h3 className="title text-xl">1242 Burrard Street <br/> Vancouver, BC, V6Z 1Z1</h3></div>
-              <h2 className="title mt-8 text-3xl uppercase text-[#21AECA]">CONTACT INFORMATION</h2>
+              <h2 className="title mt-8 text-3xl xl:text-2xl uppercase text-[#21AECA]">CONTACT INFORMATION</h2>
               <div className="mt-3 leading-loose"><h3 className="title text-xl"><a href="tel:+16046899962" target="_blank"> <PhoneOutlined /> +1 604 689 9962</a></h3></div>
               <div className="leading-loose"><h3 className="title text-xl"><a href="tel:+16046899962" target="_blank"><PrinterOutlined /> +1 604 689 9964</a></h3></div>
               <div className="leading-loose"><h3 className="title text-xl"><a href="mailto:info@pveyecare.ca" target="_blank"><MailOutlined /> info@pveyecare.ca</a></h3></div>
-              <h2 className="title mt-8 text-3xl uppercase text-[#21AECA]">CLINIC HOURS</h2>
+              <h2 className="title mt-8 text-3xl xl:text-2xl uppercase text-[#21AECA]">CLINIC HOURS</h2>
               <div className="w-3/4 mt-3 leading-loose flex justify-between"><span className="title text-xl">Monday:</span><span className="title text-xl">10:00 AM - 6:00 PM</span></div>
               <div className="w-3/4 mt-3 leading-loose flex justify-between"><span className="title text-xl">Tuesday:</span><span className="title text-xl">10:00 AM - 6:00 PM</span></div>
               <div className="w-3/4 mt-3 leading-loose flex justify-between"><span className="title text-xl">Wednesday:</span><span className="title text-xl">10:00 AM - 6:00 PM</span></div>
