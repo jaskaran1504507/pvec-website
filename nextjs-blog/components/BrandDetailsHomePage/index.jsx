@@ -71,7 +71,7 @@ export default function BrandDetailsHomePage() {
           </div>
           <div className="w-[75vw] flex h-[80vh] relative">
             <div id="obj1" className="w-full h-full flex">
-              <div className="bg-black mt-64 w-full h-84">
+              <div className="bg-black mt-64 xl:mt-56 w-full h-84">
                 <img
                   className="object-cover w-full h-full"
                   src="/images/water.jpg"

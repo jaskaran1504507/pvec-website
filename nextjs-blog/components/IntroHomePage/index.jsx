@@ -34,7 +34,7 @@ export default function IntroHomePage() {
         <div className="row justify-content-center">
           <div className="w-[84vw] flex h-[80vh] relative">
             <div id="obj1" className="w-1/2 h-full flex">
-              <div className="bg-black mt-64 2xl:mt-56 w-72 h-72">
+              <div className="bg-black mt-64 xl:mt-56 w-72 h-72">
                 <img
                   className="object-cover w-full h-full"
                   src="/images/water.jpg"
