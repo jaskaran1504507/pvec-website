@@ -30,7 +30,7 @@ export default function BrandDetailsHomePage() {
   }, []);
   return (
     <>
-      <div className="container md:mt-20 xl:mt-24 lg:mt-24 2xl:mt-24 md:block hidden">
+      <div className="container md:mt-20 xl:mt-42 lg:mt-24 2xl:mt-24 md:block hidden">
         <div className="row justify-content-center">
           {/* <div className="col-lg-10">
             <div className="section-title text-left pb-30">
