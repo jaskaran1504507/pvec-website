@@ -63,7 +63,7 @@ export default function IntroHomePage() {
               <br />
               We pride ourselves on providing the complete eyecare experience which includes: a comprehensive eye exam, a selection of modern and timeless eyewear to choose from, an extensive sunglass collection ranging from active to elegant, and all of the top name brand contact lenses.<br/> Best of all, we direct bill to most insurance providers so you pay little to no money out of pocket*! </h3> 
               <br/> <span className="title text-xs"> *Terms and conditions apply. Based on eligibility.</span></div>
-              <div className="mt-8 xl:ml-8 2xl:mb-8 text-xl">
+              <div className="mt-8 xl:mb-8 2xl:mb-8 text-xl">
                 <a className="page-scroll  rounded-lg hover:underline text-[#21AECA]" href="/bookings#appointment">
                   Request an appointment for your next eye exam.
                 </a>
