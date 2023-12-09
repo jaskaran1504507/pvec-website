@@ -1022,7 +1022,7 @@ export default function Header() {
       <div className="md:block hidden">
         <header className="h-10 bg-gray-800 ">
           <nav className="h-full flex items-center justify-center">
-            <ul className="flex space-x-6 xl:space-x-4 lg:mb-4  font-bold text-xl">
+            <ul className="flex space-x-6 xl:space-x-4 2xl:space-x-4  font-bold text-xl">
               <li><a href="/" className="hover:text-gray-500">Home</a></li>
               <li>|</li>
               <li><div className="services-option relative group hover:text-gray-500">
