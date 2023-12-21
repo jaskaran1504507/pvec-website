@@ -30,6 +30,7 @@ const Bookings = () => {
   //   wrapperCol: { span: 24 },
   // };
   const [disableDate, setDisableDate] = useState({});
+  const [date, setDate] = useState('');
 
   useEffect(() => {
     let defaultDate = getDefaultDate(true);
@@ -44,6 +45,32 @@ const Bookings = () => {
     //   })
     //   .catch((err) => console.log("err", err));
   }, []);
+
+  const handleDateChange = (e) => {
+    const inputChar = e.target.value.slice(-1);
+
+    console.log("inputChar", inputChar);
+
+    // Allow only digits and hyphens
+    if (!/[\d-]/.test(inputChar)) {
+      return;
+    }
+
+    // Concatenate the input character to the existing date
+    const updatedDate = e.target.value;
+
+    console.log("updatedDate", updatedDate);
+    
+    // Your custom validation logic here
+    // Enforce the format YYYY-MM-DD
+    const isValidDate = /^\d{0,4}-\d{0,2}-\d{0,2}$/.test(updatedDate);
+
+    console.log("isValidDate", isValidDate);
+
+    if (isValidDate) {
+      setDate(updatedDate);
+    }
+  };
 
   const layout = {
     col: {
@@ -305,7 +332,7 @@ const Bookings = () => {
               <Radio.Group value={"no"}>
                 <Radio.Button value="he">He/His</Radio.Button>
                 <Radio.Button checked value="she">
-                  She/her
+                  She/Her
                 </Radio.Button>
 
                 <Radio.Button value="they">They/Their</Radio.Button>
@@ -313,21 +340,21 @@ const Bookings = () => {
             </Form.Item>
             <Form.Item
               name="firstName"
-              label="First name"
+              label="First Name"
               rules={[{ required: true }]}
             >
               <Input />
             </Form.Item>
             <Form.Item
               name="lastName"
-              label="Last name"
+              label="Last Name"
               rules={[{ required: true }]}
             >
               <Input />
             </Form.Item>
             <Form.Item
               name="dateOfBirth"
-              label="Date of birth"
+              label="Date of Birth"
               rules={[{ required: true, message: "Please select date" }]}
             >
               <DatePicker className="w-full" />
@@ -341,7 +368,7 @@ const Bookings = () => {
             </Form.Item>
 
             <Form.Item
-              label="Existing patient?"
+              label="Existing Patient?"
               name="existing_patient"
               rules={[{ required: true }]}
             >
@@ -414,7 +441,7 @@ const Bookings = () => {
                 </Radio.Button>
               </Radio.Group>
             </Form.Item>
-            <Form.Item label="Do you currently wear glasses?" name="isGlasses">
+            <Form.Item label="Do you currently have prescription?" name="isGlasses">
               <Radio.Group value={"no"}>
                 <Radio.Button value="yes">Yes</Radio.Button>
                 <Radio.Button value="no">No</Radio.Button>
