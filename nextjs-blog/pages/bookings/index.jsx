@@ -355,7 +355,7 @@ const Bookings = () => {
             <Form.Item
               name="dateOfBirth"
               label="Date of Birth"
-              rules={[{ required: true, message: "Please select date" }]}
+              rules={[{ required: true, message: "Please enter date" }]}
             >
               <DatePicker className="w-full" />
             </Form.Item>
@@ -441,7 +441,7 @@ const Bookings = () => {
                 </Radio.Button>
               </Radio.Group>
             </Form.Item>
-            <Form.Item label="Do you currently have prescription?" name="isGlasses">
+            <Form.Item label="Do you currently wear corrective lenses? (Glasses or contact lenses)" name="isGlasses">
               <Radio.Group value={"no"}>
                 <Radio.Button value="yes">Yes</Radio.Button>
                 <Radio.Button value="no">No</Radio.Button>
