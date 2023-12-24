@@ -357,7 +357,7 @@ const Bookings = () => {
               label="Date of Birth"
               rules={[{ required: true, message: "Please enter date" }]}
             >
-              <DatePicker className="w-full" />
+              <DatePicker className="w-full" defaultValue={dayjs('2000-06-01', 'YYYY-MM-DD')}/>
             </Form.Item>
             <Form.Item
               name={["user", "email"]}
