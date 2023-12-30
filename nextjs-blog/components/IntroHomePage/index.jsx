@@ -92,7 +92,7 @@ export default function IntroHomePage() {
               </div>
             </div>
             <div id="obj2" className="w-full h-full p-4 content-start font-mono">
-              <h2 className="title text-xl uppercase ">Servicing Eyes on the Performance vision since 2004</h2>
+              <h2 className="title text-xl uppercase ">PROUDLY SERVING THE DOWNTOWN (DT) CORE SINCE 2004.</h2>
               <div className="mt-8 leading-loose"><h3 className="title ">Welcome to Performance Vision Eye Care!
                {/* located at 1242 Burrard st,Vancouver, BC.  */}
                <br />
