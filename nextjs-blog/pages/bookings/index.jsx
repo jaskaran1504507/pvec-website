@@ -484,7 +484,7 @@ const Bookings = () => {
                 // defaultValue={getDefaultDate()}
                 disabledDate={(current) => {
                   return (
-                    current.startOf("hour", 0) <= moment().startOf("hour", 0) ||
+                    current.startOf("hour", 0) < moment().startOf("hour", 0) ||
                     current.day() === 0 || current.day() === 2 || current.day() === 3 || current.day() === 5
                   );
                 }}
