@@ -481,7 +481,7 @@ const Bookings = () => {
             >
               <DatePicker
                 className="w-full"
-                defaultValue={getDefaultDate()}
+                // defaultValue={getDefaultDate()}
                 disabledDate={(current) => {
                   return (
                     current.startOf("hour", 0) <= moment().startOf("hour", 0) ||
