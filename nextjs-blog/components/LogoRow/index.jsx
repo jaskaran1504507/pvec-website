@@ -13,7 +13,7 @@ const LogoRow = ({ logos }) => {
                         className={`block mx-auto ${router?.query?.query == "eye-medic" ? 'h-48' : 'h-24'}`}
                     >
                         <img
-                            src={"/images/" + logo.link}
+                            src={logo.image}
                             alt="Logo"
                             className="w-full h-full object-contain"
                         />

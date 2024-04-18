@@ -38,8 +38,8 @@ import OrderList from "../OrderList";
 const { Search } = Input;
 const queryObj = {
   "eye-medic": "MEDICARE",
-  contacts: "CONTACTS",
-  glasses: "GLASSES",
+  "contacts": "CONTACTS",
+  "glasses": "GLASSES",
 };
 
 export default function ProductsComponent() {
@@ -138,29 +138,30 @@ export default function ProductsComponent() {
   };
 
   useEffect(() => {
+    console.log("router?.query?.query",router?.query?.query);
     getBrandsFromServer({
       query: {
         startIndex: 0,
         fetchSize: 100,
         keyword: "",
-        category: queryObj[router?.query?.query],
+        category: queryObj[router?.query?.query] || ["CONTACTS", "GLASSES"],
       },
     })
       .then((res) => {
         if (res?.brands) {
-          let newBrandsList = res?.brands.map((obj) => {
-            return {
-              value: obj._id,
-              label: obj.title,
-            };
-          });
-          setBrands(newBrandsList);
+          // let newBrandsList = res?.brands.map((obj) => {
+          //   return {
+          //     value: obj._id,
+          //     label: obj.title,
+          //   };
+          // });
+          setBrands(res?.brands);
         }
       })
       .catch((err) => {
         console.error(err);
       });
-  }, [category]);
+  }, [category, router?.query?.query]);
 
   useEffect(() => {
     setCategory(getCategory);
@@ -264,22 +265,22 @@ export default function ProductsComponent() {
 
   function getBrands() {
     if (router?.query?.query == "eye-medic") {
-      return eyecareProductsArr;
+      return brands;
     } else if (router?.query?.query == "contacts") {
-      return contactsBrandsArr;
+      return brands;
     } else if (router?.query?.query == "glasses") {
-      return brandsArr;
-    } else if (router.pathname == "/glasses-contacts") return brandsArr;
+      return brands;
+    } else if (router.pathname == "/glasses-contacts") return brands;
   }
 
   function getBrandsRow() {
     if (router?.query?.query == "eye-medic") {
-      return eyecareProductsList;
+      return brands;
     } else if (router?.query?.query == "contacts") {
-      return contactsBrandsArr;
+      return brands;
     } else if (router?.query?.query == "glasses") {
-      return brandsArr;
-    } else if (router.pathname == "/glasses-contacts") return brandsArr;
+      return brands;
+    } else if (router.pathname == "/glasses-contacts") return brands;
   }
 
   function getBrandHead() {

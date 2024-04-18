@@ -31,7 +31,6 @@ export default function Header() {
   const [form] = Form.useForm();
 
   const currContext = useContext(context);
-  console.log("currContext", currContext);
   const showModal = () => {
     setIsModalOpen(true);
   };

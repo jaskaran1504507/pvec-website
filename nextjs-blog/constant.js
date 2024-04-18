@@ -203,88 +203,88 @@ export const productCatalogue = [
 
 export const brandsArr = [
   {
-    seq: 1, link: "fysh-logo.jpg", addr: "https://fyshuk.com", name: "FYSH",
+    sequence: 1, image: "fysh-logo.jpg", redirectUrl: "https://fyshuk.com", title: "FYSH",
     backgroundImage: "Best-glasses-for-blonde-hair.webp"
   },
   {
-    seq: 2,
-    link: "guess_logo_.jpeg",
-    addr: "https://www.guess.com/us/en/women/accessories/sunglasses",
-    name: "Guess",
+    sequence: 2,
+    image: "guess_logo_.jpeg",
+    redirectUrl: "https://www.guess.com/us/en/women/accessories/sunglasses",
+    title: "Guess",
     backgroundImage: "Guess_bk.avif"
   },
   {
-    seq: 3,
-    link: "PVEC_HugoBoss.png",
-    addr: "https://www.hugoboss.com/men-glasses/",
-    name: "Hugo Boss",
+    sequence: 3,
+    image: "PVEC_HugoBoss.png",
+    redirectUrl: "https://www.hugoboss.com/men-glasses/",
+    title: "Hugo Boss",
     backgroundImage: "hugo-boss-glasses-henry-carvell.jpg"
   },
   {
-    seq: 4,
-    link: "PVEC_KateSpade.png",
-    addr: "https://www.katespade.com/shop/accessories/sunglasses-reading-glasses",
-    name: "Kate Spade",
+    sequence: 4,
+    image: "PVEC_KateSpade.png",
+    redirectUrl: "https://www.katespade.com/shop/accessories/sunglasses-reading-glasses",
+    title: "Kate Spade",
     backgroundImage: "kate_spade_bk.webp"
   },
   {
-    seq: 5,
-    link: "kliik-logo.jpg",
-    addr: "https://www.kliik.com/",
-    name: "KLiik",
+    sequence: 5,
+    image: "kliik-logo.jpg",
+    redirectUrl: "https://www.kliik.com/",
+    title: "KLiik",
     backgroundImage: "kliik-k-716.jpg"
   },
   {
-    seq: 6,
-    link: "PVEC_LaFont.png",
-    addr: "https://www.lafont.com/the-collection/",
-    name: "Lafont",
+    sequence: 6,
+    image: "PVEC_LaFont.png",
+    redirectUrl: "https://www.lafont.com/the-collection/",
+    title: "Lafont",
     backgroundImage: "lofant_bk.jpeg"
   },
   {
-    seq: 7,
-    link: "marc-jacobs-logo-vector.png",
-    addr: "https://www.marcjacobs.com/default/the-marc-jacobs/the-accessories/sunglasses/",
-    name: "Marc Jacobs",
+    sequence: 7,
+    image: "marc-jacobs-logo-vector.png",
+    redirectUrl: "https://www.marcjacobs.com/default/the-marc-jacobs/the-accessories/sunglasses/",
+    title: "Marc Jacobs",
     backgroundImage: "mj-banner.jpeg"
   },
   {
-    seq: 8,
-    link: "Michael_Kors_(brand)_logo.png",
-    addr: "https://www.michaelkors.ca/men/accessories/sunglasses/_/N-285v",
-    name: "Michael Kors",
+    sequence: 8,
+    image: "Michael_Kors_(brand)_logo.png",
+    redirectUrl: "https://www.michaelkors.ca/men/accessories/sunglasses/_/N-285v",
+    title: "Michael Kors",
     backgroundImage: "micheal-kors-banner.png"
   },
   {
-    seq: 9,
-    link: "PVEC_Moleskine.png",
-    addr: "https://moleskine-eyewear.com/en/",
-    name: "Moleskine",
+    sequence: 9,
+    image: "PVEC_Moleskine.png",
+    redirectUrl: "https://moleskine-eyewear.com/en/",
+    title: "Moleskine",
     backgroundImage: "moleskine-banner.jpeg"
   },
   {
-    seq: 10,
-    link: "oakley9768.jpg",
-    addr: "https://www.oakley.com/en-eu",
-    name: "Oakley",
+    sequence: 10,
+    image: "oakley9768.jpg",
+    redirectUrl: "https://www.oakley.com/en-eu",
+    title: "Oakley",
     backgroundImage: "ookley.jpeg"
   },
   {
-    seq: 11,
-    link: "Ray-Ban-logo.png",
-    addr: "https://www.ray-ban.com/canada/en",
-    name: "Ray Ban",
+    sequence: 11,
+    image: "Ray-Ban-logo.png",
+    redirectUrl: "https://www.ray-ban.com/canada/en",
+    title: "Ray Ban",
     backgroundImage: "ray-ban-banner.png"
   },
   {
-    seq: 12, link: "PVEC_Superflex.jpeg", addr: "", name: "Superflex",
+    sequence: 12, image: "PVEC_Superflex.jpeg", redirectUrl: "", title: "Superflex",
     backgroundImage: "superflex_bk.jpg"
   },
   {
-    seq: 13,
-    name: "Tom Ford",
-    link: "PVEC_TF.png",
-    addr: "https://www.tomford.com/eyewear/men/optical/",
+    sequence: 13,
+    title: "Tom Ford",
+    image: "PVEC_TF.png",
+    redirectUrl: "https://www.tomford.com/eyewear/men/optical/",
     backgroundImage: "tom_ford_bk.jpeg"
   },
 
@@ -409,135 +409,135 @@ export const productCards = [
 
 export const contactsBrandsArr = [
   {
-    seq: 1,
-    link: "Acuvue.jpg",
-    addr: "https://www.acuvue.ca/",
-    name: "Acuvue",
+    sequence: 1,
+    image: "Acuvue.jpg",
+    redirectUrl: "https://www.acuvue.ca/",
+    title: "Acuvue",
     backgroundImage : "acuvue_bk.jpeg"
   },
   {
-    seq: 2,
-    link: "B-L.webp",
-    addr: "https://www.bausch.ca/en-ca/",
-    name: "Bausch+Lomb",
+    sequence: 2,
+    image: "B-L.webp",
+    redirectUrl: "https://www.bausch.ca/en-ca/",
+    title: "Bausch+Lomb",
     backgroundImage : "Bausch-Lomb_bk2.webp"
   },
   {
-    seq: 3,
-    link: "cooper-vision-logo.jpg",
-    addr: "https://coopervision.ca/",
-    name: "CooperVision",
+    sequence: 3,
+    image: "cooper-vision-logo.jpg",
+    redirectUrl: "https://coopervision.ca/",
+    title: "CooperVision",
     backgroundImage : "cooper_vision_bk.png"
   },
   {
-    seq: 4,
-    link: "myAlcon_logo.png",
-    addr: "https://www.myalcon.com/ca/en/",
-    name: "My Alcon",
+    sequence: 4,
+    image: "myAlcon_logo.png",
+    redirectUrl: "https://www.myalcon.com/ca/en/",
+    title: "My Alcon",
     backgroundImage : "alcon_bk.jpeg"
   },
 ];
 
 export const eyecareProductsArr = [
   {
-    seq: 1,
-    link: "PVEC_idrop.jpeg",
-    addr: "",
-    name: "Eye Drops",
+    sequence: 1,
+    image: "PVEC_idrop.jpeg",
+    redirectUrl: "",
+    title: "Eye Drops",
     backgroundImage : "women_using_eyeDROPs.jpg"
   },
   {
-    seq: 2,
-    link: "omega-3.png",
-    addr: "",
-    name: "Omega-3",
+    sequence: 2,
+    image: "omega-3.png",
+    redirectUrl: "",
+    title: "Omega-3",
     backgroundImage : "Omega-3-Fish-Oil-Supplements.webp"
   },
   {
-    seq: 3,
-    link: "PVEC_teatree.jpeg",
-    addr: "",
-    name: "Tea Tree Eyelid",
+    sequence: 3,
+    image: "PVEC_teatree.jpeg",
+    redirectUrl: "",
+    title: "Tea Tree Eyelid",
     backgroundImage : "tea_tree_eye.jpeg"
   },
   {
-    seq: 4,
-    link: "PVEC_eyemask.jpeg",
-    addr: "",
-    name: "Eye Mask",
+    sequence: 4,
+    image: "PVEC_eyemask.jpeg",
+    redirectUrl: "",
+    title: "Eye Mask",
     backgroundImage : "s-l1600.jpg"
   },
 ];
 
 export const eyecareProductsList = [
   {
-    seq: 1,
-    link: "eyecare_1.jpeg",
-    addr: "",
-    name: "Eye Drops",
+    sequence: 1,
+    image: "eyecare_1.jpeg",
+    redirectUrl: "",
+    title: "Eye Drops",
     backgroundImage : "women_using_eyeDROPs.jpg"
   },
   {
-    seq: 2,
-    link: "eyecare_2.jpeg",
-    addr: "",
-    name: "Omega-3",
+    sequence: 2,
+    image: "eyecare_2.jpeg",
+    redirectUrl: "",
+    title: "Omega-3",
     backgroundImage : "Omega-3-Fish-Oil-Supplements.webp"
   },
   {
-    seq: 3,
-    link: "eyecare3.jpeg",
-    addr: "",
-    name: "Tea Tree Eyelid",
+    sequence: 3,
+    image: "eyecare3.jpeg",
+    redirectUrl: "",
+    title: "Tea Tree Eyelid",
     backgroundImage : "tea_tree_eye.jpeg"
   },
   {
-    seq: 4,
-    link: "eyecare4.jpeg",
-    addr: "",
-    name: "Eye Mask",
+    sequence: 4,
+    image: "eyecare4.jpeg",
+    redirectUrl: "",
+    title: "Eye Mask",
     backgroundImage : "s-l1600.jpg"
   },
   {
-    seq: 5,
-    link: "eyecare5.jpeg",
-    addr: "",
-    name: "Eye Mask",
+    sequence: 5,
+    image: "eyecare5.jpeg",
+    redirectUrl: "",
+    title: "Eye Mask",
     backgroundImage : "s-l1600.jpg"
   },
   {
-    seq: 6,
-    link: "eyecare6.jpeg",
-    addr: "",
-    name: "Eye Mask",
+    sequence: 6,
+    image: "eyecare6.jpeg",
+    redirectUrl: "",
+    title: "Eye Mask",
     backgroundImage : "s-l1600.jpg"
   },
   {
-    seq: 7,
-    link: "eyecare7.jpeg",
-    addr: "",
-    name: "Eye Mask",
+    sequence: 7,
+    image: "eyecare7.jpeg",
+    redirectUrl: "",
+    title: "Eye Mask",
     backgroundImage : "s-l1600.jpg"
   },
   {
-    seq: 8,
-    link: "515ugeq76Q.jpg",
-    addr: "",
-    name: "Eye Mask",
+    sequence: 8,
+    image: "515ugeq76Q.jpg",
+    redirectUrl: "",
+    title: "Eye Mask",
     backgroundImage : "s-l1600.jpg"
   },
   {
-    seq: 9,
-    link: "eyecare9.jpeg",
-    addr: "",
-    name: "Eye Mask",
+    sequence: 9,
+    image: "eyecare9.jpeg",
+    redirectUrl: "",
+    title: "Eye Mask",
     backgroundImage : "s-l1600.jpg"
   },
   {
-    seq: 10,
-    link: "eyecare10.jpeg",
-    addr: "",
-    name: "Eye Mask",
+    sequence: 10,
+    image: "eyecare10.jpeg",
+    redirectUrl: "",
+    title: "Eye Mask",
     backgroundImage : "s-l1600.jpg"
   },
 ];

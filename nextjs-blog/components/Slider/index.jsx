@@ -29,20 +29,21 @@ const Slider = ({ slides }) => {
                     //  target="_blank"
                      >
                         <div
-                            key={slide.seq}
+                            key={slide.sequence}
                             className={`slide w-full h-full transition-opacity duration-500 ease-in-out ${index === currentIndex ? 'block' : 'hidden'
                                 }`}
                         >
                             <div className="relative w-full md:h-64 h-40">
                                 <div className="relative">
                                     <img
-                                        src={"/images/" + slide.backgroundImage}
-                                        alt={slide.name}
+                                        // src={"/images/" + slide.backgroundImage}
+                                        src={slide.backgroundImage}
+                                        alt={slide.title}
                                         className="w-full h-full object-cover center"
                                     />
                                 </div>
                                 <div className="backdrop-blur absolute md:top-80 left-0 right-0 bottom-0 flex items-center justify-center backdrop-blur backdrop-filter backdrop-saturate-150">
-                                    <h1 className="font-serif font-bold md:text-6xl text-4xl xl:text-3xl font-bold text-sky-600">{slide.name}</h1>
+                                    <h1 className="font-serif font-bold md:text-6xl text-4xl xl:text-6xl font-bold text-sky-600">{slide.title}</h1>
                                 </div>
                             </div>
 
