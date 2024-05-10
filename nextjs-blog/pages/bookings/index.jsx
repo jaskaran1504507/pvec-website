@@ -295,6 +295,16 @@ const Bookings = () => {
     setBcCardValue(e.target.value);
   };
 
+  const isDateDisabled = (currentDate) => {
+    // Convert currentDate to a JavaScript Date object
+    const currentDateObj = new Date(currentDate.format('YYYY-MM-DD'));
+    // Create Date objects for May 10th and May 20th, 2024
+    const startDate = new Date('2024-05-10');
+    const endDate = new Date('2024-05-20');
+    // Check if currentDate falls between May 10th and May 20th, 2024
+    return currentDateObj >= startDate && currentDateObj <= endDate;
+  };
+
   return (
     <main>
       <div className="md:mt-0">
@@ -485,7 +495,9 @@ const Bookings = () => {
                 disabledDate={(current) => {
                   return (
                     current.startOf("hour", 0) < moment().startOf("hour", 0) ||
-                    current.day() === 0 || current.day() === 2 || current.day() === 3);
+                    current.day() === 0 || current.day() === 2 || current.day() === 3
+                     || isDateDisabled(current)
+                    );
                 }}
                 format={"DD/MM/YYYY"}
                 onChange={onChangeDate}
