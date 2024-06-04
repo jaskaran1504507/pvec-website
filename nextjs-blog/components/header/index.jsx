@@ -194,7 +194,7 @@ export default function Header() {
             <a className="navbar-brand " href="#">
               <img
                 // className="border-solid border-t-2 border-black"
-                src="https://performance-vision-eyecare.s3.ca-central-1.amazonaws.com/PVLogo(large).png"
+                src={"images/eyecare-logo.png"}
                 style={{
                   maxWidth: "11rem",
                   height: "4.5rem",
@@ -1607,7 +1607,7 @@ export default function Header() {
       <div className=" flex md:hidden justify-between ">
         <a className="navbar-brand " href="#">
           <img
-            src="https://performance-vision-eyecare.s3.ca-central-1.amazonaws.com/PVLogo(large).png"
+            src={"images/eyecare-logo.png"}
             style={{
               maxWidth: "11rem",
               height: "4.5rem",
