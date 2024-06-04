@@ -76,7 +76,7 @@ export default function Footer() {
                       margin: "2px",
                       padding: "2px",
                     }}
-                    src="https://pvec-bucket.s3.ca-central-1.amazonaws.com/eyecare-logo.png"
+                    src="https://performance-vision-eyecare.s3.ca-central-1.amazonaws.com/PVLogo(large).png"
                     alt="logo"
                   />
                 </a>

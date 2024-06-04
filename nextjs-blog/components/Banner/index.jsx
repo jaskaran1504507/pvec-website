@@ -76,7 +76,7 @@ export default function Banner({
           </div> */}
           <div className="h-1/2 w-full flex justify-between">
             <div> <img
-              src="https://pvec-bucket.s3.ca-central-1.amazonaws.com/eyecare-logo.png"
+              src="https://performance-vision-eyecare.s3.ca-central-1.amazonaws.com/PVLogo(large).png"
               style={{
                 maxWidth: "11rem",
                 height: "4.5rem",
