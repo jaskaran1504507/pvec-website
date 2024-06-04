@@ -84,7 +84,7 @@ export default function HeadBrandHomePage() {
                     <div className="flex bg-blue-100">
                       <div className="w-1/2">  <img
                         className=" object-fill w-full h-full shadow-lg px-4 py-1"
-                        src="https://performance-vision-eyecare.s3.ca-central-1.amazonaws.com/PVLogo(large).png"
+                        src={"images/eyecare-logo.png"}
                         alt="Logo"
                       /></div>
                       <div className="w-1/2">  <img
@@ -127,7 +127,7 @@ export default function HeadBrandHomePage() {
                 <div className="flex bg-blue-50 m-2">
                   <div className="w-1/2">  <img
                     className=" object-fill w-full h-full shadow-lg px-2 py-1"
-                    src="https://performance-vision-eyecare.s3.ca-central-1.amazonaws.com/PVLogo(large).png"
+                    src={"images/eyecare-logo.png"}
                     alt="Logo"
                   /></div>
                   <div className="w-1/2">  <img
@@ -158,7 +158,7 @@ export default function HeadBrandHomePage() {
                     <div className="flex bg-blue-100">
                       <div className="w-1/2">  <img
                         className=" object-fill w-full h-full shadow-lg px-10 py-1"
-                        src="https://performance-vision-eyecare.s3.ca-central-1.amazonaws.com/PVLogo(large).png"
+                       src={"images/eyecare-logo.png"}
                         alt="Logo"
                       /></div>
                       <div className="w-1/2">  <img
