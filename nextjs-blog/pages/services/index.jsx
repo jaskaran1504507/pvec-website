@@ -116,13 +116,20 @@ export default function ServiceProducts() {
               >
                 <div className="card-content flex-grow">
                   <div>
-                    <Image
+                    {/* <Image
                       // layout="fill"
                       // objectFit="cover"
                       className="rounded-lg"
                       src={image}
                       alt=""
                       srcSet=""
+                      height="250"
+                      width="355"
+                    /> */}
+                    <img
+                      className="rounded-lg"
+                      src={image}
+                      alt=""
                       height="250"
                       width="355"
                     />
