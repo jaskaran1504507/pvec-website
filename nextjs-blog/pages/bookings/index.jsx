@@ -205,7 +205,7 @@ const Bookings = () => {
         timeStr += obj.timeToObjStr;
       }
       if (obj.timeToAmPm) {
-        timeStr += " " + obj.timeAmPm;
+        timeStr += " " + obj.timeToAmPm;
       } else if (obj.timeAmPm) {
         timeStr += " " + obj.timeAmPm;
       }
