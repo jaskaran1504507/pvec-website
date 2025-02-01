@@ -301,8 +301,8 @@ const Bookings = () => {
     // Create Date objects for May 10th and May 20th, 2024
     const startDate = new Date('2024-05-10');
     const endDate = new Date('2024-05-20');
-    const d1 = new Date('2024-11-06');
-    const d2 = new Date('2024-11-14');``
+    const d1 = new Date('2025-02-15');
+    const d2 = new Date('2025-02-22');``
     // Check if currentDate falls between May 10th and May 20th, 2024
     console.log("curr : ", currentDateObj ==d1);
     return (currentDateObj >= startDate && currentDateObj <= endDate) || (currentDateObj >= d1 && currentDateObj <= d2);
