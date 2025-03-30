@@ -1060,7 +1060,7 @@ export default function Header() {
                     </ul> */}
 
                   <div className="flex pl-2 pt-2 bg-gray-200">
-                      <h2 className="font-semibold pb-2 border-b border-gray-300">Eye Exams</h2>
+                    <h2 className="font-semibold pb-2 border-b border-gray-300">Eye Exams</h2>
                   </div>
                   <a href="/services">
                     <div className="flex">
@@ -1078,7 +1078,7 @@ export default function Header() {
                     </div>
                   </a>
                   <div className="flex pl-2 pt-2 bg-gray-200">
-                      <h2 className="font-semibold pb-2 border-b border-gray-300">Eye Issues & Diseases</h2>
+                    <h2 className="font-semibold pb-2 border-b border-gray-300">Eye Issues & Diseases</h2>
                   </div>
                   <a href="/services">
                     <div className="flex">
@@ -1106,7 +1106,7 @@ export default function Header() {
                     </div>
                   </a>
                   <div className="flex pl-2 pt-2 bg-gray-200">
-                      <h2 className="font-semibold pb-2 border-b border-gray-300">Specialized Services</h2>
+                    <h2 className="font-semibold pb-2 border-b border-gray-300">Specialized Services</h2>
                   </div>
                   <a href="/services">
                     <div className="flex">
@@ -1161,6 +1161,8 @@ export default function Header() {
               <li><a href="/bookings#appointment" className="hover:text-gray-500">Book Appointment</a></li>
               <li>|</li>
               <li><a href="/promotions" className="hover:text-gray-500">Promotions</a></li>
+              <li>|</li>
+              <li><a href="https://vancouver528.wixsite.com/mysite" className="hover:text-gray-500" target="_blank">Blogs</a></li>
               <li>|</li>
               <li><a href="/about-us" className="hover:text-gray-500">About Us</a></li>
               <li>|</li>
