@@ -1162,7 +1162,7 @@ export default function Header() {
               <li>|</li>
               <li><a href="/promotions" className="hover:text-gray-500">Promotions</a></li>
               <li>|</li>
-              <li><a href="https://vancouver528.wixsite.com/mysite" className="hover:text-gray-500" target="_blank">Blogs</a></li>
+              <li><a href="https://vancouver528.wixsite.com/mysite" className="hover:text-gray-500" target="_blank">Blog</a></li>
               <li>|</li>
               <li><a href="/about-us" className="hover:text-gray-500">About Us</a></li>
               <li>|</li>
@@ -1453,6 +1453,24 @@ export default function Header() {
                         style={{ fontSize: "1.8rem", fontWeight: "200" }}
                       >
                         Promotions
+                      </span>
+                    </a>
+                  </div>
+                </li>
+                <li className="mb-3">
+                  <div className="relative group text-center">
+                    <div className="absolute"></div>
+                    <a
+                      className={classNames(
+                        "page-scroll font-bold rounded-lg hover:text-gray-300"
+                      )}
+                      href="https://vancouver528.wixsite.com/mysite"  target="_blank"
+                    >
+                      <span
+                        className={classNames("px-1  text-white")}
+                        style={{ fontSize: "1.8rem", fontWeight: "200" }}
+                      >
+                        Blog
                       </span>
                     </a>
                   </div>
