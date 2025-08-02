@@ -295,18 +295,63 @@ const Bookings = () => {
     setBcCardValue(e.target.value);
   };
 
-  const isDateDisabled = (currentDate) => {
-    // Convert currentDate to a JavaScript Date object
-    const currentDateObj = new Date(currentDate.format('YYYY-MM-DD'));
-    // Create Date objects for May 10th and May 20th, 2024
-    const startDate = new Date('2024-05-10');
-    const endDate = new Date('2024-05-20');
-    const d1 = new Date('2025-02-15');
-    const d2 = new Date('2025-02-22');``
-    // Check if currentDate falls between May 10th and May 20th, 2024
-    console.log("curr : ", currentDateObj ==d1);
-    return (currentDateObj >= startDate && currentDateObj <= endDate) || (currentDateObj >= d1 && currentDateObj <= d2);
-  };
+  /**
+ * Defines collections of dates and date ranges to be disabled.
+ * By defining these outside the main function, we ensure they are created only once,
+ * improving performance by avoiding re-creation on every function call.
+ */
+
+// Use a Set for single, specific dates. Sets provide very fast O(1) lookup time.
+const DISABLED_SINGLE_DATES = new Set([
+  '2025-08-04',
+  '2025-09-02',
+  '2025-10-13',
+  '2025-11-11',
+  '2025-12-25',
+  '2025-12-26',
+  '2026-01-01',
+]);
+
+// Use an array of objects for date ranges. This is easy to read and expand.
+const DISABLED_DATE_RANGES = [
+  { start: '2025-08-25', end: '2024-09-03' },
+];
+
+
+/**
+ * Checks if a given date should be disabled based on the predefined single dates and ranges.
+ * The function is optimized to handle a large number of disabled dates efficiently.
+ *
+ * @param {object} currentDate - A date object from a library like Moment.js or Day.js,
+ * which must have a .format() method.
+ * @returns {boolean} - Returns true if the date should be disabled, otherwise false.
+ */
+const isDateDisabled = (currentDate) => {
+  // Format the input date to a 'YYYY-MM-DD' string. This creates a consistent,
+  // timezone-agnostic format for reliable comparisons.
+  const dateString = currentDate.format('YYYY-MM-DD');
+
+  // 1. Check for single disabled dates.
+  // This is a highly efficient check against the Set.
+  if (DISABLED_SINGLE_DATES.has(dateString)) {
+    return true;
+  }
+
+  // 2. Check if the date falls within any of the disabled ranges.
+  // We parse the date strings to get their numeric timestamp representation for comparison.
+  // This is more reliable than comparing Date objects directly.
+  const currentDateTime = Date.parse(dateString);
+  for (const range of DISABLED_DATE_RANGES) {
+    const startDateTime = Date.parse(range.start);
+    const endDateTime = Date.parse(range.end);
+    if (currentDateTime >= startDateTime && currentDateTime <= endDateTime) {
+      return true; // The date is within a disabled range.
+    }
+  }
+
+  // 3. If the date has not been found in the Set or any range, it is enabled.
+  return false;
+};
 
   return (
     <main>
