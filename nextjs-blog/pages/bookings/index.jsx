@@ -318,7 +318,7 @@ const DISABLED_SINGLE_DATES = new Set([
   '2025-08-30',
   '2025-08-31',
   '2026-08-08',
-  '2025-08-10',
+  '2026-08-10',
 ]);
 
 // Use an array of objects for date ranges. This is easy to read and expand.
